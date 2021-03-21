@@ -13,6 +13,10 @@ class EditProfilePresenter: EditProfileModuleInput, EditProfileViewOutput, EditP
     var router: EditProfileRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
+    }
+    
+    func edit(_ user: User) {
+        interactor.save(user)
     }
 }

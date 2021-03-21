@@ -7,7 +7,10 @@
 //
 
 class EditProfileInteractor: EditProfileInteractorInput {
-
     weak var output: EditProfileInteractorOutput!
-
+    var loginService: LoginService!
+    
+    func save(_ user: User) {
+        loginService.add(user)
+    }
 }

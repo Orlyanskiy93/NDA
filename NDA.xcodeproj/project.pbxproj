@@ -128,7 +128,6 @@
 				593E59F810782BA071A2B2C5 /* EditProfileModuleInput.swift */,
 				96530F8243041035367204A3 /* EditProfilePresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -138,7 +137,6 @@
 				9199689686D3BC630544756D /* EditProfileConfigurator.swift */,
 				F48BA74ABAF429731418FB2C /* EditProfileInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -159,7 +157,6 @@
 				33C0E6E0A9B0BEAAC407EAEA /* EditProfileViewOutput.swift */,
 				B31D11D90CBECD541DE7E33E /* EditProfileViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -216,6 +213,7 @@
 			children = (
 				574F522614A061A043332A99 /* Login */,
 				F8BAF6F9B63E67205B74429E /* Profile */,
+				8B8D2F2A838242304D4BB0F8 /* EditProfile */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -290,7 +288,6 @@
 				5D02BF50260641780053E96C /* SupportingFiles */,
 				5D783253260633CD00156AC1 /* Assets.xcassets */,
 				5D783258260633CD00156AC1 /* Info.plist */,
-				8B8D2F2A838242304D4BB0F8 /* EditProfile */,
 			);
 			path = NDA;
 			sourceTree = "<group>";
@@ -302,20 +299,18 @@
 				7B9EC0A84C6E57D93D3614CA /* EditProfileInteractorOutput.swift */,
 				4A1347D4B113BB111BD6E099 /* EditProfileInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
 		8B8D2F2A838242304D4BB0F8 /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				289226162C534E60E60034FB /* Configurator */,
 				53DD62F59CAB0C040317BC7D /* View */,
 				0DADC2D0145FF38CF9A90A0C /* Presenter */,
 				67DB9E849CC332A5997F678B /* Interactor */,
 				C28A0440FDB24A1A5FD28914 /* Router */,
-				289226162C534E60E60034FB /* Configurator */,
 			);
-			name = EditProfile;
 			path = EditProfile;
 			sourceTree = "<group>";
 		};
@@ -370,7 +365,6 @@
 				7A760EEE5AB523E84670E73C /* EditProfileRouterInput.swift */,
 				2EC96045CA29338C9EB54008 /* EditProfileRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};

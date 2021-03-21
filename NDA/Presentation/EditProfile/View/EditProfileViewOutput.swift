@@ -7,11 +7,6 @@
 //
 
 protocol EditProfileViewOutput {
-
-    /**
-        @author Dmitriy
-        Notify presenter that view is ready
-    */
-
     func viewIsReady()
+    func edit(_ user: User)
 }

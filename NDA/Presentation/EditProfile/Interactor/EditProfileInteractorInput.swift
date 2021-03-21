@@ -9,5 +9,5 @@
 import Foundation
 
 protocol EditProfileInteractorInput {
-
+    func save(_ user: User)
 }

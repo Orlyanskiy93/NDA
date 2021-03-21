@@ -7,11 +7,5 @@
 //
 
 protocol EditProfileViewInput: class {
-
-    /**
-        @author Dmitriy
-        Setup initial state of the view
-    */
-
     func setupInitialState()
 }
