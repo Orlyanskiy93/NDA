@@ -12,6 +12,8 @@ class LoginViewController: UIViewController, LoginViewInput {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var continueButton: UIButton!
+    
     
     var output: LoginViewOutput!
 
@@ -21,6 +23,7 @@ class LoginViewController: UIViewController, LoginViewInput {
     }
 
     func setupInitialState() {
+        continueButton.layer.cornerRadius = 15
     }
     
     @IBAction func next(_ sender: UIButton) {
