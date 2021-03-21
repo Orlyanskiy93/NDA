@@ -17,6 +17,11 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
     }
     
     func login(_ user: User) {
-        interactor.save(user)
+        do {
+            try user.validate()
+            interactor.save(user)
+        } catch {
+            view.show(error, nil)
+        }
     }
 }

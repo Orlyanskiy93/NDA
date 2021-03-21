@@ -7,7 +7,10 @@
 //
 
 class ProfileInteractor: ProfileInteractorInput {
-
     weak var output: ProfileInteractorOutput!
-
+    var loginService: LoginService!
+    
+    func loadUser(){
+        output.user = loginService.getUser()
+    }
 }

@@ -9,5 +9,6 @@ import Foundation
 
 protocol LoginService {
     func add(_ user: User)
+    func getUser() -> User
     func remove(_ user: User)
 }

@@ -13,18 +13,35 @@ class LoginServiceImp: LoginService {
     
     var defaults = UserDefaults.standard
     
+    enum Keys: String {
+        case name
+        case age
+        case email
+    }
+    
     func add(_ user: User) {
         let name = user.name
         let age = user.age
         let email = user.email
-        defaults.setValue(name, forKey: name)
-        defaults.setValue(age, forKey: age)
-        defaults.setValue(email, forKey: email)
+        defaults.setValue(name, forKey: Keys.name.rawValue)
+        defaults.setValue(age, forKey: Keys.age.rawValue)
+        defaults.setValue(email, forKey: Keys.email.rawValue)
+
+    }
+    
+    func getUser() -> User {
+        let name = defaults.string(forKey: Keys.name.rawValue) ?? ""
+        let age = defaults.string(forKey: Keys.age.rawValue) ?? ""
+        let email = defaults.string(forKey: Keys.email.rawValue) ?? ""
+        let user = User(name: name, age: age, email: email)
+        return user
     }
     
     func remove(_ user: User) {
-        defaults.removeObject(forKey: user.name)
-        defaults.removeObject(forKey: user.age)
-        defaults.removeObject(forKey: user.email)
+        defaults.removeObject(forKey: Keys.name.rawValue)
+        defaults.removeObject(forKey: Keys.age.rawValue)
+        defaults.removeObject(forKey: Keys.email.rawValue)
     }
+    
+    
 }

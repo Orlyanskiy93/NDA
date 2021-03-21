@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol LoginViewInput: class {
+protocol LoginViewInput: class, UIViewInput {
 
     func setupInitialState()
 }

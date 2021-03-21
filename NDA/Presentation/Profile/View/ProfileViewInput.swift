@@ -7,11 +7,6 @@
 //
 
 protocol ProfileViewInput: class {
-
-    /**
-        @author Dmitriy
-        Setup initial state of the view
-    */
-
     func setupInitialState()
+    func fillLabelsBy(_ user: User)
 }

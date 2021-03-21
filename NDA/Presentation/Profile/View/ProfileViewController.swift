@@ -9,17 +9,33 @@
 import UIKit
 
 class ProfileViewController: UIViewController, ProfileViewInput {
-
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var eraseButton: UIButton!
+    
     var output: ProfileViewOutput!
 
-    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
-    // MARK: ProfileViewInput
     func setupInitialState() {
+        editButton.layer.cornerRadius = 15
+        eraseButton.layer.cornerRadius = 15
+    }
+    
+    func fillLabelsBy(_ user: User) {
+        nameLabel.text = user.name
+        ageLabel.text = user.age
+        emailLabel.text = user.email
+    }
+    
+    @IBAction func edit(_ sender: UIButton) {
+    }
+    
+    @IBAction func erase(_ sender: Any) {
     }
 }
