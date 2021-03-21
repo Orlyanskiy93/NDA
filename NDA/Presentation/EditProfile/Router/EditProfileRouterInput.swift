@@ -9,5 +9,5 @@
 import Foundation
 
 protocol EditProfileRouterInput {
-
+    func returnToProfileModule()
 }

@@ -14,7 +14,19 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
         
     func viewIsReady() {
         view.setupInitialState()
+        loadUser()
+    }
+    
+    func loadUser() {
         interactor.loadUser()
         view.fillLabelsBy(user)
+    }
+    
+    func openEditScreen() {
+        router.openEditProfileModuleWith(user)
+    }
+    
+    func openLoginScreen() {
+        router.openLoginModule()
     }
 }

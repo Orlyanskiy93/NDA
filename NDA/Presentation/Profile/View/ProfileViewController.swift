@@ -21,6 +21,11 @@ class ProfileViewController: UIViewController, ProfileViewInput {
         super.viewDidLoad()
         output.viewIsReady()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        output.loadUser()
+    }
 
     func setupInitialState() {
         editButton.layer.cornerRadius = 15
@@ -33,9 +38,12 @@ class ProfileViewController: UIViewController, ProfileViewInput {
         emailLabel.text = user.email
     }
     
+    
     @IBAction func edit(_ sender: UIButton) {
+        output.openEditScreen()
     }
     
     @IBAction func erase(_ sender: Any) {
+        output.openLoginScreen()
     }
 }

@@ -25,6 +25,12 @@ class EditProfileViewController: UIViewController, EditProfileViewInput {
         doneButton.layer.cornerRadius = 15
     }
     
+    func fillTextFields(_ user: User) {
+        nameTextField.text = user.name
+        ageTextField.text = user.age
+        emailTextField.text = user.email
+    }
+    
     @IBAction func edit(_ sender: Any) {
         let name = nameTextField.text ?? ""
         let age = ageTextField.text ?? ""

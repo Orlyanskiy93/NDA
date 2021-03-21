@@ -1,3 +1,40 @@
-PODFILE CHECKSUM: a6dec3a84805dd0e76a98c1196c591b162a9cfa2
+PODS:
+  - Alamofire (5.4.1)
+  - Kingfisher (6.1.0)
+  - ObjectMapper (4.2.0)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+  - ViperMcFlurry (1.5.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - ObjectMapper
+  - PromiseKit
+  - ViperMcFlurry
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - ObjectMapper
+    - PromiseKit
+    - ViperMcFlurry
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  ViperMcFlurry: 701bc3ad8d188b1f1e157ec0ddf4e77184de88b5
+
+PODFILE CHECKSUM: 82de9d31221e172c1c8fdc1708049f76f13def2c
 
 COCOAPODS: 1.10.1

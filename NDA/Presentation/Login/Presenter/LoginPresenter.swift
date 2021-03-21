@@ -20,6 +20,7 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
         do {
             try user.validate()
             interactor.save(user)
+            router.openProfile()
         } catch {
             view.show(error, nil)
         }

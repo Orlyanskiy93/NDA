@@ -20,6 +20,7 @@ class EditProfileModuleConfigurator {
     private func configure(viewController: EditProfileViewController) {
 
         let router = EditProfileRouter()
+        router.transitionHandler = viewController
 
         let presenter = EditProfilePresenter()
         presenter.view = viewController
@@ -31,6 +32,7 @@ class EditProfileModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
+        viewController.moduleInput = presenter
     }
 
 }
