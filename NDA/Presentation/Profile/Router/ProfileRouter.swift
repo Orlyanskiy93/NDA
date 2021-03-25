@@ -10,18 +10,16 @@ import ViperMcFlurry
 class ProfileRouter: ProfileRouterInput {    
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
-    func openEditProfileModuleWith(_ user: User) {
+    func openEditProfileModule(with user: User) {
         let promise = transitionHandler.openModule?(usingSegue: "editProfileSegue")
         promise?.thenChain({ (moduleInput) -> RamblerViperModuleOutput? in
-            (moduleInput as? EditProfileModuleInput)?.set(user)
+            let editProfileModuleInput = moduleInput as? EditProfileModuleInput
+            editProfileModuleInput?.set(user)
             return nil
         })
     }
     
     func openLoginModule() {
-        let promise = transitionHandler.openModule?(usingSegue: "loginSegue")
-        promise?.thenChain({ (moduleInput) -> RamblerViperModuleOutput? in
-            return nil
-        })
+        _ = transitionHandler.openModule?(usingSegue: "loginSegue")
     }
 }

@@ -28,7 +28,7 @@ class EditProfileModuleConfigurator {
 
         let interactor = EditProfileInteractor()
         interactor.output = presenter
-        interactor.loginService = LoginServiceImp.shared
+        interactor.profileService = ProfileServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

@@ -9,6 +9,6 @@
 protocol ProfileViewOutput {
     func viewIsReady()
     func openEditScreen()
-    func openLoginScreen()
     func loadUser()
+    func removeUserAndHistory()
 }

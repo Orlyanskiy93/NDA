@@ -8,5 +8,5 @@
 
 protocol EditProfileViewInput: class, UIViewInput {
     func setupInitialState()
-    func fillTextFields(_ user: User)
+    func fill(with user: User)
 }

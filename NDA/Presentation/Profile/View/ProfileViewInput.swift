@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol ProfileViewInput: class {
+protocol ProfileViewInput: class, UIViewInput {
     func setupInitialState()
-    func fillLabelsBy(_ user: User)
+    func fillLabels(with user: User)
 }

@@ -11,5 +11,6 @@ target 'NDA' do
   pod 'ObjectMapper'
   pod 'PromiseKit'
   pod "ViperMcFlurry"
+  pod 'SwiftLint'
 
 end

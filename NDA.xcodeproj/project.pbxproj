@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,11 +21,18 @@
 		4818BB7F7770EFA69A1C4F19 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED74E495257405CBE4E377DA /* LoginRouter.swift */; };
 		4A60F2FDA7E57644ADC92310 /* EditProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199689686D3BC630544756D /* EditProfileConfigurator.swift */; };
 		5D02BF57260646F30053E96C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF56260646F30053E96C /* User.swift */; };
-		5D02BF5A260647310053E96C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF59260647310053E96C /* LoginService.swift */; };
-		5D02BF5D260647850053E96C /* LoginServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF5C260647850053E96C /* LoginServiceImp.swift */; };
-		5D02BF69260743260053E96C /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF68260743260053E96C /* ValidationError.swift */; };
+		5D02BF5A260647310053E96C /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF59260647310053E96C /* ProfileService.swift */; };
+		5D02BF5D260647850053E96C /* ProfileServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF5C260647850053E96C /* ProfileServiceImp.swift */; };
+		5D02BF69260743260053E96C /* UserValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF68260743260053E96C /* UserValidationError.swift */; };
 		5D02BF6F2607880C0053E96C /* UIViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF6E2607880C0053E96C /* UIViewInput.swift */; };
+		5D02BF7E26091C0E0053E96C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF7D26091C0E0053E96C /* Strings.swift */; };
+		5D02BF8E26092B8C0053E96C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D02BF8D26092B8C0053E96C /* Profile.storyboard */; };
+		5D02BF94260A6FCF0053E96C /* ProfileServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */; };
+		5D02BF9B260A7D890053E96C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF9A260A7D890053E96C /* RoundedButton.swift */; };
 		5D4BAB7309550600B010EA3B /* LoginInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7C7D50B4ADBD3295F62F3 /* LoginInitializer.swift */; };
+		5D59042B260CFBE900988CCA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59042A260CFBE900988CCA /* MainRouter.swift */; };
+		5D59042F260D071600988CCA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D59042E260D071600988CCA /* Login.storyboard */; };
+		5D590435260D0E6E00988CCA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D590434260D0E6E00988CCA /* Home.storyboard */; };
 		5D78324B260633CA00156AC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D78324A260633CA00156AC1 /* AppDelegate.swift */; };
 		5D78324D260633CA00156AC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D78324C260633CA00156AC1 /* SceneDelegate.swift */; };
 		5D783252260633CA00156AC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D783250260633CA00156AC1 /* Main.storyboard */; };
@@ -72,10 +79,17 @@
 		593E59F810782BA071A2B2C5 /* EditProfileModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileModuleInput.swift; sourceTree = "<group>"; };
 		5A7760F5CE6F8D2E49D6F85E /* Pods_NDA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NDA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D02BF56260646F30053E96C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5D02BF59260647310053E96C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		5D02BF5C260647850053E96C /* LoginServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceImp.swift; sourceTree = "<group>"; };
-		5D02BF68260743260053E96C /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		5D02BF59260647310053E96C /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		5D02BF5C260647850053E96C /* ProfileServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceImp.swift; sourceTree = "<group>"; };
+		5D02BF68260743260053E96C /* UserValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidationError.swift; sourceTree = "<group>"; };
 		5D02BF6E2607880C0053E96C /* UIViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewInput.swift; sourceTree = "<group>"; };
+		5D02BF7D26091C0E0053E96C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		5D02BF8D26092B8C0053E96C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceError.swift; sourceTree = "<group>"; };
+		5D02BF9A260A7D890053E96C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		5D59042A260CFBE900988CCA /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		5D59042E260D071600988CCA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		5D590434260D0E6E00988CCA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		5D783247260633CA00156AC1 /* NDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D78324A260633CA00156AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D78324C260633CA00156AC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +198,7 @@
 		5D02BF4C260640460053E96C /* BuisnessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				5D02BF7C26091BFD0053E96C /* Constants */,
 				5D02BF4D260640540053E96C /* Entity */,
 				5D02BF4E2606405D0053E96C /* Service */,
 			);
@@ -203,7 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				5D02BF53260641C00053E96C /* Implementation */,
-				5D02BF59260647310053E96C /* LoginService.swift */,
+				5D02BF59260647310053E96C /* ProfileService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -211,6 +226,7 @@
 		5D02BF4F260640670053E96C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5D590428260CFBC200988CCA /* MainRouter */,
 				574F522614A061A043332A99 /* Login */,
 				F8BAF6F9B63E67205B74429E /* Profile */,
 				8B8D2F2A838242304D4BB0F8 /* EditProfile */,
@@ -232,6 +248,9 @@
 			children = (
 				5D783250260633CA00156AC1 /* Main.storyboard */,
 				5D783255260633CD00156AC1 /* LaunchScreen.storyboard */,
+				5D59042E260D071600988CCA /* Login.storyboard */,
+				5D02BF8D26092B8C0053E96C /* Profile.storyboard */,
+				5D590434260D0E6E00988CCA /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -239,7 +258,7 @@
 		5D02BF53260641C00053E96C /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				5D02BF5C260647850053E96C /* LoginServiceImp.swift */,
+				5D02BF5C260647850053E96C /* ProfileServiceImp.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -247,7 +266,8 @@
 		5D02BF67260743120053E96C /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				5D02BF68260743260053E96C /* ValidationError.swift */,
+				5D02BF68260743260053E96C /* UserValidationError.swift */,
+				5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -256,8 +276,25 @@
 			isa = PBXGroup;
 			children = (
 				5D02BF6E2607880C0053E96C /* UIViewInput.swift */,
+				5D02BF9A260A7D890053E96C /* RoundedButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5D02BF7C26091BFD0053E96C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5D02BF7D26091C0E0053E96C /* Strings.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		5D590428260CFBC200988CCA /* MainRouter */ = {
+			isa = PBXGroup;
+			children = (
+				5D59042A260CFBE900988CCA /* MainRouter.swift */,
+			);
+			path = MainRouter;
 			sourceTree = "<group>";
 		};
 		5D78323E260633CA00156AC1 = {
@@ -439,6 +476,7 @@
 				5D783244260633CA00156AC1 /* Frameworks */,
 				5D783245260633CA00156AC1 /* Resources */,
 				8F97A374B948BF7227A07A86 /* [CP] Embed Pods Frameworks */,
+				5D02BF8826091F360053E96C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -488,6 +526,9 @@
 			files = (
 				5D783257260633CD00156AC1 /* LaunchScreen.storyboard in Resources */,
 				5D783254260633CD00156AC1 /* Assets.xcassets in Resources */,
+				5D02BF8E26092B8C0053E96C /* Profile.storyboard in Resources */,
+				5D590435260D0E6E00988CCA /* Home.storyboard in Resources */,
+				5D59042F260D071600988CCA /* Login.storyboard in Resources */,
 				5D783252260633CA00156AC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +558,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5D02BF8826091F360053E96C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config \".swiftlint.yml\"\n";
+		};
 		8F97A374B948BF7227A07A86 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -541,18 +599,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D02BF5D260647850053E96C /* LoginServiceImp.swift in Sources */,
+				5D02BF5D260647850053E96C /* ProfileServiceImp.swift in Sources */,
 				5D78324B260633CA00156AC1 /* AppDelegate.swift in Sources */,
 				5D78324D260633CA00156AC1 /* SceneDelegate.swift in Sources */,
 				A60502BA93B0A7E0CEC146CB /* ProfileViewInput.swift in Sources */,
 				00D8E072B54F39DD85A467E7 /* ProfileViewOutput.swift in Sources */,
+				5D02BF94260A6FCF0053E96C /* ProfileServiceError.swift in Sources */,
 				9AA33CABD0739CD55B39F682 /* ProfileViewController.swift in Sources */,
 				B2FC40F81CFAD0A63EBEFFA0 /* ProfileModuleInput.swift in Sources */,
 				C3AC3052914D8B18A35BFEEE /* ProfilePresenter.swift in Sources */,
-				5D02BF5A260647310053E96C /* LoginService.swift in Sources */,
+				5D02BF5A260647310053E96C /* ProfileService.swift in Sources */,
 				EE76887613F203855534D3C1 /* ProfileInteractorInput.swift in Sources */,
 				5D02BF57260646F30053E96C /* User.swift in Sources */,
-				5D02BF69260743260053E96C /* ValidationError.swift in Sources */,
+				5D02BF69260743260053E96C /* UserValidationError.swift in Sources */,
 				5D02BF6F2607880C0053E96C /* UIViewInput.swift in Sources */,
 				F674D4F3309C281B998F3854 /* ProfileInteractorOutput.swift in Sources */,
 				686BBC18B32EA1CB240E6531 /* ProfileInteractor.swift in Sources */,
@@ -562,6 +621,7 @@
 				DB8BF6EF6BA84D52FF059BD0 /* ProfileInitializer.swift in Sources */,
 				1646F13BC9443402DB8FE154 /* LoginViewInput.swift in Sources */,
 				0CF9EB8EC5859B8130C098B5 /* LoginViewOutput.swift in Sources */,
+				5D59042B260CFBE900988CCA /* MainRouter.swift in Sources */,
 				A7429776225118355D6BAB74 /* LoginViewController.swift in Sources */,
 				4414DA36759B5E4B0536E26C /* LoginModuleInput.swift in Sources */,
 				63F9B80D50E512200B13E43F /* LoginPresenter.swift in Sources */,
@@ -575,6 +635,8 @@
 				1B5AF258AC04A3BD49207A88 /* EditProfileViewInput.swift in Sources */,
 				471F7AAC7D4E093EB84D74F0 /* EditProfileViewOutput.swift in Sources */,
 				C38B64397A57C4A89A5749D9 /* EditProfileViewController.swift in Sources */,
+				5D02BF7E26091C0E0053E96C /* Strings.swift in Sources */,
+				5D02BF9B260A7D890053E96C /* RoundedButton.swift in Sources */,
 				A21789A373AA19F7A2605214 /* EditProfileModuleInput.swift in Sources */,
 				9281AF0CE5C3E4925E07BF69 /* EditProfilePresenter.swift in Sources */,
 				B370F4378901868BDA89A8AF /* EditProfileInteractorInput.swift in Sources */,

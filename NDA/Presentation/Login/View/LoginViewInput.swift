@@ -7,6 +7,5 @@
 //
 
 protocol LoginViewInput: class, UIViewInput {
-
     func setupInitialState()
 }

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ProfileInteractorOutput: class {
-    var user: User! {set get}
+    func handle(_ error: Error)
 }

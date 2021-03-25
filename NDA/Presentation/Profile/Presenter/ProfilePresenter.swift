@@ -10,6 +10,7 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     weak var view: ProfileViewInput!
     var interactor: ProfileInteractorInput!
     var router: ProfileRouterInput!
+    var mainRouter = MainRouter.shared
     var user: User!
         
     func viewIsReady() {
@@ -18,15 +19,25 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
     }
     
     func loadUser() {
-        interactor.loadUser()
-        view.fillLabelsBy(user)
+        user = interactor.loadUser()
+        view.fillLabels(with: user)
+    }
+    
+    //TOTO: Удаление истории
+    func removeUserAndHistory() {
+        interactor.removeUser()
+        mainRouter.open(module: .login)
     }
     
     func openEditScreen() {
-        router.openEditProfileModuleWith(user)
+        router.openEditProfileModule(with: user)
     }
     
     func openLoginScreen() {
         router.openLoginModule()
+    }
+    
+    func handle(_ error: Error) {
+        view.show(error)
     }
 }

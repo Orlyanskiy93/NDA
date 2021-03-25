@@ -7,10 +7,14 @@
 //
 
 class LoginInteractor: LoginInteractorInput {
-    var loginService: LoginService!
+    var profileService: ProfileService!
     weak var output: LoginInteractorOutput!
-    
+
     func save(_ user: User) {
-        loginService.add(user)
+        do {
+            try profileService.add(user)
+        } catch {
+            output.handle(error)
+        }
     }
 }

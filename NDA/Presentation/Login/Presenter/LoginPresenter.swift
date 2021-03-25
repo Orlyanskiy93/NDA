@@ -20,9 +20,13 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
         do {
             try user.validate()
             interactor.save(user)
-            router.openProfile()
+            MainRouter.shared.open(module: .home)
         } catch {
-            view.show(error, nil)
+            view.show(error)
         }
+    }
+    
+    func handle(_ error: Error) {
+        view.show(error)
     }
 }

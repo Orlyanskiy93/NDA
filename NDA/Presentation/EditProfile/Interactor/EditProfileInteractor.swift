@@ -8,9 +8,13 @@
 
 class EditProfileInteractor: EditProfileInteractorInput {
     weak var output: EditProfileInteractorOutput!
-    var loginService: LoginService!
+    var profileService: ProfileService!
     
     func save(_ user: User) {
-        loginService.add(user)
+        do {
+            try profileService.add(user)
+        } catch {
+            output.handle(error)
+        }
     }
 }

@@ -7,32 +7,27 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
+    static var key = "user"
     var name: String
     var age: String
     var email: String
     
-    
     func validate() throws {
-        if name.contains(where: { (character) -> Bool in
-            return character.isNumber && character.isSymbol
-        }) {
-            throw ValidationError.wrongName
+        let isContains = name.contains(where: { (character) -> Bool in
+            return character.isNumber || character.isPunctuation || character.isSymbol
+        })
+        if isContains {
+            throw UserValidationError.wrongName
         }
-        if name.isEmpty {
-            throw ValidationError.emtyField
-        }
-        guard let age = Int(age) else {
-            throw ValidationError.emtyField
+        guard !name.isEmpty, let age = Int(age), !email.isEmpty else {
+            throw UserValidationError.emtyField
         }
         if age > 110 {
-            throw ValidationError.wrongAge
+            throw UserValidationError.wrongAge
         }        
         if !email.contains("@") {
-            throw ValidationError.wrongEmail
-        }
-        if email.isEmpty {
-            throw ValidationError.emtyField
+            throw UserValidationError.wrongEmail
         }
     }
 }

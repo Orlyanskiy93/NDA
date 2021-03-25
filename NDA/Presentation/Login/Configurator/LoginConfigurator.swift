@@ -11,14 +11,12 @@ import UIKit
 class LoginModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
         if let viewController = viewInput as? LoginViewController {
             configure(viewController: viewController)
         }
     }
 
     private func configure(viewController: LoginViewController) {
-
         let router = LoginRouter()
         router.transitionHandler = viewController
 
@@ -28,7 +26,7 @@ class LoginModuleConfigurator {
 
         let interactor = LoginInteractor()
         interactor.output = presenter
-        interactor.loginService = LoginServiceImp.shared
+        interactor.profileService = ProfileServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

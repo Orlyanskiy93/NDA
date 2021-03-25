@@ -9,5 +9,6 @@
 import Foundation
 
 protocol ProfileInteractorInput {
-    func loadUser()
+    func loadUser() -> User?
+    func removeUser()
 }

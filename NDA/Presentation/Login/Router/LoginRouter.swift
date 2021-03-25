@@ -11,9 +11,6 @@ class LoginRouter: LoginRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func openProfile() {
-        let promise = transitionHandler.openModule?(usingSegue: "profileSegue")
-        promise?.thenChain({ (moduleInput) -> RamblerViperModuleOutput? in
-            return nil
-        })
+        _ = transitionHandler.openModule?(usingSegue: "profileSegue")
     }
 }

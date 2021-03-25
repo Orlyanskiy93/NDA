@@ -9,5 +9,5 @@
 import Foundation
 
 protocol EditProfileInteractorOutput: class {
-
+    func handle(_ error: Error)
 }

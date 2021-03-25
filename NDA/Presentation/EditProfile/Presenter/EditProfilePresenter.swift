@@ -15,20 +15,24 @@ class EditProfilePresenter: NSObject, EditProfileModuleInput, EditProfileViewOut
 
     func viewIsReady() {
         view.setupInitialState()
-        view.fillTextFields(user)
+        view.fill(with: user)
     }
-    
+
     func edit(_ user: User) {
         do {
             try user.validate()
             interactor.save(user)
             router.returnToProfileModule()
         } catch {
-            view.show(error, nil)
+            view.show(error)
         }
     }
-    
+
     func set(_ user: User) {
         self.user = user
+    }
+    
+    func handle(_ error: Error) {
+        view.show(error)
     }
 }

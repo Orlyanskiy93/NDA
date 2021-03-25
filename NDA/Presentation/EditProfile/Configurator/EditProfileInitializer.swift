@@ -10,7 +10,7 @@ import UIKit
 
 class EditProfileModuleInitializer: NSObject {
 
-    //Connect with object on storyboard
+    // Connect with object on storyboard
     @IBOutlet weak var editprofileViewController: EditProfileViewController!
 
     override func awakeFromNib() {

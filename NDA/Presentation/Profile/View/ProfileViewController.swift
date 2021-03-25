@@ -23,27 +23,25 @@ class ProfileViewController: UIViewController, ProfileViewInput {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(false)
+        super.viewWillAppear(animated)
         output.loadUser()
     }
 
     func setupInitialState() {
-        editButton.layer.cornerRadius = 15
-        eraseButton.layer.cornerRadius = 15
+        
     }
     
-    func fillLabelsBy(_ user: User) {
+    func fillLabels(with user: User) {
         nameLabel.text = user.name
         ageLabel.text = user.age
         emailLabel.text = user.email
     }
-    
     
     @IBAction func edit(_ sender: UIButton) {
         output.openEditScreen()
     }
     
     @IBAction func erase(_ sender: Any) {
-        output.openLoginScreen()
+        output.removeUserAndHistory()
     }
 }

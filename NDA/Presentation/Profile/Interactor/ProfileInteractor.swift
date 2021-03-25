@@ -8,9 +8,19 @@
 
 class ProfileInteractor: ProfileInteractorInput {
     weak var output: ProfileInteractorOutput!
-    var loginService: LoginService!
+    var profileService: ProfileService!
     
-    func loadUser(){
-        output.user = loginService.getUser()
+    func loadUser() -> User? {
+        do {
+            let user = try profileService.getUser()
+            return user
+        } catch {
+            output.handle(error)
+            return nil
+        }
+    }
+    
+    func removeUser() {
+        profileService.removeUser()
     }
 }

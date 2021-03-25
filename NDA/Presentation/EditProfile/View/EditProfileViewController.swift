@@ -13,7 +13,7 @@ class EditProfileViewController: UIViewController, EditProfileViewInput {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var doneButton: UIButton!
-    
+
     var output: EditProfileViewOutput!
 
     override func viewDidLoad() {
@@ -22,15 +22,15 @@ class EditProfileViewController: UIViewController, EditProfileViewInput {
     }
 
     func setupInitialState() {
-        doneButton.layer.cornerRadius = 15
+        
     }
-    
-    func fillTextFields(_ user: User) {
+
+    func fill(with user: User) {
         nameTextField.text = user.name
         ageTextField.text = user.age
         emailTextField.text = user.email
     }
-    
+
     @IBAction func edit(_ sender: Any) {
         let name = nameTextField.text ?? ""
         let age = ageTextField.text ?? ""
@@ -38,5 +38,5 @@ class EditProfileViewController: UIViewController, EditProfileViewInput {
         let user = User(name: name, age: age, email: email)
         output.edit(user)
     }
-    
+
 }

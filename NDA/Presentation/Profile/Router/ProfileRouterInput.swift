@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ProfileRouterInput {
-    func openEditProfileModuleWith(_ user: User)
+    func openEditProfileModule(with user: User)
     func openLoginModule()
 }
