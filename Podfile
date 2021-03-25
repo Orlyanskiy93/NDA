@@ -6,5 +6,11 @@ target 'NDA' do
   use_frameworks!
 
   # Pods for NDA
+  pod 'Alamofire'
+  pod 'Kingfisher'
+  pod 'ObjectMapper'
+  pod 'PromiseKit'
+  pod "ViperMcFlurry"
+  pod 'SwiftLint'
 
 end
