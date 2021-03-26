@@ -11,7 +11,6 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
     weak var view: LoginViewInput!
     var interactor: LoginInteractorInput!
     var router: LoginRouterInput!
-    lazy var mainRouter = MainRouter.shared
 
     func viewIsReady() {
         view.setupInitialState()
@@ -21,7 +20,7 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
         do {
             try user.validate()
             interactor.save(user)
-            mainRouter.open(module: .home)
+            MainRouter.shared.open(module: .home)
         } catch {
             view.show(error)
         }

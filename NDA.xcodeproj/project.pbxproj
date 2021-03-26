@@ -166,7 +166,6 @@
 				6CAD66F29623AA3B17216D0C /* HomeRouterInput.swift */,
 				4748E96E9E654DFFD2FC732C /* HomeRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -264,6 +263,7 @@
 				574F522614A061A043332A99 /* Login */,
 				F8BAF6F9B63E67205B74429E /* Profile */,
 				8B8D2F2A838242304D4BB0F8 /* EditProfile */,
+				E4C58474A009E43010C41E30 /* Home */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -359,7 +359,6 @@
 				5D02BF50260641780053E96C /* SupportingFiles */,
 				5D783253260633CD00156AC1 /* Assets.xcassets */,
 				5D783258260633CD00156AC1 /* Info.plist */,
-				E4C58474A009E43010C41E30 /* Home */,
 			);
 			path = NDA;
 			sourceTree = "<group>";
@@ -381,7 +380,6 @@
 				6AAA9185963E7D5CC1A904B7 /* HomeInteractorOutput.swift */,
 				328531E896F5F394FFF9CE5C /* HomeInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -403,7 +401,6 @@
 				2BFAB5C2995B02494CCD32DD /* HomeModuleInput.swift */,
 				3B62BBB16BABF7D609771EE8 /* HomePresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -468,7 +465,6 @@
 				4E31B6AE8C3309C4D0A4243B /* HomeViewOutput.swift */,
 				18045ABD4782D0117CAF01F7 /* HomeViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -481,7 +477,6 @@
 				0CC90DC570E4AB848779408F /* Router */,
 				EFF6DADA930F87F2C4FBC206 /* Configurator */,
 			);
-			name = Home;
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -510,7 +505,6 @@
 				C8F41E7CE5F5102FD0B7F7C6 /* HomeConfigurator.swift */,
 				1250BB0D59D9F8AD400F4376 /* HomeInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};

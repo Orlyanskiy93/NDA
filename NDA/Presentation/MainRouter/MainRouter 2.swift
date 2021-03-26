@@ -13,6 +13,7 @@ class MainRouter {
     
     private init() {
         window = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window
+
     }
         
     func open(module: Module) {
