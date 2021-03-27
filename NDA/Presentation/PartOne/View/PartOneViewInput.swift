@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartOneViewInput: class {
+protocol PartOneViewInput: class, UIViewInput {
     func setupInitialState()
     func show(_ question: Question)
 }

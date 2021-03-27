@@ -7,7 +7,7 @@
 //
 
 protocol PartOneViewOutput {
-    var score: Int { set get }
+    var score: Int { get set }
     func viewIsReady()
     func nextQuestion()
 }

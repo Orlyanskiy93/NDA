@@ -31,6 +31,9 @@ class PartOneViewController: UIViewController, PartOneViewInput {
         slider.value = 5
     }
     
+    @IBAction func valueChange(_ sender: UISlider) {
+    }
+    
     @IBAction func chooseAnswer(_ sender: UIButton) {
         output.nextQuestion()
         output.score += Int(slider.value)

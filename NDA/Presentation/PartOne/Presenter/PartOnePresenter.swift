@@ -25,7 +25,7 @@ class PartOnePresenter: PartOneModuleInput, PartOneViewOutput, PartOneInteractor
             index += 1
             view.show(questions[index])
         } else {
-            //TODO: Open Part 2
+            view.show(title: "Congratulations, you scored \(score) points", message: "Go to the next part")
         }
     }
 }

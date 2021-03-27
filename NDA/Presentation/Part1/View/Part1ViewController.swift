@@ -18,8 +18,6 @@ class Part1ViewController: UIViewController, Part1ViewInput {
         output.viewIsReady()
     }
 
-
-    // MARK: Part1ViewInput
     func setupInitialState() {
     }
 }
