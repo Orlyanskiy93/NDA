@@ -9,6 +9,8 @@
 import UIKit
 
 class PartOneViewController: UIViewController, PartOneViewInput {
+    
+    @IBOutlet var numberLabels: [UILabel]!
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var cannotCertainLabel: UILabel!
@@ -29,17 +31,29 @@ class PartOneViewController: UIViewController, PartOneViewInput {
         moderatelyCertainLabel.text = String.PartOne.moderatelyCertain
         highlyCertainLabel.text = String.PartOne.highlyCertain
         slider.value = 5
+        highlitingText(with: slider.value)
+    }
+    
+    func highlitingText(with sliderValue: Float) {
+        let index = Int(sliderValue.rounded())
+        numberLabels.forEach { (label) in
+            label.font = UIFont.systemFont(ofSize: 17)
+        }
+        numberLabels[index].font = UIFont.systemFont(ofSize: 25)
+        numberLabels[index].font = UIFont.boldSystemFont(ofSize: 25)
     }
     
     @IBAction func valueChange(_ sender: UISlider) {
+        highlitingText(with: sender.value)
     }
     
     @IBAction func chooseAnswer(_ sender: UIButton) {
-        output.nextQuestion()
-        output.score += Int(slider.value)
+        output.answerDidChosen(with: Int(slider.value))
+        slider.value = 5
+        highlitingText(with: slider.value)
     }
     
-    func show(_ question: Question) {
-        questionLabel.text = question.title
+    func show(_ question: QuestionPartOne) {
+        questionLabel.text = question
     }
 }

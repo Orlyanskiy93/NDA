@@ -8,5 +8,5 @@
 
 protocol PartOneViewInput: class, UIViewInput {
     func setupInitialState()
-    func show(_ question: Question)
+    func show(_ question: QuestionPartOne)
 }

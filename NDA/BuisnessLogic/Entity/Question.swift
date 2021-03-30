@@ -9,4 +9,23 @@ import Foundation
 
 struct Question {
     var title: String
+    var answers: [String]?
 }
+
+
+
+// 2) второй тип вопроса
+
+// - текст
+// - 4 варианта ответа
+
+// dариант ответа:
+// - правильный?
+// - text?image?
+
+// ответ:
+
+// - вопрос
+// - ответ
+
+
