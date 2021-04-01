@@ -11,7 +11,6 @@ import UIKit
 class PartTwoModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
         if let viewController = viewInput as? PartTwoViewController {
             configure(viewController: viewController)
         }

@@ -12,8 +12,7 @@ class PartOnePresenter: PartOneModuleInput, PartOneViewOutput, PartOneInteractor
     var router: PartOneRouterInput!
     var questions = [QuestionPartOne]()
     var answers = [AnswerPartOne]()
-    var index = 0
-    var score: Int = 0
+    var index: Int = 0
 
     func viewIsReady() {
         questions = interactor.loadQuestions()
@@ -21,15 +20,14 @@ class PartOnePresenter: PartOneModuleInput, PartOneViewOutput, PartOneInteractor
         view.show(questions[index])
     }
         
+    // value
     func answerDidChosen(with sliderValue: Int) {
         if index + 1 != questions.count {
             index += 1
-            score += sliderValue
             view.show(questions[index])
             let answer = AnswerPartOne(question: questions[index], value: sliderValue)
             answers.append(answer)
         } else {
-            view.show(title: "Congratulations, you scored \(score) points", message: "Go to the next part")
             print(answers)
         }
     }

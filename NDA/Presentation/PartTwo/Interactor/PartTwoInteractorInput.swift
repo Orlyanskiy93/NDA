@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PartTwoInteractorInput {
-    var questions: [Question] { get }
+    var questions: [QuestionPartTwo] { get }
 }

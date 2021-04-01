@@ -9,5 +9,5 @@ import Foundation
 
 protocol QuestionBank {
     func getSelfEfficacyQuestions() -> [QuestionPartOne]
-    func getShortAnswerQuestions() -> [Question]
+    func getShortAnswerQuestions() -> [QuestionPartTwo]
 }

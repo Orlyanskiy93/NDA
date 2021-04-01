@@ -26,21 +26,25 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     }
 
     func setupInitialState() {
+        setupLabels()
+        resetSlider()
+    }
+    
+    func setupLabels() {
         instructionsLabel.text = String.PartOne.instructions
         cannotCertainLabel.text = String.PartOne.cannotCertain
         moderatelyCertainLabel.text = String.PartOne.moderatelyCertain
         highlyCertainLabel.text = String.PartOne.highlyCertain
-        slider.value = 5
-        highlitingText(with: slider.value)
     }
     
     func highlitingText(with sliderValue: Float) {
         let index = Int(sliderValue.rounded())
+        let baseFontSize: CGFloat = 17
+        let increasedFontSize: CGFloat = 25
         numberLabels.forEach { (label) in
-            label.font = UIFont.systemFont(ofSize: 17)
+            label.font = UIFont.systemFont(ofSize: baseFontSize)
         }
-        numberLabels[index].font = UIFont.systemFont(ofSize: 25)
-        numberLabels[index].font = UIFont.boldSystemFont(ofSize: 25)
+        numberLabels[index].font = UIFont.boldSystemFont(ofSize: increasedFontSize)
     }
     
     @IBAction func valueChange(_ sender: UISlider) {
@@ -49,7 +53,12 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     
     @IBAction func chooseAnswer(_ sender: UIButton) {
         output.answerDidChosen(with: Int(slider.value))
-        slider.value = 5
+        resetSlider()
+    }
+    
+    func resetSlider() {
+        let defaultValue: Float = 5
+        slider.value = defaultValue
         highlitingText(with: slider.value)
     }
     

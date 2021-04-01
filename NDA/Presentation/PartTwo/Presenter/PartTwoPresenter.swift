@@ -18,22 +18,15 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     
     func loadQuestion() {
         let question = interactor.questions[index]
-
-        let contains = question.answers?.first?.contains(where: { (character) -> Bool in
-            return character.isNumber
-        })
-        guard let isTextAnswer = contains else {
-            return
-        }
-        if isTextAnswer {
-            view.fillButtonsTitle(with: question)
-        } else {
+        if question.type == .image {
             view.fillButtonsBackground(with: question)
+        } else {
+            view.fillButtonsTitle(with: question)
         }
     }
     
     func nextQuestion() {
-        if index + 1 != interactor.questions.count {
+        if (index + 1) != interactor.questions.count {
             index += 1
             loadQuestion()
         } else {

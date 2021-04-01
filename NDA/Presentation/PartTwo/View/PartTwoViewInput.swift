@@ -8,6 +8,6 @@
 
 protocol PartTwoViewInput: class {
     func setupInitialState()
-    func fillButtonsTitle(with arithmeticQuestion: Question)
-    func fillButtonsBackground(with identifyQuestion: Question)
+    func fillButtonsTitle(with arithmeticQuestion: QuestionPartTwo)
+    func fillButtonsBackground(with identifyQuestion: QuestionPartTwo)
 }

@@ -11,6 +11,12 @@
         <!--Part One View Controller-->
         <scene sceneID="ANJ-9W-yKT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i5c-Yt-1o9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="ghh-Ux-cb9" customClass="PartOneModuleInitializer" customModule="NDA" customModuleProvider="target">
+                    <connections>
+                        <outlet property="partoneViewController" destination="tLz-cS-MhN" id="Pg4-35-vvc"/>
+                    </connections>
+                </customObject>
                 <viewController id="tLz-cS-MhN" customClass="PartOneViewController" customModule="NDA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pzM-dV-9Zr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -186,14 +192,8 @@
                         <outletCollection property="numberLabels" destination="Hkw-e4-w9Q" collectionClass="NSMutableArray" id="ITv-dQ-lil"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i5c-Yt-1o9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="ghh-Ux-cb9" customClass="PartOneModuleInitializer" customModule="NDA" customModuleProvider="target">
-                    <connections>
-                        <outlet property="partoneViewController" destination="tLz-cS-MhN" id="Pg4-35-vvc"/>
-                    </connections>
-                </customObject>
             </objects>
-            <point key="canvasLocation" x="3408.6956521739135" y="45.535714285714285"/>
+            <point key="canvasLocation" x="-2190" y="177"/>
         </scene>
     </scenes>
     <resources>

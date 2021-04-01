@@ -10,8 +10,8 @@ import Foundation
 class QuestionBankImp: QuestionBank {
     static var shared = QuestionBankImp()
     private var selfEfficacyQuestions = [QuestionPartOne]()
-    private var arithmeticQuestions = [Question]()
-    private var identifyQuestions = [Question]()
+    private var arithmeticQuestions = [QuestionPartTwo]()
+    private var identifyQuestions = [QuestionPartTwo]()
     
     private init() {
         prepareQuestions()
@@ -21,7 +21,7 @@ class QuestionBankImp: QuestionBank {
         return selfEfficacyQuestions
     }
     
-    func getShortAnswerQuestions() -> [Question] {
+    func getShortAnswerQuestions() -> [QuestionPartTwo] {
         let questions = arithmeticQuestions + identifyQuestions
         return questions.shuffled()
     }
@@ -29,7 +29,7 @@ class QuestionBankImp: QuestionBank {
     private func prepareQuestions() {
         prepareSelfEfficacyQuestions()
         prepareArithmeticQuestions(count: 4)
-        prepareIdentifyQuestions()
+        prepareIdentifyQuestions(count: 4)
     }
     
     private func prepareSelfEfficacyQuestions() {
@@ -47,45 +47,85 @@ class QuestionBankImp: QuestionBank {
     }
     
     private func prepareArithmeticQuestions(count: Int) {
-        var questions = [Question]()
+        var questions = [QuestionPartTwo]()
         for number in 0..<count {
+            let firstNumber = Int.random(in: 1...99)
+            let secondNumber = Int.random(in: 1..<firstNumber)
+            var rightAnswer = 0
+            var title = ""
+            let range = (rightAnswer - 5)...(rightAnswer + 5)
             if number % 2 == 0 {
-                let firstNumber = Int.random(in: 1...99)
-                let secondNumber = Int.random(in: 1...99)
-                let title = "What is \(firstNumber) + \(secondNumber)?"
-                let rightAnswer = firstNumber + secondNumber
-                let range = (rightAnswer - 5)...(rightAnswer + 5)
-                let answers = ["\(rightAnswer)", "\(Int.random(in: range))", "\(Int.random(in: range))", "\(Int.random(in: range))"]
-                let question = Question(title: title, answers: answers.shuffled())
-                questions.append(question)
+                title = "What is \(firstNumber) + \(secondNumber)?"
+                rightAnswer = firstNumber + secondNumber
             } else {
-                let firstNumber = Int.random(in: 1...99)
-                let secondNumber = Int.random(in: 1..<firstNumber)
-                let title = "What is \(firstNumber) - \(secondNumber)?"
-                let rightAnswer = firstNumber - secondNumber
-                let range = (rightAnswer - 5)...(rightAnswer + 5)
-                let answers = ["\(rightAnswer)", "\(Int.random(in: range))", "\(Int.random(in: range))", "\(Int.random(in: range))"]
-                let question = Question(title: title, answers: answers.shuffled())
+                title = "What is \(firstNumber) - \(secondNumber)?"
+                rightAnswer = firstNumber - secondNumber
+            }
+            let options = [
+                Option(value: "\(rightAnswer)", type: .text, isRight: true),
+                Option(value: "\(Int.random(in: range))", type: .text),
+                Option(value: "\(Int.random(in: range))", type: .text),
+                Option(value: "\(Int.random(in: range))", type: .text)
+            ]
+            do {
+                let question = try QuestionPartTwo(title: title, options: options)
                 questions.append(question)
+            } catch {
+                print(error)
             }
         }
         arithmeticQuestions.append(contentsOf: questions)
     }
     
-    private func prepareIdentifyQuestions() {
-        let images = ["bird", "zebra", "cow", "rooster", "rabbit", "sheep", "tiger",
-                      "koala", "pig", "turtle", "owl", "buffalo", "goat", "monkey",
-                      "rhino", "horse"]
-        let questions = [
-            Question(title: "Please identify the picture of a \(images[0])",
-                     answers: ["\(images[0])", "\(images[1])", "\(images[2])", "\(images[3])"]),
-            Question(title: "Please identify the picture of a \(images[4])",
-                     answers: ["\(images[5])", "\(images[4])", "\(images[6])", "\(images[7])"]),
-            Question(title: "Please identify the picture of a \(images[8])",
-                     answers: ["\(images[9])", "\(images[10])", "\(images[11])", "\(images[8])"]),
-            Question(title: "Please identify the picture of a \(images[12])",
-                     answers: ["\(images[13])", "\(images[12])", "\(images[14])", "\(images[15])"])
+    private func prepareIdentifyQuestions(count: Int) {
+        var allOptions = ["zebra", "cow", "rooster", "rabbit", "tiger", "koala", "turtle", "owl",
+                       "buffalo", "goat", "monkey", "rhino", "bird", "sheep", "pig", "horse"]
+        var chosenOptions = [String]()
+        var randomIndex: Int {
+            return Int.random(in: 0..<allOptions.count)
+        }
+        
+        for _ in 0..<count {
+            let index = randomIndex
+            chosenOptions.append(allOptions[index])
+            allOptions.remove(at: index)
+        }
+        
+        let firstQuestionOptions = [
+            Option(value: chosenOptions[0], type: .image, isRight: true),
+            Option(value: allOptions[randomIndex], type: .image),
+            Option(value: allOptions[randomIndex], type: .image),
+            Option(value: allOptions[randomIndex], type: .image)
         ]
-        identifyQuestions.append(contentsOf: questions)
+        let secondQuestionOptions = [
+            Option(value: chosenOptions[1], type: .image, isRight: true),
+            Option(value: allOptions[randomIndex], type: .image),
+            Option(value: allOptions[randomIndex], type: .image),
+            Option(value: allOptions[randomIndex], type: .image)
+        ]
+        let thirdQuestionOptions = [
+            Option(value: chosenOptions[2], type: .image, isRight: true),
+            Option(value: allOptions[randomIndex], type: .image),
+            Option(value: allOptions[randomIndex], type: .image),
+            Option(value: allOptions[randomIndex], type: .image)
+        ]
+        let fourthQuestionOptions = [
+            Option(value: chosenOptions[3], type: .image, isRight: true),
+            Option(value: allOptions[randomIndex], type: .image),
+            Option(value: allOptions[randomIndex], type: .image),
+            Option(value: allOptions[randomIndex], type: .image)
+        ]
+        
+        let title = "Please identify picture of "
+        do {
+            let firstQuestion = try QuestionPartTwo(title: title + chosenOptions[0], options: firstQuestionOptions)
+            let secondQuestion = try QuestionPartTwo(title: title + chosenOptions[1], options: secondQuestionOptions)
+            let thirdQuestion = try QuestionPartTwo(title: title + chosenOptions[2], options: thirdQuestionOptions)
+            let fourthQuestion = try QuestionPartTwo(title: title + chosenOptions[3], options: fourthQuestionOptions)
+            let questions = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion]
+            identifyQuestions.append(contentsOf: questions)
+        } catch {
+            print(error)
+        }
     }
 }

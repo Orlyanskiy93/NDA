@@ -109,11 +109,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstAnswerButton" destination="vb9-zq-d90" id="2Yz-VM-XaD"/>
-                        <outlet property="fourthAnswerButton" destination="sOJ-h3-Ycg" id="RfQ-6U-Bgy"/>
                         <outlet property="questionLabel" destination="WXz-WH-Tq1" id="42L-Cp-lPX"/>
-                        <outlet property="secondAnswerButton" destination="wkG-dT-aJC" id="VoL-3Y-Ysk"/>
-                        <outlet property="thirdAnswerButton" destination="wbU-gV-6w5" id="6je-wq-Sxp"/>
+                        <outletCollection property="optionButtons" destination="vb9-zq-d90" collectionClass="NSMutableArray" id="BhT-Yp-u39"/>
+                        <outletCollection property="optionButtons" destination="wkG-dT-aJC" collectionClass="NSMutableArray" id="IH8-MS-rfA"/>
+                        <outletCollection property="optionButtons" destination="wbU-gV-6w5" collectionClass="NSMutableArray" id="laM-wu-xaO"/>
+                        <outletCollection property="optionButtons" destination="sOJ-h3-Ycg" collectionClass="NSMutableArray" id="JcZ-tG-5ys"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIj-9U-QWe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

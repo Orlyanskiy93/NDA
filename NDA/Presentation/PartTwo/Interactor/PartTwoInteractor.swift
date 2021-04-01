@@ -10,7 +10,7 @@ class PartTwoInteractor: PartTwoInteractorInput {
     weak var output: PartTwoInteractorOutput!
     var questionBank: QuestionBank!
     
-    var questions: [Question] {
+    var questions: [QuestionPartTwo] {
         return questionBank.getShortAnswerQuestions()
     }
 }
