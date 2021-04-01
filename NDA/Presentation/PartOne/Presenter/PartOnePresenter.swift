@@ -10,22 +10,25 @@ class PartOnePresenter: PartOneModuleInput, PartOneViewOutput, PartOneInteractor
     weak var view: PartOneViewInput!
     var interactor: PartOneInteractorInput!
     var router: PartOneRouterInput!
-    var questions = [Question]()
-    var index = 0
-    var score: Int = 0
+    var questions = [QuestionPartOne]()
+    var answers = [AnswerPartOne]()
+    var index: Int = 0
 
     func viewIsReady() {
         questions = interactor.loadQuestions()
         view.setupInitialState()
         view.show(questions[index])
     }
-    
-    func nextQuestion() {
+        
+    // value
+    func answerDidChosen(with sliderValue: Int) {
         if index + 1 != questions.count {
             index += 1
             view.show(questions[index])
+            let answer = AnswerPartOne(question: questions[index], value: sliderValue)
+            answers.append(answer)
         } else {
-            view.show(title: "Congratulations, you scored \(score) points", message: "Go to the next part")
+            print(answers)
         }
     }
 }

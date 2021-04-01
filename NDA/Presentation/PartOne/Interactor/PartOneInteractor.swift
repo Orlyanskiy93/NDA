@@ -10,7 +10,7 @@ class PartOneInteractor: PartOneInteractorInput {
     weak var output: PartOneInteractorOutput!
     var questionBank: QuestionBank!
     
-    func loadQuestions() -> [Question] {
+    func loadQuestions() -> [QuestionPartOne] {
         return questionBank.getSelfEfficacyQuestions()
     }
 }

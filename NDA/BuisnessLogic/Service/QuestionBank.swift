@@ -8,5 +8,6 @@
 import Foundation
 
 protocol QuestionBank {
-    func getSelfEfficacyQuestions() -> [Question]
+    func getSelfEfficacyQuestions() -> [QuestionPartOne]
+    func getShortAnswerQuestions() -> [QuestionPartTwo]
 }

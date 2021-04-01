@@ -9,19 +9,24 @@
 /* Begin PBXBuildFile section */
 		00D8E072B54F39DD85A467E7 /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C69DB48C127B70AEB8425 /* ProfileViewOutput.swift */; };
 		017CFD2C32D1ED42AF792AC3 /* PartOneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35109BBB211336601A02486 /* PartOneConfigurator.swift */; };
+		01D0D8FA14B04F103ABD28ED /* PartTwoInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A583E61C142C0CC53E0C0E /* PartTwoInitializer.swift */; };
 		02A2019FD614A6E8A1B7D440 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F41E7CE5F5102FD0B7F7C6 /* HomeConfigurator.swift */; };
 		08DF8CBA9767B1410DA537D5 /* HomeViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0BD40526FDBE1446EE051C /* HomeViewInput.swift */; };
 		0CF9EB8EC5859B8130C098B5 /* LoginViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B71BC5CA949F2608A1A5ED /* LoginViewOutput.swift */; };
 		0D6C7DB7F3FE987459DF434E /* PartOneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0582A9BCAF9D69B9722A0A /* PartOneRouter.swift */; };
+		0D7456190E7D47C68C2120CC /* PartTwoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB2734096B2BF7E541D0564 /* PartTwoModuleInput.swift */; };
 		10ACB66A7B8744EF55FB4403 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35159AF09DF75A2366860F4C /* ProfileConfigurator.swift */; };
 		1223194DED678D1950653EEF /* LoginRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A373196D936CC5F236E14 /* LoginRouterInput.swift */; };
+		15D43D983B87B7FFD8E55355 /* PartTwoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2701761A66E7C34D4307C /* PartTwoViewOutput.swift */; };
 		1646F13BC9443402DB8FE154 /* LoginViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2679E509D7A62456F5F9A6B /* LoginViewInput.swift */; };
 		17FBD534EBE6710837F7C99F /* PartOneInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81296C26953E330826FE502A /* PartOneInteractorInput.swift */; };
 		17FEC463E3988ED569D7D735 /* EditProfileInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BA74ABAF429731418FB2C /* EditProfileInitializer.swift */; };
 		192DEE3B04703E1D8DC5ED80 /* EditProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC96045CA29338C9EB54008 /* EditProfileRouter.swift */; };
 		1B5AF258AC04A3BD49207A88 /* EditProfileViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDF009FEE85E74C3291D3D8 /* EditProfileViewInput.swift */; };
 		2C9B7F70C19A715205CAAAD1 /* ProfileRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE99706CD905B1F205DA090 /* ProfileRouterInput.swift */; };
+		2E0690C8CB8A641AF0325D9A /* PartTwoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0D45EF187CF9399AAD7B70 /* PartTwoRouter.swift */; };
 		3358CAA52155747380817F4C /* PartOnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AB4B5A401C54704205833 /* PartOnePresenter.swift */; };
+		378DA78916A92911B3A5828E /* PartTwoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2CF88F83BA9F5BAA82FAA1 /* PartTwoConfigurator.swift */; };
 		4414DA36759B5E4B0536E26C /* LoginModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE05D7DC7D0F5FCFB1FBBC5 /* LoginModuleInput.swift */; };
 		441F3317B9AEFEDA1B6AFAB4 /* PartOneRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923790B8C0376BF3C5D38BE7 /* PartOneRouterInput.swift */; };
 		471F7AAC7D4E093EB84D74F0 /* EditProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E6E0A9B0BEAAC407EAEA /* EditProfileViewOutput.swift */; };
@@ -38,12 +43,17 @@
 		5D02BF94260A6FCF0053E96C /* ProfileServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */; };
 		5D02BF9B260A7D890053E96C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF9A260A7D890053E96C /* RoundedButton.swift */; };
 		5D4BAB7309550600B010EA3B /* LoginInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7C7D50B4ADBD3295F62F3 /* LoginInitializer.swift */; };
-		5D4EE0CC260F1AD5004A6AE4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0CB260F1AD5004A6AE4 /* Question.swift */; };
 		5D4EE0CF260F1B0B004A6AE4 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0CE260F1B0B004A6AE4 /* QuestionBank.swift */; };
 		5D4EE0D2260F1BC4004A6AE4 /* QuestionBankImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0D1260F1BC4004A6AE4 /* QuestionBankImp.swift */; };
 		5D4EE0D6260F61E0004A6AE4 /* PartOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EE0D5260F61E0004A6AE4 /* PartOne.storyboard */; };
 		5D4EE0D9260F61F5004A6AE4 /* PartTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EE0D8260F61F5004A6AE4 /* PartTwo.storyboard */; };
 		5D4EE0DC260F6230004A6AE4 /* PartThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EE0DB260F6230004A6AE4 /* PartThree.storyboard */; };
+		5D4EE0EE261322D7004A6AE4 /* QuestionPartOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0ED261322D7004A6AE4 /* QuestionPartOne.swift */; };
+		5D4EE0F126132301004A6AE4 /* AnswerPartOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0F026132301004A6AE4 /* AnswerPartOne.swift */; };
+		5D4EE0F926135D3A004A6AE4 /* QuestionPartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0F826135D3A004A6AE4 /* QuestionPartTwo.swift */; };
+		5D4EE0FC261360F3004A6AE4 /* QuestionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0FB261360F3004A6AE4 /* QuestionError.swift */; };
+		5D4EE10026136B31004A6AE4 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0FF26136B31004A6AE4 /* Option.swift */; };
+		5D4EE106261493AD004A6AE4 /* AnswerPartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE105261493AD004A6AE4 /* AnswerPartTwo.swift */; };
 		5D59042B260CFBE900988CCA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59042A260CFBE900988CCA /* MainRouter.swift */; };
 		5D59042F260D071600988CCA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D59042E260D071600988CCA /* Login.storyboard */; };
 		5D590435260D0E6E00988CCA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D590434260D0E6E00988CCA /* Home.storyboard */; };
@@ -57,11 +67,15 @@
 		63F9B80D50E512200B13E43F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CE5B39421D8FD06FA75D0 /* LoginPresenter.swift */; };
 		67CCE31341F23822B348D3F3 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328531E896F5F394FFF9CE5C /* HomeInteractor.swift */; };
 		686BBC18B32EA1CB240E6531 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815E26F4E694FA367662CB7D /* ProfileInteractor.swift */; };
+		6F884C196E99FBA6DCCA8740 /* PartTwoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1943F113C75420EBA4E9559 /* PartTwoInteractor.swift */; };
 		7096C0DAFF12134A51E323C6 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748E96E9E654DFFD2FC732C /* HomeRouter.swift */; };
 		79921E2284BBAAABDB32E79E /* PartOneViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12266DAB857B20377C19B20D /* PartOneViewInput.swift */; };
+		7CD2E0CCDD5D634D12C92757 /* PartTwoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC74527F105CE8B926E2C69 /* PartTwoPresenter.swift */; };
 		84442B879FAAC80F02358C14 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3836251C4F246AF05F1EBAC /* LoginConfigurator.swift */; };
+		8832B6947C68A4799FBD1E37 /* PartTwoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAC728BFB15FF11CBD60B8F /* PartTwoInteractorOutput.swift */; };
 		8A064467CA178D331FCFCCC4 /* EditProfileRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A760EEE5AB523E84670E73C /* EditProfileRouterInput.swift */; };
 		8E29A2EB7A600EA95244F955 /* PartOneModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF1516E6B4F2094C08084A /* PartOneModuleInput.swift */; };
+		9236D9FC29E43A74B0EF3AD8 /* PartTwoInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB94F5E3CC04CAD33FB569 /* PartTwoInteractorInput.swift */; };
 		9281AF0CE5C3E4925E07BF69 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96530F8243041035367204A3 /* EditProfilePresenter.swift */; };
 		929BC0907F8C0F3D71DF46A4 /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAB5C2995B02494CCD32DD /* HomeModuleInput.swift */; };
 		932538C45D04C98FB5895662 /* PartOneViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F32E4A6EBB7A4E504F9C4 /* PartOneViewOutput.swift */; };
@@ -82,11 +96,14 @@
 		C3A59BE6961D4DCA53EE99A1 /* PartOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1F389A3C1F113A32E1E99D /* PartOneViewController.swift */; };
 		C3AC3052914D8B18A35BFEEE /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384BCF37B3609A116E5572A /* ProfilePresenter.swift */; };
 		D191874D5C36A451DA90C843 /* HomeRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD66F29623AA3B17216D0C /* HomeRouterInput.swift */; };
+		D2E7C08E35978B5447637BC6 /* PartTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C25DD378077A93DFEC4436D /* PartTwoViewController.swift */; };
 		D7FFAEC2AD9579F9F0CB41BA /* EditProfileInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9EC0A84C6E57D93D3614CA /* EditProfileInteractorOutput.swift */; };
 		DAA4C9E5D01807280EC340BC /* HomeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250BB0D59D9F8AD400F4376 /* HomeInitializer.swift */; };
 		DB8BF6EF6BA84D52FF059BD0 /* ProfileInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AEF53A284D858D032C0C3B /* ProfileInitializer.swift */; };
 		E8BD3F4CDD21FFF85F607F8A /* PartOneInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1009DE4651ADE056484BDB /* PartOneInteractorOutput.swift */; };
 		EE76887613F203855534D3C1 /* ProfileInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738189C56B2EFD04A9D3567 /* ProfileInteractorInput.swift */; };
+		F0DC894FBA61DAD937D7A777 /* PartTwoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639284663B2D031B24B040C5 /* PartTwoRouterInput.swift */; };
+		F2351AB1EE97B1F5CA9C8BC1 /* PartTwoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D075EF3A5BCDA41F7DC8843 /* PartTwoViewInput.swift */; };
 		F2BBA9C05FDBC006DCCE9760 /* HomeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31B6AE8C3309C4D0A4243B /* HomeViewOutput.swift */; };
 		F674D4F3309C281B998F3854 /* ProfileInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A430E1045FA1BEE01AEDF6 /* ProfileInteractorOutput.swift */; };
 		F89FCAC98665C38810FA8280 /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5C3B93F2DBE8523749A686 /* LoginInteractorOutput.swift */; };
@@ -102,7 +119,9 @@
 		18045ABD4782D0117CAF01F7 /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1A7A157AF2D4694EF668B4BB /* Pods-NDA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDA.debug.xcconfig"; path = "Target Support Files/Pods-NDA/Pods-NDA.debug.xcconfig"; sourceTree = "<group>"; };
 		1E0582A9BCAF9D69B9722A0A /* PartOneRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneRouter.swift; sourceTree = "<group>"; };
+		20EB94F5E3CC04CAD33FB569 /* PartTwoInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoInteractorInput.swift; sourceTree = "<group>"; };
 		2BFAB5C2995B02494CCD32DD /* HomeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeModuleInput.swift; sourceTree = "<group>"; };
+		2C25DD378077A93DFEC4436D /* PartTwoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoViewController.swift; sourceTree = "<group>"; };
 		2EC96045CA29338C9EB54008 /* EditProfileRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileRouter.swift; sourceTree = "<group>"; };
 		315F67BF625E044E56CB8C18 /* Pods-NDA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDA.release.xcconfig"; path = "Target Support Files/Pods-NDA/Pods-NDA.release.xcconfig"; sourceTree = "<group>"; };
 		328531E896F5F394FFF9CE5C /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -129,12 +148,17 @@
 		5D02BF8D26092B8C0053E96C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceError.swift; sourceTree = "<group>"; };
 		5D02BF9A260A7D890053E96C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		5D4EE0CB260F1AD5004A6AE4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5D4EE0CE260F1B0B004A6AE4 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		5D4EE0D1260F1BC4004A6AE4 /* QuestionBankImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankImp.swift; sourceTree = "<group>"; };
 		5D4EE0D5260F61E0004A6AE4 /* PartOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartOne.storyboard; sourceTree = "<group>"; };
 		5D4EE0D8260F61F5004A6AE4 /* PartTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartTwo.storyboard; sourceTree = "<group>"; };
 		5D4EE0DB260F6230004A6AE4 /* PartThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartThree.storyboard; sourceTree = "<group>"; };
+		5D4EE0ED261322D7004A6AE4 /* QuestionPartOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPartOne.swift; sourceTree = "<group>"; };
+		5D4EE0F026132301004A6AE4 /* AnswerPartOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPartOne.swift; sourceTree = "<group>"; };
+		5D4EE0F826135D3A004A6AE4 /* QuestionPartTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPartTwo.swift; sourceTree = "<group>"; };
+		5D4EE0FB261360F3004A6AE4 /* QuestionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionError.swift; sourceTree = "<group>"; };
+		5D4EE0FF26136B31004A6AE4 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		5D4EE105261493AD004A6AE4 /* AnswerPartTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPartTwo.swift; sourceTree = "<group>"; };
 		5D59042A260CFBE900988CCA /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		5D59042E260D071600988CCA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5D590434260D0E6E00988CCA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -146,15 +170,21 @@
 		5D783256260633CD00156AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D783258260633CD00156AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		638B7EC0A3B0F15761A9E184 /* EditProfileInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileInteractorInput.swift; sourceTree = "<group>"; };
+		639284663B2D031B24B040C5 /* PartTwoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoRouterInput.swift; sourceTree = "<group>"; };
 		654CBFEA48E6626D4744CA40 /* PartOneInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneInitializer.swift; sourceTree = "<group>"; };
+		6A2CF88F83BA9F5BAA82FAA1 /* PartTwoConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoConfigurator.swift; sourceTree = "<group>"; };
 		6AAA9185963E7D5CC1A904B7 /* HomeInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorOutput.swift; sourceTree = "<group>"; };
 		6CAD66F29623AA3B17216D0C /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
 		6D1009DE4651ADE056484BDB /* PartOneInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneInteractorOutput.swift; sourceTree = "<group>"; };
+		6DAC728BFB15FF11CBD60B8F /* PartTwoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoInteractorOutput.swift; sourceTree = "<group>"; };
 		7A760EEE5AB523E84670E73C /* EditProfileRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileRouterInput.swift; sourceTree = "<group>"; };
 		7B9EC0A84C6E57D93D3614CA /* EditProfileInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileInteractorOutput.swift; sourceTree = "<group>"; };
 		7BE84E24BA164F859669B3E6 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		80A583E61C142C0CC53E0C0E /* PartTwoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoInitializer.swift; sourceTree = "<group>"; };
 		81296C26953E330826FE502A /* PartOneInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneInteractorInput.swift; sourceTree = "<group>"; };
 		815E26F4E694FA367662CB7D /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		8BA2701761A66E7C34D4307C /* PartTwoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoViewOutput.swift; sourceTree = "<group>"; };
+		8D075EF3A5BCDA41F7DC8843 /* PartTwoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoViewInput.swift; sourceTree = "<group>"; };
 		8EB828839382F65DE3D36AA3 /* ProfileModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileModuleInput.swift; sourceTree = "<group>"; };
 		90FB4E7E0B47AB74BFBFF151 /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		9199689686D3BC630544756D /* EditProfileConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileConfigurator.swift; sourceTree = "<group>"; };
@@ -163,6 +193,7 @@
 		9C8CE5B39421D8FD06FA75D0 /* LoginPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		9DE05D7DC7D0F5FCFB1FBBC5 /* LoginModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleInput.swift; sourceTree = "<group>"; };
 		ACFF1516E6B4F2094C08084A /* PartOneModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneModuleInput.swift; sourceTree = "<group>"; };
+		B1943F113C75420EBA4E9559 /* PartTwoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoInteractor.swift; sourceTree = "<group>"; };
 		B31D11D90CBECD541DE7E33E /* EditProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		B384BCF37B3609A116E5572A /* ProfilePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		B7C4250A0DAAD92E3600B0B6 /* ProfileRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
@@ -170,8 +201,11 @@
 		C2B71BC5CA949F2608A1A5ED /* LoginViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
 		C738189C56B2EFD04A9D3567 /* ProfileInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractorInput.swift; sourceTree = "<group>"; };
 		C8F41E7CE5F5102FD0B7F7C6 /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		CC0D45EF187CF9399AAD7B70 /* PartTwoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoRouter.swift; sourceTree = "<group>"; };
+		CCB2734096B2BF7E541D0564 /* PartTwoModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoModuleInput.swift; sourceTree = "<group>"; };
 		D11AB4B5A401C54704205833 /* PartOnePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOnePresenter.swift; sourceTree = "<group>"; };
 		DBE99706CD905B1F205DA090 /* ProfileRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileRouterInput.swift; sourceTree = "<group>"; };
+		DDC74527F105CE8B926E2C69 /* PartTwoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoPresenter.swift; sourceTree = "<group>"; };
 		E2679E509D7A62456F5F9A6B /* LoginViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewInput.swift; sourceTree = "<group>"; };
 		E6AEF53A284D858D032C0C3B /* ProfileInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInitializer.swift; sourceTree = "<group>"; };
 		E8F00316893D22D622CA5DB3 /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
@@ -224,6 +258,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		18C4F81B5FAED08D3ED99C48 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				6A2CF88F83BA9F5BAA82FAA1 /* PartTwoConfigurator.swift */,
+				80A583E61C142C0CC53E0C0E /* PartTwoInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		200E9BED543F0FBD488B2C95 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +292,16 @@
 				654CBFEA48E6626D4744CA40 /* PartOneInitializer.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		3F543490DBFB22BE5A889F0D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				20EB94F5E3CC04CAD33FB569 /* PartTwoInteractorInput.swift */,
+				6DAC728BFB15FF11CBD60B8F /* PartTwoInteractorOutput.swift */,
+				B1943F113C75420EBA4E9559 /* PartTwoInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		4E4CAF1F4125C7C39DB69D04 /* Interactor */ = {
@@ -306,8 +359,8 @@
 			isa = PBXGroup;
 			children = (
 				5D02BF67260743120053E96C /* Error */,
+				5D4EE0F5261356AE004A6AE4 /* Questions */,
 				5D02BF56260646F30053E96C /* User.swift */,
-				5D4EE0CB260F1AD5004A6AE4 /* Question.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -331,6 +384,7 @@
 				8B8D2F2A838242304D4BB0F8 /* EditProfile */,
 				E4C58474A009E43010C41E30 /* Home */,
 				809C3170EBD0B12B4DBDA64D /* PartOne */,
+				B781D47512568AC0240A2FB1 /* PartTwo */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -373,6 +427,7 @@
 			children = (
 				5D02BF68260743260053E96C /* UserValidationError.swift */,
 				5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */,
+				5D4EE0FB261360F3004A6AE4 /* QuestionError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -392,6 +447,34 @@
 				5D02BF7D26091C0E0053E96C /* Strings.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		5D4EE0F5261356AE004A6AE4 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				5D4EE10826149817004A6AE4 /* PartOne */,
+				5D4EE10926149844004A6AE4 /* PartTwo */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		5D4EE10826149817004A6AE4 /* PartOne */ = {
+			isa = PBXGroup;
+			children = (
+				5D4EE0ED261322D7004A6AE4 /* QuestionPartOne.swift */,
+				5D4EE0F026132301004A6AE4 /* AnswerPartOne.swift */,
+			);
+			path = PartOne;
+			sourceTree = "<group>";
+		};
+		5D4EE10926149844004A6AE4 /* PartTwo */ = {
+			isa = PBXGroup;
+			children = (
+				5D4EE0F826135D3A004A6AE4 /* QuestionPartTwo.swift */,
+				5D4EE0FF26136B31004A6AE4 /* Option.swift */,
+				5D4EE105261493AD004A6AE4 /* AnswerPartTwo.swift */,
+			);
+			path = PartTwo;
 			sourceTree = "<group>";
 		};
 		5D590428260CFBC200988CCA /* MainRouter */ = {
@@ -432,6 +515,16 @@
 				5D783258260633CD00156AC1 /* Info.plist */,
 			);
 			path = NDA;
+			sourceTree = "<group>";
+		};
+		63B112A93B2D821464C2EB28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D075EF3A5BCDA41F7DC8843 /* PartTwoViewInput.swift */,
+				8BA2701761A66E7C34D4307C /* PartTwoViewOutput.swift */,
+				2C25DD378077A93DFEC4436D /* PartTwoViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		65EB17B61571833130AF4C3B /* Presenter */ = {
@@ -533,6 +626,27 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		B781D47512568AC0240A2FB1 /* PartTwo */ = {
+			isa = PBXGroup;
+			children = (
+				18C4F81B5FAED08D3ED99C48 /* Configurator */,
+				63B112A93B2D821464C2EB28 /* View */,
+				B96CC9A6ABBFBC4868F2A34F /* Presenter */,
+				3F543490DBFB22BE5A889F0D /* Interactor */,
+				D6E7ED01DBF5587AC916535D /* Router */,
+			);
+			path = PartTwo;
+			sourceTree = "<group>";
+		};
+		B96CC9A6ABBFBC4868F2A34F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CCB2734096B2BF7E541D0564 /* PartTwoModuleInput.swift */,
+				DDC74527F105CE8B926E2C69 /* PartTwoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		BA0082F7FDCEB7E8E4F6892C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +660,15 @@
 			children = (
 				7A760EEE5AB523E84670E73C /* EditProfileRouterInput.swift */,
 				2EC96045CA29338C9EB54008 /* EditProfileRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D6E7ED01DBF5587AC916535D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				639284663B2D031B24B040C5 /* PartTwoRouterInput.swift */,
+				CC0D45EF187CF9399AAD7B70 /* PartTwoRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -792,10 +915,12 @@
 				5D78324B260633CA00156AC1 /* AppDelegate.swift in Sources */,
 				5D78324D260633CA00156AC1 /* SceneDelegate.swift in Sources */,
 				A60502BA93B0A7E0CEC146CB /* ProfileViewInput.swift in Sources */,
+				5D4EE106261493AD004A6AE4 /* AnswerPartTwo.swift in Sources */,
 				00D8E072B54F39DD85A467E7 /* ProfileViewOutput.swift in Sources */,
 				5D02BF94260A6FCF0053E96C /* ProfileServiceError.swift in Sources */,
 				9AA33CABD0739CD55B39F682 /* ProfileViewController.swift in Sources */,
 				B2FC40F81CFAD0A63EBEFFA0 /* ProfileModuleInput.swift in Sources */,
+				5D4EE0FC261360F3004A6AE4 /* QuestionError.swift in Sources */,
 				C3AC3052914D8B18A35BFEEE /* ProfilePresenter.swift in Sources */,
 				5D02BF5A260647310053E96C /* ProfileService.swift in Sources */,
 				EE76887613F203855534D3C1 /* ProfileInteractorInput.swift in Sources */,
@@ -805,11 +930,13 @@
 				F674D4F3309C281B998F3854 /* ProfileInteractorOutput.swift in Sources */,
 				686BBC18B32EA1CB240E6531 /* ProfileInteractor.swift in Sources */,
 				2C9B7F70C19A715205CAAAD1 /* ProfileRouterInput.swift in Sources */,
+				5D4EE0EE261322D7004A6AE4 /* QuestionPartOne.swift in Sources */,
 				9C77F346034E06AC87808015 /* ProfileRouter.swift in Sources */,
 				10ACB66A7B8744EF55FB4403 /* ProfileConfigurator.swift in Sources */,
 				DB8BF6EF6BA84D52FF059BD0 /* ProfileInitializer.swift in Sources */,
 				1646F13BC9443402DB8FE154 /* LoginViewInput.swift in Sources */,
 				0CF9EB8EC5859B8130C098B5 /* LoginViewOutput.swift in Sources */,
+				5D4EE0F126132301004A6AE4 /* AnswerPartOne.swift in Sources */,
 				5D59042B260CFBE900988CCA /* MainRouter.swift in Sources */,
 				A7429776225118355D6BAB74 /* LoginViewController.swift in Sources */,
 				4414DA36759B5E4B0536E26C /* LoginModuleInput.swift in Sources */,
@@ -842,11 +969,11 @@
 				929BC0907F8C0F3D71DF46A4 /* HomeModuleInput.swift in Sources */,
 				ABEDA70916BDCB60A69F9A21 /* HomePresenter.swift in Sources */,
 				5977EBADB1CFBE2E7414042B /* HomeInteractorInput.swift in Sources */,
+				5D4EE10026136B31004A6AE4 /* Option.swift in Sources */,
 				A6089E902D75EE45910B99DD /* HomeInteractorOutput.swift in Sources */,
 				67CCE31341F23822B348D3F3 /* HomeInteractor.swift in Sources */,
 				D191874D5C36A451DA90C843 /* HomeRouterInput.swift in Sources */,
 				7096C0DAFF12134A51E323C6 /* HomeRouter.swift in Sources */,
-				5D4EE0CC260F1AD5004A6AE4 /* Question.swift in Sources */,
 				5D4EE0CF260F1B0B004A6AE4 /* QuestionBank.swift in Sources */,
 				02A2019FD614A6E8A1B7D440 /* HomeConfigurator.swift in Sources */,
 				DAA4C9E5D01807280EC340BC /* HomeInitializer.swift in Sources */,
@@ -862,6 +989,19 @@
 				0D6C7DB7F3FE987459DF434E /* PartOneRouter.swift in Sources */,
 				017CFD2C32D1ED42AF792AC3 /* PartOneConfigurator.swift in Sources */,
 				BEEDD905BAEAD55DD49B87D8 /* PartOneInitializer.swift in Sources */,
+				F2351AB1EE97B1F5CA9C8BC1 /* PartTwoViewInput.swift in Sources */,
+				15D43D983B87B7FFD8E55355 /* PartTwoViewOutput.swift in Sources */,
+				5D4EE0F926135D3A004A6AE4 /* QuestionPartTwo.swift in Sources */,
+				D2E7C08E35978B5447637BC6 /* PartTwoViewController.swift in Sources */,
+				0D7456190E7D47C68C2120CC /* PartTwoModuleInput.swift in Sources */,
+				7CD2E0CCDD5D634D12C92757 /* PartTwoPresenter.swift in Sources */,
+				9236D9FC29E43A74B0EF3AD8 /* PartTwoInteractorInput.swift in Sources */,
+				8832B6947C68A4799FBD1E37 /* PartTwoInteractorOutput.swift in Sources */,
+				6F884C196E99FBA6DCCA8740 /* PartTwoInteractor.swift in Sources */,
+				F0DC894FBA61DAD937D7A777 /* PartTwoRouterInput.swift in Sources */,
+				2E0690C8CB8A641AF0325D9A /* PartTwoRouter.swift in Sources */,
+				378DA78916A92911B3A5828E /* PartTwoConfigurator.swift in Sources */,
+				01D0D8FA14B04F103ABD28ED /* PartTwoInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
