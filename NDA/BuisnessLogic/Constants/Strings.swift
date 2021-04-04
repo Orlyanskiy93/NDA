@@ -10,7 +10,7 @@ import Foundation
 extension String {
     struct Error {
         static let error = "Error"
-        static let ok = "Ok"
+        static let ok = "OK"
         static let wrongName = "Name must contains only letters"
         static let wrongAge = "Age is to much"
         static let wrongEmail = "Wrong email"
@@ -29,6 +29,7 @@ extension String {
     }
     
     struct PartOne {
+        static let title = "Part 1: Self Efficacy"
         static let moduleDescription = "The following questions are designed to help us get a better understanding of any symptoms you might be experiencing in the areas of attention, memory, organization and thinking. Please try to objective in your answers."
         static let instructions = "Using the scale provided, please rate how certain you are can do the following actions:"
         static let cannotCertain = "Cannot do at all"

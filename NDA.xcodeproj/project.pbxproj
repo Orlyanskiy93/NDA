@@ -65,7 +65,6 @@
 		5D4EE0FC261360F3004A6AE4 /* QuestionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0FB261360F3004A6AE4 /* QuestionError.swift */; };
 		5D4EE10026136B31004A6AE4 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0FF26136B31004A6AE4 /* Option.swift */; };
 		5D4EE106261493AD004A6AE4 /* AnswerPartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE105261493AD004A6AE4 /* AnswerPartTwo.swift */; };
-		5D4EE11B26165243004A6AE4 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE11A26165242004A6AE4 /* TestVC.swift */; };
 		5D4EE12026178722004A6AE4 /* SelectableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE11F26178721004A6AE4 /* SelectableImage.swift */; };
 		5D59042B260CFBE900988CCA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59042A260CFBE900988CCA /* MainRouter.swift */; };
 		5D59042F260D071600988CCA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D59042E260D071600988CCA /* Login.storyboard */; };
@@ -205,7 +204,6 @@
 		5D4EE0FB261360F3004A6AE4 /* QuestionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionError.swift; sourceTree = "<group>"; };
 		5D4EE0FF26136B31004A6AE4 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		5D4EE105261493AD004A6AE4 /* AnswerPartTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPartTwo.swift; sourceTree = "<group>"; };
-		5D4EE11A26165242004A6AE4 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		5D4EE11F26178721004A6AE4 /* SelectableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableImage.swift; sourceTree = "<group>"; };
 		5D59042A260CFBE900988CCA /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		5D59042E260D071600988CCA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -317,7 +315,6 @@
 				1213611FB1A664FDFDE62692 /* PartTwoDescriptionViewOutput.swift */,
 				2D98BF08CC92904F44F65552 /* PartTwoDescriptionViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -383,7 +380,6 @@
 				4AC48667B79DC0E999CAF8C0 /* PartOneDescriptionInteractorOutput.swift */,
 				8C3C35E42C7BC80B770713F3 /* PartOneDescriptionInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -403,7 +399,6 @@
 				0CBBFC953699D6EDE1B2CC74 /* PartTwoDescriptionInteractorOutput.swift */,
 				113B9C197FD46C485033599E /* PartTwoDescriptionInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -423,7 +418,6 @@
 				3EFEC1A1CD32C328AF17D18C /* PartTwoDescriptionModuleInput.swift */,
 				CCD1C0A7A46DF6BC5668827F /* PartTwoDescriptionPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -463,7 +457,6 @@
 				C2A6FC810660CB2FD023EB9B /* PartOneDescriptionConfigurator.swift */,
 				6577625862CC3A0BE4BF32CD /* PartOneDescriptionInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -527,7 +520,9 @@
 				8B8D2F2A838242304D4BB0F8 /* EditProfile */,
 				E4C58474A009E43010C41E30 /* Home */,
 				C50B3BB0DF84B1B106E02209 /* QuestionnaireInformation */,
+				F9EA3C763CFB2E75A2664FD9 /* PartOneDescription */,
 				809C3170EBD0B12B4DBDA64D /* PartOne */,
+				FD20ADD757F63B4117A30993 /* PartTwoDescription */,
 				B781D47512568AC0240A2FB1 /* PartTwo */,
 			);
 			path = Presentation;
@@ -578,7 +573,6 @@
 			children = (
 				5D02BF6E2607880C0053E96C /* UIViewInput.swift */,
 				5D02BF9A260A7D890053E96C /* RoundedButton.swift */,
-				5D4EE11A26165242004A6AE4 /* TestVC.swift */,
 				5D4EE11F26178721004A6AE4 /* SelectableImage.swift */,
 			);
 			path = Views;
@@ -656,8 +650,6 @@
 				5D02BF50260641780053E96C /* SupportingFiles */,
 				5D783253260633CD00156AC1 /* Assets.xcassets */,
 				5D783258260633CD00156AC1 /* Info.plist */,
-				F9EA3C763CFB2E75A2664FD9 /* PartOneDescription */,
-				FD20ADD757F63B4117A30993 /* PartTwoDescription */,
 			);
 			path = NDA;
 			sourceTree = "<group>";
@@ -708,7 +700,6 @@
 				A5FDDBEFC9BC8D44FE57C600 /* PartOneDescriptionViewOutput.swift */,
 				E76EED19E2742525EFED2525 /* PartOneDescriptionViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -730,7 +721,6 @@
 				D6717A803359C426D6AE6DC9 /* PartTwoDescriptionConfigurator.swift */,
 				DA42579C11225A04A730ED17 /* PartTwoDescriptionInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -789,7 +779,6 @@
 				CDC34F6DBEFA9EEFD9536B8C /* PartOneDescriptionModuleInput.swift */,
 				4AAACD7A83F4F62CC77CF514 /* PartOneDescriptionPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -867,7 +856,6 @@
 				6AFEAF7112244584925BC182 /* PartTwoDescriptionRouterInput.swift */,
 				8BE51A8A2CA66BA0D154ADA6 /* PartTwoDescriptionRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -979,7 +967,6 @@
 				FA708AFCF7A9521C43D75456 /* Router */,
 				54342FFF13AB4898A070184A /* Configurator */,
 			);
-			name = PartOneDescription;
 			path = PartOneDescription;
 			sourceTree = "<group>";
 		};
@@ -989,7 +976,6 @@
 				67B00CD21BD738CB1474A0A4 /* PartOneDescriptionRouterInput.swift */,
 				79AE7AE6C7552696EF2337FB /* PartOneDescriptionRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1021,7 +1007,6 @@
 				C93CB5BD717C623FAFCB1C81 /* Router */,
 				8A5EA646DE5DF44C20C2C16F /* Configurator */,
 			);
-			name = PartTwoDescription;
 			path = PartTwoDescription;
 			sourceTree = "<group>";
 		};
@@ -1225,7 +1210,6 @@
 				08DF8CBA9767B1410DA537D5 /* HomeViewInput.swift in Sources */,
 				F2BBA9C05FDBC006DCCE9760 /* HomeViewOutput.swift in Sources */,
 				9F9E50C0F04784F2735BF964 /* HomeViewController.swift in Sources */,
-				5D4EE11B26165243004A6AE4 /* TestVC.swift in Sources */,
 				929BC0907F8C0F3D71DF46A4 /* HomeModuleInput.swift in Sources */,
 				ABEDA70916BDCB60A69F9A21 /* HomePresenter.swift in Sources */,
 				5977EBADB1CFBE2E7414042B /* HomeInteractorInput.swift in Sources */,

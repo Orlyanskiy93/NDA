@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1535" y="46"/>
         </scene>
-        <!--View Controller-->
+        <!--Part One Description View Controller-->
         <scene sceneID="E20-mc-XUu">
             <objects>
-                <viewController id="zJ1-xi-qcd" sceneMemberID="viewController">
+                <viewController id="zJ1-xi-qcd" customClass="PartOneDescriptionViewController" customModule="NDA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tar-gd-Ocw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,8 +172,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6dA-lp-B8L"/>
+                    <connections>
+                        <outlet property="okButton" destination="8kx-Xn-BHe" id="1aq-Op-NoQ"/>
+                        <outlet property="partDescriptionLabel" destination="wVt-3E-I2V" id="rT5-oS-omP"/>
+                        <outlet property="textView" destination="PEC-iU-VL2" id="Yjo-Y0-d3G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddj-qv-aPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="csL-V1-8X4" customClass="PartOneDescriptionModuleInitializer" customModule="NDA" customModuleProvider="target">
+                    <connections>
+                        <outlet property="partonedescriptionViewController" destination="zJ1-xi-qcd" id="OhR-He-cJX"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="2916" y="-445"/>
         </scene>

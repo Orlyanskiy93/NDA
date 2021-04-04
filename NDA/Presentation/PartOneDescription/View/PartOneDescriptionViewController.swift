@@ -9,17 +9,20 @@
 import UIKit
 
 class PartOneDescriptionViewController: UIViewController, PartOneDescriptionViewInput {
-
+    @IBOutlet weak var partDescriptionLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var okButton: RoundedButton!
+    
     var output: PartOneDescriptionViewOutput!
 
-    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
-    // MARK: PartOneDescriptionViewInput
     func setupInitialState() {
+        partDescriptionLabel.text = String.PartOne.title
+        textView.text = String.PartOne.moduleDescription
+        okButton.setTitle(String.Button.ok, for: .normal)
     }
 }
