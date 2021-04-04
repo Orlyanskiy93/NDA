@@ -78,7 +78,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVj-Y6-R4k">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVj-Y6-R4k" customClass="RoundedButton" customModule="NDA" customModuleProvider="target">
                                 <rect key="frame" x="30" y="671" width="354" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
@@ -174,8 +174,8 @@
                     <navigationItem key="navigationItem" id="6dA-lp-B8L"/>
                     <connections>
                         <outlet property="okButton" destination="8kx-Xn-BHe" id="1aq-Op-NoQ"/>
-                        <outlet property="partDescriptionLabel" destination="wVt-3E-I2V" id="rT5-oS-omP"/>
                         <outlet property="textView" destination="PEC-iU-VL2" id="Yjo-Y0-d3G"/>
+                        <outlet property="titleLabel" destination="wVt-3E-I2V" id="rT5-oS-omP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddj-qv-aPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -413,10 +413,10 @@
             </objects>
             <point key="canvasLocation" x="3969.5652173913045" y="-445.10869565217394"/>
         </scene>
-        <!--View Controller-->
+        <!--Part Two Description View Controller-->
         <scene sceneID="UHp-EI-kdf">
             <objects>
-                <viewController id="ofc-Jf-bbG" sceneMemberID="viewController">
+                <viewController id="ofc-Jf-bbG" customClass="PartTwoDescriptionViewController" customModule="NDA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dtx-Mw-NP2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -466,8 +466,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eXP-Rs-maa"/>
+                    <connections>
+                        <outlet property="okButtton" destination="puH-eB-Vwa" id="RJc-zM-4VP"/>
+                        <outlet property="textView" destination="HoZ-0o-XyJ" id="3MC-AB-a7u"/>
+                        <outlet property="titleLabel" destination="4q5-hy-jLY" id="Kqa-4L-9WS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcj-sj-w8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="mml-UU-mAZ" customClass="PartTwoDescriptionModuleInitializer" customModule="NDA" customModuleProvider="target">
+                    <connections>
+                        <outlet property="parttwodescriptionViewController" destination="ofc-Jf-bbG" id="JqV-pW-DfS"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="2917" y="615"/>
         </scene>
@@ -650,7 +660,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lwa-rU-a32"/>
+        <segue reference="R2H-W6-MEK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brain" width="512" height="512"/>

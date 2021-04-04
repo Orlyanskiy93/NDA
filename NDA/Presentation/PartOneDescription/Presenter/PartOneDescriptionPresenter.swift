@@ -13,6 +13,6 @@ class PartOneDescriptionPresenter: PartOneDescriptionModuleInput, PartOneDescrip
     var router: PartOneDescriptionRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
     }
 }

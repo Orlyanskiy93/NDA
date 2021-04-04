@@ -36,4 +36,9 @@ extension String {
         static let moderatelyCertain = "Moderately can do"
         static let highlyCertain = "Highly certain can do"
     }
+    
+    struct PartTwo {
+        static let title = "Part 2: Short Answer"
+        static let moduleDescription = "The following questions are designed to test you using a few simple short - answer questions. Please try to answer these questions quickly and correctly."
+    }
 }
