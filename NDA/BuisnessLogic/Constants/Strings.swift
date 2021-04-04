@@ -19,6 +19,15 @@ extension String {
         static let getUser = "Unable to load user"
     }
     
+    struct Button {
+        static let ok = "OK"
+        static let `continue` = "CONTINUE"
+        static let next = "NEXT"
+        static let begin = "BEGIN"
+        static let editInformation = "EDIT INFORMATION"
+        static let eraceAppData = "ERACE APP DATA"
+    }
+    
     struct PartOne {
         static let moduleDescription = "The following questions are designed to help us get a better understanding of any symptoms you might be experiencing in the areas of attention, memory, organization and thinking. Please try to objective in your answers."
         static let instructions = "Using the scale provided, please rate how certain you are can do the following actions:"

@@ -15,4 +15,8 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     func viewIsReady() {
 
     }
+    
+    func begin() {
+        router.openInformationScreen()
+    }
 }

@@ -20,4 +20,8 @@ class HomeViewController: UIViewController, HomeViewInput {
     func setupInitialState() {
         
     }
+    
+    @IBAction func begin(_ sender: UIButton) {
+        output.begin()
+    }
 }
