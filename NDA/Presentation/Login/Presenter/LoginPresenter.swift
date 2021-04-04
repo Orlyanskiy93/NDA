@@ -21,7 +21,7 @@ class LoginPresenter: LoginModuleInput, LoginViewOutput, LoginInteractorOutput {
         do {
             try user.validate()
             interactor.save(user)
-            mainRouter.open(module: .home)
+            mainRouter.open(module: .main)
         } catch {
             view.show(error)
         }
