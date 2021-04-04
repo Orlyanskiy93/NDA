@@ -23,7 +23,8 @@ struct User: Codable {
         guard !name.isEmpty, let age = Int(age), !email.isEmpty else {
             throw UserValidationError.emtyField
         }
-        if age > 110 {
+        let maxAge = 110
+        if age > maxAge {
             throw UserValidationError.wrongAge
         }        
         if !email.contains("@") {

@@ -13,7 +13,6 @@ class MainRouter {
     
     private init() {
         window = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window
-
     }
         
     func open(module: Module) {
@@ -38,18 +37,12 @@ class MainRouter {
 extension MainRouter {
     enum Module {
         case login
-        case profile
-        case home
         case main
         
         var storyboardName: String {
             switch  self {
             case .login:
                 return "Login"
-            case .profile:
-                return "Profile"
-            case .home:
-                return "Home"
             case .main:
                 return "Main"
             }
