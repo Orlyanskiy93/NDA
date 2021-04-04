@@ -13,7 +13,7 @@ class QuestionnaireInformationPresenter: QuestionnaireInformationModuleInput, Qu
     var router: QuestionnaireInformationRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
     }
     
     func loadQuestionnaire() {

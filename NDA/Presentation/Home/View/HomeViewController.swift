@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, HomeViewInput {
-
+    @IBOutlet weak var beginQuestionnaireButton: RoundedButton!
     var output: HomeViewOutput!
 
     override func viewDidLoad() {
@@ -18,7 +18,7 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
 
     func setupInitialState() {
-        
+        beginQuestionnaireButton.setTitle(String.Home.beginQuestionnaire, for: .normal)
     }
     
     @IBAction func begin(_ sender: UIButton) {

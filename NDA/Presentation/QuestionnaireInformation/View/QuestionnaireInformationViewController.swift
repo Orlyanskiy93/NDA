@@ -9,19 +9,20 @@
 import UIKit
 
 class QuestionnaireInformationViewController: UIViewController, QuestionnaireInformationViewInput {
-
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var beginButton: RoundedButton!
     var output: QuestionnaireInformationViewOutput!
 
-    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
-    // MARK: QuestionnaireInformationViewInput
     func setupInitialState() {
+        textView.text = String.Home.questionnaireDescription
+        beginButton.setTitle(String.Button.begin, for: .normal)
     }
+    
     @IBAction func begin(_ sender: UIButton) {
         output.loadQuestionnaire()
     }

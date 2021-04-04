@@ -33,16 +33,7 @@ class QuestionBankImp: QuestionBank {
     }
     
     private func prepareSelfEfficacyQuestions() {
-        let questions: [QuestionPartOne]  = [
-            "I am sure that I can recognize when I forget something",
-            "I am sure that I can recognize when I become distracted",
-            "I am sure that I can recognize when I am having difficulty concentrating",
-            "I am sure that I can recognize when I make a mistake",
-            "I am sure that I can recognize when I have missed details or information",
-            "I am sure that I can recognize when my mind feels cloudy or less sharp",
-            "I am sure that I can recognize when there is too much information for mee to process",
-            "I am sure that I can recognize when I have lost track of what I was just doing"
-        ]
+        let questions = String.PartOne.questions
         selfEfficacyQuestions.append(contentsOf: questions)
     }
     
@@ -55,10 +46,10 @@ class QuestionBankImp: QuestionBank {
             var title = ""
             let range = (rightAnswer - 5)...(rightAnswer + 5)
             if number % 2 == 0 {
-                title = "What is \(firstNumber) + \(secondNumber)?"
+                title = String.PartTwo.arythmeticQuestion + "\(firstNumber) + \(secondNumber)?"
                 rightAnswer = firstNumber + secondNumber
             } else {
-                title = "What is \(firstNumber) - \(secondNumber)?"
+                title = String.PartTwo.arythmeticQuestion + "\(firstNumber) - \(secondNumber)?"
                 rightAnswer = firstNumber - secondNumber
             }
             let options = [
@@ -78,8 +69,7 @@ class QuestionBankImp: QuestionBank {
     }
     
     private func prepareIdentifyQuestions(count: Int) {
-        var allOptions = ["zebra", "cow", "rooster", "rabbit", "tiger", "koala", "turtle", "owl",
-                       "buffalo", "goat", "monkey", "rhino", "bird", "sheep", "pig", "horse"]
+        var allOptions = String.PartTwo.images
         var chosenOptions = [String]()
         var randomIndex: Int {
             return Int.random(in: 0..<allOptions.count)
@@ -116,12 +106,11 @@ class QuestionBankImp: QuestionBank {
             Option(value: allOptions[randomIndex], type: .image)
         ]
         
-        let title = "Please identify picture of "
         do {
-            let firstQuestion = try QuestionPartTwo(title: title + chosenOptions[0], options: firstQuestionOptions)
-            let secondQuestion = try QuestionPartTwo(title: title + chosenOptions[1], options: secondQuestionOptions)
-            let thirdQuestion = try QuestionPartTwo(title: title + chosenOptions[2], options: thirdQuestionOptions)
-            let fourthQuestion = try QuestionPartTwo(title: title + chosenOptions[3], options: fourthQuestionOptions)
+            let firstQuestion = try QuestionPartTwo(title: String.PartTwo.identifyQuestion + chosenOptions[0], options: firstQuestionOptions)
+            let secondQuestion = try QuestionPartTwo(title: String.PartTwo.identifyQuestion + chosenOptions[1], options: secondQuestionOptions)
+            let thirdQuestion = try QuestionPartTwo(title: String.PartTwo.identifyQuestion + chosenOptions[2], options: thirdQuestionOptions)
+            let fourthQuestion = try QuestionPartTwo(title: String.PartTwo.identifyQuestion + chosenOptions[3], options: fourthQuestionOptions)
             let questions = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion]
             identifyQuestions.append(contentsOf: questions)
         } catch {

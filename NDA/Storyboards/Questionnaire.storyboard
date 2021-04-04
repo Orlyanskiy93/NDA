@@ -50,6 +50,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vc5-qm-4jU"/>
                     <connections>
+                        <outlet property="beginQuestionnaireButton" destination="pXc-Mg-8HM" id="F18-62-aKv"/>
                         <segue destination="Cep-Xy-UPF" kind="show" identifier="informationScreenSegue" id="fIC-C0-6Ps"/>
                     </connections>
                 </viewController>
@@ -107,6 +108,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Questionnaire" id="b6E-DD-e4G"/>
                     <connections>
+                        <outlet property="beginButton" destination="xVj-Y6-R4k" id="1bn-6S-WVO"/>
+                        <outlet property="textView" destination="Vqb-U2-dFm" id="vB5-94-RSN"/>
                         <segue destination="zJ1-xi-qcd" kind="show" identifier="partOneSegue" id="dCH-s3-BOA"/>
                         <segue destination="ofc-Jf-bbG" kind="show" identifier="partTwoSegue" id="Lwa-rU-a32"/>
                     </connections>
@@ -660,7 +663,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R2H-W6-MEK"/>
+        <segue reference="Lwa-rU-a32"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brain" width="512" height="512"/>

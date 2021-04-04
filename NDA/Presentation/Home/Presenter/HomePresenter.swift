@@ -13,7 +13,7 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     var router: HomeRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
     }
     
     func begin() {
