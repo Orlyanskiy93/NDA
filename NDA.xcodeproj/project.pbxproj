@@ -16,6 +16,7 @@
 		0D6C7DB7F3FE987459DF434E /* PartOneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0582A9BCAF9D69B9722A0A /* PartOneRouter.swift */; };
 		0D7456190E7D47C68C2120CC /* PartTwoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB2734096B2BF7E541D0564 /* PartTwoModuleInput.swift */; };
 		10ACB66A7B8744EF55FB4403 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35159AF09DF75A2366860F4C /* ProfileConfigurator.swift */; };
+		10B469F177AA9F3F0AB96C8E /* QuestionnaireInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58025EAE97A5C014AB70019 /* QuestionnaireInformationPresenter.swift */; };
 		1223194DED678D1950653EEF /* LoginRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A373196D936CC5F236E14 /* LoginRouterInput.swift */; };
 		15D43D983B87B7FFD8E55355 /* PartTwoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2701761A66E7C34D4307C /* PartTwoViewOutput.swift */; };
 		1646F13BC9443402DB8FE154 /* LoginViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2679E509D7A62456F5F9A6B /* LoginViewInput.swift */; };
@@ -32,6 +33,7 @@
 		471F7AAC7D4E093EB84D74F0 /* EditProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E6E0A9B0BEAAC407EAEA /* EditProfileViewOutput.swift */; };
 		4818BB7F7770EFA69A1C4F19 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED74E495257405CBE4E377DA /* LoginRouter.swift */; };
 		4A60F2FDA7E57644ADC92310 /* EditProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9199689686D3BC630544756D /* EditProfileConfigurator.swift */; };
+		557D253E557C3B7F2496E347 /* QuestionnaireInformationViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81718FEB106A315253598624 /* QuestionnaireInformationViewInput.swift */; };
 		5977EBADB1CFBE2E7414042B /* HomeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F00316893D22D622CA5DB3 /* HomeInteractorInput.swift */; };
 		5D02BF57260646F30053E96C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF56260646F30053E96C /* User.swift */; };
 		5D02BF5A260647310053E96C /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF59260647310053E96C /* ProfileService.swift */; };
@@ -45,15 +47,14 @@
 		5D4BAB7309550600B010EA3B /* LoginInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7C7D50B4ADBD3295F62F3 /* LoginInitializer.swift */; };
 		5D4EE0CF260F1B0B004A6AE4 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0CE260F1B0B004A6AE4 /* QuestionBank.swift */; };
 		5D4EE0D2260F1BC4004A6AE4 /* QuestionBankImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0D1260F1BC4004A6AE4 /* QuestionBankImp.swift */; };
-		5D4EE0D6260F61E0004A6AE4 /* PartOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EE0D5260F61E0004A6AE4 /* PartOne.storyboard */; };
-		5D4EE0D9260F61F5004A6AE4 /* PartTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EE0D8260F61F5004A6AE4 /* PartTwo.storyboard */; };
-		5D4EE0DC260F6230004A6AE4 /* PartThree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4EE0DB260F6230004A6AE4 /* PartThree.storyboard */; };
 		5D4EE0EE261322D7004A6AE4 /* QuestionPartOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0ED261322D7004A6AE4 /* QuestionPartOne.swift */; };
 		5D4EE0F126132301004A6AE4 /* AnswerPartOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0F026132301004A6AE4 /* AnswerPartOne.swift */; };
 		5D4EE0F926135D3A004A6AE4 /* QuestionPartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0F826135D3A004A6AE4 /* QuestionPartTwo.swift */; };
 		5D4EE0FC261360F3004A6AE4 /* QuestionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0FB261360F3004A6AE4 /* QuestionError.swift */; };
 		5D4EE10026136B31004A6AE4 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0FF26136B31004A6AE4 /* Option.swift */; };
 		5D4EE106261493AD004A6AE4 /* AnswerPartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE105261493AD004A6AE4 /* AnswerPartTwo.swift */; };
+		5D4EE11B26165243004A6AE4 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE11A26165242004A6AE4 /* TestVC.swift */; };
+		5D4EE12026178722004A6AE4 /* SelectableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE11F26178721004A6AE4 /* SelectableImage.swift */; };
 		5D59042B260CFBE900988CCA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59042A260CFBE900988CCA /* MainRouter.swift */; };
 		5D59042F260D071600988CCA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D59042E260D071600988CCA /* Login.storyboard */; };
 		5D590435260D0E6E00988CCA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D590434260D0E6E00988CCA /* Home.storyboard */; };
@@ -71,15 +72,20 @@
 		7096C0DAFF12134A51E323C6 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748E96E9E654DFFD2FC732C /* HomeRouter.swift */; };
 		79921E2284BBAAABDB32E79E /* PartOneViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12266DAB857B20377C19B20D /* PartOneViewInput.swift */; };
 		7CD2E0CCDD5D634D12C92757 /* PartTwoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC74527F105CE8B926E2C69 /* PartTwoPresenter.swift */; };
+		843A1C7E199D2178B41B4E43 /* QuestionnaireInformationRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFDB3C32A09D92E192BA1B2 /* QuestionnaireInformationRouterInput.swift */; };
 		84442B879FAAC80F02358C14 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3836251C4F246AF05F1EBAC /* LoginConfigurator.swift */; };
 		8832B6947C68A4799FBD1E37 /* PartTwoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAC728BFB15FF11CBD60B8F /* PartTwoInteractorOutput.swift */; };
 		8A064467CA178D331FCFCCC4 /* EditProfileRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A760EEE5AB523E84670E73C /* EditProfileRouterInput.swift */; };
 		8E29A2EB7A600EA95244F955 /* PartOneModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFF1516E6B4F2094C08084A /* PartOneModuleInput.swift */; };
+		8EB429E8633DF3553872A4D2 /* QuestionnaireInformationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51485AB14961D73FEB99329E /* QuestionnaireInformationRouter.swift */; };
 		9236D9FC29E43A74B0EF3AD8 /* PartTwoInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB94F5E3CC04CAD33FB569 /* PartTwoInteractorInput.swift */; };
 		9281AF0CE5C3E4925E07BF69 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96530F8243041035367204A3 /* EditProfilePresenter.swift */; };
 		929BC0907F8C0F3D71DF46A4 /* HomeModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAB5C2995B02494CCD32DD /* HomeModuleInput.swift */; };
 		932538C45D04C98FB5895662 /* PartOneViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F32E4A6EBB7A4E504F9C4 /* PartOneViewOutput.swift */; };
+		9659925A4B4CA133202718D3 /* QuestionnaireInformationInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742886BFC99C218A16C4A32E /* QuestionnaireInformationInteractorInput.swift */; };
 		9AA33CABD0739CD55B39F682 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE84E24BA164F859669B3E6 /* ProfileViewController.swift */; };
+		9ADBA6BDE8DF72FD33820303 /* QuestionnaireInformationViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F139442ECB30DB3D7C48264 /* QuestionnaireInformationViewOutput.swift */; };
+		9BCA1B5CF8646383883FCA70 /* QuestionnaireInformationInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619758CA011798AC5E393A5E /* QuestionnaireInformationInteractorOutput.swift */; };
 		9C77F346034E06AC87808015 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4250A0DAAD92E3600B0B6 /* ProfileRouter.swift */; };
 		9F9E50C0F04784F2735BF964 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18045ABD4782D0117CAF01F7 /* HomeViewController.swift */; };
 		A21789A373AA19F7A2605214 /* EditProfileModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593E59F810782BA071A2B2C5 /* EditProfileModuleInput.swift */; };
@@ -89,6 +95,8 @@
 		ABEDA70916BDCB60A69F9A21 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B62BBB16BABF7D609771EE8 /* HomePresenter.swift */; };
 		B2FC40F81CFAD0A63EBEFFA0 /* ProfileModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB828839382F65DE3D36AA3 /* ProfileModuleInput.swift */; };
 		B370F4378901868BDA89A8AF /* EditProfileInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B7EC0A3B0F15761A9E184 /* EditProfileInteractorInput.swift */; };
+		B858307B56BCB55CD4960A0E /* QuestionnaireInformationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4800683883F071CD9A22DE5D /* QuestionnaireInformationConfigurator.swift */; };
+		BAD3F425831ABD860E58F9AA /* QuestionnaireInformationModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6402C7DFC1EB3C53953BAD /* QuestionnaireInformationModuleInput.swift */; };
 		BD3F299B9950B78CF461F0BB /* PartOneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7D3AFF7498CE2A3752B53 /* PartOneInteractor.swift */; };
 		BEEDD905BAEAD55DD49B87D8 /* PartOneInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CBFEA48E6626D4744CA40 /* PartOneInitializer.swift */; };
 		C0DAB015CFC56391C149E295 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB4E7E0B47AB74BFBFF151 /* LoginInteractor.swift */; };
@@ -105,12 +113,16 @@
 		F0DC894FBA61DAD937D7A777 /* PartTwoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639284663B2D031B24B040C5 /* PartTwoRouterInput.swift */; };
 		F2351AB1EE97B1F5CA9C8BC1 /* PartTwoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D075EF3A5BCDA41F7DC8843 /* PartTwoViewInput.swift */; };
 		F2BBA9C05FDBC006DCCE9760 /* HomeViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31B6AE8C3309C4D0A4243B /* HomeViewOutput.swift */; };
+		F43FAAC794D9C291C2B9AF83 /* QuestionnaireInformationInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640AB2BCAAE1462F3A8C62 /* QuestionnaireInformationInitializer.swift */; };
 		F674D4F3309C281B998F3854 /* ProfileInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A430E1045FA1BEE01AEDF6 /* ProfileInteractorOutput.swift */; };
+		F798E768B44F6A056F3C927A /* QuestionnaireInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE6D45AD0C6D4265C285B1 /* QuestionnaireInformationViewController.swift */; };
 		F89FCAC98665C38810FA8280 /* LoginInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5C3B93F2DBE8523749A686 /* LoginInteractorOutput.swift */; };
 		F9C3AC0EF0DEAD75DEC8A67D /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D8E37CBE9E7E0796ABEC10 /* LoginInteractorInput.swift */; };
+		FF2A817A4EB2AE997EF7ED2A /* QuestionnaireInformationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB68345C88486903A3EE564 /* QuestionnaireInformationInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03DE6D45AD0C6D4265C285B1 /* QuestionnaireInformationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationViewController.swift; sourceTree = "<group>"; };
 		0AA7D3AFF7498CE2A3752B53 /* PartOneInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneInteractor.swift; sourceTree = "<group>"; };
 		0FEEE4DCF1AB5C1DF2E308E7 /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		111C69DB48C127B70AEB8425 /* ProfileViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
@@ -119,21 +131,26 @@
 		18045ABD4782D0117CAF01F7 /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1A7A157AF2D4694EF668B4BB /* Pods-NDA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDA.debug.xcconfig"; path = "Target Support Files/Pods-NDA/Pods-NDA.debug.xcconfig"; sourceTree = "<group>"; };
 		1E0582A9BCAF9D69B9722A0A /* PartOneRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneRouter.swift; sourceTree = "<group>"; };
+		1F6402C7DFC1EB3C53953BAD /* QuestionnaireInformationModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationModuleInput.swift; sourceTree = "<group>"; };
 		20EB94F5E3CC04CAD33FB569 /* PartTwoInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoInteractorInput.swift; sourceTree = "<group>"; };
 		2BFAB5C2995B02494CCD32DD /* HomeModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeModuleInput.swift; sourceTree = "<group>"; };
 		2C25DD378077A93DFEC4436D /* PartTwoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoViewController.swift; sourceTree = "<group>"; };
 		2EC96045CA29338C9EB54008 /* EditProfileRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileRouter.swift; sourceTree = "<group>"; };
+		2F139442ECB30DB3D7C48264 /* QuestionnaireInformationViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationViewOutput.swift; sourceTree = "<group>"; };
 		315F67BF625E044E56CB8C18 /* Pods-NDA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NDA.release.xcconfig"; path = "Target Support Files/Pods-NDA/Pods-NDA.release.xcconfig"; sourceTree = "<group>"; };
 		328531E896F5F394FFF9CE5C /* HomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		33C0E6E0A9B0BEAAC407EAEA /* EditProfileViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileViewOutput.swift; sourceTree = "<group>"; };
 		35159AF09DF75A2366860F4C /* ProfileConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
 		3A5C3B93F2DBE8523749A686 /* LoginInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractorOutput.swift; sourceTree = "<group>"; };
 		3B62BBB16BABF7D609771EE8 /* HomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		3BFDB3C32A09D92E192BA1B2 /* QuestionnaireInformationRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationRouterInput.swift; sourceTree = "<group>"; };
 		3D1F389A3C1F113A32E1E99D /* PartOneViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneViewController.swift; sourceTree = "<group>"; };
 		4748E96E9E654DFFD2FC732C /* HomeRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		4800683883F071CD9A22DE5D /* QuestionnaireInformationConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationConfigurator.swift; sourceTree = "<group>"; };
 		4A1347D4B113BB111BD6E099 /* EditProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileInteractor.swift; sourceTree = "<group>"; };
 		4CDF009FEE85E74C3291D3D8 /* EditProfileViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileViewInput.swift; sourceTree = "<group>"; };
 		4E31B6AE8C3309C4D0A4243B /* HomeViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewOutput.swift; sourceTree = "<group>"; };
+		51485AB14961D73FEB99329E /* QuestionnaireInformationRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationRouter.swift; sourceTree = "<group>"; };
 		53A430E1045FA1BEE01AEDF6 /* ProfileInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractorOutput.swift; sourceTree = "<group>"; };
 		54D8E37CBE9E7E0796ABEC10 /* LoginInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
 		573F32E4A6EBB7A4E504F9C4 /* PartOneViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneViewOutput.swift; sourceTree = "<group>"; };
@@ -150,15 +167,14 @@
 		5D02BF9A260A7D890053E96C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		5D4EE0CE260F1B0B004A6AE4 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		5D4EE0D1260F1BC4004A6AE4 /* QuestionBankImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankImp.swift; sourceTree = "<group>"; };
-		5D4EE0D5260F61E0004A6AE4 /* PartOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartOne.storyboard; sourceTree = "<group>"; };
-		5D4EE0D8260F61F5004A6AE4 /* PartTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartTwo.storyboard; sourceTree = "<group>"; };
-		5D4EE0DB260F6230004A6AE4 /* PartThree.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PartThree.storyboard; sourceTree = "<group>"; };
 		5D4EE0ED261322D7004A6AE4 /* QuestionPartOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPartOne.swift; sourceTree = "<group>"; };
 		5D4EE0F026132301004A6AE4 /* AnswerPartOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPartOne.swift; sourceTree = "<group>"; };
 		5D4EE0F826135D3A004A6AE4 /* QuestionPartTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPartTwo.swift; sourceTree = "<group>"; };
 		5D4EE0FB261360F3004A6AE4 /* QuestionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionError.swift; sourceTree = "<group>"; };
 		5D4EE0FF26136B31004A6AE4 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		5D4EE105261493AD004A6AE4 /* AnswerPartTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPartTwo.swift; sourceTree = "<group>"; };
+		5D4EE11A26165242004A6AE4 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		5D4EE11F26178721004A6AE4 /* SelectableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableImage.swift; sourceTree = "<group>"; };
 		5D59042A260CFBE900988CCA /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		5D59042E260D071600988CCA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5D590434260D0E6E00988CCA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -169,6 +185,8 @@
 		5D783253260633CD00156AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D783256260633CD00156AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D783258260633CD00156AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E640AB2BCAAE1462F3A8C62 /* QuestionnaireInformationInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationInitializer.swift; sourceTree = "<group>"; };
+		619758CA011798AC5E393A5E /* QuestionnaireInformationInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationInteractorOutput.swift; sourceTree = "<group>"; };
 		638B7EC0A3B0F15761A9E184 /* EditProfileInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileInteractorInput.swift; sourceTree = "<group>"; };
 		639284663B2D031B24B040C5 /* PartTwoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoRouterInput.swift; sourceTree = "<group>"; };
 		654CBFEA48E6626D4744CA40 /* PartOneInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneInitializer.swift; sourceTree = "<group>"; };
@@ -177,12 +195,14 @@
 		6CAD66F29623AA3B17216D0C /* HomeRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeRouterInput.swift; sourceTree = "<group>"; };
 		6D1009DE4651ADE056484BDB /* PartOneInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneInteractorOutput.swift; sourceTree = "<group>"; };
 		6DAC728BFB15FF11CBD60B8F /* PartTwoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoInteractorOutput.swift; sourceTree = "<group>"; };
+		742886BFC99C218A16C4A32E /* QuestionnaireInformationInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationInteractorInput.swift; sourceTree = "<group>"; };
 		7A760EEE5AB523E84670E73C /* EditProfileRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileRouterInput.swift; sourceTree = "<group>"; };
 		7B9EC0A84C6E57D93D3614CA /* EditProfileInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EditProfileInteractorOutput.swift; sourceTree = "<group>"; };
 		7BE84E24BA164F859669B3E6 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		80A583E61C142C0CC53E0C0E /* PartTwoInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoInitializer.swift; sourceTree = "<group>"; };
 		81296C26953E330826FE502A /* PartOneInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneInteractorInput.swift; sourceTree = "<group>"; };
 		815E26F4E694FA367662CB7D /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		81718FEB106A315253598624 /* QuestionnaireInformationViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationViewInput.swift; sourceTree = "<group>"; };
 		8BA2701761A66E7C34D4307C /* PartTwoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoViewOutput.swift; sourceTree = "<group>"; };
 		8D075EF3A5BCDA41F7DC8843 /* PartTwoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoViewInput.swift; sourceTree = "<group>"; };
 		8EB828839382F65DE3D36AA3 /* ProfileModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileModuleInput.swift; sourceTree = "<group>"; };
@@ -199,6 +219,7 @@
 		B7C4250A0DAAD92E3600B0B6 /* ProfileRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		BA3A373196D936CC5F236E14 /* LoginRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouterInput.swift; sourceTree = "<group>"; };
 		C2B71BC5CA949F2608A1A5ED /* LoginViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewOutput.swift; sourceTree = "<group>"; };
+		C58025EAE97A5C014AB70019 /* QuestionnaireInformationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationPresenter.swift; sourceTree = "<group>"; };
 		C738189C56B2EFD04A9D3567 /* ProfileInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractorInput.swift; sourceTree = "<group>"; };
 		C8F41E7CE5F5102FD0B7F7C6 /* HomeConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		CC0D45EF187CF9399AAD7B70 /* PartTwoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartTwoRouter.swift; sourceTree = "<group>"; };
@@ -210,6 +231,7 @@
 		E6AEF53A284D858D032C0C3B /* ProfileInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInitializer.swift; sourceTree = "<group>"; };
 		E8F00316893D22D622CA5DB3 /* HomeInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeInteractorInput.swift; sourceTree = "<group>"; };
 		EA0BD40526FDBE1446EE051C /* HomeViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewInput.swift; sourceTree = "<group>"; };
+		EBB68345C88486903A3EE564 /* QuestionnaireInformationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationInteractor.swift; sourceTree = "<group>"; };
 		ED74E495257405CBE4E377DA /* LoginRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		F1B7C7D50B4ADBD3295F62F3 /* LoginInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInitializer.swift; sourceTree = "<group>"; };
 		F35109BBB211336601A02486 /* PartOneConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartOneConfigurator.swift; sourceTree = "<group>"; };
@@ -230,6 +252,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03D8EF5D40C129FA6741E988 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81718FEB106A315253598624 /* QuestionnaireInformationViewInput.swift */,
+				2F139442ECB30DB3D7C48264 /* QuestionnaireInformationViewOutput.swift */,
+				03DE6D45AD0C6D4265C285B1 /* QuestionnaireInformationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0CC90DC570E4AB848779408F /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +324,16 @@
 				654CBFEA48E6626D4744CA40 /* PartOneInitializer.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		326FD7F708333D602F67CE4A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				742886BFC99C218A16C4A32E /* QuestionnaireInformationInteractorInput.swift */,
+				619758CA011798AC5E393A5E /* QuestionnaireInformationInteractorOutput.swift */,
+				EBB68345C88486903A3EE564 /* QuestionnaireInformationInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		3F543490DBFB22BE5A889F0D /* Interactor */ = {
@@ -383,6 +425,7 @@
 				F8BAF6F9B63E67205B74429E /* Profile */,
 				8B8D2F2A838242304D4BB0F8 /* EditProfile */,
 				E4C58474A009E43010C41E30 /* Home */,
+				C50B3BB0DF84B1B106E02209 /* QuestionnaireInformation */,
 				809C3170EBD0B12B4DBDA64D /* PartOne */,
 				B781D47512568AC0240A2FB1 /* PartTwo */,
 			);
@@ -406,9 +449,6 @@
 				5D59042E260D071600988CCA /* Login.storyboard */,
 				5D02BF8D26092B8C0053E96C /* Profile.storyboard */,
 				5D590434260D0E6E00988CCA /* Home.storyboard */,
-				5D4EE0D5260F61E0004A6AE4 /* PartOne.storyboard */,
-				5D4EE0D8260F61F5004A6AE4 /* PartTwo.storyboard */,
-				5D4EE0DB260F6230004A6AE4 /* PartThree.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -437,6 +477,8 @@
 			children = (
 				5D02BF6E2607880C0053E96C /* UIViewInput.swift */,
 				5D02BF9A260A7D890053E96C /* RoundedButton.swift */,
+				5D4EE11A26165242004A6AE4 /* TestVC.swift */,
+				5D4EE11F26178721004A6AE4 /* SelectableImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -589,6 +631,15 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		961EC60AA70EBEC06F87C054 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3BFDB3C32A09D92E192BA1B2 /* QuestionnaireInformationRouterInput.swift */,
+				51485AB14961D73FEB99329E /* QuestionnaireInformationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		97ECFD02A88538E1DFBF4C57 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -664,6 +715,27 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		C50B3BB0DF84B1B106E02209 /* QuestionnaireInformation */ = {
+			isa = PBXGroup;
+			children = (
+				03D8EF5D40C129FA6741E988 /* View */,
+				D0FA649D299E1E7374235D5F /* Presenter */,
+				326FD7F708333D602F67CE4A /* Interactor */,
+				961EC60AA70EBEC06F87C054 /* Router */,
+				DF43D73B26D64F7B03983E34 /* Configurator */,
+			);
+			path = QuestionnaireInformation;
+			sourceTree = "<group>";
+		};
+		D0FA649D299E1E7374235D5F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1F6402C7DFC1EB3C53953BAD /* QuestionnaireInformationModuleInput.swift */,
+				C58025EAE97A5C014AB70019 /* QuestionnaireInformationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		D6E7ED01DBF5587AC916535D /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,6 +743,15 @@
 				CC0D45EF187CF9399AAD7B70 /* PartTwoRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		DF43D73B26D64F7B03983E34 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				4800683883F071CD9A22DE5D /* QuestionnaireInformationConfigurator.swift */,
+				5E640AB2BCAAE1462F3A8C62 /* QuestionnaireInformationInitializer.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		E44DB26EFB60DAF02186715B /* View */ = {
@@ -834,12 +915,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D783257260633CD00156AC1 /* LaunchScreen.storyboard in Resources */,
-				5D4EE0DC260F6230004A6AE4 /* PartThree.storyboard in Resources */,
 				5D783254260633CD00156AC1 /* Assets.xcassets in Resources */,
-				5D4EE0D9260F61F5004A6AE4 /* PartTwo.storyboard in Resources */,
 				5D02BF8E26092B8C0053E96C /* Profile.storyboard in Resources */,
 				5D590435260D0E6E00988CCA /* Home.storyboard in Resources */,
-				5D4EE0D6260F61E0004A6AE4 /* PartOne.storyboard in Resources */,
 				5D59042F260D071600988CCA /* Login.storyboard in Resources */,
 				5D783252260633CA00156AC1 /* Main.storyboard in Resources */,
 			);
@@ -926,6 +1004,7 @@
 				EE76887613F203855534D3C1 /* ProfileInteractorInput.swift in Sources */,
 				5D02BF57260646F30053E96C /* User.swift in Sources */,
 				5D02BF69260743260053E96C /* UserValidationError.swift in Sources */,
+				5D4EE12026178722004A6AE4 /* SelectableImage.swift in Sources */,
 				5D02BF6F2607880C0053E96C /* UIViewInput.swift in Sources */,
 				F674D4F3309C281B998F3854 /* ProfileInteractorOutput.swift in Sources */,
 				686BBC18B32EA1CB240E6531 /* ProfileInteractor.swift in Sources */,
@@ -966,6 +1045,7 @@
 				08DF8CBA9767B1410DA537D5 /* HomeViewInput.swift in Sources */,
 				F2BBA9C05FDBC006DCCE9760 /* HomeViewOutput.swift in Sources */,
 				9F9E50C0F04784F2735BF964 /* HomeViewController.swift in Sources */,
+				5D4EE11B26165243004A6AE4 /* TestVC.swift in Sources */,
 				929BC0907F8C0F3D71DF46A4 /* HomeModuleInput.swift in Sources */,
 				ABEDA70916BDCB60A69F9A21 /* HomePresenter.swift in Sources */,
 				5977EBADB1CFBE2E7414042B /* HomeInteractorInput.swift in Sources */,
@@ -1002,6 +1082,18 @@
 				2E0690C8CB8A641AF0325D9A /* PartTwoRouter.swift in Sources */,
 				378DA78916A92911B3A5828E /* PartTwoConfigurator.swift in Sources */,
 				01D0D8FA14B04F103ABD28ED /* PartTwoInitializer.swift in Sources */,
+				557D253E557C3B7F2496E347 /* QuestionnaireInformationViewInput.swift in Sources */,
+				9ADBA6BDE8DF72FD33820303 /* QuestionnaireInformationViewOutput.swift in Sources */,
+				F798E768B44F6A056F3C927A /* QuestionnaireInformationViewController.swift in Sources */,
+				BAD3F425831ABD860E58F9AA /* QuestionnaireInformationModuleInput.swift in Sources */,
+				10B469F177AA9F3F0AB96C8E /* QuestionnaireInformationPresenter.swift in Sources */,
+				9659925A4B4CA133202718D3 /* QuestionnaireInformationInteractorInput.swift in Sources */,
+				9BCA1B5CF8646383883FCA70 /* QuestionnaireInformationInteractorOutput.swift in Sources */,
+				FF2A817A4EB2AE997EF7ED2A /* QuestionnaireInformationInteractor.swift in Sources */,
+				843A1C7E199D2178B41B4E43 /* QuestionnaireInformationRouterInput.swift in Sources */,
+				8EB429E8633DF3553872A4D2 /* QuestionnaireInformationRouter.swift in Sources */,
+				B858307B56BCB55CD4960A0E /* QuestionnaireInformationConfigurator.swift in Sources */,
+				F43FAAC794D9C291C2B9AF83 /* QuestionnaireInformationInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

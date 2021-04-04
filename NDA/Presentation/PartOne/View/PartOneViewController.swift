@@ -17,6 +17,7 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     @IBOutlet weak var moderatelyCertainLabel: UILabel!
     @IBOutlet weak var highlyCertainLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var progressView: UIProgressView!
     
     var output: PartOneViewOutput!
 
@@ -35,6 +36,10 @@ class PartOneViewController: UIViewController, PartOneViewInput {
         cannotCertainLabel.text = String.PartOne.cannotCertain
         moderatelyCertainLabel.text = String.PartOne.moderatelyCertain
         highlyCertainLabel.text = String.PartOne.highlyCertain
+    }
+    
+    func updateProgressView(with value: Float) {
+        progressView.progress += value
     }
     
     func highlitingText(with sliderValue: Float) {

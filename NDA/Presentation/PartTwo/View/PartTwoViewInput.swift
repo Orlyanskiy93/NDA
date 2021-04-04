@@ -8,6 +8,7 @@
 
 protocol PartTwoViewInput: class {
     func setupInitialState()
+    func setupProgressView(with questions: [QuestionPartTwo])
     func fillButtonsTitle(with arithmeticQuestion: QuestionPartTwo)
     func fillButtonsBackground(with identifyQuestion: QuestionPartTwo)
 }

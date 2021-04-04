@@ -50,7 +50,7 @@ class QuestionBankImp: QuestionBank {
         var questions = [QuestionPartTwo]()
         for number in 0..<count {
             let firstNumber = Int.random(in: 1...99)
-            let secondNumber = Int.random(in: 1..<firstNumber)
+            let secondNumber = Int.random(in: 1...firstNumber)
             var rightAnswer = 0
             var title = ""
             let range = (rightAnswer - 5)...(rightAnswer + 5)

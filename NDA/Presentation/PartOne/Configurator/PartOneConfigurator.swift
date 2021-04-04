@@ -20,6 +20,7 @@ class PartOneModuleConfigurator {
     private func configure(viewController: PartOneViewController) {
 
         let router = PartOneRouter()
+        router.transitionHandler = viewController
 
         let presenter = PartOnePresenter()
         presenter.view = viewController
@@ -31,6 +32,7 @@ class PartOneModuleConfigurator {
 
         presenter.interactor = interactor
         viewController.output = presenter
+        viewController.moduleInput = presenter
     }
 
 }

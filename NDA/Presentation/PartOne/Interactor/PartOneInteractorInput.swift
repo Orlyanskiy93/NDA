@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PartOneInteractorInput {
-    func loadQuestions() -> [QuestionPartOne]
+    var questions: [QuestionPartOne] { get }
 }

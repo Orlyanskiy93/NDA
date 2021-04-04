@@ -9,4 +9,5 @@
 protocol PartOneViewInput: class, UIViewInput {
     func setupInitialState()
     func show(_ question: QuestionPartOne)
+    func updateProgressView(with value: Float)
 }

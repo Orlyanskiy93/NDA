@@ -13,6 +13,8 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     var index = 0
 
     func viewIsReady() {
+        view.setupProgressView(with: interactor.questions)
+        view.setupInitialState()
         loadQuestion()
     }
     
