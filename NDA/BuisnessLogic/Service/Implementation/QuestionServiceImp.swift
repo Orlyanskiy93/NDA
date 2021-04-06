@@ -57,7 +57,6 @@ class QuestionServiceImp: QuestionService {
         return questions
     }
     
-    // TODO: BUG repeat images
     func getIdentifyQuestions() -> [QuestionPartTwo] {
         var images = ["cow", "koala", "buffalo", "goat", "rhino", "bird",
                       "horse", "monkey", "owl", "pig", "rabbit", "rooster",

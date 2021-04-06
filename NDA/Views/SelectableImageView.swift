@@ -27,8 +27,7 @@ class SelectableImageView: UIImageView {
     }
     
     weak var delegate: SelectableImageDelegate!
-    // TODO
-    private let subview = UIView()
+    private let coverSubview = UIView()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,26 +38,26 @@ class SelectableImageView: UIImageView {
     }
         
     private func baseColorSetup() {
-        self.subview.removeFromSuperview()
+        self.coverSubview.removeFromSuperview()
         self.layer.borderColor = UIColor.clear.cgColor
         self.layer.borderWidth = 0
     }
     
     private func selectedColorSetup() {
-        self.subview.removeFromSuperview()
+        self.coverSubview.removeFromSuperview()
         self.layer.borderColor = UIColor.green.cgColor
         self.layer.borderWidth = 5
     }
     
     private func notSelectedColorSetup() {
         baseColorSetup()
-        subview.frame = self.bounds
-        subview.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-        self.addSubview(subview)
+        coverSubview.frame = self.bounds
+        coverSubview.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        self.addSubview(coverSubview)
     }
     
     @objc private func tap(_ gestureRecognizer: UITapGestureRecognizer) {
-        state = .selected
+//        state = .selected
         delegate.selectableImageView(didSelect: self)
     }
 }

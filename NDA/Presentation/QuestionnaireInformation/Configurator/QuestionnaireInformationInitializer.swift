@@ -9,8 +9,6 @@
 import UIKit
 
 class QuestionnaireInformationModuleInitializer: NSObject {
-
-    // Connect with object on storyboard
     @IBOutlet weak var questionnaireinformationViewController: QuestionnaireInformationViewController!
 
     override func awakeFromNib() {

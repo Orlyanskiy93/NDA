@@ -24,15 +24,19 @@ class PartOnePresenter: NSObject, PartOneModuleInput, PartOneViewOutput, PartOne
         let answer = AnswerPartOne(question: question, value: value)
         answers.append(answer)
     }
-        
+    
     func answerDidChosen(with value: Int) {
         if index + 1 != interactor.questions.count {
-            let question = interactor.questions[index]
-            saveAnswer(question: question, value: value)
+            let currentQuestion = interactor.questions[index]
+            saveAnswer(question: currentQuestion, value: value)
+            
+            index += 1
+            
             let progressValue = Float(index) / Float(interactor.questions.count)
             view.updateProgressView(with: progressValue)
-            index += 1
-            view.show(question)
+            
+            let nextQuestion = interactor.questions[index]
+            view.show(nextQuestion)
         } else {
             router.openPartTwo()
         }

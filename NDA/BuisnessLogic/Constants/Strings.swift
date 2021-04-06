@@ -17,6 +17,7 @@ extension String {
         static let emptyField = "Field is empty"
         static let saveUser = "Unable to save user"
         static let getUser = "Unable to load user"
+        static let optionsCount = "Wrong count of options"
     }
     
     struct Button {

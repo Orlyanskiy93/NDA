@@ -13,7 +13,6 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     var index: Int = 0
 
     func viewIsReady() {
-        view.setupProgressView(with: interactor.questions)
         view.setupInitialState()
         loadQuestion()
     }
@@ -21,15 +20,17 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     func loadQuestion() {
         let question = interactor.questions[index]
         if question.type == .image {
-            view.fillButtonsBackground(with: question)
+            view.fillImageViews(with: question)
         } else {
-            view.fillButtonsTitle(with: question)
+            view.fillButtons(with: question)
         }
     }
     
     func nextQuestion() {
-        if (index + 1) != interactor.questions.count {
+        if index + 1 != interactor.questions.count {
             index += 1
+            let progressValue = Float(index) / Float(interactor.questions.count)
+            view.updateProgressView(with: progressValue)
             loadQuestion()
         } else {
         }
