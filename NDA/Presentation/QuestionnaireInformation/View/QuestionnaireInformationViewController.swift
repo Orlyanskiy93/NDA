@@ -9,7 +9,7 @@
 import UIKit
 
 class QuestionnaireInformationViewController: UIViewController, QuestionnaireInformationViewInput {
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var beginButton: RoundedButton!
     var output: QuestionnaireInformationViewOutput!
 
@@ -19,7 +19,7 @@ class QuestionnaireInformationViewController: UIViewController, QuestionnaireInf
     }
 
     func setupInitialState() {
-        textView.text = String.Home.questionnaireDescription
+        descriptionLabel.text = String.Home.questionnaireDescription
         beginButton.setTitle(String.Button.begin, for: .normal)
     }
     

@@ -10,7 +10,7 @@ import UIKit
 
 class PartTwoDescriptionViewController: UIViewController, PartTwoDescriptionViewInput {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var okButtton: RoundedButton!
     
     var output: PartTwoDescriptionViewOutput!
@@ -22,7 +22,7 @@ class PartTwoDescriptionViewController: UIViewController, PartTwoDescriptionView
 
     func setupInitialState() {
         titleLabel.text = String.PartTwo.title
-        textView.text = String.PartTwo.moduleDescription
+        descriptionLabel.text = String.PartTwo.moduleDescription
         okButtton.setTitle(String.Button.ok, for: .normal)
     }
 }
