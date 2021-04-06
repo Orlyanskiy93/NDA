@@ -8,8 +8,9 @@
 
 class PartOneInteractor: PartOneInteractorInput {
     weak var output: PartOneInteractorOutput!
-    var questionBank: QuestionBank!
+    var questionBank: QuestionService!
+    
     var questions: [QuestionPartOne] {
-        return questionBank.getSelfEfficacyQuestions()
+        return questionBank.questionsPartOne
     }
 }

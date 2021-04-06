@@ -10,7 +10,7 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     weak var view: PartTwoViewInput!
     var interactor: PartTwoInteractorInput!
     var router: PartTwoRouterInput!
-    var index = 0
+    var index: Int = 0
 
     func viewIsReady() {
         view.setupProgressView(with: interactor.questions)

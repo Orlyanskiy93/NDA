@@ -8,54 +8,65 @@
 import UIKit
 
 protocol SelectableImageDelegate: class {
-    func imageDidSelected(_ selectableImage: SelectableImage, with condition: SelectableImage.Condition)
+    func selectableImageView(didSelect selectableImageView: SelectableImageView)
  }
 
-class SelectableImage: UIImageView {
+class SelectableImageView: UIImageView {
     
-    var isSelected: Bool = false
+    var state: Condition = .notDetermined {
+        didSet {
+            switch state {
+            case .notDetermined:
+                baseColorSetup()
+            case .notSelected:
+                notSelectedColorSetup()
+            case .selected:
+                selectedColorSetup()
+            }
+        }
+    }
+    
     weak var delegate: SelectableImageDelegate!
-    let subview = UIView()
-    let tasd = UITableView()
+    // TODO
+    private let subview = UIView()
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        contentMode = .scaleAspectFill
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap(_:)))
         self.addGestureRecognizer(gestureRecognizer)
         self.isUserInteractionEnabled = true
     }
         
-    func baseColorSetup() {
+    private func baseColorSetup() {
         self.subview.removeFromSuperview()
         self.layer.borderColor = UIColor.clear.cgColor
         self.layer.borderWidth = 0
     }
     
-    func selectedColorSetup() {
+    private func selectedColorSetup() {
         self.subview.removeFromSuperview()
         self.layer.borderColor = UIColor.green.cgColor
         self.layer.borderWidth = 5
     }
     
-    func notSelectedColorSetup() {
+    private func notSelectedColorSetup() {
         baseColorSetup()
         subview.frame = self.bounds
         subview.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         self.addSubview(subview)
     }
     
-    @objc func tap(_ gestureRecognizer: UITapGestureRecognizer) {
-        if !isSelected {
-            delegate.imageDidSelected(self, with: .selected)
-        } else {
-            delegate.imageDidSelected(self, with: .notSelected)
-        }
+    @objc private func tap(_ gestureRecognizer: UITapGestureRecognizer) {
+        state = .selected
+        delegate.selectableImageView(didSelect: self)
     }
 }
 
-extension SelectableImage {
+extension SelectableImageView {
     enum Condition {
         case selected
         case notSelected
+        case notDetermined
     }
 }

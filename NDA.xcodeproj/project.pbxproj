@@ -57,15 +57,15 @@
 		5D02BF94260A6FCF0053E96C /* ProfileServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */; };
 		5D02BF9B260A7D890053E96C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF9A260A7D890053E96C /* RoundedButton.swift */; };
 		5D4BAB7309550600B010EA3B /* LoginInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7C7D50B4ADBD3295F62F3 /* LoginInitializer.swift */; };
-		5D4EE0CF260F1B0B004A6AE4 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0CE260F1B0B004A6AE4 /* QuestionBank.swift */; };
-		5D4EE0D2260F1BC4004A6AE4 /* QuestionBankImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0D1260F1BC4004A6AE4 /* QuestionBankImp.swift */; };
+		5D4EE0CF260F1B0B004A6AE4 /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0CE260F1B0B004A6AE4 /* QuestionService.swift */; };
+		5D4EE0D2260F1BC4004A6AE4 /* QuestionServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0D1260F1BC4004A6AE4 /* QuestionServiceImp.swift */; };
 		5D4EE0EE261322D7004A6AE4 /* QuestionPartOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0ED261322D7004A6AE4 /* QuestionPartOne.swift */; };
 		5D4EE0F126132301004A6AE4 /* AnswerPartOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0F026132301004A6AE4 /* AnswerPartOne.swift */; };
 		5D4EE0F926135D3A004A6AE4 /* QuestionPartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0F826135D3A004A6AE4 /* QuestionPartTwo.swift */; };
 		5D4EE0FC261360F3004A6AE4 /* QuestionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0FB261360F3004A6AE4 /* QuestionError.swift */; };
 		5D4EE10026136B31004A6AE4 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE0FF26136B31004A6AE4 /* Option.swift */; };
 		5D4EE106261493AD004A6AE4 /* AnswerPartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE105261493AD004A6AE4 /* AnswerPartTwo.swift */; };
-		5D4EE12026178722004A6AE4 /* SelectableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE11F26178721004A6AE4 /* SelectableImage.swift */; };
+		5D4EE12026178722004A6AE4 /* SelectableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4EE11F26178721004A6AE4 /* SelectableImageView.swift */; };
 		5D59042B260CFBE900988CCA /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59042A260CFBE900988CCA /* MainRouter.swift */; };
 		5D59042F260D071600988CCA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D59042E260D071600988CCA /* Login.storyboard */; };
 		5D590435260D0E6E00988CCA /* Questionnaire.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D590434260D0E6E00988CCA /* Questionnaire.storyboard */; };
@@ -196,15 +196,15 @@
 		5D02BF8D26092B8C0053E96C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceError.swift; sourceTree = "<group>"; };
 		5D02BF9A260A7D890053E96C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		5D4EE0CE260F1B0B004A6AE4 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
-		5D4EE0D1260F1BC4004A6AE4 /* QuestionBankImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankImp.swift; sourceTree = "<group>"; };
+		5D4EE0CE260F1B0B004A6AE4 /* QuestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
+		5D4EE0D1260F1BC4004A6AE4 /* QuestionServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionServiceImp.swift; sourceTree = "<group>"; };
 		5D4EE0ED261322D7004A6AE4 /* QuestionPartOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPartOne.swift; sourceTree = "<group>"; };
 		5D4EE0F026132301004A6AE4 /* AnswerPartOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPartOne.swift; sourceTree = "<group>"; };
 		5D4EE0F826135D3A004A6AE4 /* QuestionPartTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPartTwo.swift; sourceTree = "<group>"; };
 		5D4EE0FB261360F3004A6AE4 /* QuestionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionError.swift; sourceTree = "<group>"; };
 		5D4EE0FF26136B31004A6AE4 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		5D4EE105261493AD004A6AE4 /* AnswerPartTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPartTwo.swift; sourceTree = "<group>"; };
-		5D4EE11F26178721004A6AE4 /* SelectableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableImage.swift; sourceTree = "<group>"; };
+		5D4EE11F26178721004A6AE4 /* SelectableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableImageView.swift; sourceTree = "<group>"; };
 		5D59042A260CFBE900988CCA /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		5D59042E260D071600988CCA /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5D590434260D0E6E00988CCA /* Questionnaire.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questionnaire.storyboard; sourceTree = "<group>"; };
@@ -506,7 +506,7 @@
 			children = (
 				5D02BF53260641C00053E96C /* Implementation */,
 				5D02BF59260647310053E96C /* ProfileService.swift */,
-				5D4EE0CE260F1B0B004A6AE4 /* QuestionBank.swift */,
+				5D4EE0CE260F1B0B004A6AE4 /* QuestionService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -553,7 +553,7 @@
 			isa = PBXGroup;
 			children = (
 				5D02BF5C260647850053E96C /* ProfileServiceImp.swift */,
-				5D4EE0D1260F1BC4004A6AE4 /* QuestionBankImp.swift */,
+				5D4EE0D1260F1BC4004A6AE4 /* QuestionServiceImp.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -573,7 +573,7 @@
 			children = (
 				5D02BF6E2607880C0053E96C /* UIViewInput.swift */,
 				5D02BF9A260A7D890053E96C /* RoundedButton.swift */,
-				5D4EE11F26178721004A6AE4 /* SelectableImage.swift */,
+				5D4EE11F26178721004A6AE4 /* SelectableImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1169,7 +1169,7 @@
 				EE76887613F203855534D3C1 /* ProfileInteractorInput.swift in Sources */,
 				5D02BF57260646F30053E96C /* User.swift in Sources */,
 				5D02BF69260743260053E96C /* UserValidationError.swift in Sources */,
-				5D4EE12026178722004A6AE4 /* SelectableImage.swift in Sources */,
+				5D4EE12026178722004A6AE4 /* SelectableImageView.swift in Sources */,
 				5D02BF6F2607880C0053E96C /* UIViewInput.swift in Sources */,
 				F674D4F3309C281B998F3854 /* ProfileInteractorOutput.swift in Sources */,
 				686BBC18B32EA1CB240E6531 /* ProfileInteractor.swift in Sources */,
@@ -1201,7 +1201,7 @@
 				9281AF0CE5C3E4925E07BF69 /* EditProfilePresenter.swift in Sources */,
 				B370F4378901868BDA89A8AF /* EditProfileInteractorInput.swift in Sources */,
 				D7FFAEC2AD9579F9F0CB41BA /* EditProfileInteractorOutput.swift in Sources */,
-				5D4EE0D2260F1BC4004A6AE4 /* QuestionBankImp.swift in Sources */,
+				5D4EE0D2260F1BC4004A6AE4 /* QuestionServiceImp.swift in Sources */,
 				5FCFF3CC1B61E6D4E451EE5D /* EditProfileInteractor.swift in Sources */,
 				8A064467CA178D331FCFCCC4 /* EditProfileRouterInput.swift in Sources */,
 				192DEE3B04703E1D8DC5ED80 /* EditProfileRouter.swift in Sources */,
@@ -1218,7 +1218,7 @@
 				67CCE31341F23822B348D3F3 /* HomeInteractor.swift in Sources */,
 				D191874D5C36A451DA90C843 /* HomeRouterInput.swift in Sources */,
 				7096C0DAFF12134A51E323C6 /* HomeRouter.swift in Sources */,
-				5D4EE0CF260F1B0B004A6AE4 /* QuestionBank.swift in Sources */,
+				5D4EE0CF260F1B0B004A6AE4 /* QuestionService.swift in Sources */,
 				02A2019FD614A6E8A1B7D440 /* HomeConfigurator.swift in Sources */,
 				DAA4C9E5D01807280EC340BC /* HomeInitializer.swift in Sources */,
 				79921E2284BBAAABDB32E79E /* PartOneViewInput.swift in Sources */,

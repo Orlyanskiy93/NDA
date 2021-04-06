@@ -39,7 +39,7 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     }
     
     func updateProgressView(with value: Float) {
-        progressView.progress += value
+        progressView.progress = value
     }
     
     func highlitingText(with sliderValue: Float) {
@@ -49,6 +49,7 @@ class PartOneViewController: UIViewController, PartOneViewInput {
         numberLabels.forEach { (label) in
             label.font = UIFont.systemFont(ofSize: baseFontSize)
         }
+        // TODO: tag
         numberLabels[index].font = UIFont.boldSystemFont(ofSize: increasedFontSize)
     }
     

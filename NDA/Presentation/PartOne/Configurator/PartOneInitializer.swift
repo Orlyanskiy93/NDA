@@ -9,8 +9,6 @@
 import UIKit
 
 class PartOneModuleInitializer: NSObject {
-
-    // Connect with object on storyboard
     @IBOutlet weak var partoneViewController: PartOneViewController!
 
     override func awakeFromNib() {
