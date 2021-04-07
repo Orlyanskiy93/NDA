@@ -43,6 +43,9 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
             show(title: String.Error.error, message: String.Error.optionsCount)
             return
         }
+        optionButtons.forEach { (button) in
+            button.backgroundColor = .lightGray
+        }
         optionButtons[0].setTitle(arithmeticQuestion.firstOption.value, for: .normal)
         optionButtons[1].setTitle(arithmeticQuestion.secondOption.value, for: .normal)
         optionButtons[2].setTitle(arithmeticQuestion.thirdOption.value, for: .normal)
@@ -77,7 +80,20 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
             selectableImageView.state = .selected
         }
     }
-
+    
+    @IBAction func buttonDidSelected(_ sender: UIButton) {
+        let greenColor = UIColor.systemGreen
+        let lightGrayColor = UIColor.lightGray
+        if sender.backgroundColor == greenColor {
+            sender.backgroundColor = lightGrayColor
+        } else {
+            optionButtons.forEach { (button) in
+                button.backgroundColor = lightGrayColor
+            }
+            sender.backgroundColor = greenColor
+        }
+    }
+    
     @IBAction func nextQuestion(_ sender: UIButton) {
         output.nextQuestion()
         optionImageViews.forEach { (imageView) in

@@ -49,6 +49,13 @@ class PartOneViewController: UIViewController, PartOneViewInput {
         numberLabels.forEach { (label) in
             label.font = UIFont.systemFont(ofSize: baseFontSize)
         }
+        
+//        for label in numberLabels {
+//            if label.tag == Int(sliderValue) {
+//                label.font = UIFont.boldSystemFont(ofSize: increasedFontSize)
+//            }
+//        }
+        
         // TODO: tag
         numberLabels[index].font = UIFont.boldSystemFont(ofSize: increasedFontSize)
     }

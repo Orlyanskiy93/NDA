@@ -23,7 +23,7 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
         view.fillLabels(with: user)
     }
     
-    //TOTO: Удаление истории
+    //TODO: Удаление истории
     func removeUserAndHistory() {
         interactor.removeUser()
         mainRouter.open(module: .login)
