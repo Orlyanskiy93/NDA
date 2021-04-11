@@ -17,6 +17,7 @@ extension String {
         static let emptyField = "Field is empty"
         static let saveUser = "Unable to save user"
         static let getUser = "Unable to load user"
+        static let optionsCount = "Wrong count of options"
     }
     
     struct Button {
@@ -55,8 +56,8 @@ extension String {
     struct PartTwo {
         static let title = "Part 2: Short Answer"
         static let moduleDescription = "The following questions are designed to test you using a few simple short - answer questions. Please try to answer these questions quickly and correctly."
-        static let images = ["zebra", "cow", "rooster", "rabbit", "tiger", "koala", "turtle", "owl",
-                             "buffalo", "goat", "monkey", "rhino", "bird", "sheep", "pig", "horse"]
+        static let images = ["cow", "koala",
+                             "buffalo", "goat", "rhino", "bird", "horse"]
         static let arythmeticQuestion = "What is "
         static let identifyQuestion = "Please identify picture of "
     }
