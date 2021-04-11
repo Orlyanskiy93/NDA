@@ -12,14 +12,11 @@ class PartThreeViewController: UIViewController, PartThreeViewInput {
 
     var output: PartThreeViewOutput!
 
-    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
-    // MARK: PartThreeViewInput
     func setupInitialState() {
     }
 }

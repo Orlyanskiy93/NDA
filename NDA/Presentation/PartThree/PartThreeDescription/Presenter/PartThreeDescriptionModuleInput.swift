@@ -6,6 +6,8 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartThreeDescriptionModuleInput: class {
+import ViperMcFlurry
+
+protocol PartThreeDescriptionModuleInput: class, RamblerViperModuleInput {
 
 }

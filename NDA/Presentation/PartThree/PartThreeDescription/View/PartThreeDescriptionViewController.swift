@@ -12,14 +12,11 @@ class PartThreeDescriptionViewController: UIViewController, PartThreeDescription
 
     var output: PartThreeDescriptionViewOutput!
 
-    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
-    // MARK: PartThreeDescriptionViewInput
     func setupInitialState() {
     }
 }
