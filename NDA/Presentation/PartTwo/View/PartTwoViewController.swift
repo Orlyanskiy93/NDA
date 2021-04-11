@@ -10,14 +10,15 @@ import UIKit
 
 class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImageDelegate {
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet var optionImageViews: [SelectableImageView]!
-    @IBOutlet var optionButtons: [RoundedButton]!
+    @IBOutlet var optionImageViews: [OptionSelectableImageView]!
+    @IBOutlet var optionButtons: [OptionSelectableButton]!
     @IBOutlet weak var imageViewsStackView: UIStackView!
     @IBOutlet weak var buttonsStackView: UIStackView!
+    @IBOutlet weak var nextButton: RoundedButton!
     @IBOutlet weak var progressView: UIProgressView!
-    
+        
     var output: PartTwoViewOutput!
-    var questionBank = QuestionServiceImp.shared
+    var chosenOption: Option?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,17 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
         optionImageViews.forEach { (imageView) in
             imageView.delegate = self
         }
+        optionNotSelectedNextButtonSetup()
+    }
+    
+    func optionSelectedNextButtonSetup() {
+        nextButton.isEnabled = true
+        nextButton.backgroundColor = .systemGreen
+    }
+    
+    func optionNotSelectedNextButtonSetup() {
+        nextButton.backgroundColor = .gray
+        nextButton.isEnabled = false
     }
     
     func updateProgressView(with value: Float) {
@@ -46,10 +58,11 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
         optionButtons.forEach { (button) in
             button.backgroundColor = .lightGray
         }
-        optionButtons[0].setTitle(arithmeticQuestion.firstOption.value, for: .normal)
-        optionButtons[1].setTitle(arithmeticQuestion.secondOption.value, for: .normal)
-        optionButtons[2].setTitle(arithmeticQuestion.thirdOption.value, for: .normal)
-        optionButtons[3].setTitle(arithmeticQuestion.fourthOption.value, for: .normal)
+        
+        optionButtons[0].fill(with: arithmeticQuestion.firstOption)
+        optionButtons[1].fill(with: arithmeticQuestion.secondOption)
+        optionButtons[2].fill(with: arithmeticQuestion.thirdOption)
+        optionButtons[3].fill(with: arithmeticQuestion.fourthOption)
     }
     
     func fillImageViews(with identifyQuestion: QuestionPartTwo) {
@@ -62,42 +75,51 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
             show(title: String.Error.error, message: String.Error.optionsCount)
             return
         }
-        optionImageViews[0].image = UIImage(named: identifyQuestion.firstOption.value)
-        optionImageViews[1].image = UIImage(named: identifyQuestion.secondOption.value)
-        optionImageViews[2].image = UIImage(named: identifyQuestion.thirdOption.value)
-        optionImageViews[3].image = UIImage(named: identifyQuestion.fourthOption.value)
+        
+        optionImageViews[0].fill(with: identifyQuestion.firstOption)
+        optionImageViews[1].fill(with: identifyQuestion.secondOption)
+        optionImageViews[2].fill(with: identifyQuestion.thirdOption)
+        optionImageViews[3].fill(with: identifyQuestion.fourthOption)        
     }
     
-    func selectableImageView(didSelect selectableImageView: SelectableImageView) {
-        if selectableImageView.state == .selected {
-            optionImageViews.forEach { (imageView) in
-                imageView.state = .notDetermined
-            }
-        } else {
-            optionImageViews.forEach { (view) in
-                view.state = .notSelected
-            }
-            selectableImageView.state = .selected
+    func selectableImageView(didSelect selectableImageView: OptionSelectableImageView) {
+        optionImageViews.forEach { (view) in
+            view.state = .notSelected
         }
+        selectableImageView.state = .selected
+        
+        chosenOption = selectableImageView.option
+        optionSelectedNextButtonSetup()
     }
-    
-    @IBAction func buttonDidSelected(_ sender: UIButton) {
-        let greenColor = UIColor.systemGreen
-        let lightGrayColor = UIColor.lightGray
-        if sender.backgroundColor == greenColor {
-            sender.backgroundColor = lightGrayColor
-        } else {
-            optionButtons.forEach { (button) in
-                button.backgroundColor = lightGrayColor
-            }
-            sender.backgroundColor = greenColor
+        
+    @IBAction func buttonDidSelected(_ sender: OptionSelectableButton) {
+        optionButtons.forEach { (button) in
+            button.isSelected = false
         }
+        sender.isSelected = true
+        
+        chosenOption = sender.option
+        optionSelectedNextButtonSetup()
     }
     
-    @IBAction func nextQuestion(_ sender: UIButton) {
-        output.nextQuestion()
+    func resetOptions() {
         optionImageViews.forEach { (imageView) in
             imageView.state = .notDetermined
         }
+        optionButtons.forEach { (button) in
+            button.isSelected = false
+        }
+        optionNotSelectedNextButtonSetup()
+    }
+
+    @IBAction func nextQuestion(_ sender: UIButton) {
+        guard let option = chosenOption else {
+            show(title: String.Error.error, message: String.Error.tryAgain) { [weak self] (_) in
+                self?.output.loadQuestion()
+            }
+            return
+        }
+        output.didChosen(option)
+        resetOptions()
     }
 }

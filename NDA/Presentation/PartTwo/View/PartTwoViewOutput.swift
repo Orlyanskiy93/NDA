@@ -8,5 +8,6 @@
 
 protocol PartTwoViewOutput {
     func viewIsReady()
-    func nextQuestion()
+    func didChosen(_ option: Option)
+    func loadQuestion()
 }

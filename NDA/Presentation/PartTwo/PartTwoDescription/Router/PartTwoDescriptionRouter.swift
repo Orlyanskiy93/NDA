@@ -6,6 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-class PartTwoDescriptionRouter: PartTwoDescriptionRouterInput {
+import ViperMcFlurry
 
+class PartTwoDescriptionRouter: PartTwoDescriptionRouterInput {
 }

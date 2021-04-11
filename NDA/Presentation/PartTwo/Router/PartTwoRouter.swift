@@ -9,5 +9,9 @@
 import ViperMcFlurry
 
 class PartTwoRouter: PartTwoRouterInput {
-
+    var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
+    
+    func openPartThree() {
+        _ = transitionHandler.openModule?(usingSegue: "partThreeSegue")
+    }
 }
