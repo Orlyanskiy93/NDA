@@ -18,6 +18,7 @@ extension String {
         static let saveUser = "Unable to save user"
         static let getUser = "Unable to load user"
         static let optionsCount = "Wrong count of options"
+        static let tryAgain = "Try again"
     }
     
     struct Button {
@@ -41,23 +42,11 @@ extension String {
         static let cannotCertain = "Cannot do at all"
         static let moderatelyCertain = "Moderately can do"
         static let highlyCertain = "Highly certain can do"
-        static let questions = [
-            "I am sure that I can recognize when I forget something",
-            "I am sure that I can recognize when I become distracted",
-            "I am sure that I can recognize when I am having difficulty concentrating",
-            "I am sure that I can recognize when I make a mistake",
-            "I am sure that I can recognize when I have missed details or information",
-            "I am sure that I can recognize when my mind feels cloudy or less sharp",
-            "I am sure that I can recognize when there is too much information for mee to process",
-            "I am sure that I can recognize when I have lost track of what I was just doing"
-        ]
     }
     
     struct PartTwo {
         static let title = "Part 2: Short Answer"
         static let moduleDescription = "The following questions are designed to test you using a few simple short - answer questions. Please try to answer these questions quickly and correctly."
-        static let images = ["cow", "koala",
-                             "buffalo", "goat", "rhino", "bird", "horse"]
         static let arythmeticQuestion = "What is "
         static let identifyQuestion = "Please identify picture of "
     }

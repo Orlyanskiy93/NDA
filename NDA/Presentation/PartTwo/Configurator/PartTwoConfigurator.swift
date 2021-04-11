@@ -19,6 +19,7 @@ class PartTwoModuleConfigurator {
     private func configure(viewController: PartTwoViewController) {
 
         let router = PartTwoRouter()
+        router.transitionHandler = viewController
 
         let presenter = PartTwoPresenter()
         presenter.view = viewController

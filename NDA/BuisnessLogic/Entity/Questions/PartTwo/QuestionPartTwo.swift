@@ -8,35 +8,46 @@
 import Foundation
 
 struct QuestionPartTwo {
+    private let questionBank = QuestionBank.shared
+    
     var title: String
     var firstOption: Option
     var secondOption: Option
     var thirdOption: Option
     var fourthOption: Option
     
-    var type: Option.OptionType {
+    var type: OptionType {
         return firstOption.type
     }
-    
-    init(title: String, firstOption: Option, secondOption: Option, thirdOption: Option, fourthOption: Option) {
-        self.title = title
-
-        self.firstOption = firstOption
-        self.secondOption = secondOption
-        self.thirdOption = thirdOption
-        self.fourthOption = fourthOption
-    }
-    
-    init(title: String, options: [Option]) throws {
-        if options.count < 4 || options.count > 4 {
-            throw QuestionError.wrongAnswerCount
-        }
-        self.title = title
         
-        let shuffledOptions = options.shuffled()
-        self.firstOption = shuffledOptions[0]
-        self.secondOption = shuffledOptions[1]
-        self.thirdOption = shuffledOptions[2]
-        self.fourthOption = shuffledOptions[3]
+    init(type: OptionType) {
+        if type == .text {
+            let arithmetic = questionBank.getArithmeticOptions(count: 4)
+            var title = ""
+            var options = [Option]()
+            for (name, answers) in arithmetic {
+                title = name
+                options = answers
+            }
+            
+            self.title = title
+            firstOption = options[0]
+            secondOption = options[1]
+            thirdOption = options[2]
+            fourthOption = options[3]
+        } else {
+            let options = questionBank.getImageOptions(count: 4)
+            var title = ""
+            options.forEach { (option) in
+                if option.isRight == true {
+                    title = String.PartTwo.identifyQuestion + option.value
+                }
+            }
+            self.title = title
+            firstOption = options[0]
+            secondOption = options[1]
+            thirdOption = options[2]
+            fourthOption = options[3]
+        }
     }
 }

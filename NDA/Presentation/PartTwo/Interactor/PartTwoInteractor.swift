@@ -11,6 +11,12 @@ class PartTwoInteractor: PartTwoInteractorInput {
     var questionBank: QuestionService!
     
     var questions: [QuestionPartTwo] {
-        return questionBank.questionsPartTwo
+        var questions = [QuestionPartTwo]()
+        do {
+            try questions = questionBank.getQuestioinsPartTwo(count: 8)
+        } catch {
+            output.handle(error)
+        }
+        return questions
     }
 }

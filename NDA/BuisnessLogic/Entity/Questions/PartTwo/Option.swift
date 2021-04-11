@@ -8,10 +8,10 @@
 import Foundation
 
 struct Option {
-    var value: String // image or string
+    var value: String
     var isRight: Bool
     var type: OptionType
-    
+
     init(value: String, type: OptionType, isRight: Bool = false) {
         self.value = value
         self.isRight = isRight
@@ -19,9 +19,7 @@ struct Option {
     }
 }
 
-extension Option {
-    enum OptionType {
-        case image
-        case text
-    }
+enum OptionType {
+    case image
+    case text
 }

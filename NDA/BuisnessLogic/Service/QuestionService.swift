@@ -8,6 +8,6 @@
 import Foundation
 
 protocol QuestionService {
-    var questionsPartOne: [QuestionPartOne] { get }
-    var questionsPartTwo: [QuestionPartTwo] { get }
+    func getQuestionsPartOne() -> [QuestionPartOne]
+    func getQuestioinsPartTwo(count: Int) throws -> [QuestionPartTwo]
 }

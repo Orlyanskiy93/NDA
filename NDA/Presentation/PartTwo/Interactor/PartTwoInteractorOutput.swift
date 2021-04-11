@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PartTwoInteractorOutput: class {
-
+    func handle(_ error: Error)
 }
