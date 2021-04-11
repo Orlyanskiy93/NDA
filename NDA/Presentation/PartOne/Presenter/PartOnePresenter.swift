@@ -26,10 +26,10 @@ class PartOnePresenter: NSObject, PartOneModuleInput, PartOneViewOutput, PartOne
     }
     
     func answerDidChosen(with value: Int) {
-        if index + 1 != interactor.questions.count {
-            let currentQuestion = interactor.questions[index]
-            saveAnswer(question: currentQuestion, value: value)
-            
+        let currentQuestion = interactor.questions[index]
+        saveAnswer(question: currentQuestion, value: value)
+        
+        if index + 1 < interactor.questions.count {
             index += 1
             
             let progressValue = Float(index) / Float(interactor.questions.count)

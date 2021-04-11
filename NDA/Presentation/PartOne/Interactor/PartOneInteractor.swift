@@ -11,6 +11,6 @@ class PartOneInteractor: PartOneInteractorInput {
     var questionBank: QuestionService!
     
     var questions: [QuestionPartOne] {
-        return questionBank.questionsPartOne
+        return questionBank.getQuestionsPartOne()
     }
 }
