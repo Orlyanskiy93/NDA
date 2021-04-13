@@ -1,5 +1,5 @@
 //
-//  PartThreePartThreeConfigurator.swift
+//  PartThreeDescriptionPartThreeDescriptionConfigurator.swift
 //  NDA
 //
 //  Created by Dmitriy on 06/04/2021.
@@ -8,29 +8,29 @@
 
 import UIKit
 
-class PartThreeModuleConfigurator {
+class PartThreeDescriptionModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
-        if let viewController = viewInput as? PartThreeViewController {
+        if let viewController = viewInput as? PartThreeDescriptionViewController {
             configure(viewController: viewController)
         }
     }
 
-    private func configure(viewController: PartThreeViewController) {
+    private func configure(viewController: PartThreeDescriptionViewController) {
 
-        let router = PartThreeRouter()
+        let router = PartThreeDescriptionRouter()
 
-        let presenter = PartThreePresenter()
+        let presenter = PartThreeDescriptionPresenter()
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = PartThreeInteractor()
+        let interactor = PartThreeDescriptionInteractor()
         interactor.output = presenter
-        interactor.questionServise = QuestionServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter
+        viewController.moduleInput = presenter
     }
 
 }

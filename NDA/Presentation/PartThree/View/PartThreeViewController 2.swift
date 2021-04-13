@@ -9,8 +9,7 @@
 import UIKit
 
 class PartThreeViewController: UIViewController, PartThreeViewInput {
-    @IBOutlet weak var textView: UITextView!
-    
+
     var output: PartThreeViewOutput!
 
     override func viewDidLoad() {
@@ -19,10 +18,5 @@ class PartThreeViewController: UIViewController, PartThreeViewInput {
     }
 
     func setupInitialState() {
-    }
-    
-    @IBAction func next(_ sender: RoundedButton) {
-        let text = textView.text ?? ""
-        output.recive(text)
     }
 }

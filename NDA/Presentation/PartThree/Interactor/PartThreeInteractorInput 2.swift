@@ -9,6 +9,5 @@
 import Foundation
 
 protocol PartThreeInteractorInput {
-    func didRecived(_ text: String)
-    func save(answer: AnswerPartThree, score: Double, completionDate: Date)
+
 }

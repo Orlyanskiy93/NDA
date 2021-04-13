@@ -6,6 +6,12 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartThreeViewInput: class, UIViewInput {
+protocol PartThreeViewInput: class {
+
+    /**
+        @author Dmitriy
+        Setup initial state of the view
+    */
+
     func setupInitialState()
 }
