@@ -80,7 +80,11 @@
 		5D783252260633CA00156AC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D783250260633CA00156AC1 /* Main.storyboard */; };
 		5D783254260633CD00156AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D783253260633CD00156AC1 /* Assets.xcassets */; };
 		5D783257260633CD00156AC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D783255260633CD00156AC1 /* LaunchScreen.storyboard */; };
+		5DC62AD62625D4DF000569E9 /* QuestioinPartThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC62AD52625D4DE000569E9 /* QuestioinPartThree.swift */; };
+		5DC62ADA2625D4F2000569E9 /* AnswerPartThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC62AD92625D4F2000569E9 /* AnswerPartThree.swift */; };
 		5DCBDCAF2621C15C00E53D06 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCBDCAE2621C15C00E53D06 /* QuestionBank.swift */; };
+		5DCBDCB726230E0000E53D06 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DCBDCB926230E0000E53D06 /* Localizable.strings */; };
+		5DCBDCBE2623133400E53D06 /* LoginLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCBDCBD2623133400E53D06 /* LoginLocalizable.swift */; };
 		5DD004F2261DCD8900A5D64D /* OptionSelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD004F1261DCD8900A5D64D /* OptionSelectableButton.swift */; };
 		5FCFF3CC1B61E6D4E451EE5D /* EditProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1347D4B113BB111BD6E099 /* EditProfileInteractor.swift */; };
 		60A9E5B999CB6C21219BE837 /* Pods_NDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7760F5CE6F8D2E49D6F85E /* Pods_NDA.framework */; };
@@ -247,7 +251,12 @@
 		5D783253260633CD00156AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D783256260633CD00156AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D783258260633CD00156AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DC62AD52625D4DE000569E9 /* QuestioinPartThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestioinPartThree.swift; sourceTree = "<group>"; };
+		5DC62AD92625D4F2000569E9 /* AnswerPartThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerPartThree.swift; sourceTree = "<group>"; };
 		5DCBDCAE2621C15C00E53D06 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		5DCBDCB826230E0000E53D06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5DCBDCBB2623105B00E53D06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5DCBDCBD2623133400E53D06 /* LoginLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLocalizable.swift; sourceTree = "<group>"; };
 		5DD004F1261DCD8900A5D64D /* OptionSelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectableButton.swift; sourceTree = "<group>"; };
 		5E640AB2BCAAE1462F3A8C62 /* QuestionnaireInformationInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuestionnaireInformationInitializer.swift; sourceTree = "<group>"; };
 		60AC891C699841B99E8861C9 /* PartThreeDescriptionPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PartThreeDescriptionPresenter.swift; sourceTree = "<group>"; };
@@ -570,6 +579,7 @@
 				FD4DA6DB37F8F6136FDD8E96 /* Presenter */,
 				EA4ABECA3D9CC8461BCD24D1 /* Interactor */,
 				EFD27B067CD9927C9CCC3DC7 /* Router */,
+				5DCBDCBD2623133400E53D06 /* LoginLocalizable.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -684,6 +694,7 @@
 			isa = PBXGroup;
 			children = (
 				5D02BF7D26091C0E0053E96C /* Strings.swift */,
+				5DCBDCB926230E0000E53D06 /* Localizable.strings */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -693,6 +704,7 @@
 			children = (
 				5D4EE10826149817004A6AE4 /* PartOne */,
 				5D4EE10926149844004A6AE4 /* PartTwo */,
+				5DC62AD42625D4AF000569E9 /* PartThree */,
 				5DCBDCAE2621C15C00E53D06 /* QuestionBank.swift */,
 			);
 			path = Questions;
@@ -755,6 +767,15 @@
 				5D783258260633CD00156AC1 /* Info.plist */,
 			);
 			path = NDA;
+			sourceTree = "<group>";
+		};
+		5DC62AD42625D4AF000569E9 /* PartThree */ = {
+			isa = PBXGroup;
+			children = (
+				5DC62AD52625D4DE000569E9 /* QuestioinPartThree.swift */,
+				5DC62AD92625D4F2000569E9 /* AnswerPartThree.swift */,
+			);
+			path = PartThree;
 			sourceTree = "<group>";
 		};
 		5FF5CD9CA712C659A6A312D2 /* PartThree */ = {
@@ -1237,6 +1258,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 5D78323E260633CA00156AC1;
 			productRefGroup = 5D783248260633CA00156AC1 /* Products */;
@@ -1256,6 +1278,7 @@
 				5D783257260633CD00156AC1 /* LaunchScreen.storyboard in Resources */,
 				5D783254260633CD00156AC1 /* Assets.xcassets in Resources */,
 				5D02BF8E26092B8C0053E96C /* Profile.storyboard in Resources */,
+				5DCBDCB726230E0000E53D06 /* Localizable.strings in Resources */,
 				5D590435260D0E6E00988CCA /* Questionnaire.storyboard in Resources */,
 				5D59042F260D071600988CCA /* Login.storyboard in Resources */,
 				5D783252260633CA00156AC1 /* Main.storyboard in Resources */,
@@ -1371,6 +1394,7 @@
 				C38B64397A57C4A89A5749D9 /* EditProfileViewController.swift in Sources */,
 				5D02BF7E26091C0E0053E96C /* Strings.swift in Sources */,
 				5D02BF9B260A7D890053E96C /* RoundedButton.swift in Sources */,
+				5DCBDCBE2623133400E53D06 /* LoginLocalizable.swift in Sources */,
 				A21789A373AA19F7A2605214 /* EditProfileModuleInput.swift in Sources */,
 				9281AF0CE5C3E4925E07BF69 /* EditProfilePresenter.swift in Sources */,
 				B370F4378901868BDA89A8AF /* EditProfileInteractorInput.swift in Sources */,
@@ -1382,6 +1406,7 @@
 				4A60F2FDA7E57644ADC92310 /* EditProfileConfigurator.swift in Sources */,
 				17FEC463E3988ED569D7D735 /* EditProfileInitializer.swift in Sources */,
 				08DF8CBA9767B1410DA537D5 /* HomeViewInput.swift in Sources */,
+				5DC62AD62625D4DF000569E9 /* QuestioinPartThree.swift in Sources */,
 				F2BBA9C05FDBC006DCCE9760 /* HomeViewOutput.swift in Sources */,
 				9F9E50C0F04784F2735BF964 /* HomeViewController.swift in Sources */,
 				929BC0907F8C0F3D71DF46A4 /* HomeModuleInput.swift in Sources */,
@@ -1414,6 +1439,7 @@
 				D2E7C08E35978B5447637BC6 /* PartTwoViewController.swift in Sources */,
 				0D7456190E7D47C68C2120CC /* PartTwoModuleInput.swift in Sources */,
 				7CD2E0CCDD5D634D12C92757 /* PartTwoPresenter.swift in Sources */,
+				5DC62ADA2625D4F2000569E9 /* AnswerPartThree.swift in Sources */,
 				9236D9FC29E43A74B0EF3AD8 /* PartTwoInteractorInput.swift in Sources */,
 				8832B6947C68A4799FBD1E37 /* PartTwoInteractorOutput.swift in Sources */,
 				6F884C196E99FBA6DCCA8740 /* PartTwoInteractor.swift in Sources */,
@@ -1504,6 +1530,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		5DCBDCB926230E0000E53D06 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DCBDCB826230E0000E53D06 /* en */,
+				5DCBDCBB2623105B00E53D06 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1511,6 +1546,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1572,6 +1608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
