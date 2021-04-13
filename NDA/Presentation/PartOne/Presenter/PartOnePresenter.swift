@@ -11,7 +11,6 @@ class PartOnePresenter: NSObject, PartOneModuleInput, PartOneViewOutput, PartOne
     weak var view: PartOneViewInput!
     var interactor: PartOneInteractorInput!
     var router: PartOneRouterInput!
-    var answers = [AnswerPartOne]()
     var index: Int = 0
 
     func viewIsReady() {
@@ -19,15 +18,11 @@ class PartOnePresenter: NSObject, PartOneModuleInput, PartOneViewOutput, PartOne
         let firstQuestion = interactor.questions[index]
         view.show(firstQuestion)
     }
-    
-    func saveAnswer(question: QuestionPartOne, value: Int) {
-        let answer = AnswerPartOne(question: question, value: value)
-        answers.append(answer)
-    }
-    
+        
     func answerDidChosen(with value: Int) {
         let currentQuestion = interactor.questions[index]
-        saveAnswer(question: currentQuestion, value: value)
+        let answer = AnswerPartOne(question: currentQuestion, value: value)
+        interactor.save(answer: answer, score: Double(value))
         
         if index + 1 < interactor.questions.count {
             index += 1

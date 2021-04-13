@@ -8,15 +8,20 @@
 
 class PartTwoInteractor: PartTwoInteractorInput {
     weak var output: PartTwoInteractorOutput!
-    var questionBank: QuestionService!
+    var questionService: QuestionService!
     
     var questions: [QuestionPartTwo] {
         var questions = [QuestionPartTwo]()
         do {
-            try questions = questionBank.getQuestioinsPartTwo(count: 8)
+            try questions = questionService.getQuestioinsPartTwo(count: 8)
         } catch {
             output.handle(error)
         }
         return questions
+    }
+    
+    func save(answer: AnswerPartTwo, score: Double) {
+        questionService.answersPartTwo.append(answer)
+        questionService.scorePartTwo += score
     }
 }

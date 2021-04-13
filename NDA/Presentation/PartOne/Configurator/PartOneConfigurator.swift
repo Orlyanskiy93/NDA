@@ -28,7 +28,7 @@ class PartOneModuleConfigurator {
 
         let interactor = PartOneInteractor()
         interactor.output = presenter
-        interactor.questionBank = QuestionServiceImp.shared
+        interactor.questionService = QuestionServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

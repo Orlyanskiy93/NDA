@@ -20,29 +20,46 @@ struct QuestionPartTwo {
         return firstOption.type
     }
         
-    init(type: OptionType) {
+    init(type: OptionType) throws {
         if type == .text {
-            let arithmetic = questionBank.getArithmeticOptions(count: 4)
+            let randomNumber = Int.random(in: 1...2)
+            let firstNumber = Int.random(in: 1...99)
+            let secondNumber = Int.random(in: 1...firstNumber)
+            var rightAnswer = 0
             var title = ""
-            var options = [Option]()
-            for (name, answers) in arithmetic {
-                title = name
-                options = answers
+            
+            if randomNumber % 2 == 0 {
+                title = String.PartTwo.arythmeticQuestion + "\(firstNumber) + \(secondNumber)?"
+                rightAnswer = firstNumber + secondNumber
+            } else {
+                title = String.PartTwo.arythmeticQuestion + "\(firstNumber) - \(secondNumber)?"
+                rightAnswer = firstNumber - secondNumber
             }
+            let range = (rightAnswer - 5)...(rightAnswer + 5)
+            let options = [
+                Option(value: "\(rightAnswer)", type: .text, isRight: true),
+                Option(value: "\(Int.random(in: range))", type: .text),
+                Option(value: "\(Int.random(in: range))", type: .text),
+                Option(value: "\(Int.random(in: range))", type: .text)
+            ].shuffled()
             
             self.title = title
-            firstOption = options[0]
-            secondOption = options[1]
-            thirdOption = options[2]
-            fourthOption = options[3]
+            self.firstOption = options[0]
+            self.secondOption = options[1]
+            self.thirdOption = options[2]
+            self.fourthOption = options[3]
+
         } else {
             let options = questionBank.getImageOptions(count: 4)
             var title = ""
-            options.forEach { (option) in
-                if option.isRight == true {
-                    title = String.PartTwo.identifyQuestion + option.value
-                }
+            let rightOptionIndex = options.firstIndex { (option) -> Bool in
+                return option.isRight == true
             }
+            guard let index = rightOptionIndex else {
+                throw QuestionError.rightAnswer
+            }
+            title = String.PartTwo.identifyQuestion + options[index].value
+            
             self.title = title
             firstOption = options[0]
             secondOption = options[1]
@@ -50,4 +67,54 @@ struct QuestionPartTwo {
             fourthOption = options[3]
         }
     }
+    
+//    private mutating func initImageQuestion() throws {
+//        let options = questionBank.getImageOptions(count: 4)
+//        var title = ""
+//        let rightOptionIndex = options.firstIndex { (option) -> Bool in
+//            return option.isRight == true
+//        }
+//        guard let index = rightOptionIndex else {
+//            throw QuestionError.rightAnswer
+//        }
+//        title = String.PartTwo.identifyQuestion + options[index].value
+//
+//        self.title = title
+//        firstOption = options[0]
+//        secondOption = options[1]
+//        thirdOption = options[2]
+//        fourthOption = options[3]
+//    }
+//
+//    private mutating func initTextQuestion() {
+//        let randomNumber = Int.random(in: 1...2)
+//        let firstNumber = Int.random(in: 1...99)
+//        let secondNumber = Int.random(in: 1...firstNumber)
+//
+//        var rightAnswer = 0
+//        var title = ""
+//
+//        if randomNumber % 2 == 0 {
+//            title = String.PartTwo.arythmeticQuestion + "\(firstNumber) + \(secondNumber)?"
+//            rightAnswer = firstNumber + secondNumber
+//        } else {
+//            title = String.PartTwo.arythmeticQuestion + "\(firstNumber) - \(secondNumber)?"
+//            rightAnswer = firstNumber - secondNumber
+//        }
+//
+//        let range = (rightAnswer - 5)...(rightAnswer + 5)
+//        let options = [
+//            Option(value: "\(rightAnswer)", type: .text, isRight: true),
+//            Option(value: "\(Int.random(in: range))", type: .text),
+//            Option(value: "\(Int.random(in: range))", type: .text),
+//            Option(value: "\(Int.random(in: range))", type: .text)
+//        ].shuffled()
+//
+//        self.title = title
+//        self.firstOption = options[0]
+//        self.secondOption = options[1]
+//        self.thirdOption = options[2]
+//        self.fourthOption = options[3]
+//    }
+//
 }

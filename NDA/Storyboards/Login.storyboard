@@ -97,8 +97,13 @@
                         <outlet property="loginViewController" destination="4lM-9u-yag" id="7F6-3N-kWp"/>
                     </connections>
                 </customObject>
+                <customObject id="7pl-8W-Yi8" customClass="LoginLocalizable" customModule="NDA" customModuleProvider="target">
+                    <connections>
+                        <outlet property="welcomLabel" destination="Ya2-ZY-aDt" id="t52-3Y-Ori"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="-3343" y="490"/>
+            <point key="canvasLocation" x="-3123" y="377"/>
         </scene>
     </scenes>
     <resources>

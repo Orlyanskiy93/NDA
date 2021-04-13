@@ -6,9 +6,24 @@
 //
 
 import Foundation
+import Alamofire
+import PromiseKit
 
 class QuestionServiceImp: QuestionService {
     static var shared = QuestionServiceImp()
+    
+    var answersPartOne: [AnswerPartOne] = []
+    var scorePartOne: Double = 0
+    var answersPartTwo: [AnswerPartTwo] = []
+    var scorePartTwo: Double = 0
+    var answerPartThree: AnswerPartThree?
+    var scorePartThree: Double = 0
+    var avetrageScore: Double?
+    var completionDate: Date? {
+        didSet {
+            print("Q")
+        }
+    }
     
     private init() {}
                 
@@ -17,17 +32,51 @@ class QuestionServiceImp: QuestionService {
         return questions
     }
     
-    func getQuestioinsPartTwo(count: Int) -> [QuestionPartTwo] {
+    func getQuestioinsPartTwo(count: Int) throws -> [QuestionPartTwo] {
         var arithmeticQuestions = [QuestionPartTwo]()
         var identifyQuestions = [QuestionPartTwo]()
         for _ in 0..<count / 2 {
-            let arithmeticQuestion = QuestionPartTwo(type: .text)
-            arithmeticQuestions.append(arithmeticQuestion)
-            let identifyQuestion = QuestionPartTwo(type: .image)
-            identifyQuestions.append(identifyQuestion)
+            do {
+                let arithmeticQuestion = try QuestionPartTwo(type: .text)
+                arithmeticQuestions.append(arithmeticQuestion)
+                let identifyQuestion = try QuestionPartTwo(type: .image)
+                identifyQuestions.append(identifyQuestion)
+            } catch {
+                throw error
+            }
         }
         
         let questionsPartTwo = arithmeticQuestions + identifyQuestions
         return questionsPartTwo.shuffled()
+    }
+    
+    func getGunningFogIndex(with text: String) -> Promise<Double> {
+        let url = URL(string: "https://ipeirotis-readability-metrics.p.rapidapi.com/getReadabilityMetrics")!
+        let headers: HTTPHeaders = [
+            "x-rapidapi-host": "ipeirotis-readability-metrics.p.rapidapi.com",
+            "x-rapidapi-key": "9e3e4ba00amsh77ecb2a6ef93b17p1bc968jsn122bb0d8500f",
+            "content-type": "application/x-www-form-urlencoded",
+            "useQueryString": "true"
+        ]
+        let parametrs: Parameters = ["text": text]
+        return Promise { seal in
+            AF.request(url, method: .post, parameters: parametrs, headers: headers).validate().responseJSON { (response) in
+                switch response.result {
+                case .success(let data):
+                    do {
+                        guard let dict = data as? [String: Double],
+                              let gfIndex = dict["GUNNING_FOG"] else {
+                            throw QuestionError.mapping
+                        }
+                        seal.fulfill(gfIndex)
+                    } catch {
+                        seal.reject(error)
+                    }
+                case .failure(let error):
+                    //TODO: обработка
+                    seal.reject(error)
+                }
+            }
+        }
     }
 }

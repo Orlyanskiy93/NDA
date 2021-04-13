@@ -8,9 +8,14 @@
 
 class PartOneInteractor: PartOneInteractorInput {
     weak var output: PartOneInteractorOutput!
-    var questionBank: QuestionService!
+    var questionService: QuestionService!
     
     var questions: [QuestionPartOne] {
-        return questionBank.getQuestionsPartOne()
+        return questionService.getQuestionsPartOne()
+    }
+    
+    func save(answer: AnswerPartOne, score: Double) {
+        questionService.answersPartOne.append(answer)
+        questionService.scorePartOne += score
     }
 }

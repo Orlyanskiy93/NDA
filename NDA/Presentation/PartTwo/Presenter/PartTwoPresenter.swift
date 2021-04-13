@@ -14,7 +14,6 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     var router: PartTwoRouterInput!
     
     var questions: [QuestionPartTwo] = []
-    var answers: [AnswerPartTwo] = []
     var index: Int = 0
     var startingTime: Date = Date()
     
@@ -33,15 +32,31 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
             view.fillButtons(with: question)
         }
     }
-        
-    func didChosen(_ option: Option) {
+    
+    func updateScore(with option: Option) {
         let question = questions[index].title
         let chosenOption = option
         let time = Date().timeIntervalSince(startingTime)
-        let answer = AnswerPartTwo(question: question, option: chosenOption, time: time)
-        answers.append(answer)
+        var score = 0.0
         
-        if index + 1 != interactor.questions.count {
+        if option.isRight && time <= 1.5 {
+            score += 10
+        }
+        if option.isRight && time <= 3.0 {
+            score += 7.5
+        }
+        if option.isRight && time >= 5.0 {
+            score += 5
+        }
+        
+        let answer = AnswerPartTwo(question: question, option: chosenOption, time: time)
+        interactor.save(answer: answer, score: score)
+    }
+    
+    func didChosen(_ option: Option) {
+        updateScore(with: option)
+        
+        if index + 1 != questions.count {
             index += 1
             let progressValue = Float(index) / Float(questions.count)
             view.updateProgressView(with: progressValue)
@@ -52,6 +67,8 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     }
     
     func handle(_ error: Error) {
-        
+        view.show(title: String.Error.error, message: String.Error.tryAgain) { [weak self] (_) in
+            self?.loadQuestion()
+        }
     }
 }
