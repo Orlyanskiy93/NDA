@@ -8,12 +8,15 @@
 import Foundation
 
 enum QuestionError: LocalizedError {
-    case wrongAnswerCount
+    case rightAnswer
+    case mapping
     
     var errorDescription: String? {
         switch self {
-        case .wrongAnswerCount:
-            return "Wrong count of answers"
+        case .rightAnswer:
+            return String.Error.rightAnswer
+        case .mapping:
+            return "" //TODO: String
         }
     }
 }
