@@ -905,6 +905,9 @@
                                 <state key="normal" title="GO TO HOME SCREEN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="toHome:" destination="Lpf-n7-u73" eventType="touchUpInside" id="dVA-dX-ixR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g8b-pE-6Gy"/>
@@ -927,6 +930,7 @@
                         <outlet property="partOneScoreLabel" destination="QUc-0T-Nnp" id="ST5-Ih-im0"/>
                         <outlet property="partThreeScoreLabel" destination="YNb-0P-QSC" id="kZT-u0-iHR"/>
                         <outlet property="partTwoScoreLabel" destination="IQ8-qj-cKV" id="6R5-eW-2Q4"/>
+                        <segue destination="1qN-ky-xgc" kind="show" identifier="homeSegue" id="1of-FB-pTd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DK-T4-LOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
