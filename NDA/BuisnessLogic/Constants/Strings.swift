@@ -74,4 +74,8 @@ extension String {
         static let partThreeQuestion2 = NSLocalizedString("partThreeQuestion2", comment: "")
         static let partThreeQuestion3 = NSLocalizedString("partThreeQuestion3", comment: "")
     }
+    
+    struct History {
+        static let score = NSLocalizedString("score", comment: "")
+    }
 }

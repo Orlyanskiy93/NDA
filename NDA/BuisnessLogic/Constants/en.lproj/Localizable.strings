@@ -69,3 +69,7 @@
 "partThreeQuestion1" = "Pleace describe the last birthday party you had.";
 "partThreeQuestion2" = "Pleace describe the last book you read";
 "partThreeQuestion3" = "Pleace describe the last movie you watched";
+
+//MARK: History
+
+"score" = "Score";

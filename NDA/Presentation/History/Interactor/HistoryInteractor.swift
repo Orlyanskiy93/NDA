@@ -7,7 +7,9 @@
 //
 
 class HistoryInteractor: HistoryInteractorInput {
-
     weak var output: HistoryInteractorOutput!
-
+    var questionService: QuestionService!
+    var sessions: [Session]! {
+        return questionService.sessions
+    }
 }

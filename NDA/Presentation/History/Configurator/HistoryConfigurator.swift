@@ -27,6 +27,7 @@ class HistoryModuleConfigurator {
 
         let interactor = HistoryInteractor()
         interactor.output = presenter
+        interactor.questionService = QuestionServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

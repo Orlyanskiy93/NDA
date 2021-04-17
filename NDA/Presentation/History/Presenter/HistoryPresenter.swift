@@ -13,6 +13,11 @@ class HistoryPresenter: HistoryModuleInput, HistoryViewOutput, HistoryInteractor
     var router: HistoryRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
+        guard let sessions = interactor.sessions else {
+            //TODO:
+            return
+        }
+        view.update(sessions)
     }
 }

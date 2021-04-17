@@ -7,11 +7,6 @@
 //
 
 protocol HistoryViewInput: class {
-
-    /**
-        @author Dmitriy
-        Setup initial state of the view
-    */
-
     func setupInitialState()
+    func update(_ sessions: [Session])
 }

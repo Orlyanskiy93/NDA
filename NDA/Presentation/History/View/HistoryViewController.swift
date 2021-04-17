@@ -9,17 +9,30 @@
 import UIKit
 
 class HistoryViewController: UIViewController, HistoryViewInput {
-
+    @IBOutlet weak var tableView: UITableView!
+    
     var output: HistoryViewOutput!
+    lazy var historyDisplayManager: HistoryDisplayManager = {
+        let displayManager = HistoryDisplayManager(tableView)
+        return displayManager
+    }()
 
-    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
-    // MARK: HistoryViewInput
     func setupInitialState() {
+        historyDisplayManager.delegate = self
+    }
+    
+    func update(_ sessions: [Session]) {
+        historyDisplayManager.sessions = sessions
+    }
+}
+
+extension HistoryViewController: HistoryDisplayManagerDelegate {
+    func historyDisplayManager(_ historyDisplayManager: HistoryDisplayManager, didSelect session: Session) {
+        
     }
 }

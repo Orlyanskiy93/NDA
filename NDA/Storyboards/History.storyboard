@@ -30,6 +30,9 @@
                             <constraint firstItem="zHa-G8-26r" firstAttribute="trailing" secondItem="AWL-0E-7do" secondAttribute="trailing" id="u19-6Y-sI6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="AWL-0E-7do" id="7b9-d4-XJ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ute-QN-IBP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="FW4-ZP-iF5" customClass="HistoryModuleInitializer" customModule="NDA" customModuleProvider="target">
