@@ -30,4 +30,8 @@ class QuestionnaireEndScreenViewController: UIViewController, QuestionnaireEndSc
         partThreeScoreLabel.text = Int(score.partThree).description
         averageScoreLabel.text = Int(score.average).description
     }
+    
+    @IBAction func toHome(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }

@@ -22,5 +22,5 @@ class QuestionnaireEndScreenPresenter: NSObject, QuestionnaireEndScreenModuleInp
     func handle(_ error: Error) {
         view.show(title: error.localizedDescription, message: String.Error.tryAgain)
         view.fill(with: interactor.loadScore())
-    }
+    }    
 }

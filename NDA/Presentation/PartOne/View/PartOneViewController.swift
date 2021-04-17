@@ -27,6 +27,7 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     }
 
     func setupInitialState() {
+        navigationController?.navigationBar.isHidden = true
         setupLabels()
         resetSlider()
     }

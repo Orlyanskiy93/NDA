@@ -26,6 +26,7 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
     }
 
     func setupInitialState() {
+        navigationController?.navigationBar.isHidden = true
         optionImageViews.forEach { (imageView) in
             imageView.delegate = self
         }

@@ -20,6 +20,7 @@ class QuestionnaireEndScreenModuleConfigurator {
     private func configure(viewController: QuestionnaireEndScreenViewController) {
 
         let router = QuestionnaireEndScreenRouter()
+        router.transitionHandler = viewController
 
         let presenter = QuestionnaireEndScreenPresenter()
         presenter.view = viewController

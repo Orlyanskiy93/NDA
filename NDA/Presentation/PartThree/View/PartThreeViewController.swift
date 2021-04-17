@@ -25,6 +25,7 @@ class PartThreeViewController: UIViewController, PartThreeViewInput {
     
     func fill(with question: QuestionPartThree) {
         questionLabel.text = question
+        navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func next(_ sender: RoundedButton) {
