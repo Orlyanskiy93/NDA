@@ -10,13 +10,16 @@ import Foundation
 enum QuestionError: LocalizedError {
     case rightAnswer
     case mapping
+    case custom(String)
     
     var errorDescription: String? {
         switch self {
         case .rightAnswer:
             return String.Error.rightAnswer
         case .mapping:
-            return "" //TODO: String
+            return String.Error.mapping
+        case .custom(let string):
+            return string
         }
     }
 }

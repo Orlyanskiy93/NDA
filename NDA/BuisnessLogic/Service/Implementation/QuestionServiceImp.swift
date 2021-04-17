@@ -12,21 +12,11 @@ import PromiseKit
 class QuestionServiceImp: QuestionService {
     static var shared = QuestionServiceImp()
     
-    var answersPartOne: [AnswerPartOne] = []
-    var scorePartOne: Double = 0
-    var answersPartTwo: [AnswerPartTwo] = []
-    var scorePartTwo: Double = 0
-    var answerPartThree: AnswerPartThree?
-    var scorePartThree: Double = 0
-    var avetrageScore: Double?
-    var completionDate: Date? {
-        didSet {
-            print("Q")
-        }
-    }
-    
+    var sessions: [Session] = []
+    var currentSession: Session?
+
     private init() {}
-                
+    
     func getQuestionsPartOne() -> [QuestionPartOne] {
         let questions = QuestionBank.shared.questionsPartOne
         return questions
@@ -48,6 +38,11 @@ class QuestionServiceImp: QuestionService {
         
         let questionsPartTwo = arithmeticQuestions + identifyQuestions
         return questionsPartTwo.shuffled()
+    }
+    
+    func getQuestionsPartThree() -> [QuestionPartThree] {
+        let questions = QuestionBank.shared.questionsPartThree
+        return questions
     }
     
     func getGunningFogIndex(with text: String) -> Promise<Double> {
@@ -73,10 +68,51 @@ class QuestionServiceImp: QuestionService {
                         seal.reject(error)
                     }
                 case .failure(let error):
-                    //TODO: обработка
-                    seal.reject(error)
+                    guard let data = response.data,
+                          let dict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                          let errorsArray = (dict["error"] as? [String: Any])?["errors"] as? [Any],
+                          let reasonMessage = (errorsArray.first as? [String: Any])?["reason"] as? String else {
+                        seal.reject(error)
+                        return
+                    }
+                    let requestError = QuestionError.custom(reasonMessage)
+                    seal.reject(requestError)
                 }
             }
         }
     }
+}
+
+extension QuestionServiceImp: SessionManager {
+        
+    func beginSession() {
+        currentSession = Session()
+        currentSession?.stage = .partOne
+    }
+    
+    func save(_ partOne: AnswerPartOne) {
+        currentSession?.answersPartOne.append(partOne)
+        currentSession?.stage = .partTwo
+    }
+    
+    func save(_ partTwo: AnswerPartTwo) {
+        currentSession?.answersPartTwo.append(partTwo)
+        currentSession?.stage = .partThree
+    }
+    
+    func save(_ partThree: AnswerPartThree) {
+        currentSession?.answerPartThree = partThree
+        currentSession?.stage = .finished
+        
+    }
+    
+    func saveSession() throws {
+        let completionDate = Date()
+        currentSession?.completionDate = completionDate
+        guard let session = currentSession else {
+            throw SessionError.saving
+        }
+        sessions.append(session)
+    }
+    
 }

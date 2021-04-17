@@ -12,50 +12,39 @@ class PartThreePresenter: PartThreeModuleInput, PartThreeViewOutput, PartThreeIn
     weak var view: PartThreeViewInput!
     var interactor: PartThreeInteractorInput!
     var router: PartThreeRouterInput!
-    var gfIndex: Double = 0
-    var score: Double = 0
+    var question: QuestionPartThree!
 
     func viewIsReady() {
-
+        question = interactor.question
+        view.fill(with: question)
     }
-    
-    func calculateScore(with gfIndex: Double) {
-        self.gfIndex = gfIndex
-        if gfIndex > 25 {
-            score = 100.0
-        } else {
-            score = logForScoreCalculating(value: gfIndex, for: 25) * 100
-        }
-        finishQuestionnaire()
-    }
-    
-    func logForScoreCalculating(value: Double, for base: Double) -> Double {
-        return log(value)/log(base)
-    }
-    
-    func validate(_ text: String) {
+                    
+    func isValide(_ text: String) -> Bool {
         guard !text.isEmpty else {
             view.show(message: String.Error.emptyField)
-            return
+            return false
         }
         guard text.count >= 20 else {
             view.show(message: String.Error.shortText)
-            return
+            return false
+        }
+        return true
+    }
+    
+    func recive(_ text: String) {
+        if isValide(text) {
+            interactor.didRecived(text)
         }
     }
     
-    func finishQuestionnaire() {
-        let answer = AnswerPartThree(question: "", gunningFogIndex: gfIndex)
-        let date = Date()
-        interactor.save(answer: answer, score: score, completionDate: date)
+    func finishQuestionnaire(with gunningFogIndex: Double) {
+        let answer = AnswerPartThree(question: question, gunningFogIndex: gunningFogIndex)
+        interactor.save(answer)
+        router.openEndScreen()
     }
 
-    func recive(_ text: String) {
-        interactor.didRecived(text)
-    }
-    
     func handle(_ error: Error) {
-        
+        view.show(title: error.localizedDescription, message: String.Error.tryAgain)
     }
 
 }

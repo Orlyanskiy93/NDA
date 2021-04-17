@@ -195,6 +195,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="G8C-53-7XD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eS0-3S-kuJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -617,7 +618,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="PVX-gt-YWb"/>
                     <connections>
+                        <outlet property="questionLabel" destination="TqL-0o-lhH" id="Wi5-5Z-UIE"/>
                         <outlet property="textView" destination="VTN-Wo-pes" id="hEV-EB-BEq"/>
+                        <segue destination="Lpf-n7-u73" kind="show" identifier="endSegue" id="uVB-9b-o5o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyL-nN-TEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -823,12 +826,12 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="3906" y="45"/>
+            <point key="canvasLocation" x="3812" y="45"/>
         </scene>
-        <!--View Controller-->
+        <!--Questionnaire End Screen View Controller-->
         <scene sceneID="GIX-26-huL">
             <objects>
-                <viewController id="Lpf-n7-u73" sceneMemberID="viewController">
+                <viewController id="Lpf-n7-u73" customClass="QuestionnaireEndScreenViewController" customModule="NDA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XlZ-yq-aYu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -896,22 +899,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xme-3R-sug" customClass="RoundedButton" customModule="NDA" customModuleProvider="target">
+                                <rect key="frame" x="20" y="469" width="280" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="GO TO HOME SCREEN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g8b-pE-6Gy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="g8b-pE-6Gy" firstAttribute="bottom" secondItem="xme-3R-sug" secondAttribute="bottom" constant="20" id="8Mh-yf-BGc"/>
                             <constraint firstItem="A4h-Op-rCg" firstAttribute="centerX" secondItem="XlZ-yq-aYu" secondAttribute="centerX" id="93a-3a-nT1"/>
+                            <constraint firstItem="xme-3R-sug" firstAttribute="leading" secondItem="g8b-pE-6Gy" secondAttribute="leading" constant="20" id="EXF-7E-wxk"/>
                             <constraint firstItem="Xzd-d5-cK8" firstAttribute="centerX" secondItem="XlZ-yq-aYu" secondAttribute="centerX" id="Ogt-6f-2K6"/>
                             <constraint firstItem="VQg-Ll-QJH" firstAttribute="top" secondItem="Xzd-d5-cK8" secondAttribute="bottom" constant="12" id="S5f-qA-fDY"/>
                             <constraint firstItem="VQg-Ll-QJH" firstAttribute="centerX" secondItem="Xzd-d5-cK8" secondAttribute="centerX" id="VDH-3u-BY2"/>
                             <constraint firstItem="A4h-Op-rCg" firstAttribute="top" secondItem="Xzd-d5-cK8" secondAttribute="bottom" constant="80" id="ZTr-A1-WDK"/>
+                            <constraint firstItem="g8b-pE-6Gy" firstAttribute="trailing" secondItem="xme-3R-sug" secondAttribute="trailing" constant="20" id="tnr-iH-TbO"/>
                             <constraint firstItem="A4h-Op-rCg" firstAttribute="centerY" secondItem="XlZ-yq-aYu" secondAttribute="centerY" id="wsg-1i-Kvh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iMw-Kk-cVt"/>
+                    <connections>
+                        <outlet property="averageScoreLabel" destination="VQg-Ll-QJH" id="Nyv-KE-BGL"/>
+                        <outlet property="partOneScoreLabel" destination="QUc-0T-Nnp" id="ST5-Ih-im0"/>
+                        <outlet property="partThreeScoreLabel" destination="YNb-0P-QSC" id="kZT-u0-iHR"/>
+                        <outlet property="partTwoScoreLabel" destination="IQ8-qj-cKV" id="6R5-eW-2Q4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DK-T4-LOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="qxp-9I-f7J" customClass="QuestionnaireEndScreenModuleInitializer" customModule="NDA" customModuleProvider="target">
+                    <connections>
+                        <outlet property="questionnaireendscreenViewController" destination="Lpf-n7-u73" id="UDH-fg-yjT"/>
+                    </connections>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="5146" y="456"/>
+            <point key="canvasLocation" x="4929" y="881"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

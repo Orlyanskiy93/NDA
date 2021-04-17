@@ -6,7 +6,9 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-class QuestionnaireInformationPresenter: QuestionnaireInformationModuleInput, QuestionnaireInformationViewOutput, QuestionnaireInformationInteractorOutput {
+class QuestionnaireInformationPresenter: QuestionnaireInformationModuleInput,
+                                         QuestionnaireInformationViewOutput,
+                                         QuestionnaireInformationInteractorOutput {
 
     weak var view: QuestionnaireInformationViewInput!
     var interactor: QuestionnaireInformationInteractorInput!

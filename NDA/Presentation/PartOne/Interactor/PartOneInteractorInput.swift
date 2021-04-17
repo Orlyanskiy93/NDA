@@ -10,5 +10,5 @@ import Foundation
 
 protocol PartOneInteractorInput {
     var questions: [QuestionPartOne] { get }
-    func save(answer: AnswerPartOne, score: Double)
+    func save(_ answer: AnswerPartOne)
 }

@@ -21,7 +21,11 @@
 "tryAgain" = "Try again";
 "welcomeMessage" = "Welcome to the Neuro Degenerative Cognitive Assessment App!";
 "rightAnswer" = "Options have no right answer";
-
+"mapping" = "Unable to load data";
+"gfIndex" = "Gunning fog index is empty";
+"completion" = "Session is not finished";
+"continueSession" = "Session progress is empty";
+"savingSession" = "Unable to save session";
 
 //MARK: Button
 
@@ -63,8 +67,5 @@
 
 //MARK: PartThree
 "partThreeQuestion1" = "Pleace describe the last birthday party you had.";
-"partThreeQuestion2" = "";
-"partThreeQuestion3" = "";
-"partThreeQuestion4" = "";
-"partThreeQuestion5" = "";
-
+"partThreeQuestion2" = "Pleace describe the last book you read";
+"partThreeQuestion3" = "Pleace describe the last movie you watched";

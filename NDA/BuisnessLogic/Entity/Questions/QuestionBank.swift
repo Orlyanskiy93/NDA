@@ -10,14 +10,20 @@ import Foundation
 class QuestionBank {
     static let shared = QuestionBank()
     
-    var questionsPartOne: [QuestionPartOne] = []
-    var images: [String] = []
+    private(set) var questionsPartOne: [QuestionPartOne] = []
+    private(set) var questionsPartThree: [QuestionPartThree] = []
+    private(set) var images: [String] = []
     
     private init() {
         questionsPartOne = [
             String.PartOne.question1, String.PartOne.question2, String.PartOne.question3,
             String.PartOne.question4, String.PartOne.question5, String.PartOne.question6,
-            String.PartOne.question7, String.PartOne.question8,
+            String.PartOne.question7, String.PartOne.question8
+        ]
+        questionsPartThree = [
+            String.PartThree.partThreeQuestion1,
+            String.PartThree.partThreeQuestion2,
+            String.PartThree.partThreeQuestion3
         ]
         images  = ["cow", "koala", "buffalo", "goat", "rhino", "bird",
                    "horse", "monkey", "owl", "pig", "rabbit", "rooster",

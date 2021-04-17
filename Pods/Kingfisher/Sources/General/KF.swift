@@ -176,11 +176,11 @@ extension KF.Builder {
     /// - Returns: A task represents the image downloading, if initialized.
     ///            This value is `nil` if the image is being loaded from cache.
     @discardableResult
-    public func set(to button: UIButton, for state: UIControl.State) -> DownloadTask? {
+    public func set(to button: UIButton, for stage: UIControl.State) -> DownloadTask? {
         let placeholderImage = placeholder as? KFCrossPlatformImage ?? nil
         return button.kf.setImage(
             with: source,
-            for: state,
+            for: stage,
             placeholder: placeholderImage,
             parsedOptions: options,
             progressBlock: progressBlock,
@@ -195,11 +195,11 @@ extension KF.Builder {
     /// - Returns: A task represents the image downloading, if initialized.
     ///            This value is `nil` if the image is being loaded from cache.
     @discardableResult
-    public func setBackground(to button: UIButton, for state: UIControl.State) -> DownloadTask? {
+    public func setBackground(to button: UIButton, for stage: UIControl.State) -> DownloadTask? {
         let placeholderImage = placeholder as? KFCrossPlatformImage ?? nil
         return button.kf.setBackgroundImage(
             with: source,
-            for: state,
+            for: stage,
             placeholder: placeholderImage,
             parsedOptions: options,
             progressBlock: progressBlock,

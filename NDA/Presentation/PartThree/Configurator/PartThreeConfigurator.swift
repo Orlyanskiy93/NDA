@@ -20,6 +20,7 @@ class PartThreeModuleConfigurator {
     private func configure(viewController: PartThreeViewController) {
 
         let router = PartThreeRouter()
+        router.transitionHandler = viewController
 
         let presenter = PartThreePresenter()
         presenter.view = viewController

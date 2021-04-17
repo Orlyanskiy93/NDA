@@ -11,26 +11,28 @@ class PartOnePresenter: NSObject, PartOneModuleInput, PartOneViewOutput, PartOne
     weak var view: PartOneViewInput!
     var interactor: PartOneInteractorInput!
     var router: PartOneRouterInput!
+    var questions: [QuestionPartOne]!
     var index: Int = 0
 
     func viewIsReady() {
+        questions = interactor.questions
         view.setupInitialState()
-        let firstQuestion = interactor.questions[index]
+        let firstQuestion = questions[index]
         view.show(firstQuestion)
     }
         
     func answerDidChosen(with value: Int) {
-        let currentQuestion = interactor.questions[index]
+        let currentQuestion = questions[index]
         let answer = AnswerPartOne(question: currentQuestion, value: value)
-        interactor.save(answer: answer, score: Double(value))
+        interactor.save(answer)
         
-        if index + 1 < interactor.questions.count {
+        if index + 1 < questions.count {
             index += 1
             
-            let progressValue = Float(index) / Float(interactor.questions.count)
+            let progressValue = Float(index) / Float(questions.count)
             view.updateProgressView(with: progressValue)
             
-            let nextQuestion = interactor.questions[index]
+            let nextQuestion = questions[index]
             view.show(nextQuestion)
         } else {
             router.openPartTwo()

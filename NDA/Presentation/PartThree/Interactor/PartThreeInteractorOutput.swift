@@ -10,5 +10,5 @@ import Foundation
 
 protocol PartThreeInteractorOutput: class {
     func handle(_ error: Error)
-    func calculateScore(with gfIndex: Double)
+    func finishQuestionnaire(with gunningFogIndex: Double)
 }

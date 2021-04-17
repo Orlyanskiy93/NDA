@@ -11,11 +11,11 @@ class PartOneInteractor: PartOneInteractorInput {
     var questionService: QuestionService!
     
     var questions: [QuestionPartOne] {
+        questionService.beginSession()
         return questionService.getQuestionsPartOne()
     }
     
-    func save(answer: AnswerPartOne, score: Double) {
-        questionService.answersPartOne.append(answer)
-        questionService.scorePartOne += score
+    func save(_ answer: AnswerPartOne) {
+        questionService.save(answer)
     }
 }

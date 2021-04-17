@@ -33,28 +33,16 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
         }
     }
     
-    func updateScore(with option: Option) {
+    func saveAnswer(with chosenOption: Option) {
         let question = questions[index].title
-        let chosenOption = option
+        let chosenOption = chosenOption
         let time = Date().timeIntervalSince(startingTime)
-        var score = 0.0
-        
-        if option.isRight && time <= 1.5 {
-            score += 10
-        }
-        if option.isRight && time <= 3.0 {
-            score += 7.5
-        }
-        if option.isRight && time >= 5.0 {
-            score += 5
-        }
-        
-        let answer = AnswerPartTwo(question: question, option: chosenOption, time: time)
-        interactor.save(answer: answer, score: score)
+        let answer = AnswerPartTwo(question: question!, option: chosenOption, time: time)
+        interactor.save(answer)
     }
     
     func didChosen(_ option: Option) {
-        updateScore(with: option)
+        saveAnswer(with: option)
         
         if index + 1 != questions.count {
             index += 1

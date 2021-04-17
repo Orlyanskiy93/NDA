@@ -20,8 +20,7 @@ class PartTwoInteractor: PartTwoInteractorInput {
         return questions
     }
     
-    func save(answer: AnswerPartTwo, score: Double) {
-        questionService.answersPartTwo.append(answer)
-        questionService.scorePartTwo += score
+    func save(_ answer: AnswerPartTwo) {
+        questionService.save(answer)
     }
 }

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PartThreeRouterInput {
-
+    func openEndScreen()
 }

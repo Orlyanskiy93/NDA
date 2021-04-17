@@ -8,4 +8,5 @@
 
 protocol PartThreeViewInput: class, UIViewInput {
     func setupInitialState()
+    func fill(with question: QuestionPartThree)
 }

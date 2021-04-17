@@ -9,6 +9,7 @@
 import UIKit
 
 class PartThreeViewController: UIViewController, PartThreeViewInput {
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
     var output: PartThreeViewOutput!
@@ -19,6 +20,11 @@ class PartThreeViewController: UIViewController, PartThreeViewInput {
     }
 
     func setupInitialState() {
+        
+    }
+    
+    func fill(with question: QuestionPartThree) {
+        questionLabel.text = question
     }
     
     @IBAction func next(_ sender: RoundedButton) {

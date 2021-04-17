@@ -49,7 +49,6 @@ class PartOneViewController: UIViewController, PartOneViewInput {
         numberLabels.forEach { (label) in
             label.font = UIFont.systemFont(ofSize: baseFontSize)
         }
-        // TODO: tag
         numberLabels[index].font = UIFont.boldSystemFont(ofSize: increasedFontSize)
     }
     

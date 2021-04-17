@@ -24,6 +24,11 @@ extension String {
         static let tryAgain = NSLocalizedString("tryAgain", comment: "")
         static let rightAnswer = NSLocalizedString("rightAnswer", comment: "")
         static let shortText = NSLocalizedString("shortText", comment: "")
+        static let mapping = NSLocalizedString("mapping", comment: "")
+        static let gfIndex = NSLocalizedString("gfIndex", comment: "")
+        static let completion = NSLocalizedString("completion", comment: "")
+        static let continueSession = NSLocalizedString("continueSession", comment: "")
+        static let savingSession = NSLocalizedString("savingSession", comment: "")
     }
     
     struct Button {
@@ -62,5 +67,11 @@ extension String {
         static let moduleDescription = NSLocalizedString("partTwoModuleDescription", comment: "")
         static let arythmeticQuestion = NSLocalizedString("arythmeticQuestion", comment: "")
         static let identifyQuestion = NSLocalizedString("identifyQuestion", comment: "")
+    }
+    
+    struct PartThree {
+        static let partThreeQuestion1 = NSLocalizedString("partThreeQuestion1", comment: "")
+        static let partThreeQuestion2 = NSLocalizedString("partThreeQuestion2", comment: "")
+        static let partThreeQuestion3 = NSLocalizedString("partThreeQuestion3", comment: "")
     }
 }

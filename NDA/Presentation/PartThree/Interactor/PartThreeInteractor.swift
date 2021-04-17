@@ -10,20 +10,27 @@ import PromiseKit
 class PartThreeInteractor: PartThreeInteractorInput {
     weak var output: PartThreeInteractorOutput!
     var questionServise: QuestionService!
+    var question: QuestionPartThree {
+        let questions = questionServise.getQuestionsPartThree()
+        return questions[Int.random(in: 0..<questions.count)]
+    }
     
     func didRecived(_ text: String) {
         firstly {
             questionServise.getGunningFogIndex(with: text)
         } .done { [weak self] (index) in
-            self?.output.calculateScore(with: index)
+            self?.output.finishQuestionnaire(with: index)
         } .catch { [weak self] (error) in
             self?.output.handle(error)
         }
     }
     
-    func save(answer: AnswerPartThree, score: Double, completionDate: Date) {
-        questionServise.answerPartThree = answer
-        questionServise.scorePartThree = score
-        questionServise.completionDate = completionDate
+    func save(_ answer: AnswerPartThree) {
+        questionServise.save(answer)
+        do {
+            try questionServise.saveSession()
+        } catch {
+            output.handle(error)
+        }
     }
 }

@@ -8,17 +8,9 @@
 import Foundation
 import PromiseKit
 
-protocol QuestionService {
-    var answersPartOne: [AnswerPartOne] { get set }
-    var scorePartOne: Double { get set }
-    var answersPartTwo: [AnswerPartTwo] { get set }
-    var scorePartTwo: Double { get set }
-    var answerPartThree: AnswerPartThree? { get set }
-    var scorePartThree: Double { get set }
-    var avetrageScore: Double? { get }
-    var completionDate: Date? { get set }
-    
+protocol QuestionService: SessionManager {
     func getQuestionsPartOne() -> [QuestionPartOne]
     func getQuestioinsPartTwo(count: Int) throws -> [QuestionPartTwo]
+    func getQuestionsPartThree() -> [QuestionPartThree]
     func getGunningFogIndex(with text: String) -> Promise<Double>
 }
