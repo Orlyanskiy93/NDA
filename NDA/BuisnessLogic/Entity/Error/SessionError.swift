@@ -8,21 +8,15 @@
 import Foundation
 
 enum SessionError: LocalizedError {
-    case gfIndex
-    case completion
-    case `continue`
     case saving
+    case stage
     
     var errorDescription: String? {
         switch self {
-        case .gfIndex:
-            return String.Error.rightAnswer
-        case .completion:
-            return String.Error.completion
-        case .continue:
-            return String.Error.continueSession
         case .saving:
             return String.Error.savingSession
+        case .stage:
+            return String.Error.stage
         }
     }
 }
