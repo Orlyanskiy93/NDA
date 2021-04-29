@@ -8,5 +8,4 @@
 
 protocol QuestionnaireInformationViewOutput {
     func viewIsReady()
-    func loadQuestionnaire()
 }

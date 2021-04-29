@@ -9,5 +9,6 @@ import Foundation
 
 struct AnswerPartThree {
     var question: QuestionPartThree
+    var answer: String
     var gunningFogIndex: Double
 }

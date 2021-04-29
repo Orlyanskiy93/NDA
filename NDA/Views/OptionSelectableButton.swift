@@ -12,7 +12,8 @@ class OptionSelectableButton: RoundedButton {
     
     override var isSelected: Bool {
         didSet {
-            backgroundColor = isSelected ? .systemGreen : .gray
+            backgroundColor = isSelected ? UIColor(named: "NDGreen") : UIColor(named: "NDLightGrey")
+            isUserInteractionEnabled = isSelected ? false : true
         }
     }
     

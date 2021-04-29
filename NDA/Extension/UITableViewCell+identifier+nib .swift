@@ -5,7 +5,7 @@
 //  Created by Дмитрий Орлянский on 22.04.2021.
 //
 
-import Foundation
+import UIKit
 
 extension UITableViewCell {
     static var identifier: String {

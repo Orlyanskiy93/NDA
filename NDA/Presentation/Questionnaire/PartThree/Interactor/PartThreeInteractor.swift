@@ -10,6 +10,9 @@ import PromiseKit
 class PartThreeInteractor: PartThreeInteractorInput {
     weak var output: PartThreeInteractorOutput!
     var questionServise: QuestionService!
+    var dataService: QuestionnaireDataService!
+    var timerService: TimerService!
+    
     var question: QuestionPartThree {
         let questions = questionServise.getQuestionsPartThree()
         return questions[Int.random(in: 0..<questions.count)]
@@ -27,11 +30,11 @@ class PartThreeInteractor: PartThreeInteractorInput {
     }
     
     func save(_ answer: AnswerPartThree) {
-        questionServise.save(answer)
         do {
-            try questionServise.saveSession()
+            try dataService.save(answer)
         } catch {
             output.handle(error)
         }
+        timerService.lounchTimer()
     }
 }

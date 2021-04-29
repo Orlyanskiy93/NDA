@@ -12,14 +12,11 @@ class {{ module_info.name }}ViewController: UIViewController, {{module_info.name
 
     var output: {{ module_info.name }}ViewOutput!
 
-    // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
-
-    // MARK: {{module_info.name}}ViewInput
     func setupInitialState() {
     }
 }

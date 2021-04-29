@@ -12,5 +12,6 @@ target 'NDA' do
   pod 'PromiseKit'
   pod "ViperMcFlurry"
   pod 'SwiftLint'
+  pod 'RSKPlaceholderTextView'
 
 end

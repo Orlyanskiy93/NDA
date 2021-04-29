@@ -19,7 +19,16 @@ struct Option {
     }
 }
 
-enum OptionType {
+enum OptionType: String {
     case image
     case text
+    
+    var typeDescription: String {
+        switch self {
+        case .image:
+            return rawValue
+        case .text:
+            return rawValue
+        }
+    }
 }

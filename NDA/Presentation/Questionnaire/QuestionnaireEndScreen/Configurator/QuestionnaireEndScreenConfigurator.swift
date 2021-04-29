@@ -28,7 +28,7 @@ class QuestionnaireEndScreenModuleConfigurator {
 
         let interactor = QuestionnaireEndScreenInteractor()
         interactor.output = presenter
-        interactor.questionService = QuestionServiceImp.shared
+        interactor.dataService = QuestionnaireDataServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

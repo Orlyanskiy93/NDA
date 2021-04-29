@@ -18,7 +18,4 @@ class QuestionnaireInformationPresenter: QuestionnaireInformationModuleInput,
         view.setupInitialState()
     }
     
-    func loadQuestionnaire() {
-        router.openPartOneModule()
-    }
 }

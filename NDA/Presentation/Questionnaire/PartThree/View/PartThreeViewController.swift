@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PartThreeViewController: UIViewController, PartThreeViewInput {
+class PartThreeViewController: UIViewController, PartThreeViewInput, UITextViewDelegate {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
@@ -20,7 +20,7 @@ class PartThreeViewController: UIViewController, PartThreeViewInput {
     }
 
     func setupInitialState() {
-        
+        textView.delegate = self
     }
     
     func fill(with question: QuestionPartThree) {
@@ -32,4 +32,19 @@ class PartThreeViewController: UIViewController, PartThreeViewInput {
         let text = textView.text ?? ""
         output.didRecived(text)
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "/n" {
+            textView.resignFirstResponder()
+        }
+        return true
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "Input your answer here:"
+            textView.textColor = .lightGray
+        }
+    }
+
 }

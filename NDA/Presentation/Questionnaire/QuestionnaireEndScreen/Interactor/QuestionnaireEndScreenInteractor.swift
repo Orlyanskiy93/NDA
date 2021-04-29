@@ -7,17 +7,16 @@
 //
 
 class QuestionnaireEndScreenInteractor: QuestionnaireEndScreenInteractorInput {
-    var questionService: QuestionService!
+    var dataService: QuestionnaireDataService!
     weak var output: QuestionnaireEndScreenInteractorOutput!
     
-    func loadScore() -> Score {
-        //TODO:
-        var score: Score!
+    func loadSession() -> Session {
+        var session = Session()
         do {
-            score = questionService.currentSession?.score
+            session = try dataService.getLastSession()
         } catch {
             output.handle(error)
         }
-        return score
+        return session
     }
 }

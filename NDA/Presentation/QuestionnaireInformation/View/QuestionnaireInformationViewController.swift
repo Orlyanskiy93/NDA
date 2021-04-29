@@ -23,7 +23,4 @@ class QuestionnaireInformationViewController: UIViewController, QuestionnaireInf
         beginButton.setTitle(String.Button.begin, for: .normal)
     }
     
-    @IBAction func begin(_ sender: UIButton) {
-        output.loadQuestionnaire()
-    }
 }

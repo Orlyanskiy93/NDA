@@ -14,6 +14,7 @@ protocol UIViewInput {
 }
 
 extension UIViewInput {
+    
     func show(_ error: Error, _ handler: ((UIAlertAction) -> Void)? = nil) {
         show(title: String.Error.error, message: error.localizedDescription, handler)
     }

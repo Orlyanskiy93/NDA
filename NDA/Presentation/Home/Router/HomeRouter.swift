@@ -11,7 +11,15 @@ class HomeRouter: HomeRouterInput {
     
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
-    func openInformationScreen() {
-        _ = transitionHandler.openModule?(usingSegue: "informationScreenSegue")
+    func openPartOne() {
+        _ = transitionHandler.openModule?(usingSegue: "partOneSegue")
+    }
+    
+    func openPartTwo() {
+        _ = transitionHandler.openModule?(usingSegue: "partTwoSegue")
+    }
+    
+    func openPartThree() {
+        _ = transitionHandler.openModule?(usingSegue: "partThreeSegue")
     }
 }

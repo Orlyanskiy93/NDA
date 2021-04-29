@@ -16,37 +16,46 @@ class QuestionnaireDataServiceImp {
 
     private var sessionsData: [SessionData] = []
     private var currentSessionData: SessionData!
-    var sessions: [Session] = []
-    var currentSession: Session!
 
     private init() {
+        appDelegate = UIApplication.shared.delegate as? AppDelegate
+        context = appDelegate.persistentContainer.viewContext
         do {
             sessionsData = try fetchSessions()
+            guard !sessionsData.isEmpty else {
+                currentSessionData = SessionData(context: context)
+                return
+            }
         } catch {
-            
+            //TODO:
         }
         
     }
     
     private func fetchSessions() throws -> [SessionData] {
-        appDelegate = UIApplication.shared.delegate as? AppDelegate
-        context = appDelegate.persistentContainer.viewContext
-
         guard let sessionsData = try? context.fetch(SessionData.fetchRequest()) as? [SessionData] else {
             throw DataError.fetch
         }
         
+        return sessionsData
+    }
+    
+    func beginSession() throws {
+        guard let index = sessionsData.firstIndex(where: { (sessionData) -> Bool in
+//            let array = sessionData.answersPartTwoData?.allObjects as? [AnswerPartTwoData]
+            //TODO:
+            // swiftlint:disable all
+            return sessionData.answersPartTwoData?.count == 0 || sessionData.answerPartThreeData == nil
+            // swiftlint:enable all
+        }) else {
+            currentSessionData = SessionData(context: context)
+            return
+        }
+        currentSessionData = sessionsData[index]
+        sessionsData.remove(at: index)
         do {
-            try sessionsData.forEach({ (sessionData) in
-                if sessionData.answersPartTwoData == nil || sessionData.answerPartThreeData == nil {
-                    self.currentSessionData = sessionData
-                    self.currentSession = try map(sessionData)
-                } else {
-                    try self.sessions.append(map(sessionData))
-                    self.currentSessionData = SessionData(context: context)
-                }
-            })
-            return sessionsData
+            try context.save()
+            
         } catch {
             throw error
         }
@@ -58,6 +67,7 @@ class QuestionnaireDataServiceImp {
             return
         }
         sessionsData[index] = data
+        
     }
     
     func clearAll() throws {
@@ -71,7 +81,6 @@ class QuestionnaireDataServiceImp {
         }
     }
 
-    
     func map(_ answersPartOne: [AnswerPartOne]) -> [AnswerPartOneData] {
         var answersData = [AnswerPartOneData]()
        
@@ -163,8 +172,29 @@ class QuestionnaireDataServiceImp {
 }
 
 extension QuestionnaireDataServiceImp: QuestionnaireDataService {
+    func getSessions() throws -> [Session] {
+        var sessions = [Session]()
+        do {
+            try sessionsData.forEach { (sessionData) in
+                let session = try map(sessionData)
+                sessions.append(session)
+            }
+            return sessions
+        } catch {
+            throw error
+        }
+    }
+    
+    func getLastSession() throws -> Session {
+        do {
+            let session = try map(currentSessionData)
+            return session
+        } catch {
+            throw error
+        }
+    }
+    
     func save(_ answersPartOne: [AnswerPartOne]) throws {
-        currentSession.save(answersPartOne)
         let partOneAnswersData = map(answersPartOne)
         currentSessionData.addToAnswersPartOneData(NSSet(array: partOneAnswersData))
         currentSessionData.completionDate = Date()
@@ -178,7 +208,6 @@ extension QuestionnaireDataServiceImp: QuestionnaireDataService {
     }
     
     func save(_ answersPartTwo: [AnswerPartTwo]) throws {
-        currentSession.save(answersPartTwo)
         let partTwoAnswersData = map(answersPartTwo)
         currentSessionData.addToAnswersPartTwoData(NSSet(array: partTwoAnswersData))
         currentSessionData.completionDate = Date()
@@ -192,12 +221,10 @@ extension QuestionnaireDataServiceImp: QuestionnaireDataService {
     }
     
     func save(_ answerPartThree: AnswerPartThree) throws {
-        currentSession.save(answerPartThree)
         let partThreeAnswerData = map(answerPartThree)
         currentSessionData.answerPartThreeData = partThreeAnswerData
         currentSessionData.completionDate = Date()
         save(currentSessionData)
-        
         do {
             try context.save()
         } catch {

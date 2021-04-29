@@ -14,7 +14,7 @@ protocol SelectableImageDelegate: class {
 class OptionSelectableImageView: UIImageView {
     private(set) var option: Option?
     
-    var state: Condition = .notDetermined {
+    var state: State = .notDetermined {
         didSet {
             switch state {
             case .notDetermined:
@@ -52,7 +52,7 @@ class OptionSelectableImageView: UIImageView {
     
     private func selectedColorSetup() {
         self.coverSubview.removeFromSuperview()
-        self.layer.borderColor = UIColor.green.cgColor
+        self.layer.borderColor = UIColor(named: "NDGreen")?.cgColor
         self.layer.borderWidth = 5
     }
     
@@ -70,7 +70,7 @@ class OptionSelectableImageView: UIImageView {
 }
 
 extension OptionSelectableImageView {
-    enum Condition {
+    enum State {
         case selected
         case notSelected
         case notDetermined

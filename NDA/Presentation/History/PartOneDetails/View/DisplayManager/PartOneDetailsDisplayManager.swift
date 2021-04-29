@@ -27,6 +27,10 @@ class PartOneDetailsDisplayManager: NSObject {
     func setupTableView() {
         tableView.register(PartOneDetailsCell.nib, forCellReuseIdentifier: PartOneDetailsCell.identifier)
 //        tableView.register(PartOneDetailsHeaderView.nib, forHeaderFooterViewReuseIdentifier: PartOneDetailsHeaderView.identifier)
+
+//        tableView.estimatedSectionHeaderHeight = UITableView.automaticDimension
+//        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -55,6 +59,11 @@ extension PartOneDetailsDisplayManager: UITableViewDelegate {
 //        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: PartOneDetailsHeaderView.identifier) as! PartOneDetailsHeaderView
         let header = PartOneDetailsHeaderView()
         header.fill(with: session)
-        tableView.tableHeaderView = header        
-    }
+        tableView.tableHeaderView = header
+        let newSize = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        header.frame.size = newSize
+        tableView.tableHeaderView = header
+        tableView.layoutSubviews()
+//        tableView.layoutIfNeeded()
+    }    
 }

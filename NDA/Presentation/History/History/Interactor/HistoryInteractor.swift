@@ -8,8 +8,15 @@
 
 class HistoryInteractor: HistoryInteractorInput {
     weak var output: HistoryInteractorOutput!
-    var questionService: QuestionService!
-    var sessions: [Session]! {
-        return questionService.sessions
+    var dataService: QuestionnaireDataService!
+    
+    func loadSessions() -> [Session] {
+        var sessions = [Session]()
+        do {
+            sessions = try dataService.getSessions()
+        } catch {
+            output.handle(error)
+        }
+        return sessions
     }
 }

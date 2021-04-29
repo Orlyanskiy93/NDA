@@ -8,7 +8,7 @@
 import Foundation
 import PromiseKit
 
-protocol QuestionService: SessionManager {
+protocol QuestionService {
     func getQuestionsPartOne() -> [QuestionPartOne]
     func getQuestioinsPartTwo(count: Int) throws -> [QuestionPartTwo]
     func getQuestionsPartThree() -> [QuestionPartThree]

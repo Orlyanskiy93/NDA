@@ -19,6 +19,11 @@ class PartOneDetailsViewController: UIViewController, PartOneDetailsViewInput {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         output.viewIsReady()
     }
 

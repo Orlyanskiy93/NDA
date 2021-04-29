@@ -9,13 +9,17 @@
 class PartOneInteractor: PartOneInteractorInput {
     weak var output: PartOneInteractorOutput!
     var questionService: QuestionService!
+    var dataService: QuestionnaireDataService!
     
     var questions: [QuestionPartOne] {
-        questionService.beginSession()
         return questionService.getQuestionsPartOne()
     }
     
     func save(_ answers: [AnswerPartOne]) {
-        questionService.save(answers)
+        do {
+            try dataService.save(answers)
+        } catch {
+            //TODO:
+        }
     }
 }

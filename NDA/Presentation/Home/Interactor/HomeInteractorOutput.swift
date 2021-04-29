@@ -9,5 +9,6 @@
 import Foundation
 
 protocol HomeInteractorOutput: class {
-
+    func handle(_ error: Error)
+    func didLoad(daysToNextQuestionnaire days: Int)
 }

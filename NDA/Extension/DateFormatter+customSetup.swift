@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+extension DateFormatter {
+    static func stringForSession(_ date: Date) -> String {
+        let dateFormatter = self.init()
+        dateFormatter.dateFormat = "d MMMM YYYY"
+        return dateFormatter.string(from: date)
+    }
+}

@@ -22,10 +22,8 @@
 "welcomeMessage" = "Welcome to the Neuro Degenerative Cognitive Assessment App!";
 "rightAnswer" = "Options have no right answer";
 "mapping" = "Unable to load data";
-"gfIndex" = "Gunning fog index is empty";
-"completion" = "Session is not finished";
-"continueSession" = "Session progress is empty";
 "savingSession" = "Unable to save session";
+"stage" = "Previous session is not completed";
 
 //MARK: Button
 
@@ -35,11 +33,13 @@
 "begin" = "BEGIN";
 "editInformation" = "EDIT INFORMATION";
 "eraceAppData" = "ERACE APP DATA";
+"beginQuestionnaire" = "BEGIN QUESTIONNAIRE";
+"daysToNextSession" = "DAYS UNTIL NEXT SESSION";
+"hoursToNextSession" = "HOURS UNTIL NEXT SESSION";
 
 //MARK: Home
 
 "questionnaireDescription" = "Please answer the next few questions as quickly as your ability. The questionnaire will consist of 3 parts: Self - Efficacy, Short - Answer and Long - Answer questions.";
-"beginQuestionnaire" = "BEGIN QUESTIONNAIRE";
 
 //MARK: PartOne
 
@@ -73,3 +73,11 @@
 //MARK: History
 
 "score" = "Score";
+"yourAnswer" = "Your answer:";
+"correct" = "Correct";
+"incorrect" = "Incorrect";
+"responceTime" = "Responce time:";
+"gfIndex" = "Gunning Fog Index:";
+"partOne" = "Self Efficacy Questions";
+"partTwo" = "Short Answers Questions";
+"partThree" = "Long Answer Question";

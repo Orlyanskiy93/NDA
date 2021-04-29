@@ -11,6 +11,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.13.1):
     - PromiseKit/CorePromise
+  - RSKPlaceholderTextView (6.0.4)
   - SwiftLint (0.43.1)
   - ViperMcFlurry (1.5.2)
 
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Kingfisher
   - ObjectMapper
   - PromiseKit
+  - RSKPlaceholderTextView
   - SwiftLint
   - ViperMcFlurry
 
@@ -28,6 +30,7 @@ SPEC REPOS:
     - Kingfisher
     - ObjectMapper
     - PromiseKit
+    - RSKPlaceholderTextView
     - SwiftLint
     - ViperMcFlurry
 
@@ -36,9 +39,10 @@ SPEC CHECKSUMS:
   Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  RSKPlaceholderTextView: 245c20e06d14df883809b7d9ca71bd7784c92531
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   ViperMcFlurry: 701bc3ad8d188b1f1e157ec0ddf4e77184de88b5
 
-PODFILE CHECKSUM: d1ef1c9ae25c9ee580cbd900aa6abce1c3760ab2
+PODFILE CHECKSUM: 351a2348f7c4dc85ded825a8eb190c3e9a0f4cb2
 
 COCOAPODS: 1.10.1

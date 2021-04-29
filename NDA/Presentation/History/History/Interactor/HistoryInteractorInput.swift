@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HistoryInteractorInput {
-    var sessions: [Session]! { get }
+    func loadSessions() -> [Session]
 }

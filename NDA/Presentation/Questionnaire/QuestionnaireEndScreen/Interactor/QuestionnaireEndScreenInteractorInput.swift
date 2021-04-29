@@ -9,5 +9,5 @@
 import Foundation
 
 protocol QuestionnaireEndScreenInteractorInput {
-    func loadScore() -> Score
+    func loadSession() -> Session
 }

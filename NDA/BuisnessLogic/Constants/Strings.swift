@@ -25,10 +25,8 @@ extension String {
         static let rightAnswer = NSLocalizedString("rightAnswer", comment: "")
         static let shortText = NSLocalizedString("shortText", comment: "")
         static let mapping = NSLocalizedString("mapping", comment: "")
-        static let gfIndex = NSLocalizedString("gfIndex", comment: "")
-        static let completion = NSLocalizedString("completion", comment: "")
-        static let continueSession = NSLocalizedString("continueSession", comment: "")
         static let savingSession = NSLocalizedString("savingSession", comment: "")
+        static let stage = NSLocalizedString("stage", comment: "")
     }
     
     struct Button {
@@ -38,11 +36,13 @@ extension String {
         static let begin = NSLocalizedString("begin", comment: "")
         static let editInformation = NSLocalizedString("editInformation", comment: "")
         static let eraceAppData = NSLocalizedString("eraceAppData", comment: "")
+        static let beginQuestionnaire = NSLocalizedString("beginQuestionnaire", comment: "")
+        static let daysToNextSession = NSLocalizedString("daysToNextSession", comment: "")
+        static let hoursToNextSession = NSLocalizedString("hoursToNextSession", comment: "")
     }
     
     struct Home {
         static let questionnaireDescription = NSLocalizedString("questionnaireDescription", comment: "")
-        static let beginQuestionnaire = NSLocalizedString("beginQuestionnaire", comment: "")
     }
     
     struct PartOne {
@@ -77,5 +77,13 @@ extension String {
     
     struct History {
         static let score = NSLocalizedString("score", comment: "")
+        static let yourAnswer = NSLocalizedString("yourAnswer", comment: "")
+        static let correct = NSLocalizedString("correct", comment: "")
+        static let incorrect = NSLocalizedString("incorrect", comment: "")
+        static let responceTime = NSLocalizedString("responceTime", comment: "")
+        static let gfIndex = NSLocalizedString("gfIndex", comment: "")
+        static let partOne = NSLocalizedString("partOne", comment: "")
+        static let partThree = NSLocalizedString("partThree", comment: "")
+        static let partTwo = NSLocalizedString("partTwo", comment: "")
     }
 }

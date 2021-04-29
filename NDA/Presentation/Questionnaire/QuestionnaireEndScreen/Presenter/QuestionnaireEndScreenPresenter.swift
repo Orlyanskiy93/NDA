@@ -16,11 +16,13 @@ class QuestionnaireEndScreenPresenter: NSObject, QuestionnaireEndScreenModuleInp
     var router: QuestionnaireEndScreenRouterInput!
 
     func viewIsReady() {
-        view.fill(with: interactor.loadScore())
+        let session = interactor.loadSession()
+        view.fill(with: session.score)
     }
     
     func handle(_ error: Error) {
         view.show(title: error.localizedDescription, message: String.Error.tryAgain)
-        view.fill(with: interactor.loadScore())
+        //TODO:
+//        view.fill(with: interactor.loadScore())
     }    
 }

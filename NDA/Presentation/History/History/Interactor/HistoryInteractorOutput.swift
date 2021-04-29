@@ -9,5 +9,5 @@
 import Foundation
 
 protocol HistoryInteractorOutput: class {
-
+    func handle(_ error: Error)
 }

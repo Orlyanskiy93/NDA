@@ -18,10 +18,28 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
 
     func setupInitialState() {
-        beginQuestionnaireButton.setTitle(String.Home.beginQuestionnaire, for: .normal)
+        beginQuestionnaireButton.setTitle(String.Button.beginQuestionnaire, for: .normal)
     }
     
     @IBAction func begin(_ sender: UIButton) {
-        output.begin()
+        output.runSession()
+    }
+    
+    func updateButton(with days: Int) {
+        if days > 1 {
+            beginQuestionnaireButton.setTitle("\(days) " + String.Button.daysToNextSession, for: .normal)
+            beginQuestionnaireButton.backgroundColor = .systemGray
+            beginQuestionnaireButton.isEnabled = false
+        }
+        if days == 1 {
+            beginQuestionnaireButton.setTitle("\(days) " + String.Button.daysToNextSession, for: .normal)
+            beginQuestionnaireButton.backgroundColor = .systemBlue
+            beginQuestionnaireButton.isEnabled = false
+        }
+        if days < 1 {
+            beginQuestionnaireButton.setTitle(String.Button.beginQuestionnaire, for: .normal)
+            beginQuestionnaireButton.backgroundColor = .systemBlue
+            beginQuestionnaireButton.isEnabled = true
+        }
     }
 }

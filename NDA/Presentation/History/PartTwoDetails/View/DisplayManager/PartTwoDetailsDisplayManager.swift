@@ -27,7 +27,7 @@ class PartTwoDetailsDisplayManager: NSObject, UITableViewDelegate {
     func setupTableView() {
         tableView.register(PartTwoDetailsImageCell.nib, forCellReuseIdentifier: PartTwoDetailsImageCell.identifier)
         tableView.register(PartTwoDetailsTextCell.nib, forCellReuseIdentifier: PartTwoDetailsTextCell.identifier)
-        tableView.register(PartTwoDetailsHeaderView.nib, forHeaderFooterViewReuseIdentifier: PartTwoDetailsHeaderView.identifier)
+//        tableView.register(PartTwoDetailsHeaderView.nib, forHeaderFooterViewReuseIdentifier: PartTwoDetailsHeaderView.identifier)
         tableView.delegate = self
         tableView.dataSource = self        
     }
@@ -54,8 +54,15 @@ extension PartTwoDetailsDisplayManager: UITableViewDataSource {
     }
     
     func setHeader() {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: PartTwoDetailsHeaderView.identifier) as! PartTwoDetailsHeaderView
+//        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: PartTwoDetailsHeaderView.identifier) as! PartTwoDetailsHeaderView
+        let header = PartTwoDetailsHeaderView()
+        
         header.fill(with: session)
         tableView.tableHeaderView = header
-    }
+
+        let newSize = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        header.frame.size = newSize
+        tableView.tableHeaderView = header
+        tableView.layoutSubviews()
+    }    
 }

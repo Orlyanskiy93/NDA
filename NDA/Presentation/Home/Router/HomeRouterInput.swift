@@ -9,5 +9,7 @@
 import Foundation
 
 protocol HomeRouterInput {
-    func openInformationScreen()
+    func openPartOne()
+    func openPartTwo()
+    func openPartThree()
 }

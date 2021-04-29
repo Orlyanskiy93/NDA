@@ -6,39 +6,52 @@
 //
 
 import Foundation
-
+ 
 struct Session {
-    var stage: Stage = .partOne
-    var answersPartOne: [AnswerPartOne] = []
-    var answersPartTwo: [AnswerPartTwo] = []
-    var answerPartThree: AnswerPartThree?
-    var completionDate: Date = Date()
-    
-    func getScore() throws -> Score {
-        do {
-            guard stage == .finished else {
-                throw SessionError.completion
-            }
-            let partOneScore = partOneScoreCalculate()
-            let partTwoScore = partTwoScoreCalculate()
-            let partThreeScore = try partThreeScoreCalculate()
-            let score = Score(partOne: partOneScore, partTwo: partTwoScore, partThree: partThreeScore)
-            return score
-        } catch {
-            throw error
+     var stage: Stage {
+        if answersPartOne.isEmpty {
+            return .partOne
+        }
+        if answersPartTwo.isEmpty {
+            return .partTwo
+        }
+        if answerPartThree.gunningFogIndex > 0 {
+            return.finished
+        } else {
+            return .partThree
         }
     }
     
-    //TODO:
-    private func partOneScoreCalculate() -> Double {
+    private(set) var answersPartOne: [AnswerPartOne] = []
+    private(set) var answersPartTwo: [AnswerPartTwo] = []
+    private(set) var answerPartThree: AnswerPartThree = AnswerPartThree(question: "", answer: "", gunningFogIndex: 0.0)
+    private(set) var completionDate: Date = Date()
+    private(set) var score: Score = Score(partOne: 0.0, partTwo: 0.0, partThree: 0.0)
+    
+    mutating func save(_ answersPartOne: [AnswerPartOne]) {
+        self.answersPartOne = answersPartOne
+        partOneScoreCalculate()
+    }
+    
+    mutating func save(_ answersPartTwo: [AnswerPartTwo]) {
+        self.answersPartTwo = answersPartTwo
+        partTwoScoreCalculate()
+    }
+    
+    mutating func save(_ answerPartThree: AnswerPartThree) {
+        self.answerPartThree = answerPartThree
+        partThreeScoreCalculate()
+    }
+    
+    mutating private func partOneScoreCalculate() {
         var partOnePoints = 0
         answersPartOne.forEach { (answer) in
             partOnePoints += answer.value
         }
-        return  Double((partOnePoints * 100) / (answersPartOne.count * 10))
+        score.partOne = Double((partOnePoints * 100) / (answersPartOne.count * 10))
     }
     
-    private func partTwoScoreCalculate() -> Double {
+    mutating private func partTwoScoreCalculate() {
         var partTwoPoints = 0.0
         answersPartTwo.forEach { (answer) in
             let bestTime = 0.75
@@ -55,14 +68,12 @@ struct Session {
                 partTwoPoints += 10
             }
         }
-        return (partTwoPoints * 100) / Double(answersPartTwo.count * 10)
+        score.partTwo = (partTwoPoints * 100) / Double(answersPartTwo.count * 10)
     }
     
-    private func partThreeScoreCalculate() throws -> Double {
-        guard let gfIndex = answerPartThree?.gunningFogIndex else {
-            throw SessionError.gfIndex
-        }
-        return calculatingY(from: gfIndex)
+    mutating private func partThreeScoreCalculate() {
+        let gfIndex = answerPartThree.gunningFogIndex
+        score.partThree = calculatingY(from: gfIndex)
     }
     
     private func calculatingY(from xValue: Double) -> Double {

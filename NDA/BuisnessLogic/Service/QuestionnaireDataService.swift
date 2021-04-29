@@ -8,10 +8,10 @@
 import Foundation
 
 protocol QuestionnaireDataService {
-    var sessions: [Session] { get }
-    var currentSession: Session! { get }
-//    func save(_ session: Session) throws
     func save(_ answersPartOne: [AnswerPartOne]) throws
     func save(_ answersPartTwo: [AnswerPartTwo]) throws
     func save(_ answerPartThree: AnswerPartThree) throws
+    func beginSession() throws
+    func getSessions() throws -> [Session]
+    func getLastSession() throws -> Session
 }

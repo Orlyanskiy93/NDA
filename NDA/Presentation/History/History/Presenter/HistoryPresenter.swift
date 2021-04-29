@@ -14,14 +14,19 @@ class HistoryPresenter: HistoryModuleInput, HistoryViewOutput, HistoryInteractor
 
     func viewIsReady() {
         view.setupInitialState()
-        guard !interactor.sessions.isEmpty else {
+        let sessions = interactor.loadSessions()
+        guard !sessions.isEmpty else {
             view.emptySessionsViewSetup()
             return
         }
-        view.update(interactor.sessions)
+        view.update(sessions)
     }
     
     func didSelected(_ session: Session) {
         router.openSessionDescription(session)
+    }
+    
+    func handle(_ error: Error) {
+        //TODO:
     }
 }

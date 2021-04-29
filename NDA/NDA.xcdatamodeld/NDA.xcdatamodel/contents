@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="AnswerPartOneData" representedClassName="AnswerPartOneData" syncable="YES">
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="sessionData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SessionData" inverseName="answersPartOneData" inverseEntity="SessionData"/>
+    </entity>
+    <entity name="AnswerPartThreeData" representedClassName="AnswerPartThreeData" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String"/>
+        <attribute name="gunningFogIndex" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <relationship name="sessionData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SessionData" inverseName="answerPartThreeData" inverseEntity="SessionData"/>
+    </entity>
+    <entity name="AnswerPartTwoData" representedClassName="AnswerPartTwoData" syncable="YES">
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="optionData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OptionData" inverseName="answerPartTwoData" inverseEntity="OptionData"/>
+        <relationship name="sessionData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SessionData" inverseName="answersPartTwoData" inverseEntity="SessionData"/>
+    </entity>
+    <entity name="OptionData" representedClassName="OptionData" syncable="YES">
+        <attribute name="isRight" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+        <relationship name="answerPartTwoData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerPartTwoData" inverseName="optionData" inverseEntity="AnswerPartTwoData"/>
+    </entity>
+    <entity name="SessionData" representedClassName="SessionData" syncable="YES">
+        <attribute name="completionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="answerPartThreeData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerPartThreeData" inverseName="sessionData" inverseEntity="AnswerPartThreeData"/>
+        <relationship name="answersPartOneData" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AnswerPartOneData" inverseName="sessionData" inverseEntity="AnswerPartOneData"/>
+        <relationship name="answersPartTwoData" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AnswerPartTwoData" inverseName="sessionData" inverseEntity="AnswerPartTwoData"/>
+    </entity>
+    <elements>
+        <element name="AnswerPartOneData" positionX="42.50372314453125" positionY="-124.5878753662109" width="128" height="88"/>
+        <element name="AnswerPartThreeData" positionX="40.91046142578125" positionY="98.4324951171875" width="128" height="103"/>
+        <element name="AnswerPartTwoData" positionX="43.63250732421875" positionY="-20.18829345703125" width="128" height="103"/>
+        <element name="OptionData" positionX="270.8141479492188" positionY="-33.20498657226562" width="128" height="103"/>
+        <element name="SessionData" positionX="-164.2391357421875" positionY="29.3087158203125" width="128" height="103"/>
+    </elements>
 </model>

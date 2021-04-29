@@ -28,6 +28,7 @@ class PartTwoModuleConfigurator {
         let interactor = PartTwoInteractor()
         interactor.output = presenter
         interactor.questionService = QuestionServiceImp.shared
+        interactor.dataService = QuestionnaireDataServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

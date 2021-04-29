@@ -29,6 +29,8 @@ class PartThreeModuleConfigurator {
         let interactor = PartThreeInteractor()
         interactor.output = presenter
         interactor.questionServise = QuestionServiceImp.shared
+        interactor.dataService = QuestionnaireDataServiceImp.shared
+        interactor.timerService = TimerServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

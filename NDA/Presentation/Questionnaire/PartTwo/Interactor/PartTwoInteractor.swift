@@ -9,6 +9,7 @@
 class PartTwoInteractor: PartTwoInteractorInput {
     weak var output: PartTwoInteractorOutput!
     var questionService: QuestionService!
+    var dataService: QuestionnaireDataService!
     
     var questions: [QuestionPartTwo] {
         var questions = [QuestionPartTwo]()
@@ -21,6 +22,10 @@ class PartTwoInteractor: PartTwoInteractorInput {
     }
     
     func save(_ answers: [AnswerPartTwo]) {
-        questionService.save(answers)
+        do {
+            try dataService.save(answers)
+        } catch {
+            //TODO:
+        }
     }
 }

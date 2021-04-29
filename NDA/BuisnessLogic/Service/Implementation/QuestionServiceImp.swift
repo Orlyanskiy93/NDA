@@ -11,9 +11,6 @@ import PromiseKit
 
 class QuestionServiceImp: QuestionService {
     static var shared = QuestionServiceImp()
-    
-    var sessions: [Session] = []
-    var currentSession: Session?
 
     private init() {}
     
@@ -81,38 +78,4 @@ class QuestionServiceImp: QuestionService {
             }
         }
     }
-}
-
-extension QuestionServiceImp: SessionManager {
-        
-    func beginSession() {
-        currentSession = Session()
-        currentSession?.stage = .partOne
-    }
-    
-    func save(_ partOne: AnswerPartOne) {
-        currentSession?.answersPartOne.append(partOne)
-        currentSession?.stage = .partTwo
-    }
-    
-    func save(_ partTwo: AnswerPartTwo) {
-        currentSession?.answersPartTwo.append(partTwo)
-        currentSession?.stage = .partThree
-    }
-    
-    func save(_ partThree: AnswerPartThree) {
-        currentSession?.answerPartThree = partThree
-        currentSession?.stage = .finished
-        
-    }
-    
-    func saveSession() throws {
-        let completionDate = Date()
-        currentSession?.completionDate = completionDate
-        guard let session = currentSession else {
-            throw SessionError.saving
-        }
-        sessions.append(session)
-    }
-    
 }
