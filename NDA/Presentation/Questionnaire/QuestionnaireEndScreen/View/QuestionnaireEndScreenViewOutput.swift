@@ -8,4 +8,5 @@
 
 protocol QuestionnaireEndScreenViewOutput {
     func viewIsReady()
+    func goToHomeScreen()
 }

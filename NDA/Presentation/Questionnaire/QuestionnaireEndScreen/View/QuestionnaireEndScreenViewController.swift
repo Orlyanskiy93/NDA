@@ -9,6 +9,13 @@
 import UIKit
 
 class QuestionnaireEndScreenViewController: UIViewController, QuestionnaireEndScreenViewInput {
+    @IBOutlet weak var finishingMessageLabel: UILabel!
+    @IBOutlet weak var scoreMessageLabel: UILabel!
+    @IBOutlet weak var averageLabel: UILabel!
+    @IBOutlet weak var partOneLabel: UILabel!
+    @IBOutlet weak var partTwoLabel: UILabel!
+    @IBOutlet weak var partThreeLabel: UILabel!
+    @IBOutlet weak var toHomeButton: RoundedButton!
     @IBOutlet weak var averageScoreLabel: UILabel!
     @IBOutlet weak var partOneScoreLabel: UILabel!
     @IBOutlet weak var partTwoScoreLabel: UILabel!
@@ -22,6 +29,13 @@ class QuestionnaireEndScreenViewController: UIViewController, QuestionnaireEndSc
     }
 
     func setupInitialState() {
+        finishingMessageLabel.text = String.Results.finishingMessage
+        scoreMessageLabel.text = String.Results.scoreMessage
+        averageLabel.text = String.Results.average
+        partOneLabel.text = String.Results.part1
+        partTwoLabel.text = String.Results.part2
+        partThreeLabel.text = String.Results.part3
+        toHomeButton.setTitle(String.Button.toHomePage, for: .normal)
     }
     
     func fill(with score: Score) {
@@ -32,7 +46,6 @@ class QuestionnaireEndScreenViewController: UIViewController, QuestionnaireEndSc
     }
     
     @IBAction func toHome(_ sender: UIButton) {
-        //TODO:
-        navigationController?.popToRootViewController(animated: true)
+        output.goToHomeScreen()
     }
 }

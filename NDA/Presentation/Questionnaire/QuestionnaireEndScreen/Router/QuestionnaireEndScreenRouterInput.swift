@@ -9,4 +9,5 @@
 import Foundation
 
 protocol QuestionnaireEndScreenRouterInput {
+    func openHomeScreen()
 }

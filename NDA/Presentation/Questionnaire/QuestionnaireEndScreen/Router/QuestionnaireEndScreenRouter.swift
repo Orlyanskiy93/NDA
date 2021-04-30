@@ -9,4 +9,8 @@ import  ViperMcFlurry
 
 class QuestionnaireEndScreenRouter: QuestionnaireEndScreenRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
+    
+    func openHomeScreen() {
+        _ = transitionHandler.openModule?(usingSegue: "toHomeSegue")
+    }
 }

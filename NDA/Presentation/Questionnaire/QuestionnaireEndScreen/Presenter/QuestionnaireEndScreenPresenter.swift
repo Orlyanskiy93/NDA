@@ -23,6 +23,9 @@ class QuestionnaireEndScreenPresenter: NSObject, QuestionnaireEndScreenModuleInp
     func handle(_ error: Error) {
         view.show(title: error.localizedDescription, message: String.Error.tryAgain)
         //TODO:
-//        view.fill(with: interactor.loadScore())
-    }    
+    }
+    
+    func goToHomeScreen() {
+        router.openHomeScreen()
+    }
 }
