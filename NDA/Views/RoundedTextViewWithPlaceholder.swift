@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
-class MyTextView: UITextView {
+class RoundedTextViewWithPlaceholder: KMPlaceholderTextView {
     
     override func awakeFromNib() {
         super.awakeFromNib()

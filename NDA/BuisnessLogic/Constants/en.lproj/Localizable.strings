@@ -24,6 +24,9 @@
 "mapping" = "Unable to load data";
 "savingSession" = "Unable to save session";
 "stage" = "Previous session is not completed";
+"saveData" = "Unable to save data";
+"fetchData" = "Unable to load data";
+"mapData" = "Unable to map data";
 
 //MARK: Button
 
@@ -36,6 +39,7 @@
 "beginQuestionnaire" = "BEGIN QUESTIONNAIRE";
 "daysToNextSession" = "DAYS UNTIL NEXT SESSION";
 "hoursToNextSession" = "HOURS UNTIL NEXT SESSION";
+"toHomePage" = "GO TO HOME PAGE";
 
 //MARK: Home
 
@@ -66,13 +70,22 @@
 "identifyQuestion" = "Please identify picture of ";
 
 //MARK: PartThree
+
 "partThreeQuestion1" = "Pleace describe the last birthday party you had.";
-"partThreeQuestion2" = "Pleace describe the last book you read";
-"partThreeQuestion3" = "Pleace describe the last movie you watched";
+"partThreeQuestion2" = "Pleace describe the last book you read.";
+"partThreeQuestion3" = "Pleace describe the last movie you watched.";
+
+//MARK: Results
+"finishingMessage" = "Thank you for finishing  the questionnaire!";
+"scoreMessage" = "Your scores are:";
+"average" = "Average:";
+"part1" = "Part 1:";
+"part2" = "Part 2:";
+"part3" = "Part 3:";
 
 //MARK: History
 
-"score" = "Score";
+"score" = "Score:";
 "yourAnswer" = "Your answer:";
 "correct" = "Correct";
 "incorrect" = "Incorrect";

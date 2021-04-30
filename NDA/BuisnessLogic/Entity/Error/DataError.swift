@@ -12,16 +12,14 @@ enum DataError: LocalizedError {
     case fetch
     case maping
     
-    //TODO:
     var errorDescription: String? {
         switch self {
         case .save:
-            return "Unable to save data"
+            return String.Error.saveData
         case .fetch:
-            return "Unable to fetch data"
+            return String.Error.fetchData
         case .maping:
-            return "Unable to map data"
+            return String.Error.mapData
         }
-
     }
 }

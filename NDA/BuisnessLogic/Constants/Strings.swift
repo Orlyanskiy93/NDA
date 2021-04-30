@@ -27,6 +27,9 @@ extension String {
         static let mapping = NSLocalizedString("mapping", comment: "")
         static let savingSession = NSLocalizedString("savingSession", comment: "")
         static let stage = NSLocalizedString("stage", comment: "")
+        static let saveData = NSLocalizedString("saveData", comment: "")
+        static let fetchData = NSLocalizedString("fetchData", comment: "")
+        static let mapData = NSLocalizedString("mapData", comment: "")
     }
     
     struct Button {
@@ -39,6 +42,7 @@ extension String {
         static let beginQuestionnaire = NSLocalizedString("beginQuestionnaire", comment: "")
         static let daysToNextSession = NSLocalizedString("daysToNextSession", comment: "")
         static let hoursToNextSession = NSLocalizedString("hoursToNextSession", comment: "")
+        static let toHomePage = NSLocalizedString("toHomePage", comment: "")
     }
     
     struct Home {
@@ -73,6 +77,15 @@ extension String {
         static let partThreeQuestion1 = NSLocalizedString("partThreeQuestion1", comment: "")
         static let partThreeQuestion2 = NSLocalizedString("partThreeQuestion2", comment: "")
         static let partThreeQuestion3 = NSLocalizedString("partThreeQuestion3", comment: "")
+    }
+    
+    struct Results {
+        static let finishingMessage = NSLocalizedString("finishingMessage", comment: "")
+        static let scoreMessage = NSLocalizedString("scoreMessage", comment: "")
+        static let average = NSLocalizedString("average", comment: "")
+        static let part1 = NSLocalizedString("part1", comment: "")
+        static let part2 = NSLocalizedString("part2", comment: "")
+        static let part3 = NSLocalizedString("part3", comment: "")
     }
     
     struct History {
