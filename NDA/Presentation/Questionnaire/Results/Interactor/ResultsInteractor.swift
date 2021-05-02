@@ -6,9 +6,9 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-class QuestionnaireEndScreenInteractor: QuestionnaireEndScreenInteractorInput {
+class ResultsInteractor: ResultsInteractorInput {
     var dataService: QuestionnaireDataService!
-    weak var output: QuestionnaireEndScreenInteractorOutput!
+    weak var output: ResultsInteractorOutput!
     
     func loadSession() -> Session {
         var session = Session()

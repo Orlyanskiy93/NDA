@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol QuestionnaireEndScreenInteractorOutput: class {
+protocol ResultsInteractorOutput: class {
     func handle(_ error: Error)
 }

@@ -6,6 +6,6 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 import ViperMcFlurry
-protocol QuestionnaireEndScreenModuleInput: class, RamblerViperModuleInput {
+protocol ResultsModuleInput: class, RamblerViperModuleInput {
 
 }

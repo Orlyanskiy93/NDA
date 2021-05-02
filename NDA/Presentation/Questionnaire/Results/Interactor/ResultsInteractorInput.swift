@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol QuestionnaireEndScreenInteractorInput {
+protocol ResultsInteractorInput {
     func loadSession() -> Session
 }

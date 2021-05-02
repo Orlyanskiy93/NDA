@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionnaireEndScreenViewController: UIViewController, QuestionnaireEndScreenViewInput {
+class ResultsViewController: UIViewController, ResultsViewInput {
     @IBOutlet weak var finishingMessageLabel: UILabel!
     @IBOutlet weak var scoreMessageLabel: UILabel!
     @IBOutlet weak var averageLabel: UILabel!
@@ -21,7 +21,7 @@ class QuestionnaireEndScreenViewController: UIViewController, QuestionnaireEndSc
     @IBOutlet weak var partTwoScoreLabel: UILabel!
     @IBOutlet weak var partThreeScoreLabel: UILabel!
     
-    var output: QuestionnaireEndScreenViewOutput!
+    var output: ResultsViewOutput!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,13 @@ class QuestionnaireEndScreenViewController: UIViewController, QuestionnaireEndSc
     }
 
     func setupInitialState() {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        navigationController?.navigationBar.isHidden = true
+        tabBarController?.hidesBottomBarWhenPushed = true //TODO: ??
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        tabBarController?.tabBar.isHidden = true
+        
         finishingMessageLabel.text = String.Results.finishingMessage
         scoreMessageLabel.text = String.Results.scoreMessage
         averageLabel.text = String.Results.average

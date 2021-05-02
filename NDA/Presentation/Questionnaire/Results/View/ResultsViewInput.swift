@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol QuestionnaireEndScreenViewInput: class, UIViewInput {
+protocol ResultsViewInput: class, UIViewInput {
     func setupInitialState()
     func fill(with score: Score)
 }

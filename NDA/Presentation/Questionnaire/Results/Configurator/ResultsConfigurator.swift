@@ -8,25 +8,25 @@
 
 import UIKit
 
-class QuestionnaireEndScreenModuleConfigurator {
+class ResultsModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
-        if let viewController = viewInput as? QuestionnaireEndScreenViewController {
+        if let viewController = viewInput as? ResultsViewController {
             configure(viewController: viewController)
         }
     }
 
-    private func configure(viewController: QuestionnaireEndScreenViewController) {
+    private func configure(viewController: ResultsViewController) {
 
-        let router = QuestionnaireEndScreenRouter()
+        let router = ResultsRouter()
         router.transitionHandler = viewController
 
-        let presenter = QuestionnaireEndScreenPresenter()
+        let presenter = ResultsPresenter()
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = QuestionnaireEndScreenInteractor()
+        let interactor = ResultsInteractor()
         interactor.output = presenter
         interactor.dataService = QuestionnaireDataServiceImp.shared
 

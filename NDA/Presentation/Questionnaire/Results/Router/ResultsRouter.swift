@@ -7,7 +7,7 @@
 //
 import  ViperMcFlurry
 
-class QuestionnaireEndScreenRouter: QuestionnaireEndScreenRouterInput {
+class ResultsRouter: ResultsRouterInput {
     var transitionHandler: RamblerViperModuleTransitionHandlerProtocol!
     
     func openHomeScreen() {

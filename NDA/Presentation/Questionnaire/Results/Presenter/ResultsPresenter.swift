@@ -7,13 +7,13 @@
 //
 import Foundation
 
-class QuestionnaireEndScreenPresenter: NSObject, QuestionnaireEndScreenModuleInput,
-                                       QuestionnaireEndScreenViewOutput,
-                                       QuestionnaireEndScreenInteractorOutput {
+class ResultsPresenter: NSObject, ResultsModuleInput,
+                                       ResultsViewOutput,
+                                       ResultsInteractorOutput {
 
-    weak var view: QuestionnaireEndScreenViewInput!
-    var interactor: QuestionnaireEndScreenInteractorInput!
-    var router: QuestionnaireEndScreenRouterInput!
+    weak var view: ResultsViewInput!
+    var interactor: ResultsInteractorInput!
+    var router: ResultsRouterInput!
 
     func viewIsReady() {
         let session = interactor.loadSession()

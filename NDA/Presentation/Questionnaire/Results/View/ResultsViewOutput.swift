@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol QuestionnaireEndScreenViewOutput {
+protocol ResultsViewOutput {
     func viewIsReady()
     func goToHomeScreen()
 }
