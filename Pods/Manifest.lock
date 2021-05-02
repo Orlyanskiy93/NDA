@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.4.1)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - Kingfisher (6.1.0)
   - KMPlaceholderTextView (1.4.0)
   - ObjectMapper (4.2.0)
@@ -17,6 +20,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
   - Kingfisher
   - KMPlaceholderTextView
   - ObjectMapper
@@ -27,6 +31,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
     - Kingfisher
     - KMPlaceholderTextView
     - ObjectMapper
@@ -36,6 +41,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
@@ -43,6 +49,6 @@ SPEC CHECKSUMS:
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
   ViperMcFlurry: 701bc3ad8d188b1f1e157ec0ddf4e77184de88b5
 
-PODFILE CHECKSUM: ed9c9e96930efe84256d910f137ef45607cc276f
+PODFILE CHECKSUM: 9a5122bf8eea6312003a4d10e10ac1ee00d52464
 
 COCOAPODS: 1.10.1

@@ -13,5 +13,6 @@ target 'NDA' do
   pod "ViperMcFlurry"
   pod 'SwiftLint'
   pod 'KMPlaceholderTextView'
+  pod 'Charts'
 
 end
