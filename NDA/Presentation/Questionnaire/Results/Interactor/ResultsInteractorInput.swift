@@ -10,4 +10,5 @@ import Foundation
 
 protocol ResultsInteractorInput {
     func loadSession() -> Session
+    func finishSession()
 }

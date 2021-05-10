@@ -31,10 +31,6 @@ class ResultsViewController: UIViewController, ResultsViewInput {
     func setupInitialState() {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationController?.navigationBar.isHidden = true
-        tabBarController?.hidesBottomBarWhenPushed = true //TODO: ??
-        
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        tabBarController?.tabBar.isHidden = true
         
         finishingMessageLabel.text = String.Results.finishingMessage
         scoreMessageLabel.text = String.Results.scoreMessage

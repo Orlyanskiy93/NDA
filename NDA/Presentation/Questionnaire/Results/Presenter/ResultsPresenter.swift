@@ -7,9 +7,10 @@
 //
 import Foundation
 
-class ResultsPresenter: NSObject, ResultsModuleInput,
-                                       ResultsViewOutput,
-                                       ResultsInteractorOutput {
+class ResultsPresenter: NSObject,
+                        ResultsModuleInput,
+                        ResultsViewOutput,
+                        ResultsInteractorOutput {
 
     weak var view: ResultsViewInput!
     var interactor: ResultsInteractorInput!
@@ -21,11 +22,13 @@ class ResultsPresenter: NSObject, ResultsModuleInput,
     }
     
     func handle(_ error: Error) {
-        view.show(title: error.localizedDescription, message: String.Error.tryAgain)
-        //TODO:
+        view.show(error) { [weak self] _ in
+            self?.viewIsReady()
+        }
     }
     
     func goToHomeScreen() {
+        interactor.finishSession()
         router.openHomeScreen()
     }
 }

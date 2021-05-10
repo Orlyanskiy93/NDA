@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ResultsInteractorOutput: class {
+protocol ResultsInteractorOutput: AnyObject {
     func handle(_ error: Error)
 }

@@ -29,6 +29,7 @@ class ResultsModuleConfigurator {
         let interactor = ResultsInteractor()
         interactor.output = presenter
         interactor.dataService = QuestionnaireDataServiceImp.shared
+        interactor.notificationService = NotificationsServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter
