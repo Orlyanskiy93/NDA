@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "rightSeporator.pdf",
+      "filename" : "circle-x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "circle-x@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "circle-x@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

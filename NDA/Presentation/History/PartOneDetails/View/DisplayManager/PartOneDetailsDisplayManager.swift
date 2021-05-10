@@ -14,7 +14,7 @@ class PartOneDetailsDisplayManager: NSObject {
         didSet {
             answers = session.answersPartOne
             setHeader()
-//            tableView.reloadData()
+            tableView.reloadData()
         }
     }
     
@@ -26,13 +26,10 @@ class PartOneDetailsDisplayManager: NSObject {
     
     func setupTableView() {
         tableView.register(PartOneDetailsCell.nib, forCellReuseIdentifier: PartOneDetailsCell.identifier)
-//        tableView.register(PartOneDetailsHeaderView.nib, forHeaderFooterViewReuseIdentifier: PartOneDetailsHeaderView.identifier)
-
-//        tableView.estimatedSectionHeaderHeight = UITableView.automaticDimension
-//        tableView.sectionHeaderHeight = UITableView.automaticDimension
-        
+        tableView.register(PartOneDetailsHeaderView.nib, forHeaderFooterViewReuseIdentifier: PartOneDetailsHeaderView.identifier)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
 }
@@ -56,14 +53,8 @@ extension PartOneDetailsDisplayManager: UITableViewDelegate {
     }
     
     func setHeader() {
-//        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: PartOneDetailsHeaderView.identifier) as! PartOneDetailsHeaderView
-        let header = PartOneDetailsHeaderView()
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: PartOneDetailsHeaderView.identifier) as! PartOneDetailsHeaderView
         header.fill(with: session)
         tableView.tableHeaderView = header
-        let newSize = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-        header.frame.size = newSize
-        tableView.tableHeaderView = header
-        tableView.layoutSubviews()
-//        tableView.layoutIfNeeded()
-    }    
+    }
 }

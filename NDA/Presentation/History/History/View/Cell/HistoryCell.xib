@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,44 +18,61 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpF-IH-4fM" customClass="RoundedView" customModule="NDA" customModuleProvider="target">
-                        <rect key="frame" x="20" y="20" width="374" height="51"/>
+                        <rect key="frame" x="20" y="10" width="374" height="71"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGP-bG-B4X">
-                                <rect key="frame" x="174" y="15" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="54" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGP-bG-B4X">
+                                <rect key="frame" x="199.5" y="23.5" width="26" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" name="NDMediumGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVC-p4-ik5">
-                                <rect key="frame" x="112" y="15" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVC-p4-ik5">
+                                <rect key="frame" x="128" y="25" width="51.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="NDMediumGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHO-Zr-WHv">
-                                <rect key="frame" x="20" y="20" width="42" height="11"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCT 23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHO-Zr-WHv">
+                                <rect key="frame" x="20" y="20" width="62.5" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="NDMediumGrey"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweron" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BWk-K2-v1f">
+                                <rect key="frame" x="102.5" y="16" width="5.5" height="39"/>
+                                <color key="tintColor" name="NDLightGrey"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-TQ-kbf">
+                                <rect key="frame" x="337" y="25.5" width="17" height="20.5"/>
+                                <color key="tintColor" name="NDLightGrey"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c2E-TQ-kbf" secondAttribute="height" multiplier="0.7:1" id="VBJ-wE-G9D"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QVC-p4-ik5" firstAttribute="leading" secondItem="BWk-K2-v1f" secondAttribute="trailing" constant="20" id="2VS-Ec-DOk"/>
                             <constraint firstItem="fHO-Zr-WHv" firstAttribute="top" secondItem="YpF-IH-4fM" secondAttribute="top" constant="20" id="4p7-U5-Oxc"/>
                             <constraint firstItem="xGP-bG-B4X" firstAttribute="centerY" secondItem="YpF-IH-4fM" secondAttribute="centerY" id="746-iB-hv8"/>
-                            <constraint firstItem="QVC-p4-ik5" firstAttribute="leading" secondItem="fHO-Zr-WHv" secondAttribute="trailing" constant="50" id="Fp6-SX-S4u"/>
+                            <constraint firstItem="c2E-TQ-kbf" firstAttribute="centerY" secondItem="YpF-IH-4fM" secondAttribute="centerY" id="C08-lP-4QH"/>
+                            <constraint firstItem="BWk-K2-v1f" firstAttribute="top" secondItem="YpF-IH-4fM" secondAttribute="top" constant="15" id="FmD-FP-OMN"/>
+                            <constraint firstAttribute="trailing" secondItem="c2E-TQ-kbf" secondAttribute="trailing" constant="20" id="IJB-Vp-3y3"/>
                             <constraint firstItem="QVC-p4-ik5" firstAttribute="centerY" secondItem="YpF-IH-4fM" secondAttribute="centerY" id="NLz-4c-Rrv"/>
+                            <constraint firstAttribute="bottom" secondItem="BWk-K2-v1f" secondAttribute="bottom" constant="15" id="Pe1-67-FXK"/>
                             <constraint firstItem="xGP-bG-B4X" firstAttribute="leading" secondItem="QVC-p4-ik5" secondAttribute="trailing" constant="20" id="RgV-dh-XzD"/>
                             <constraint firstAttribute="bottom" secondItem="fHO-Zr-WHv" secondAttribute="bottom" constant="20" id="Rgp-qA-6ON"/>
+                            <constraint firstItem="c2E-TQ-kbf" firstAttribute="height" secondItem="xGP-bG-B4X" secondAttribute="height" id="Z5m-Qi-PZN"/>
                             <constraint firstItem="fHO-Zr-WHv" firstAttribute="centerY" secondItem="YpF-IH-4fM" secondAttribute="centerY" id="Zz0-cw-c5c"/>
                             <constraint firstItem="fHO-Zr-WHv" firstAttribute="leading" secondItem="YpF-IH-4fM" secondAttribute="leading" constant="20" id="emp-di-xsT"/>
+                            <constraint firstItem="BWk-K2-v1f" firstAttribute="leading" secondItem="fHO-Zr-WHv" secondAttribute="trailing" constant="20" id="wau-vB-n3C"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="YpF-IH-4fM" secondAttribute="trailing" constant="20" id="T58-e1-wgr"/>
-                    <constraint firstAttribute="bottom" secondItem="YpF-IH-4fM" secondAttribute="bottom" constant="20" id="VTK-WO-5GS"/>
-                    <constraint firstItem="YpF-IH-4fM" firstAttribute="top" secondItem="z0M-8K-cKd" secondAttribute="top" constant="20" id="kLT-r8-uVA"/>
+                    <constraint firstAttribute="bottom" secondItem="YpF-IH-4fM" secondAttribute="bottom" constant="10" id="VTK-WO-5GS"/>
+                    <constraint firstItem="YpF-IH-4fM" firstAttribute="top" secondItem="z0M-8K-cKd" secondAttribute="top" constant="10" id="kLT-r8-uVA"/>
                     <constraint firstItem="YpF-IH-4fM" firstAttribute="leading" secondItem="z0M-8K-cKd" secondAttribute="leading" constant="20" id="ltx-gu-Fxr"/>
                 </constraints>
             </tableViewCellContentView>
@@ -67,6 +85,14 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="poweron" catalog="system" width="39" height="128"/>
+        <namedColor name="NDLightGrey">
+            <color red="0.7686274509803922" green="0.7686274509803922" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NDMediumGrey">
+            <color red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

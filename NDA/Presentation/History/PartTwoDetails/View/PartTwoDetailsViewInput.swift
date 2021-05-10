@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartTwoDetailsViewInput: class, UIViewInput {
+protocol PartTwoDetailsViewInput: AnyObject, UIViewInput {
     func setupInitialState()
     func update(_ session: Session)
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol HistoryDisplayManagerDelegate: class {
+protocol HistoryDisplayManagerDelegate: AnyObject {
     func historyDisplayManager( _ historyDisplayManager: HistoryDisplayManager, didSelect session: Session)
 }

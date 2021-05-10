@@ -6,12 +6,6 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartTwoDescriptionViewInput: class {
-
-    /**
-        @author Dmitriy
-        Setup initial state of the view
-    */
-
+protocol PartTwoDescriptionViewInput: AnyObject {
     func setupInitialState()
 }

@@ -11,10 +11,11 @@ class HistoryPresenter: HistoryModuleInput, HistoryViewOutput, HistoryInteractor
     weak var view: HistoryViewInput!
     var interactor: HistoryInteractorInput!
     var router: HistoryRouterInput!
+    var sessions: [Session] = []
 
     func viewIsReady() {
+        sessions = interactor.loadSessions()
         view.setupInitialState()
-        let sessions = interactor.loadSessions()
         guard !sessions.isEmpty else {
             view.emptySessionsViewSetup()
             return
@@ -27,6 +28,8 @@ class HistoryPresenter: HistoryModuleInput, HistoryViewOutput, HistoryInteractor
     }
     
     func handle(_ error: Error) {
-        //TODO:
+        view.show(error) { [weak self] _ in
+            self?.viewIsReady()
+        }
     }
 }

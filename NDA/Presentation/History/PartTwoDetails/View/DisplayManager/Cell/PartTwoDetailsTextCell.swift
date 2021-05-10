@@ -14,21 +14,42 @@ class PartTwoDetailsTextCell: UITableViewCell {
     @IBOutlet weak var isCorrectLabel: UILabel!
     @IBOutlet weak var responseTimeLabel: UILabel!
     @IBOutlet weak var responseTimeValueLabel: UILabel!
+    @IBOutlet weak var checkImageView: UIImageView!
+    
+    let greenColor: UIColor? = UIColor(named: "NDGreen")
+    let redColor: UIColor? = UIColor(named: "NDRed")
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
     
     func fill(with answer: AnswerPartTwo) {
         questionLabel.text = answer.question
         yourAnswerLabel.text = String.History.yourAnswer
         responseTimeLabel.text = String.History.responceTime
-        responseTimeValueLabel.text = answer.time.rounded().description + "s"
+        responseTimeValueLabel.text = Double(answer.time).rounded(digits: 2).description + "s"
         optionButton.setTitle(answer.option.value, for: .normal)
         
         if answer.option.isRight {
-            optionButton.backgroundColor = .green
-            isCorrectLabel.text = String.History.correct
+            correctSetup()
         } else {
-            optionButton.backgroundColor = .red
-            isCorrectLabel.text = String.History.incorrect
+            incorrectSetup()
         }
+    }
+    
+    func correctSetup() {
+        optionButton.backgroundColor = greenColor
+        checkImageView.tintColor = greenColor
+        isCorrectLabel.text = String.History.correct
+        checkImageView.image = UIImage(named: "circle-checked")
+    }
+    
+    func incorrectSetup() {
+        optionButton.backgroundColor = redColor
+        checkImageView.tintColor = redColor
+        isCorrectLabel.text = String.History.incorrect
+        checkImageView.image = UIImage(named: "circle-x")
     }
     
 }

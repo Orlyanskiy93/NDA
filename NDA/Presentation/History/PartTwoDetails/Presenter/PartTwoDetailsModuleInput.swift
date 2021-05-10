@@ -7,6 +7,6 @@
 //
 import ViperMcFlurry
 
-protocol PartTwoDetailsModuleInput: class, RamblerViperModuleInput {
+protocol PartTwoDetailsModuleInput: RamblerViperModuleInput {
     func load(_ session: Session)
 }

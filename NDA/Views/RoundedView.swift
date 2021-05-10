@@ -14,8 +14,9 @@ class RoundedView: UIView {
     }
     
     private func setup() {
+        let lightGreyColor = UIColor(named: "NDLightGrey") ?? .lightGray
         self.layer.cornerRadius = 15
         self.layer.borderWidth = 3
-        self.layer.borderColor = UIColor(named: "NDLightGrey")?.cgColor
+        self.layer.borderColor = lightGreyColor.cgColor
     }
 }

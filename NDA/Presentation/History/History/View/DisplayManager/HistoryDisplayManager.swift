@@ -11,6 +11,7 @@ class HistoryDisplayManager: NSObject {
     weak var delegate: HistoryDisplayManagerDelegate!
     var sessions: [Session] = [] {
         didSet {
+            setHeader()
             tableView.reloadData()
         }
     }
@@ -23,8 +24,10 @@ class HistoryDisplayManager: NSObject {
     
     func setupTableView() {
         tableView.register(HistoryCell.nib, forCellReuseIdentifier: HistoryCell.identifier)
+        tableView.register(ChartHeaderView.nib, forHeaderFooterViewReuseIdentifier: ChartHeaderView.identifier)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
 }
@@ -47,7 +50,9 @@ extension HistoryDisplayManager: UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
+    func setHeader() {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: ChartHeaderView.identifier) as! ChartHeaderView
+        header.setup(with: sessions)
+        tableView.tableHeaderView = header
     }
 }

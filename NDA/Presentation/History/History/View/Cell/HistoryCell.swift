@@ -13,10 +13,15 @@ class HistoryCell: UITableViewCell {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var scoreValueLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
+    
     func fill(with session: Session) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d"
-        dateLabel.text = dateFormatter.string(from: session.completionDate)
+        dateLabel.text = dateFormatter.string(from: session.completionDate).uppercased()
         scoreLabel.text = String.History.score
         scoreValueLabel.text = Int(session.score.average).description
     }

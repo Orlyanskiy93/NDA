@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol SessionDescriptionInteractorOutput: class {
+protocol SessionDescriptionInteractorOutput: AnyObject {
 
 }

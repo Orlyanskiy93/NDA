@@ -17,7 +17,7 @@ extension UITableViewHeaderFooterView {
     }
 }
 
-class PartOneDetailsHeaderView: UIView {
+class PartOneDetailsHeaderView: UITableViewHeaderFooterView {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var partTitleLabel: UILabel!
@@ -26,16 +26,6 @@ class PartOneDetailsHeaderView: UIView {
     @IBOutlet weak var cannotCertainLabel: UILabel!
     @IBOutlet weak var moderatelyCertainLabel: UILabel!
     @IBOutlet weak var highlyCertainLabel: UILabel!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupFromNib()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupFromNib()
-    }
     
     func fill(with session: Session) {
         dateLabel.text = DateFormatter.stringForSession(session.completionDate)
