@@ -14,5 +14,6 @@ target 'NDA' do
   pod 'SwiftLint'
   pod 'KMPlaceholderTextView'
   pod 'Charts'
+  pod 'IQKeyboardManager'
 
 end
