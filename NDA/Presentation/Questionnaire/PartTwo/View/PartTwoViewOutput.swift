@@ -7,6 +7,7 @@
 //
 
 protocol PartTwoViewOutput {
+    var chosenQuestion: Int { get }
     func viewIsReady()
     func didChosen(_ option: Option)
     func loadQuestion()

@@ -10,6 +10,6 @@ import Foundation
 
 protocol PartThreeInteractorInput {
     var question: QuestionPartThree { get }
-    func loadGunningFogIndex(_ text: String)
+    func loadGunningFogIndex(with text: String)
     func save(_ answer: AnswerPartThree)
 }

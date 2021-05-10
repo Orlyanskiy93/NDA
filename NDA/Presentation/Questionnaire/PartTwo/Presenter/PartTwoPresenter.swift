@@ -15,18 +15,18 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     
     var questions: [QuestionPartTwo] = []
     var answers: [AnswerPartTwo] = []
-    var index: Int = 0
+    var chosenQuestion: Int = 0
     var startingTime: Date = Date()
     
     func viewIsReady() {
         questions = interactor.questions
-        view.setupInitialState()
+        view.setup(with: questions.count)
         loadQuestion()
     }
     
     func loadQuestion() {
         startingTime = Date()
-        let question = questions[index]
+        let question = questions[chosenQuestion]
         if question.type == .image {
             view.fillImageViews(with: question)
         } else {
@@ -35,7 +35,7 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     }
     
     func saveAnswer(with chosenOption: Option) {
-        let question = questions[index].title
+        let question = questions[chosenQuestion].title
         let chosenOption = chosenOption
         let time = Date().timeIntervalSince(startingTime)
         let answer = AnswerPartTwo(question: question!, option: chosenOption, time: time)
@@ -45,9 +45,9 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     func didChosen(_ option: Option) {
         saveAnswer(with: option)
         
-        if index + 1 != questions.count {
-            index += 1
-            let progressValue = Float(index) / Float(questions.count)
+        if chosenQuestion + 1 != questions.count {
+            chosenQuestion += 1
+            let progressValue = Float(chosenQuestion) / Float(questions.count)
             view.updateProgressView(with: progressValue)
             loadQuestion()
         } else {
@@ -57,8 +57,8 @@ class PartTwoPresenter: PartTwoModuleInput, PartTwoViewOutput, PartTwoInteractor
     }
     
     func handle(_ error: Error) {
-        view.show(title: String.Error.error, message: String.Error.tryAgain) { [weak self] (_) in
-            self?.loadQuestion()
+        view.show(error) { [weak self] _ in
+            self?.viewIsReady()
         }
     }
 }

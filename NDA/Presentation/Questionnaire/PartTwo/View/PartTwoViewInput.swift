@@ -6,8 +6,8 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartTwoViewInput: class, UIViewInput {
-    func setupInitialState()
+protocol PartTwoViewInput: AnyObject, UIViewInput {
+    func setup(with questionCount: Int)
     func fillButtons(with arithmeticQuestion: QuestionPartTwo)
     func fillImageViews(with identifyQuestion: QuestionPartTwo)
     func updateProgressView(with value: Float)

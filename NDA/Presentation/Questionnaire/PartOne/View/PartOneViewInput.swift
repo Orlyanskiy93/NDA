@@ -6,8 +6,9 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartOneViewInput: class, UIViewInput {
-    func setupInitialState()
+protocol PartOneViewInput: AnyObject, UIViewInput {
+    func setupInitialState(with questionsCount: Int)
     func show(_ question: QuestionPartOne)
+    func showEditing(_ question: QuestionPartOne, with answerValue: Float)
     func updateProgressView(with value: Float)
 }

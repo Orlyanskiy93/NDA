@@ -9,10 +9,13 @@ import UIKit
 
 class OptionSelectableButton: RoundedButton {
     private(set) var option: Option?
+    private let greenColor: UIColor = UIColor(named: "NDGreen") ?? .systemGreen
+    private let lightGreyColor: UIColor = UIColor(named: "NDLightGrey") ?? .lightGray
+
     
     override var isSelected: Bool {
         didSet {
-            backgroundColor = isSelected ? UIColor(named: "NDGreen") : UIColor(named: "NDLightGrey")
+            backgroundColor = isSelected ? greenColor : lightGreyColor
             isUserInteractionEnabled = isSelected ? false : true
         }
     }

@@ -19,7 +19,7 @@ class PartOneInteractor: PartOneInteractorInput {
         do {
             try dataService.save(answers)
         } catch {
-            //TODO:
+            output.handle(error)
         }
     }
 }

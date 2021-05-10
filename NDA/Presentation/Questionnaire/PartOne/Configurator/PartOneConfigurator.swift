@@ -29,7 +29,6 @@ class PartOneModuleConfigurator {
         let interactor = PartOneInteractor()
         interactor.output = presenter
         interactor.questionService = QuestionServiceImp.shared
-        //TODO:
         interactor.dataService = QuestionnaireDataServiceImp.shared
 
         presenter.interactor = interactor

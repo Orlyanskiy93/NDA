@@ -13,10 +13,11 @@ class PartThreePresenter: PartThreeModuleInput, PartThreeViewOutput, PartThreeIn
     var interactor: PartThreeInteractorInput!
     var router: PartThreeRouterInput!
     var question: QuestionPartThree!
-    var gfIndex: Double = 0.0
+    var gfIndex: Double = 0.0 
 
     func viewIsReady() {
         question = interactor.question
+        view.setupInitialState()
         view.fill(with: question)
     }
                     
@@ -25,7 +26,7 @@ class PartThreePresenter: PartThreeModuleInput, PartThreeViewOutput, PartThreeIn
             view.show(message: String.Error.emptyField)
             return false
         }
-        guard text.count >= 20 else {
+        guard text.count >= 30 else {
             view.show(message: String.Error.shortText)
             return false
         }
@@ -34,10 +35,10 @@ class PartThreePresenter: PartThreeModuleInput, PartThreeViewOutput, PartThreeIn
     
     func didRecived(_ answer: String) {
         if isValide(answer) {
-            interactor.loadGunningFogIndex(answer)
+            interactor.loadGunningFogIndex(with: answer)
         }
     }
-    //TODO: названия
+    
     func save(_ answer: String) {
         let answer = AnswerPartThree(question: question, answer: answer, gunningFogIndex: gfIndex)
         interactor.save(answer)
@@ -45,7 +46,9 @@ class PartThreePresenter: PartThreeModuleInput, PartThreeViewOutput, PartThreeIn
     }
     
     func handle(_ error: Error) {
-        view.show(title: error.localizedDescription, message: String.Error.tryAgain)
+        view.show(error) { [weak self] _ in
+            self?.viewIsReady()
+        }
     }
 
 }

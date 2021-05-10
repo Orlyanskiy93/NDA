@@ -16,14 +16,16 @@ protocol UIViewInput {
 extension UIViewInput {
     
     func show(_ error: Error, _ handler: ((UIAlertAction) -> Void)? = nil) {
-        show(title: String.Error.error, message: error.localizedDescription, handler)
+        show(title: error.localizedDescription, message: String.Error.tryAgain, handler)
     }
     
     func show(title: String? = nil, message: String, _ handler: ((UIAlertAction) -> Void)? = nil) {
         guard let vc = self as? UIViewController else { return }
-        let allert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: String.Error.ok, style: .cancel, handler: handler)
-        allert.addAction(action)
-        vc.present(allert, animated: true, completion: nil)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: String.Error.ok, style: .default, handler: handler)
+        let actionCancel = UIAlertAction(title: String.Error.cancel, style: .cancel, handler: nil)
+        alert.addAction(actionCancel)
+        alert.addAction(action)
+        vc.present(alert, animated: true, completion: nil)
     }
 }

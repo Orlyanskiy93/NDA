@@ -7,6 +7,8 @@
 //
 
 protocol PartOneViewOutput {
+    var chosenQuestionNumber: Int { get }
     func viewIsReady()
     func answerDidChosen(with points: Int)
+    func editQuestion(with number: Int)
 }

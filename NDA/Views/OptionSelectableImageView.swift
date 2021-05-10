@@ -7,12 +7,13 @@
 
 import UIKit
 
-protocol SelectableImageDelegate: class {
+protocol SelectableImageViewDelegate: AnyObject {
     func selectableImageView(didSelect selectableImageView: OptionSelectableImageView)
 }
 
 class OptionSelectableImageView: UIImageView {
     private(set) var option: Option?
+    private let greenColor: UIColor = UIColor(named: "NDGreen") ?? .systemGreen
     
     var state: State = .notDetermined {
         didSet {
@@ -27,7 +28,7 @@ class OptionSelectableImageView: UIImageView {
         }
     }
     
-    weak var delegate: SelectableImageDelegate!
+    weak var delegate: SelectableImageViewDelegate!
     private let coverSubview = UIView()
     
     override func awakeFromNib() {
@@ -52,7 +53,7 @@ class OptionSelectableImageView: UIImageView {
     
     private func selectedColorSetup() {
         self.coverSubview.removeFromSuperview()
-        self.layer.borderColor = UIColor(named: "NDGreen")?.cgColor
+        self.layer.borderColor = greenColor.cgColor
         self.layer.borderWidth = 5
     }
     

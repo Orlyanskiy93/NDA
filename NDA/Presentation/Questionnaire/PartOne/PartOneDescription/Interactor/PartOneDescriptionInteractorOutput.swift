@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol PartOneDescriptionInteractorOutput: class {
+protocol PartOneDescriptionInteractorOutput: AnyObject {
 
 }

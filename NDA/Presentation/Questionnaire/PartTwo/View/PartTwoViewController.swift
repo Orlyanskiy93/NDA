@@ -8,15 +8,16 @@
 
 import UIKit
 
-class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImageDelegate {
+class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImageViewDelegate {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var optionImageViews: [OptionSelectableImageView]!
     @IBOutlet var optionButtons: [OptionSelectableButton]!
     @IBOutlet weak var imageViewsStackView: UIStackView!
-    @IBOutlet weak var buttonsStackView: UIStackView!
+    @IBOutlet weak var optionButtonsStackView: UIStackView!
     @IBOutlet weak var nextButton: RoundedButton!
     @IBOutlet weak var progressView: UIProgressView!
-        
+    @IBOutlet weak var questionButtonsStackView: ButtonsStackView!
+    
     var output: PartTwoViewOutput!
     var chosenOption: Option?
 
@@ -25,10 +26,15 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
         output.viewIsReady()
     }
 
-    func setupInitialState() {
+    func setup(with questionsCount: Int) {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationController?.navigationBar.isHidden = true
         optionImageViews.forEach { (imageView) in
             imageView.delegate = self
+        }
+        questionButtonsStackView.createButtons(count: questionsCount)
+        questionButtonsStackView.buttons.forEach { button in
+            button.isEnabled = false
         }
         optionNotSelectedNextButtonSetup()
     }
@@ -48,9 +54,11 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
     }
     
     func fillButtons(with arithmeticQuestion: QuestionPartTwo) {
+        let index = output.chosenQuestion
+        questionButtonsStackView.setSelected(index: index, true)
         questionLabel.text = arithmeticQuestion.title
         imageViewsStackView.isHidden = true
-        buttonsStackView.isHidden = false
+        optionButtonsStackView.isHidden = false
         
         guard optionButtons.count == 4 else {
             show(title: String.Error.error, message: String.Error.optionsCount)
@@ -67,9 +75,11 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
     }
     
     func fillImageViews(with identifyQuestion: QuestionPartTwo) {
+        let index = output.chosenQuestion
+        questionButtonsStackView.setSelected(index: index, true)
         questionLabel.text = identifyQuestion.title
         
-        buttonsStackView.isHidden = true
+        optionButtonsStackView.isHidden = true
         imageViewsStackView.isHidden = false
         
         guard optionImageViews.count == 4 else {
@@ -112,8 +122,10 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
         }
         optionNotSelectedNextButtonSetup()
     }
-
+    
     @IBAction func nextQuestion(_ sender: UIButton) {
+        let index = output.chosenQuestion
+        questionButtonsStackView.setButtonState(index: index, to: .answered)
         guard let option = chosenOption else {
             show(title: String.Error.error, message: String.Error.tryAgain) { [weak self] (_) in
                 self?.output.loadQuestion()

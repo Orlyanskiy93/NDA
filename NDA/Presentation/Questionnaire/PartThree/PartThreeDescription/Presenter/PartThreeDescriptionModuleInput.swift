@@ -8,6 +8,6 @@
 
 import ViperMcFlurry
 
-protocol PartThreeDescriptionModuleInput: class, RamblerViperModuleInput {
+protocol PartThreeDescriptionModuleInput: RamblerViperModuleInput {
 
 }

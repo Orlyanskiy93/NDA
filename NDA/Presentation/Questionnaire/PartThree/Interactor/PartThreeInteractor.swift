@@ -11,14 +11,13 @@ class PartThreeInteractor: PartThreeInteractorInput {
     weak var output: PartThreeInteractorOutput!
     var questionServise: QuestionService!
     var dataService: QuestionnaireDataService!
-    var timerService: TimerService!
     
     var question: QuestionPartThree {
         let questions = questionServise.getQuestionsPartThree()
         return questions[Int.random(in: 0..<questions.count)]
     }
     
-    func loadGunningFogIndex(_ text: String) {
+    func loadGunningFogIndex(with text: String) {
         firstly {
             questionServise.getGunningFogIndex(with: text)
         } .done { [weak self] (index) in
@@ -35,6 +34,5 @@ class PartThreeInteractor: PartThreeInteractorInput {
         } catch {
             output.handle(error)
         }
-        timerService.lounchTimer()
     }
 }

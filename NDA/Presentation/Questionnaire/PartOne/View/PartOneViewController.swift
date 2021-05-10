@@ -9,7 +9,6 @@
 import UIKit
 
 class PartOneViewController: UIViewController, PartOneViewInput {
-    
     @IBOutlet var numberLabels: [UILabel]!
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -18,6 +17,7 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     @IBOutlet weak var highlyCertainLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var buttonsStackView: ButtonsStackView!
     
     var output: PartOneViewOutput!
 
@@ -26,8 +26,11 @@ class PartOneViewController: UIViewController, PartOneViewInput {
         output.viewIsReady()
     }
 
-    func setupInitialState() {
+    func setupInitialState(with questionsCount: Int) {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationController?.navigationBar.isHidden = true
+        buttonsStackView.createButtons(count: questionsCount)
+        buttonsStackView.delegate = self
         setupLabels()
         resetSlider()
     }
@@ -56,8 +59,10 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     @IBAction func valueChange(_ sender: UISlider) {
         highlitingText(with: sender.value)
     }
-    
+        
     @IBAction func chooseAnswer(_ sender: UIButton) {
+        let index = output.chosenQuestionNumber
+        buttonsStackView.setButtonState(index: index, to: .answered)
         output.answerDidChosen(with: Int(slider.value))
         resetSlider()
     }
@@ -70,5 +75,25 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     
     func show(_ question: QuestionPartOne) {
         questionLabel.text = question
+        let index = output.chosenQuestionNumber
+        buttonsStackView.setSelected(index: index, true)
+    }
+    
+    func showEditing(_ question: QuestionPartOne, with answerValue: Float) {
+        questionLabel.text = question
+        slider.value = answerValue
+        highlitingText(with: slider.value)
+        let index = output.chosenQuestionNumber
+        buttonsStackView.setSelected(index: index, true)
+    }
+}
+
+extension PartOneViewController: ButtonsStackViewDelegate {
+    func buttonsStackView(didSelected button: StackViewButton) {
+        buttonsStackView.buttons.forEach { button in
+            button.isSelected = false
+        }
+        button.isSelected = true
+        output.editQuestion(with: button.identifier)
     }
 }

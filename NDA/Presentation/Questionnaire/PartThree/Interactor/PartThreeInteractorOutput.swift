@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PartThreeInteractorOutput: class {
+protocol PartThreeInteractorOutput: AnyObject {
     var gfIndex: Double { get set }
     func handle(_ error: Error)
     func save(_ answer: String)

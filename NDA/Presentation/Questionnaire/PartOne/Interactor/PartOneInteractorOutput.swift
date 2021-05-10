@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol PartOneInteractorOutput: class {
-
+protocol PartOneInteractorOutput: AnyObject {
+    func handle(_ error: Error)
 }
