@@ -19,8 +19,9 @@ class CircleView: UIView {
     }
     
     private func setup() {
+        let blueColor = UIColor(named: "NDBlue") ?? .systemBlue
         self.layer.borderWidth = 5
-        self.layer.borderColor = UIColor(named: "NDBlue")?.cgColor
+        self.layer.borderColor = blueColor.cgColor
     }
 
 }

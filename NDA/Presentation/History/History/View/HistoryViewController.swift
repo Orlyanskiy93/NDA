@@ -24,7 +24,6 @@ class HistoryViewController: UIViewController, HistoryViewInput {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //TODO:
         super.viewWillAppear(true)
         output.viewIsReady()
         historyDisplayManager.tableView.reloadData()

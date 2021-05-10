@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol HistoryViewInput: class {
+protocol HistoryViewInput: AnyObject, UIViewInput {
     func setupInitialState()
     func emptySessionsViewSetup()
     func update(_ sessions: [Session])
