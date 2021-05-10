@@ -6,6 +6,6 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol LoginModuleInput: class {
+protocol LoginModuleInput: AnyObject {
 
 }

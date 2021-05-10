@@ -7,6 +7,6 @@
 //
 import ViperMcFlurry
 
-protocol EditProfileModuleInput: class, RamblerViperModuleInput {
+protocol EditProfileModuleInput: RamblerViperModuleInput {
     func set(_ user: User)
 }

@@ -22,7 +22,7 @@ class EditProfileViewController: UIViewController, EditProfileViewInput {
     }
 
     func setupInitialState() {
-        
+        hideKeyboardWhenTaped()
     }
 
     func fill(with user: User) {
@@ -38,5 +38,8 @@ class EditProfileViewController: UIViewController, EditProfileViewInput {
         let user = User(name: name, age: age, email: email)
         output.edit(user)
     }
-
+    
+//    @IBAction func hideKeyboard(_ sender: Any) {
+//        self.view.endEditing(true)
+//    }
 }

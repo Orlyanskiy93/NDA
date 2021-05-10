@@ -22,8 +22,9 @@ class LoginViewController: UIViewController, LoginViewInput {
     }
 
     func setupInitialState() {
+        hideKeyboardWhenTaped()
     }
-
+        
     @IBAction func next(_ sender: UIButton) {
         let name = nameTextField.text ?? ""
         let age = ageTextField.text ?? ""
@@ -31,5 +32,4 @@ class LoginViewController: UIViewController, LoginViewInput {
         let user = User(name: name, age: age, email: email)
         output.login(user)
     }
-
 }

@@ -7,44 +7,33 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
-class PartThreeViewController: UIViewController, PartThreeViewInput, UITextViewDelegate {
+class PartThreeViewController: UIViewController, PartThreeViewInput {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var buttonsStackVIew: ButtonsStackView!
     
     var output: PartThreeViewOutput!
-
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
 
     func setupInitialState() {
-        textView.delegate = self
+        hideKeyboardWhenTaped()
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        navigationController?.navigationBar.isHidden = true
+        buttonsStackVIew.createButtons(count: 1)
     }
     
     func fill(with question: QuestionPartThree) {
         questionLabel.text = question
-        navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func next(_ sender: RoundedButton) {
         let text = textView.text ?? ""
         output.didRecived(text)
     }
-    
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "/n" {
-            textView.resignFirstResponder()
-        }
-        return true
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text == "" {
-            textView.text = "Input your answer here:"
-            textView.textColor = .lightGray
-        }
-    }
-
 }
