@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol TimerObserver: class {
-    func didUpdate(_ days: Int)
+protocol TimerObserver: AnyObject {
+    func didUpdate(_ timeInterval: TimeInterval)
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol HomeInteractorOutput: class {
+protocol HomeInteractorOutput: AnyObject {
     func handle(_ error: Error)
-    func didLoad(daysToNextQuestionnaire days: Int)
+    func didLoad(timeIntervalToNextQuestionnaire timeInterval: TimeInterval)
 }

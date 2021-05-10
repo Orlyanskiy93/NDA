@@ -10,33 +10,63 @@ import Foundation
 class TimerServiceImp: TimerSubject, TimerService {
     static let shared = TimerServiceImp()
     
-    var timer: Timer!
+    var timer: Timer = Timer()
     var observers: [TimerObserver] = []
+    var secondTimeInterval: TimeInterval!
     var minuteInterval: TimeInterval!
     var hourInterval: TimeInterval!
     var dayInterval: TimeInterval!
-    var dateToNextQuestionnaire: Date = Date()
+    var monthInterval: TimeInterval!
+    var fireDate: Date = Date()
 
     private init() {
-        setup()
-    }
-    
-    func setup() {
-        minuteInterval = 60.0
+        secondTimeInterval = 1.0
+        minuteInterval = secondTimeInterval * 60.0
         hourInterval = 60.0 * minuteInterval
         dayInterval = 24 * hourInterval
-        timer = Timer()
+        monthInterval = dayInterval * 30
     }
     
-    func lounchTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1,
-                                     target: self ,
-                                     selector: #selector(notifyObservers),
-                                     userInfo: nil,
-                                     repeats: true)
-        dateToNextQuestionnaire = Date(timeIntervalSinceNow: 30)
+    func setupTimer(with date: Date?) {
+        guard let date = date else {
+            return
+        }
+        fireDate = Date(timeInterval: monthInterval, since: date)
+        notifyObservers()
     }
     
+    func update(_ timeInterval: TimeInterval) -> TimeInterval {
+        if timeInterval < minuteInterval {
+            return secondTimeInterval
+        }
+        
+        if timeInterval < hourInterval {
+            return minuteInterval
+        }
+        
+        if timeInterval < dayInterval {
+            return hourInterval
+        }
+        
+        if timeInterval < monthInterval {
+            return dayInterval
+        }
+        
+        return 0
+    }
+    
+    func isValid(_ timeInterval: TimeInterval) -> Bool {
+        if timer.timeInterval == timeInterval {
+            return true
+        } else {
+            return false
+        }
+    }
+        
+    private func launchTimer(with timeInterval: TimeInterval) {
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(notifyObservers), userInfo: nil, repeats: true)
+    }
+        
     func registerObserver(_ observer: TimerObserver) {
         observers.append(observer)
     }
@@ -45,18 +75,24 @@ class TimerServiceImp: TimerSubject, TimerService {
     }
     
     @objc func notifyObservers() {
-        let calendar = Calendar.current
-//        let daysToNextQuestionnaire = calendar.component(.second, from: dateToNextQuestionnaire) - calendar.component(.second, from: Date())
-        let daysToNextQuestionnaire: Int = Int(dateToNextQuestionnaire.timeIntervalSinceNow)
-        // 16:40 -> 10
-        // 16:40 -> 40
+        let timeIntervalToNextQuestionnaire = fireDate.timeIntervalSince1970
+        let remainedTimeInterval = timeIntervalToNextQuestionnaire - Date().timeIntervalSince1970
+        let timeIntervalForTimer = update(remainedTimeInterval)
+        
         observers.forEach { (observer) in
-            observer.didUpdate(daysToNextQuestionnaire)
+            observer.didUpdate(remainedTimeInterval)
+        }
+        
+        if !isValid(timeIntervalForTimer) {
+            launchTimer(with: timeIntervalForTimer)
         }
 
-        if daysToNextQuestionnaire <= 0 {
-            timer.invalidate()
+        if remainedTimeInterval <= 0 {
+            stopTimer()
         }
     }
     
+    func stopTimer() {
+        timer.invalidate()
+    }
 }

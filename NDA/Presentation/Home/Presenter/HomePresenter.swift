@@ -13,18 +13,14 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     var interactor: HomeInteractorInput!
     var router: HomeRouterInput!
     var session: Session!
-
+    
     func viewIsReady() {
         self.session = interactor.loadSession()
-        view.setupInitialState()
+        view.setup(with: session)
     }
-    
-    func handle(_ error: Error) {
-        //TODO:
-    }
-    
-    func didLoad(daysToNextQuestionnaire days: Int) {
-        view.updateButton(with: days)
+        
+    func didLoad(timeIntervalToNextQuestionnaire timeInterval: TimeInterval) {
+        view.updateButton(with: timeInterval)
     }
     
     func runSession() {
@@ -36,6 +32,12 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
         }
         if session.stage == .partThree {
             router.openPartThree()
+        }
+    }
+    
+    func handle(_ error: Error) {
+        view.show(error) { [weak self] _ in
+            self?.runSession()
         }
     }
 }

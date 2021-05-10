@@ -7,7 +7,7 @@
 //
 import Foundation
 
-protocol HomeViewInput: class {
-    func setupInitialState()
-    func updateButton(with days: Int)
+protocol HomeViewInput: AnyObject, UIViewInput {
+    func setup(with session: Session)
+    func updateButton(with timeInterval: TimeInterval)
 }

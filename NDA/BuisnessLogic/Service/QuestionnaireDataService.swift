@@ -11,7 +11,8 @@ protocol QuestionnaireDataService {
     func save(_ answersPartOne: [AnswerPartOne]) throws
     func save(_ answersPartTwo: [AnswerPartTwo]) throws
     func save(_ answerPartThree: AnswerPartThree) throws
-    func beginSession() throws
     func getSessions() throws -> [Session]
-    func getLastSession() throws -> Session
+    func getCurrentSession() throws -> Session
+    func endSession()
+    func clearHistory() throws
 }

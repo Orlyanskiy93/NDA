@@ -30,6 +30,7 @@ class HomeModuleConfigurator {
         interactor.output = presenter
         interactor.dataService = QuestionnaireDataServiceImp.shared
         interactor.timerService = TimerServiceImp.shared
+        interactor.notificationsService = NotificationsServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

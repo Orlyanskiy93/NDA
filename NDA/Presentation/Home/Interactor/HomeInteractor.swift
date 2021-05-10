@@ -12,20 +12,40 @@ class HomeInteractor: HomeInteractorInput, TimerObserver {
     weak var output: HomeInteractorOutput!
     var dataService: QuestionnaireDataService!
     var timerService: TimerService!
-
+    var notificationsService: NotificationsService!
+    
     func loadSession() -> Session {
-        timerService.registerObserver(self)
+        loadLastCompletedSession()
         var session = Session()
         do {
-            try dataService.beginSession()
-            session = try dataService.getLastSession()
+            session = try dataService.getCurrentSession()
         } catch {
             output.handle(error)
         }
         return session
     }
+        
+    func loadLastCompletedSession() {
+        do {
+            var sessions = try dataService.getSessions()
+            sessions.sort { session1, session2 in
+                return session1.completionDate > session2.completionDate
+            }
+            guard let lastCompletedSession = sessions.first else {
+                return
+            }
+            setupTimer(with: lastCompletedSession.completionDate)
+        } catch {
+            output.handle(error)
+        }
+    }
     
-    func didUpdate(_ days: Int) {
-        output.didLoad(daysToNextQuestionnaire: days)
+    func setupTimer(with completionDate: Date) {
+        timerService.registerObserver(self)
+        timerService.setupTimer(with: completionDate)
+    }
+    
+    func didUpdate(_ timeInterval: TimeInterval) {
+        output.didLoad(timeIntervalToNextQuestionnaire: timeInterval)
     }
 }
