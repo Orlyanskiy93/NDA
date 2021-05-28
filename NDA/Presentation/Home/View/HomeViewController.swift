@@ -27,8 +27,11 @@ class HomeViewController: UIViewController, HomeViewInput {
     }
     
     func setup(with session: Session) {
+        self.navigationItem.title = String.Home.home
         if session.stage != .partOne {
             setButton(title: String.Button.resumeQuestionnaire, color: greenColor, isEnabled: true)
+        } else {
+            setButton(title: String.Button.beginQuestionnaire, color: blueColor, isEnabled: true)
         }
     }
     

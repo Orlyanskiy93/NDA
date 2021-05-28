@@ -34,9 +34,13 @@ class SessionDescriptionViewController: UIViewController, SessionDescriptionView
     
     func fill(with session: Session) {
         dateLabel.text = DateFormatter.stringForSession(session.completionDate)
+        averageScoreLabel.text = String.Results.average
         averageScoreValueLabel.text = Int(session.score.average).description
+        partOneLabel.text = String.PartOne.title
         partOneAverageScoreLabel.text = Int(session.score.partOne).description
+        partTwoLabel.text = String.PartTwo.title
         partTwoAverageScoreLabel.text = Int(session.score.partTwo).description
+        partThreeLabel.text = String.PartThree.partThreeTitle
         partThreeAverageScoreLabel.text = Int(session.score.partThree).description
     }
     

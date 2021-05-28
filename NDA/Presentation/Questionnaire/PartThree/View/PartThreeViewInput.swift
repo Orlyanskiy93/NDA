@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartThreeViewInput: class, UIViewInput {
+protocol PartThreeViewInput: AnyObject, UIViewInput {
     func setupInitialState()
     func fill(with question: QuestionPartThree)
 }

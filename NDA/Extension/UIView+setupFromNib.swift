@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIView {
-    
     func setupFromNib() {
         guard let view = loadFromNib() else {
             return
@@ -24,5 +23,4 @@ extension UIView {
         
         return nib.instantiate(withOwner: self).first as? UIView
     }
-    
 }

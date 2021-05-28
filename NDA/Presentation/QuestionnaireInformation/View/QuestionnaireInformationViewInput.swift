@@ -6,12 +6,6 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol QuestionnaireInformationViewInput: class {
-
-    /**
-        @author Dmitriy
-        Setup initial state of the view
-    */
-
+protocol QuestionnaireInformationViewInput: AnyObject {
     func setupInitialState()
 }

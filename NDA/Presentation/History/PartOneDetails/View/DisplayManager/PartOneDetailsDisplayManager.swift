@@ -12,7 +12,13 @@ class PartOneDetailsDisplayManager: NSObject {
     var answers: [AnswerPartOne] = []
     var session: Session! {
         didSet {
-            answers = session.answersPartOne
+            answers = session.answersPartOne.sorted(by: { answer1, answer2 in
+                guard let firstCharacter = answer1.question.first,
+                      let secondCharacter = answer2.question.first else {
+                    return false
+                }
+                return firstCharacter < secondCharacter
+            })
             setHeader()
             tableView.reloadData()
         }

@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="FKA-ln-17T" customClass="PartOneDetailsHeaderView" customModule="NDA" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="466"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="520"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fj-dY-KAJ">
@@ -20,8 +20,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr4-Tc-UgZ">
-                    <rect key="frame" x="177.66666666666666" y="70" width="59" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr4-Tc-UgZ">
+                    <rect key="frame" x="20" y="70" width="374" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -154,11 +154,13 @@
                 <constraint firstItem="gr4-Tc-UgZ" firstAttribute="top" secondItem="3fj-dY-KAJ" secondAttribute="bottom" constant="20" id="Bg7-7r-uNU"/>
                 <constraint firstItem="Yp8-fU-YFR" firstAttribute="trailing" secondItem="PCc-we-Z9E" secondAttribute="trailing" constant="20" id="Ebl-Uk-zmX"/>
                 <constraint firstItem="QLg-9V-tVo" firstAttribute="top" secondItem="c5v-uR-n9e" secondAttribute="bottom" constant="20" id="Gna-Fp-tk7"/>
+                <constraint firstItem="Yp8-fU-YFR" firstAttribute="trailing" secondItem="gr4-Tc-UgZ" secondAttribute="trailing" constant="20" id="Ia8-IE-4rI"/>
                 <constraint firstItem="QLg-9V-tVo" firstAttribute="leading" secondItem="Yp8-fU-YFR" secondAttribute="leading" constant="20" id="LIG-8k-CCW"/>
                 <constraint firstItem="ozM-Y6-m0T" firstAttribute="leading" secondItem="Yp8-fU-YFR" secondAttribute="leading" constant="20" id="N5B-LO-tfL"/>
                 <constraint firstItem="Yp8-fU-YFR" firstAttribute="trailing" secondItem="gvn-tT-aNp" secondAttribute="trailing" constant="20" id="PPp-bk-Us4"/>
                 <constraint firstItem="c5v-uR-n9e" firstAttribute="centerX" secondItem="FKA-ln-17T" secondAttribute="centerX" id="S9M-YQ-rZU"/>
                 <constraint firstItem="PCc-we-Z9E" firstAttribute="top" secondItem="ozM-Y6-m0T" secondAttribute="bottom" constant="20" id="VUn-SH-Cax"/>
+                <constraint firstItem="gr4-Tc-UgZ" firstAttribute="leading" secondItem="Yp8-fU-YFR" secondAttribute="leading" constant="20" id="Vpl-U2-Znx"/>
                 <constraint firstItem="3fj-dY-KAJ" firstAttribute="centerX" secondItem="FKA-ln-17T" secondAttribute="centerX" id="ZLN-98-KQc"/>
                 <constraint firstItem="gr4-Tc-UgZ" firstAttribute="centerX" secondItem="FKA-ln-17T" secondAttribute="centerX" id="dTL-mG-RGg"/>
                 <constraint firstItem="Yp8-fU-YFR" firstAttribute="trailing" secondItem="ozM-Y6-m0T" secondAttribute="trailing" constant="20" id="ekx-rV-LXv"/>
@@ -177,7 +179,7 @@
                 <outlet property="partTitleLabel" destination="gr4-Tc-UgZ" id="PpD-Yf-zey"/>
                 <outlet property="scoreLabel" destination="4HB-3D-BbU" id="a0Z-yC-ZDO"/>
             </connections>
-            <point key="canvasLocation" x="-43.478260869565219" y="-275.54347826086956"/>
+            <point key="canvasLocation" x="-43.478260869565219" y="-253.53260869565219"/>
         </view>
     </objects>
     <resources>

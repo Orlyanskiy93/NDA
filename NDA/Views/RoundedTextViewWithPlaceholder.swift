@@ -16,9 +16,11 @@ class RoundedTextViewWithPlaceholder: KMPlaceholderTextView {
     }
     
     private func setup() {
-        self.layer.cornerRadius = 15
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor(named: "NDLightGrey")?.cgColor
+        let lightGreyColor = UIColor(named: "NDLightGrey") ?? .lightGray
+        layer.cornerRadius = 15
+        layer.borderWidth = 1
+        layer.borderColor = lightGreyColor.cgColor
+        placeholder = String.PartThree.placeholder
     }
     
 }

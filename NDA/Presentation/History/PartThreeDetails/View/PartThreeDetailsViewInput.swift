@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartThreeDetailsViewInput: class, UIViewInput {
+protocol PartThreeDetailsViewInput: AnyObject, UIViewInput {
     func setupInitialState()
     func fill(with session: Session)
 }

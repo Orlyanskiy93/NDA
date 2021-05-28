@@ -17,6 +17,7 @@ class ResultsPresenter: NSObject,
     var router: ResultsRouterInput!
 
     func viewIsReady() {
+        view.setupInitialState()
         let session = interactor.loadSession()
         view.fill(with: session.score)
     }

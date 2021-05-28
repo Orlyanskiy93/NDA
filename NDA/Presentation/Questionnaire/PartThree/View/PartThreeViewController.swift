@@ -12,6 +12,7 @@ import KMPlaceholderTextView
 class PartThreeViewController: UIViewController, PartThreeViewInput {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var nextButton: RoundedButton!
     @IBOutlet weak var buttonsStackVIew: ButtonsStackView!
     
     var output: PartThreeViewOutput!
@@ -25,6 +26,7 @@ class PartThreeViewController: UIViewController, PartThreeViewInput {
         hideKeyboardWhenTaped()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationController?.navigationBar.isHidden = true
+        nextButton.setTitle(String.Button.next, for: .normal)
         buttonsStackVIew.createButtons(count: 1)
     }
     

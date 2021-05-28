@@ -10,57 +10,48 @@ import Foundation
 class TimerServiceImp: TimerSubject, TimerService {
     static let shared = TimerServiceImp()
     
-    var timer: Timer = Timer()
-    var observers: [TimerObserver] = []
-    var secondTimeInterval: TimeInterval!
-    var minuteInterval: TimeInterval!
-    var hourInterval: TimeInterval!
-    var dayInterval: TimeInterval!
-    var monthInterval: TimeInterval!
-    var fireDate: Date = Date()
-
-    private init() {
-        secondTimeInterval = 1.0
-        minuteInterval = secondTimeInterval * 60.0
-        hourInterval = 60.0 * minuteInterval
-        dayInterval = 24 * hourInterval
-        monthInterval = dayInterval * 30
+    private var timer: Timer = Timer()
+    private var observers: [WeakBox] = []
+    private var fireDate: Date = Date()
+    private var timeIntervalToNextQuestionnaire: TimeInterval {
+        return fireDate.timeIntervalSince1970
     }
+    private var remainedTimeInterval: TimeInterval {
+        return timeIntervalToNextQuestionnaire - Date().timeIntervalSince1970
+    }
+
+    private init() {}
     
     func setupTimer(with date: Date?) {
-        guard let date = date else {
-            return
-        }
-        fireDate = Date(timeInterval: monthInterval, since: date)
-        notifyObservers()
+//        guard let date = date else {
+//            return
+//        }
+//        fireDate = Date(timeInterval: TimeInterval().month, since: date)
+//        notifyObservers()
     }
     
-    func update(_ timeInterval: TimeInterval) -> TimeInterval {
-        if timeInterval < minuteInterval {
-            return secondTimeInterval
+    private func getTimeIntervalForTimer(from remainedTimeInterval: TimeInterval) -> TimeInterval {
+        if remainedTimeInterval < TimeInterval().minute {
+            return TimeInterval().second
         }
         
-        if timeInterval < hourInterval {
-            return minuteInterval
+        if remainedTimeInterval < TimeInterval().hour {
+            return TimeInterval().minute
         }
         
-        if timeInterval < dayInterval {
-            return hourInterval
+        if remainedTimeInterval < TimeInterval().day {
+            return TimeInterval().hour
         }
         
-        if timeInterval < monthInterval {
-            return dayInterval
+        if remainedTimeInterval < TimeInterval().month {
+            return TimeInterval().day
         }
         
         return 0
     }
     
-    func isValid(_ timeInterval: TimeInterval) -> Bool {
-        if timer.timeInterval == timeInterval {
-            return true
-        } else {
-            return false
-        }
+    func isEqualCurrentTimeIntervalForTimer(to chosenTimeInterval: TimeInterval) -> Bool {
+        return timer.timeInterval == chosenTimeInterval
     }
         
     private func launchTimer(with timeInterval: TimeInterval) {
@@ -68,23 +59,32 @@ class TimerServiceImp: TimerSubject, TimerService {
     }
         
     func registerObserver(_ observer: TimerObserver) {
-        observers.append(observer)
+        let weakBox = WeakBox(observer)
+        let isObserverAlreadyRegistered = observers.contains { (weakBox) -> Bool in
+            return weakBox.object === observer
+        }
+        guard !isObserverAlreadyRegistered else {
+            return
+        }
+        observers.append(weakBox)
     }
     
     func removeObserver(_ observer: TimerObserver) {
+        observers.removeAll { (weakBox) -> Bool in
+            return weakBox.object === observer
+        }
     }
     
     @objc func notifyObservers() {
-        let timeIntervalToNextQuestionnaire = fireDate.timeIntervalSince1970
-        let remainedTimeInterval = timeIntervalToNextQuestionnaire - Date().timeIntervalSince1970
-        let timeIntervalForTimer = update(remainedTimeInterval)
+        let chosenTimeIntervalForTimer = getTimeIntervalForTimer(from: remainedTimeInterval)
         
-        observers.forEach { (observer) in
-            observer.didUpdate(remainedTimeInterval)
+        observers.forEach { (weakBox) in
+            weakBox.object?.didUpdate(remainedTimeInterval)
         }
         
-        if !isValid(timeIntervalForTimer) {
-            launchTimer(with: timeIntervalForTimer)
+        if !isEqualCurrentTimeIntervalForTimer(to: chosenTimeIntervalForTimer) {
+            stopTimer()
+            launchTimer(with: chosenTimeIntervalForTimer)
         }
 
         if remainedTimeInterval <= 0 {

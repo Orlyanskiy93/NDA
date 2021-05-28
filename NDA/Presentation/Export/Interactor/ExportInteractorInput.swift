@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ExportInteractorInput {
-
+    func loadSessions() -> [Session]
 }

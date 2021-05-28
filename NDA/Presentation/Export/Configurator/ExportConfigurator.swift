@@ -28,6 +28,7 @@ class ExportModuleConfigurator {
 
         let interactor = ExportInteractor()
         interactor.output = presenter
+        interactor.dataService = QuestionnaireDataServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

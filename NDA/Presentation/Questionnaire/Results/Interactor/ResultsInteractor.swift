@@ -24,8 +24,8 @@ class ResultsInteractor: ResultsInteractorInput {
     
     func setupNotification(with date: Date) {
         let timeInterval = TimeInterval()
-        let timeIntervalToNextQuestionnaire = date.timeIntervalSinceNow * timeInterval.day * 30
-        notificationService.sendNotification(from: 10)
+//        let timeIntervalToNextQuestionnaire = date.timeIntervalSinceNow * timeInterval.day * 30
+//        notificationService.setNotification(with: timeIntervalToNextQuestionnaire)
     }
     
     func finishSession() {

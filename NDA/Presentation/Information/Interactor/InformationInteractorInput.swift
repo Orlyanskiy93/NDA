@@ -9,5 +9,5 @@
 import Foundation
 
 protocol InformationInteractorInput {
-    func getStringsTuple() -> [(title: String, description: String)]
+    func getFAQArray() -> [FAQ]
 }

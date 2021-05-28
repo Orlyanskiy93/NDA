@@ -37,7 +37,8 @@ struct QuestionPartTwo {
         guard let index = rightOptionIndex else {
             throw QuestionError.rightAnswer
         }
-        title = String.PartTwo.identifyQuestion + options[index].value
+        let animalString = NSLocalizedString(options[index].value, comment: "")
+        title = String.PartTwo.identifyQuestion + animalString
 
         self.title = title
         firstOption = options[0]
@@ -62,12 +63,11 @@ struct QuestionPartTwo {
             rightAnswer = firstNumber - secondNumber
         }
 
-        let range = (rightAnswer - 5)...(rightAnswer + 5)
         let options = [
             Option(value: "\(rightAnswer)", type: .text, isRight: true),
-            Option(value: "\(Int.random(in: range))", type: .text),
-            Option(value: "\(Int.random(in: range))", type: .text),
-            Option(value: "\(Int.random(in: range))", type: .text)
+            Option(value: "\(Int.random(in: rightAnswer + 1...rightAnswer + 5))", type: .text),
+            Option(value: "\(Int.random(in: rightAnswer - 5..<rightAnswer))", type: .text),
+            Option(value: "\(Int.random(in: rightAnswer + 6...rightAnswer + 10))", type: .text)
         ].shuffled()
 
         self.title = title

@@ -9,6 +9,8 @@
 import UIKit
 
 class LoginViewController: UIViewController, LoginViewInput {
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -22,6 +24,12 @@ class LoginViewController: UIViewController, LoginViewInput {
     }
 
     func setupInitialState() {
+        welcomeLabel.text = String.Login.welcomeMessage
+        titleLabel.text = String.Login.title
+        nameTextField.placeholder = String.Login.name
+        ageTextField.placeholder = String.Login.age
+        emailTextField.placeholder = String.Login.email
+        continueButton.setTitle(String.Button.continue, for: .normal)
         hideKeyboardWhenTaped()
     }
         

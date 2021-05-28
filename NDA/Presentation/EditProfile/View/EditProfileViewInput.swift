@@ -6,7 +6,7 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol EditProfileViewInput: class, UIViewInput {
+protocol EditProfileViewInput: AnyObject, UIViewInput {
     func setupInitialState()
     func fill(with user: User)
 }

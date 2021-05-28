@@ -12,7 +12,6 @@ class OptionSelectableButton: RoundedButton {
     private let greenColor: UIColor = UIColor(named: "NDGreen") ?? .systemGreen
     private let lightGreyColor: UIColor = UIColor(named: "NDLightGrey") ?? .lightGray
 
-    
     override var isSelected: Bool {
         didSet {
             backgroundColor = isSelected ? greenColor : lightGreyColor
@@ -24,13 +23,13 @@ class OptionSelectableButton: RoundedButton {
         super.awakeFromNib()
         setTitleColor(.black, for: .normal)
         setTitleColor(.white, for: .selected)
-        self.tintColor = .clear
+        tintColor = .clear
     }
     
     func fill(with option: Option) {
         self.option = option
         let title = option.value
-        self.setTitle(title, for: .normal)
+        setTitle(title, for: .normal)
     }
     
 }

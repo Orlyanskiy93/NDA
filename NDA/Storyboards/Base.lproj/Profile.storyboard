@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h1d-T9-SKj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h1d-T9-SKj">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -108,6 +108,10 @@
                         <outlet property="emailLabel" destination="MwR-J5-bOl" id="1Pi-s6-rw1"/>
                         <outlet property="eraseButton" destination="dgV-YB-e2C" id="Ubw-dw-8pW"/>
                         <outlet property="nameLabel" destination="cst-et-1Be" id="6sI-y0-vKv"/>
+                        <outlet property="profileNavigationItem" destination="6Gj-f9-XSv" id="o0Q-bS-WnH"/>
+                        <outlet property="titleAgeLabel" destination="Dlm-Nt-dMv" id="5aC-65-Mtd"/>
+                        <outlet property="titleEmailLabel" destination="gdk-og-TIz" id="dqq-0u-hpb"/>
+                        <outlet property="titleNameLabel" destination="QqF-aR-8BQ" id="aIx-eT-hui"/>
                         <segue destination="M5d-rh-dyp" kind="show" identifier="editProfileSegue" id="Lj2-no-R5B"/>
                     </connections>
                 </viewController>
@@ -181,6 +185,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dRj-A5-o2T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="rBM-G8-XGk" firstAttribute="height" secondItem="fyj-AS-wYa" secondAttribute="height" id="0ZC-t2-pt1"/>
                             <constraint firstItem="49p-TP-IeU" firstAttribute="top" secondItem="KdO-lY-JAk" secondAttribute="bottom" constant="12" id="1EW-VB-CZf"/>
@@ -209,9 +214,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Edit profile" id="tlZ-Jh-d0A"/>
                     <connections>
+                        <outlet property="ageLabel" destination="reb-Du-Uln" id="5cv-ul-avO"/>
                         <outlet property="ageTextField" destination="fyj-AS-wYa" id="Dwj-El-RsD"/>
                         <outlet property="doneButton" destination="9xR-6u-j7s" id="ENm-bc-GuB"/>
+                        <outlet property="editProfileNavigationItem" destination="tlZ-Jh-d0A" id="xK3-ZB-DKt"/>
+                        <outlet property="emailLabel" destination="bmj-G0-N3w" id="JJU-jT-961"/>
                         <outlet property="emailTextField" destination="rBM-G8-XGk" id="2yD-7w-aNz"/>
+                        <outlet property="nameLabel" destination="KdO-lY-JAk" id="Wmf-ru-qo4"/>
                         <outlet property="nameTextField" destination="49p-TP-IeU" id="1I6-ps-scf"/>
                     </connections>
                 </viewController>

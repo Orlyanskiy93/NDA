@@ -30,7 +30,9 @@ class HistoryViewController: UIViewController, HistoryViewInput {
     }
 
     func setupInitialState() {
+        messageLabel.text = String.History.empty
         historyDisplayManager.delegate = self
+        navigationItem.title = String.History.history
     }
     
     func emptySessionsViewSetup() {

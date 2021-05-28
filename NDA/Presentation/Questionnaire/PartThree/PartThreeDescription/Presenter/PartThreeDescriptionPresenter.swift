@@ -14,6 +14,6 @@ class PartThreeDescriptionPresenter: NSObject, PartThreeDescriptionModuleInput, 
     var router: PartThreeDescriptionRouterInput!
 
     func viewIsReady() {
-
+        view.setupInitialState()
     }
 }

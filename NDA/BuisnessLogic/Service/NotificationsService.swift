@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NotificationsService {
-    func sendNotification(from timeInterval: TimeInterval)
+    func setNotification(with timeInterval: TimeInterval)
 }

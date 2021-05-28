@@ -37,13 +37,14 @@ class StackViewButton: UIButton {
     }
         
     private func setup() {
-        self.layer.borderWidth = 2
-        self.layer.cornerRadius = 5
-        self.tintColor = .clear
-        self.setTitleColor(.black, for: .selected)
-        self.setTitleColor(.black, for: .normal)
-        self.translatesAutoresizingMaskIntoConstraints = false
+        layer.borderWidth = 2
+        layer.cornerRadius = 5
+        tintColor = .clear
+        setTitleColor(.black, for: .selected)
+        setTitleColor(.black, for: .normal)
+        translatesAutoresizingMaskIntoConstraints = false
         setupConstraints()
+        isEnabled = false
         isSelected = false
         buttonState = .notAnswered
     }

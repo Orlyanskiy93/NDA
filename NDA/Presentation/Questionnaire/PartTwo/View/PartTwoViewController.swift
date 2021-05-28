@@ -29,13 +29,11 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
     func setup(with questionsCount: Int) {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationController?.navigationBar.isHidden = true
+        nextButton.setTitle(String.Button.next, for: .normal)
         optionImageViews.forEach { (imageView) in
             imageView.delegate = self
         }
         questionButtonsStackView.createButtons(count: questionsCount)
-        questionButtonsStackView.buttons.forEach { button in
-            button.isEnabled = false
-        }
         optionNotSelectedNextButtonSetup()
     }
     
@@ -55,7 +53,7 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
     
     func fillButtons(with arithmeticQuestion: QuestionPartTwo) {
         let index = output.chosenQuestion
-        questionButtonsStackView.setSelected(index: index, true)
+        questionButtonsStackView.setSelected(index: index, false)
         questionLabel.text = arithmeticQuestion.title
         imageViewsStackView.isHidden = true
         optionButtonsStackView.isHidden = false
@@ -76,7 +74,7 @@ class PartTwoViewController: UIViewController, PartTwoViewInput, SelectableImage
     
     func fillImageViews(with identifyQuestion: QuestionPartTwo) {
         let index = output.chosenQuestion
-        questionButtonsStackView.setSelected(index: index, true)
+        questionButtonsStackView.setSelected(index: index, false)
         questionLabel.text = identifyQuestion.title
         
         optionButtonsStackView.isHidden = true

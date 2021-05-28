@@ -98,7 +98,6 @@
 		5D02BF69260743260053E96C /* UserValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF68260743260053E96C /* UserValidationError.swift */; };
 		5D02BF6F2607880C0053E96C /* UIViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF6E2607880C0053E96C /* UIViewInput.swift */; };
 		5D02BF7E26091C0E0053E96C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF7D26091C0E0053E96C /* Strings.swift */; };
-		5D02BF8E26092B8C0053E96C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D02BF8D26092B8C0053E96C /* Profile.storyboard */; };
 		5D02BF94260A6FCF0053E96C /* ProfileServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */; };
 		5D02BF9B260A7D890053E96C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02BF9A260A7D890053E96C /* RoundedButton.swift */; };
 		5D0A7328262B7B5300E7982E /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A7327262B7B5300E7982E /* RoundedView.swift */; };
@@ -124,6 +123,11 @@
 		5D1DA7E32647C71F00C81D92 /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA7E22647C71F00C81D92 /* InformationCell.swift */; };
 		5D1DA7E52647C75500C81D92 /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D1DA7E42647C75500C81D92 /* InformationCell.xib */; };
 		5D1DA7E82647D37400C81D92 /* InformationDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA7E72647D37400C81D92 /* InformationDisplayManager.swift */; };
+		5D1DA80C264B11C000C81D92 /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA80B264B11BE00C81D92 /* FAQ.swift */; };
+		5D1DA80E264B128E00C81D92 /* InformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA80D264B128E00C81D92 /* InformationService.swift */; };
+		5D1DA810264B12E300C81D92 /* InformationServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA80F264B12E300C81D92 /* InformationServiceImp.swift */; };
+		5D1DA812264C4BAD00C81D92 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA811264C4BAC00C81D92 /* WeakBox.swift */; };
+		5D2CCAFF265AE50300C791DB /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2CCB01265AE50300C791DB /* Profile.storyboard */; };
 		5D484ECE262F8A6700FF537D /* PartTwoDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D484ECD262F8A6700FF537D /* PartTwoDetailsHeaderView.xib */; };
 		5D484ED3262F8A7E00FF537D /* PartTwoDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484ED2262F8A7E00FF537D /* PartTwoDetailsHeaderView.swift */; };
 		5D484EDB26308E9C00FF537D /* UIView+setupFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484EDA26308E9C00FF537D /* UIView+setupFromNib.swift */; };
@@ -169,7 +173,6 @@
 		5DC62B0F262B0FAC000569E9 /* HistoryDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC62B0E262B0FAC000569E9 /* HistoryDisplayManager.swift */; };
 		5DCBDCAF2621C15C00E53D06 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCBDCAE2621C15C00E53D06 /* QuestionBank.swift */; };
 		5DCBDCB726230E0000E53D06 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DCBDCB926230E0000E53D06 /* Localizable.strings */; };
-		5DCBDCBE2623133400E53D06 /* LoginLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCBDCBD2623133400E53D06 /* LoginLocalizable.swift */; };
 		5DCEB6E826383B6C001E75DC /* TimerSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEB6E726383B6B001E75DC /* TimerSubject.swift */; };
 		5DCEB6ED26383BC6001E75DC /* TimerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEB6EC26383BC6001E75DC /* TimerObserver.swift */; };
 		5DCEB6F026383C23001E75DC /* TimerServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCEB6EF26383C23001E75DC /* TimerServiceImp.swift */; };
@@ -415,7 +418,6 @@
 		5D02BF68260743260053E96C /* UserValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidationError.swift; sourceTree = "<group>"; };
 		5D02BF6E2607880C0053E96C /* UIViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewInput.swift; sourceTree = "<group>"; };
 		5D02BF7D26091C0E0053E96C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		5D02BF8D26092B8C0053E96C /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		5D02BF93260A6FCF0053E96C /* ProfileServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceError.swift; sourceTree = "<group>"; };
 		5D02BF9A260A7D890053E96C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		5D0A7327262B7B5300E7982E /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
@@ -441,6 +443,11 @@
 		5D1DA7E22647C71F00C81D92 /* InformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
 		5D1DA7E42647C75500C81D92 /* InformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
 		5D1DA7E72647D37400C81D92 /* InformationDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDisplayManager.swift; sourceTree = "<group>"; };
+		5D1DA80B264B11BE00C81D92 /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
+		5D1DA80D264B128E00C81D92 /* InformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationService.swift; sourceTree = "<group>"; };
+		5D1DA80F264B12E300C81D92 /* InformationServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationServiceImp.swift; sourceTree = "<group>"; };
+		5D1DA811264C4BAC00C81D92 /* WeakBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
+		5D2CCB02265AE53D00C791DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		5D484ECD262F8A6700FF537D /* PartTwoDetailsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartTwoDetailsHeaderView.xib; sourceTree = "<group>"; };
 		5D484ED2262F8A7E00FF537D /* PartTwoDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoDetailsHeaderView.swift; sourceTree = "<group>"; };
 		5D484EDA26308E9C00FF537D /* UIView+setupFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setupFromNib.swift"; sourceTree = "<group>"; };
@@ -489,7 +496,6 @@
 		5DCBDCAE2621C15C00E53D06 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		5DCBDCB826230E0000E53D06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5DCBDCBB2623105B00E53D06 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5DCBDCBD2623133400E53D06 /* LoginLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLocalizable.swift; sourceTree = "<group>"; };
 		5DCEB6E726383B6B001E75DC /* TimerSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSubject.swift; sourceTree = "<group>"; };
 		5DCEB6EC26383BC6001E75DC /* TimerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerObserver.swift; sourceTree = "<group>"; };
 		5DCEB6EF26383C23001E75DC /* TimerServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerServiceImp.swift; sourceTree = "<group>"; };
@@ -1019,7 +1025,6 @@
 				FD4DA6DB37F8F6136FDD8E96 /* Presenter */,
 				EA4ABECA3D9CC8461BCD24D1 /* Interactor */,
 				EFD27B067CD9927C9CCC3DC7 /* Router */,
-				5DCBDCBD2623133400E53D06 /* LoginLocalizable.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1053,6 +1058,7 @@
 				5DC62AEB26278214000569E9 /* Session.swift */,
 				5DC62AE726262287000569E9 /* Score.swift */,
 				5D1DA7A62640923800C81D92 /* Coordinates.swift */,
+				5D1DA80B264B11BE00C81D92 /* FAQ.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1067,6 +1073,7 @@
 				5D4EE0CE260F1B0B004A6AE4 /* QuestionService.swift */,
 				5D484EEB2631DC5400FF537D /* QuestionnaireDataService.swift */,
 				5D1DA7D9264697CD00C81D92 /* NotificationsService.swift */,
+				5D1DA80D264B128E00C81D92 /* InformationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1104,7 +1111,7 @@
 				5D783250260633CA00156AC1 /* Main.storyboard */,
 				5D783255260633CD00156AC1 /* LaunchScreen.storyboard */,
 				5D59042E260D071600988CCA /* Login.storyboard */,
-				5D02BF8D26092B8C0053E96C /* Profile.storyboard */,
+				5D2CCB01265AE50300C791DB /* Profile.storyboard */,
 				5D590434260D0E6E00988CCA /* Questionnaire.storyboard */,
 				5DC62AF9262AFE32000569E9 /* History.storyboard */,
 				5D1DA7D52645708C00C81D92 /* Export.storyboard */,
@@ -1121,6 +1128,7 @@
 				5D484EEF2631DD3800FF537D /* QuestionnaireDataServiceImp.swift */,
 				5DCEB6EF26383C23001E75DC /* TimerServiceImp.swift */,
 				5D1DA7DB2646980700C81D92 /* NotificationsServiceImp.swift */,
+				5D1DA80F264B12E300C81D92 /* InformationServiceImp.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -1397,6 +1405,7 @@
 			children = (
 				5DCEB6E726383B6B001E75DC /* TimerSubject.swift */,
 				5DCEB6EC26383BC6001E75DC /* TimerObserver.swift */,
+				5D1DA811264C4BAC00C81D92 /* WeakBox.swift */,
 			);
 			path = TimerObserver;
 			sourceTree = "<group>";
@@ -2255,7 +2264,7 @@
 				5DC62B03262B0B1B000569E9 /* HistoryCell.xib in Resources */,
 				5D0A733D262CC43000E7982E /* PartOneDetailsCell.xib in Resources */,
 				5D783254260633CD00156AC1 /* Assets.xcassets in Resources */,
-				5D02BF8E26092B8C0053E96C /* Profile.storyboard in Resources */,
+				5D2CCAFF265AE50300C791DB /* Profile.storyboard in Resources */,
 				5DCBDCB726230E0000E53D06 /* Localizable.strings in Resources */,
 				5DCEB7B0263F299E001E75DC /* ChartHeaderView.xib in Resources */,
 				5D0A7353262CD3B600E7982E /* PartTwoDetailsImageCell.xib in Resources */,
@@ -2388,7 +2397,6 @@
 				C38B64397A57C4A89A5749D9 /* EditProfileViewController.swift in Sources */,
 				5D02BF7E26091C0E0053E96C /* Strings.swift in Sources */,
 				5D02BF9B260A7D890053E96C /* RoundedButton.swift in Sources */,
-				5DCBDCBE2623133400E53D06 /* LoginLocalizable.swift in Sources */,
 				A21789A373AA19F7A2605214 /* EditProfileModuleInput.swift in Sources */,
 				9281AF0CE5C3E4925E07BF69 /* EditProfilePresenter.swift in Sources */,
 				B370F4378901868BDA89A8AF /* EditProfileInteractorInput.swift in Sources */,
@@ -2411,6 +2419,7 @@
 				5977EBADB1CFBE2E7414042B /* HomeInteractorInput.swift in Sources */,
 				5D484EEC2631DC5400FF537D /* QuestionnaireDataService.swift in Sources */,
 				5D4EE10026136B31004A6AE4 /* Option.swift in Sources */,
+				5D1DA812264C4BAD00C81D92 /* WeakBox.swift in Sources */,
 				A6089E902D75EE45910B99DD /* HomeInteractorOutput.swift in Sources */,
 				67CCE31341F23822B348D3F3 /* HomeInteractor.swift in Sources */,
 				D191874D5C36A451DA90C843 /* HomeRouterInput.swift in Sources */,
@@ -2466,7 +2475,9 @@
 				B858307B56BCB55CD4960A0E /* QuestionnaireInformationConfigurator.swift in Sources */,
 				5D1DA7E32647C71F00C81D92 /* InformationCell.swift in Sources */,
 				F43FAAC794D9C291C2B9AF83 /* QuestionnaireInformationInitializer.swift in Sources */,
+				5D1DA810264B12E300C81D92 /* InformationServiceImp.swift in Sources */,
 				5D484EF32631E0C900FF537D /* DataError.swift in Sources */,
+				5D1DA80C264B11C000C81D92 /* FAQ.swift in Sources */,
 				19EF89D05F8E81B5485DF13C /* PartOneDescriptionViewInput.swift in Sources */,
 				5D1DA7E82647D37400C81D92 /* InformationDisplayManager.swift in Sources */,
 				5D1DA7DA264697D000C81D92 /* NotificationsService.swift in Sources */,
@@ -2622,6 +2633,7 @@
 				3A7BDC02D7968E91047ABC74 /* ExportInitializer.swift in Sources */,
 				18667469F24480E320ABA9B2 /* InformationViewInput.swift in Sources */,
 				88AE47DDA8B9E741FDEFAD48 /* InformationViewOutput.swift in Sources */,
+				5D1DA80E264B128E00C81D92 /* InformationService.swift in Sources */,
 				6657F822BC857005B85373EB /* InformationViewController.swift in Sources */,
 				7D41566FF0F5D66729E95821 /* InformationModuleInput.swift in Sources */,
 				9C1EDD419D19A96B927C4627 /* InformationPresenter.swift in Sources */,
@@ -2638,6 +2650,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5D2CCB01265AE50300C791DB /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D2CCB02265AE53D00C791DB /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
 		5D783250260633CA00156AC1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

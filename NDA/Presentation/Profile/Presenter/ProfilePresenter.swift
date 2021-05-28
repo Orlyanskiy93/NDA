@@ -23,10 +23,11 @@ class ProfilePresenter: ProfileModuleInput, ProfileViewOutput, ProfileInteractor
         view.fillLabels(with: user)
     }
     
-    //TODO: Удаление истории
     func removeUserAndHistory() {
-        interactor.removeUser()
-        mainRouter.open(module: .login)
+        view.show(title: nil , message: String.History.removeProfile) { [weak self] _ in
+            self?.interactor.removeUser()
+            self?.mainRouter.open(module: .login)
+        }
     }
     
     func openEditScreen() {

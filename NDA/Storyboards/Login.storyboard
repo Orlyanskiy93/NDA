@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4lM-9u-yag">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4lM-9u-yag">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,17 +14,17 @@
             <objects>
                 <viewController id="4lM-9u-yag" customClass="LoginViewController" customModule="NDA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rg9-pi-EGY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To get started, we need some of your basic details:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GWI-Wv-uhC">
-                                <rect key="frame" x="40" y="227.33333333333334" width="334" height="48.000000000000028"/>
+                                <rect key="frame" x="40" y="271.5" width="334" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="L8M-bb-E5E">
-                                <rect key="frame" x="30" y="315.33333333333331" width="354" height="180"/>
+                                <rect key="frame" x="30" y="359.5" width="354" height="180"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your full name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHb-FB-L1G">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
@@ -47,7 +47,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oye-Kf-e7p" customClass="RoundedButton" customModule="NDA" customModuleProvider="target">
-                                <rect key="frame" x="30" y="671" width="354" height="45"/>
+                                <rect key="frame" x="30" y="797" width="354" height="45"/>
                                 <color key="backgroundColor" name="NDGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ZkW-Ey-7KA"/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Welcome to the Neuro Degenerative Cognitive Assessment App!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ya2-ZY-aDt">
-                                <rect key="frame" x="35" y="40" width="344" height="167.33333333333334"/>
+                                <rect key="frame" x="35" y="84" width="344" height="167.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -69,6 +69,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mOF-fz-6Se"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="oye-Kf-e7p" firstAttribute="centerX" secondItem="rg9-pi-EGY" secondAttribute="centerX" id="CZK-Sv-Tdk"/>
                             <constraint firstItem="Ya2-ZY-aDt" firstAttribute="leading" secondItem="mOF-fz-6Se" secondAttribute="leading" constant="35" id="Cii-5y-SZe"/>
@@ -91,17 +92,14 @@
                         <outlet property="continueButton" destination="oye-Kf-e7p" id="G9N-7s-9Ig"/>
                         <outlet property="emailTextField" destination="jUH-Dd-Ewx" id="LHw-rX-PWm"/>
                         <outlet property="nameTextField" destination="HHb-FB-L1G" id="MRo-8R-EXf"/>
+                        <outlet property="titleLabel" destination="GWI-Wv-uhC" id="Kpp-Yw-PgE"/>
+                        <outlet property="welcomeLabel" destination="Ya2-ZY-aDt" id="ERX-qE-3te"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLs-a2-yyn" sceneMemberID="firstResponder"/>
                 <customObject id="wyY-7a-Gsp" customClass="LoginModuleInitializer" customModule="NDA" customModuleProvider="target">
                     <connections>
                         <outlet property="loginViewController" destination="4lM-9u-yag" id="7F6-3N-kWp"/>
-                    </connections>
-                </customObject>
-                <customObject id="7pl-8W-Yi8" customClass="LoginLocalizable" customModule="NDA" customModuleProvider="target">
-                    <connections>
-                        <outlet property="welcomLabel" destination="Ya2-ZY-aDt" id="t52-3Y-Ori"/>
                     </connections>
                 </customObject>
             </objects>

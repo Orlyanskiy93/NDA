@@ -9,6 +9,10 @@
 import UIKit
 
 class EditProfileViewController: UIViewController, EditProfileViewInput {
+    @IBOutlet weak var editProfileNavigationItem: UINavigationItem!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -22,6 +26,11 @@ class EditProfileViewController: UIViewController, EditProfileViewInput {
     }
 
     func setupInitialState() {
+        editProfileNavigationItem.title = String.Login.editProfileNavigationItemTitle
+        nameLabel.text = String.Login.name
+        ageLabel.text = String.Login.age
+        emailLabel.text = String.Login.email
+        doneButton.setTitle(String.Button.done, for: .normal)
         hideKeyboardWhenTaped()
     }
 
@@ -38,8 +47,4 @@ class EditProfileViewController: UIViewController, EditProfileViewInput {
         let user = User(name: name, age: age, email: email)
         output.edit(user)
     }
-    
-//    @IBAction func hideKeyboard(_ sender: Any) {
-//        self.view.endEditing(true)
-//    }
 }
