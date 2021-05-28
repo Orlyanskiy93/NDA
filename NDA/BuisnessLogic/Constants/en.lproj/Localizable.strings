@@ -1,0 +1,184 @@
+/* 
+  Localizable.strings
+  NDA
+
+  Created by Дмитрий Орлянский on 11.04.2021.
+  
+*/
+
+//MARK: Error
+
+"error" = "Error";
+"ok" = "Ok";
+"cancel" = "Cancel";
+"wrongName" = "Name must contains only letters";
+"wrongAge" = "Age is to much";
+"wrongEmail" = "Wrong email";
+"emptyField" = "Field is empty";
+"shortText" = "Text is to short";
+"saveUser" = "Unable to save user";
+"getUser" = "Unable to load user";
+"optionsCount" = "Wrong count of options";
+"tryAgain" = "Try again";
+"rightAnswer" = "Options have no right answer";
+"mapping" = "Unable to load data";
+"savingSession" = "Unable to save session";
+"stage" = "Previous session is not completed";
+"saveData" = "Unable to save data";
+"fetchData" = "Unable to load data";
+"mapData" = "Unable to map data";
+
+//MARK: Button
+
+"ok" = "OK";
+"continue" = "CONTINUE";
+"next" = "NEXT";
+"begin" = "BEGIN";
+"editInformation" = "EDIT INFORMATION";
+"eraceAppData" = "ERACE APP DATA";
+"beginQuestionnaire" = "BEGIN QUESTIONNAIRE";
+"resumeQuestionnaire" = "RESUME QUESTIONNAIRE";
+"daysToNextSession" = "DAYS UNTIL NEXT SESSION";
+"hoursToNextSession" = "HOURS UNTIL NEXT SESSION";
+"minutesToNextSession" = "MINUTES UNTIL NEXT SESSION";
+"secondsToNextSession" = "SECONDS UNTIL NEXT SESSION";
+"toHomePage" = "GO TO HOME PAGE";
+"export" = "EXPORT";
+"done" = "DONE";
+
+//MARK: Login/Profile
+
+"profileNavigationItemTitle" = "Your profile";
+"editProfileNavigationItemTitle" = "Edit profile";
+"profile" = "Profile";
+"welcomeMessage" = "Welcome to the Neuro Degenerative Cognitive Assessment App!";
+"loginTitle" = "To get started, we need some of your basic details:";
+"name" = "Your full name:";
+"age" = "Your age:";
+"email" = "Your email:";
+
+//MARK: Home
+
+"home" = "Home";
+"questionnaire" = "Questionnaire";
+"questionnaireDescription" = "Please answer the next few questions as quickly as your ability. The questionnaire will consist of 3 parts: Self - Efficacy, Short - Answer and Long - Answer questions.";
+"notDeterminedStatus" = "Your cognitive behavior status will appear here after you complete at least 3 questionnaires.";
+"positiveDynamicsStatus" = "No change detected in cognitive behavior. Everything is great!";
+"negativeDynamicsStatus" = "Potential change detected in cognitive behavior. Please consider visiting your doctor.";
+
+//MARK: PartOne
+
+"partOneTitle" = "Part 1: Self Efficacy";
+"partOneModuleDescription" = "The following questions are designed to help us get a better understanding of any symptoms you might be experiencing in the areas of attention, memory, organization and thinking. Please try to objective in your answers.";
+"instructions" = "Using the scale provided, please rate how certain you are can do the following actions:";
+"cannotCertain" = "Cannot do at all";
+"moderatelyCertain" = "Moderately can do";
+"highlyCertain" = "Highly certain can do";
+"partOneQuestion1" = "1. I am sure that I can recognize when I forget something";
+"partOneQuestion2" = "2. I am sure that I can recognize when I become distracted";
+"partOneQuestion3" = "3. I am sure that I can recognize when I am having difficulty concentrating";
+"partOneQuestion4" = "4. I am sure that I can recognize when I make a mistake";
+"partOneQuestion5" = "5. I am sure that I can recognize when I have missed details or information";
+"partOneQuestion6" = "6. I am sure that I can recognize when my mind feels cloudy or less sharp";
+"partOneQuestion7" = "7. I am sure that I can recognize when there is too much information for me to process";
+"partOneQuestion8" = "8. I am sure that I can recognize when I have lost track of what I was just doing";
+
+//MARK: PartTwo
+
+"partTwoTitle" = "Part 2: Short Answer";
+"partTwoModuleDescription" = "The following questions are designed to test you using a few simple short - answer questions. Please try to answer these questions quickly and correctly.";
+"arythmeticQuestion" = "What is ";
+"identifyQuestion" = "Please identify picture of ";
+"bird" = "bird";
+"buffalo" = "buffalo";
+"cow" = "cow";
+"goat" = "goat";
+"horse" = "horse";
+"koala" = "koala";
+"monkey" = "monkey";
+"owl" = "owl";
+"pig" = "pig";
+"rabbit" = "rabbit";
+"rhino" = "rhino";
+"rooster" = "rooster";
+"sheep" = "sheep";
+"tiger" = "tiger";
+"turtle" = "turtle";
+"zebra" = "zebra";
+
+//MARK: PartThree
+
+"partThreeTitle" = "Part 3: Long Answer";
+"partThreeDescription" = "The following questions are designed to test you using a few long - answer questions. Please try to provide detailed medium - size answers. You might find the dictating feature in your keyboard helpful.";
+"placeholder" = "Input your answer here:";
+"partThreeQuestion1" = "Pleace describe the last birthday party you had.";
+"partThreeQuestion2" = "Pleace describe the last book you read.";
+"partThreeQuestion3" = "Pleace describe the last movie you watched.";
+
+//MARK: Results
+
+"finishingMessage" = "Thank you for finishing  the questionnaire!";
+"scoreMessage" = "Your scores are:";
+"average" = "Average:";
+"part1" = "Part 1:";
+"part2" = "Part 2:";
+"part3" = "Part 3:";
+
+//MARK: History
+
+"history" = "History";
+"emptyHistory" = "You have no history yet. You can view you history once you have answered at least one questionnaire!";
+"score" = "Score:";
+"yourAnswer" = "Your answer:";
+"correct" = "Correct";
+"incorrect" = "Incorrect";
+"responceTime" = "Responce time:";
+"gfIndex" = "Gunning Fog Index:";
+"partOne" = "Self Efficacy Questions";
+"partTwo" = "Short Answers Questions";
+"partThree" = "Long Answer Question";
+"recentScores" = "Your recent scores:";
+"removeProfile" = "Remove profile and history?";
+
+//MARK: Information
+
+"information" = "Information";
+"information1Question" = "How does app work?";
+"information1Answer" = " Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
+
+"information2Question" = "How are the scores calculated?";
+"information2Answer" = " Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
+
+"information3Question" = "How are the scores calculated?";
+"information3Answer" = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
+
+"information4Question" = "How is my information processed?";
+"information4Answer" = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
+
+//MARK: Export
+
+"export" = "Export";
+"exportTitle" = "The export feature allows you to download  your questionnaire results in .cvs file. The file includes detailed informatinon as well as scores for all your questionnaire sessions, which you might want to share with your doctor, family or friends.";
+"tableTitle1" = "Session Date";
+"tableTitle2" = "Average Score";
+"tableTitle3" = "Part 1 Score";
+"tableTitle4" = "Part 2 Score";
+"tableTitle5" = "Part 3 Score";
+"tableTitle6" = "Part 1. Question 1: ";
+"tableTitle7" = "Part 1. Question 2: ";
+"tableTitle8" = "Part 1. Question 3: ";
+"tableTitle9" = "Part 1. Question 4: ";
+"tableTitle10" = "Part 1. Question 5: ";
+"tableTitle11" = "Part 1. Question 6: ";
+"tableTitle12" = "Part 1. Question 7: ";
+"tableTitle13" = "Part 1. Question 8: ";
+"tableTitle14" = "Part 2: % of correct answers";
+"tableTitle15" = "Part 2: Average response time";
+"tableTitle16" = "Part 3: Question:";
+"tableTitle17" = "Part 3: Answer";
+"tableTitle18" = "Part 3: Gunning Fog Index";
+
+
+//MARK: Notifications
+
+"newSession" = "You can already begin a new session!";
