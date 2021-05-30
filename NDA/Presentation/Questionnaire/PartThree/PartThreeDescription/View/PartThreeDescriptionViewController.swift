@@ -9,7 +9,10 @@
 import UIKit
 
 class PartThreeDescriptionViewController: UIViewController, PartThreeDescriptionViewInput {
-
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var okButton: RoundedButton!
+    
     var output: PartThreeDescriptionViewOutput!
 
     override func viewDidLoad() {
@@ -18,5 +21,8 @@ class PartThreeDescriptionViewController: UIViewController, PartThreeDescription
     }
 
     func setupInitialState() {
+        titleLabel.text = String.PartThree.partThreeTitle
+        descriptionLabel.text = String.PartThree.partThreeDescription
+        okButton.setTitle(String.Button.ok, for: .normal)
     }
 }
