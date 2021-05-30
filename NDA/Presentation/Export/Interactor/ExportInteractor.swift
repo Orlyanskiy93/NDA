@@ -7,7 +7,16 @@
 //
 
 class ExportInteractor: ExportInteractorInput {
-
+    var dataService: QuestionnaireDataService!
     weak var output: ExportInteractorOutput!
-
+    
+    func loadSessions() -> [Session] {
+        var sessions = [Session]()
+        do {
+            sessions = try dataService.getSessions()
+        } catch {
+            
+        }
+        return sessions
+    }
 }

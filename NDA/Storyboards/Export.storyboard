@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hel-wr-Ic6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Export View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ExportViewController" customModule="NDA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gaR-KV-ey7">
+                                <rect key="frame" x="30" y="108" width="354" height="239"/>
+                                <string key="text">The export feature allows you to download  your questionnaire results in .cvs file. The file includes detailed informatinon as well as scores for all your questionnaire sessions, which you might want to share with your doctor, family or friends.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgG-qd-7sH" customClass="RoundedButton" customModule="NDA" customModuleProvider="target">
+                                <rect key="frame" x="30" y="377" width="354" height="45"/>
+                                <color key="backgroundColor" name="NDBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="KXc-qd-k8p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" name="NDWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="export:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ycv-r9-UQ2"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTW-eg-nwH">
+                                <rect key="frame" x="0.0" y="422" width="414" height="391"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yLL-fy-KMM">
+                                        <rect key="frame" x="197" y="185.5" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="yLL-fy-KMM" firstAttribute="centerX" secondItem="mTW-eg-nwH" secondAttribute="centerX" id="W4l-dP-g1U"/>
+                                    <constraint firstItem="yLL-fy-KMM" firstAttribute="centerY" secondItem="mTW-eg-nwH" secondAttribute="centerY" id="kqJ-1O-tL5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mTW-eg-nwH" secondAttribute="bottom" id="03S-6P-M8y"/>
+                            <constraint firstItem="gaR-KV-ey7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3LN-Yg-0j5"/>
+                            <constraint firstItem="KgG-qd-7sH" firstAttribute="top" secondItem="gaR-KV-ey7" secondAttribute="bottom" constant="30" id="3nq-Bl-OHZ"/>
+                            <constraint firstItem="mTW-eg-nwH" firstAttribute="top" secondItem="KgG-qd-7sH" secondAttribute="bottom" id="9Na-gJ-zWa"/>
+                            <constraint firstItem="KgG-qd-7sH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="G7f-Wy-EeR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mTW-eg-nwH" secondAttribute="trailing" id="K1H-4z-7fr"/>
+                            <constraint firstItem="gaR-KV-ey7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Uvk-d6-7MF"/>
+                            <constraint firstItem="KgG-qd-7sH" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fzP-8L-8Do"/>
+                            <constraint firstItem="gaR-KV-ey7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="lMc-Y8-53W"/>
+                            <constraint firstItem="mTW-eg-nwH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sdT-bA-jPG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QDB-xw-v0f"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="yLL-fy-KMM" id="a5i-nT-iII"/>
+                        <outlet property="exportButton" destination="KgG-qd-7sH" id="w4S-CT-Z3R"/>
+                        <outlet property="titleLabel" destination="gaR-KV-ey7" id="Rok-Q4-vr1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="cPp-Qt-fRm" customClass="ExportModuleInitializer" customModule="NDA" customModuleProvider="target">
+                    <connections>
+                        <outlet property="exportViewController" destination="Y6W-OH-hqX" id="iZb-C8-TeJ"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="71.651785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MCb-cP-stO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hel-wr-Ic6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="share-arrow" id="1EI-m4-r6K"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qma-z6-4jc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="bzw-aL-cU2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HU8-Nf-8Gy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.7971014492753632" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="share-arrow" width="24" height="24"/>
+        <namedColor name="NDBlue">
+            <color red="0.24705882352941178" green="0.63529411764705879" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NDWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

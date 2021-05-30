@@ -6,6 +6,6 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol ExportViewInput: class {
+protocol ExportViewInput: AnyObject, UIViewInput {
     func setupInitialState()
 }
