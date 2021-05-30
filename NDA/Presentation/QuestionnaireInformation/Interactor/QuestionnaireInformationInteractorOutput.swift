@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol QuestionnaireInformationInteractorOutput: class {
+protocol QuestionnaireInformationInteractorOutput: AnyObject {
 
 }
