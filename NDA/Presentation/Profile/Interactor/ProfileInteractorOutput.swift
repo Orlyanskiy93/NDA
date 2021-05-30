@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ProfileInteractorOutput: class {
+protocol ProfileInteractorOutput: AnyObject {
     func handle(_ error: Error)
 }

@@ -9,6 +9,10 @@
 import UIKit
 
 class ProfileViewController: UIViewController, ProfileViewInput {
+    @IBOutlet weak var profileNavigationItem: UINavigationItem!
+    @IBOutlet weak var titleNameLabel: UILabel!
+    @IBOutlet weak var titleAgeLabel: UILabel!
+    @IBOutlet weak var titleEmailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -28,7 +32,12 @@ class ProfileViewController: UIViewController, ProfileViewInput {
     }
 
     func setupInitialState() {
-        
+        profileNavigationItem.title = String.Login.profileNavigationItemTitle
+        titleNameLabel.text = String.Login.name
+        titleAgeLabel.text = String.Login.age
+        titleEmailLabel.text = String.Login.email
+        editButton.setTitle(String.Button.editInformation, for: .normal)
+        eraseButton.setTitle(String.Button.eraceAppData, for: .normal)
     }
     
     func fillLabels(with user: User) {

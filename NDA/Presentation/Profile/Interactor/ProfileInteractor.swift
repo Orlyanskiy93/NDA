@@ -9,6 +9,8 @@
 class ProfileInteractor: ProfileInteractorInput {
     weak var output: ProfileInteractorOutput!
     var profileService: ProfileService!
+    var dataService: QuestionnaireDataService!
+    var timerService: TimerService!
     
     func loadUser() -> User? {
         do {
@@ -21,6 +23,13 @@ class ProfileInteractor: ProfileInteractorInput {
     }
     
     func removeUser() {
-        profileService.removeUser()
+        do {
+            try dataService.clearHistory()
+            profileService.removeUser()
+            timerService.stopTimer()
+        } catch {
+            output.handle(error)
+        }
     }
+    
 }
