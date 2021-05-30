@@ -8,7 +8,6 @@
 import Foundation
 
 protocol TimerService: TimerSubject {
-    var fireDate: Date { get }
     func setupTimer(with completionDate: Date?)
     func stopTimer()
 }
