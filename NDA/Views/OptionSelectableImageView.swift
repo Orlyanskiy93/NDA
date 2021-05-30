@@ -35,33 +35,33 @@ class OptionSelectableImageView: UIImageView {
         super.awakeFromNib()
         contentMode = .scaleAspectFill
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap(_:)))
-        self.addGestureRecognizer(gestureRecognizer)
-        self.isUserInteractionEnabled = true
+        addGestureRecognizer(gestureRecognizer)
+        isUserInteractionEnabled = true
     }
     
     func fill(with option: Option) {
         self.option = option
         let name = option.value
-        self.image = UIImage(named: name)
+        image = UIImage(named: name)
     }
     
     private func baseColorSetup() {
-        self.coverSubview.removeFromSuperview()
-        self.layer.borderColor = UIColor.clear.cgColor
-        self.layer.borderWidth = 0
+        coverSubview.removeFromSuperview()
+        layer.borderColor = UIColor.clear.cgColor
+        layer.borderWidth = 0
     }
     
     private func selectedColorSetup() {
-        self.coverSubview.removeFromSuperview()
-        self.layer.borderColor = greenColor.cgColor
-        self.layer.borderWidth = 5
+        coverSubview.removeFromSuperview()
+        layer.borderColor = greenColor.cgColor
+        layer.borderWidth = 5
     }
     
     private func notSelectedColorSetup() {
         baseColorSetup()
         coverSubview.frame = self.bounds
         coverSubview.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-        self.addSubview(coverSubview)
+        addSubview(coverSubview)
     }
     
     @objc private func tap(_ gestureRecognizer: UITapGestureRecognizer) {

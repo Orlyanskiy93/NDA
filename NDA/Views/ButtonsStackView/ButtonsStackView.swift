@@ -17,19 +17,21 @@ class ButtonsStackView: UIStackView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.distribution = .fillEqually
-        self.spacing = 10
+        distribution = .fillEqually
+        spacing = 10
     }
     
     func createButtons(count: Int) {
+        var buttons = [StackViewButton]()
         for i in 0..<count {
             let button = StackViewButton()
             button.setTitle("\(i + 1)", for: .normal)
             button.identifier = i
             button.addTarget(self, action: #selector(didSelected(_:)), for: .touchUpInside)
             buttons.append(button)
-            self.addArrangedSubview(button)
+            addArrangedSubview(button)
         }
+        self.buttons = buttons
     }
     
     @objc func didSelected(_ button: StackViewButton) {
@@ -37,11 +39,12 @@ class ButtonsStackView: UIStackView {
         delegate?.buttonsStackView(didSelected: button)
     }
     
-    func setSelected(index: Int, _ isSelected: Bool) {
+    func setSelected(index: Int, _ isEnabled: Bool) {
         buttons.forEach { button in
             button.isSelected = false
         }
         buttons[index].isSelected = true
+        buttons[index].isEnabled = isEnabled
     }
     
     func setButtonState(index: Int, to state: StackViewButton.ButtonState) {

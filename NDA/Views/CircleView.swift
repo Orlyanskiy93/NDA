@@ -15,13 +15,13 @@ class CircleView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.cornerRadius = self.frame.height / 2
+        layer.cornerRadius = self.frame.height / 2
     }
     
     private func setup() {
         let blueColor = UIColor(named: "NDBlue") ?? .systemBlue
-        self.layer.borderWidth = 5
-        self.layer.borderColor = blueColor.cgColor
+        layer.borderWidth = 5
+        layer.borderColor = blueColor.cgColor
     }
 
 }
