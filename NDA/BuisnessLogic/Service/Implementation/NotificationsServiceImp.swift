@@ -12,23 +12,9 @@ class NotificationsServiceImp: NotificationsService {
     static let shared = NotificationsServiceImp()
     let notificationCenter = UNUserNotificationCenter.current()
 
-    private init() {
-        requestAutorization()
-    }
+    private init() {}
     
-    func requestAutorization() {
-        notificationCenter.requestAuthorization(options: [.alert, .sound]) { granted, error in
-            
-            if granted {
-            }
-            
-            if let error = error {
-                print(error.localizedDescription)
-            }
-        }
-    }
-
-    func sendNotification(from timeInterval: TimeInterval) {
+    func setNotification(with timeInterval: TimeInterval) {
         let content = UNMutableNotificationContent()
         content.body = String.Notifications.newSession
         content.sound = UNNotificationSound.default
