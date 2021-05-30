@@ -7,6 +7,6 @@
 //
 import ViperMcFlurry
 
-protocol InformationModuleInput: class, RamblerViperModuleInput {
+protocol InformationModuleInput: AnyObject, RamblerViperModuleInput {
 
 }

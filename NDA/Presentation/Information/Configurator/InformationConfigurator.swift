@@ -28,6 +28,7 @@ class InformationModuleConfigurator {
 
         let interactor = InformationInteractor()
         interactor.output = presenter
+        interactor.informationService = InformationServiceImp.shared
 
         presenter.interactor = interactor
         viewController.output = presenter

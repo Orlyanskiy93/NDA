@@ -20,10 +20,10 @@ class InformationViewController: UIViewController, InformationViewInput {
     }
 
     func setupInitialState() {
+        navigationItem.title = String.Information.information
     }
     
-    
-    func update(_ tuple: [(title: String, description: String)]) {
-        displayManager.informationTuple = tuple
+    func update(_ faqArray: [FAQ]) {
+        displayManager.faqArray = faqArray
     }
 }

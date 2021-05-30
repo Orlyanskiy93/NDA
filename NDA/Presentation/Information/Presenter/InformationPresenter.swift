@@ -14,7 +14,8 @@ class InformationPresenter: NSObject, InformationModuleInput, InformationViewOut
     var router: InformationRouterInput!
 
     func viewIsReady() {
-        let tuple = interactor.getStringsTuple()
-        view.update(tuple)
+        view.setupInitialState()
+        let faqArray = interactor.getFAQArray()
+        view.update(faqArray)
     }
 }

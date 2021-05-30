@@ -8,5 +8,5 @@
 
 protocol InformationViewInput: class {
     func setupInitialState()
-    func update(_ tuple: [(title: String, description: String)])
+    func update(_ faqArray: [FAQ])
 }

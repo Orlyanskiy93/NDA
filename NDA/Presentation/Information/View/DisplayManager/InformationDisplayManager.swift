@@ -8,7 +8,7 @@ import UIKit
 
 class InformationDisplayManager: NSObject {
     var tableView: UITableView!
-    var informationTuple: [(title: String, description: String)] = [] {
+    var faqArray: [FAQ] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -31,14 +31,13 @@ class InformationDisplayManager: NSObject {
 
 extension InformationDisplayManager: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return informationTuple.count
+        return faqArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: InformationCell.identifier) as! InformationCell
-        let tuple = informationTuple[indexPath.row]
-        cell.fill(with: tuple)
-        cell.descriptionLabel.numberOfLines = 3
+        let faq = faqArray[indexPath.row]
+        cell.fill(with: faq)
         return cell
     }
 }
@@ -49,11 +48,7 @@ extension InformationDisplayManager: UITableViewDelegate {
             return
         }
         tableView.beginUpdates()
-        if cell.content == .rolled {
-            cell.content = .unrolled
-        } else {
-            cell.content = .rolled
-        }
+        cell.isChosen = !cell.isChosen
         tableView.endUpdates()
     }
 }

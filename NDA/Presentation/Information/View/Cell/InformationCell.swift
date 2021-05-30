@@ -8,51 +8,41 @@
 import UIKit
 
 class InformationCell: UITableViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var arrowImageView: UIImageView!
-    var content: Content = .rolled {
+    var isChosen: Bool = false {
         didSet {
-            switch content {
-            case .rolled:
-                rollUpContent()
-            case .unrolled:
-                unrollContent()
-            }
+            isChosen ? unrollContent() : rollUpContent()
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        descriptionLabel.contentMode = .top
-        content = .rolled
+        answerLabel.contentMode = .top
+        answerLabel.numberOfLines = 2
     }
 
-    func fill(with tuple: (title: String, description: String)) {
-        titleLabel.text = tuple.title
-        descriptionLabel.text = tuple.description
+    func fill(with faq: FAQ) {
+        questionLabel.text = faq.question
+        answerLabel.text = faq.answer
     }
     
-    func rollUpContent() {        
-        UIView.animate(withDuration: 0.7) { [weak self] in
-            self?.descriptionLabel.numberOfLines = 2
+    private func rollUpContent() {
+        answerLabel.numberOfLines = 2
+
+        UIView.animate(withDuration: 0.3) { [weak self] in
             self?.arrowImageView.transform = .identity
         }
     }
     
-    func unrollContent() {
+    private func unrollContent() {
+        answerLabel.numberOfLines = 0
+
         let rotationAngle = CGFloat.pi
-        UIView.animate(withDuration: 0.7) { [weak self] in
-            self?.descriptionLabel.numberOfLines = 0
+        UIView.animate(withDuration: 0.3) { [weak self] in
             self?.arrowImageView.transform = CGAffineTransform(rotationAngle: rotationAngle)
         }
-    }
-}
-
-extension InformationCell {
-    enum Content {
-        case rolled
-        case unrolled
     }
 }
