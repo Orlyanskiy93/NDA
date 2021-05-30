@@ -16,6 +16,7 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     @IBOutlet weak var moderatelyCertainLabel: UILabel!
     @IBOutlet weak var highlyCertainLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var nextButton: RoundedButton!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var buttonsStackView: ButtonsStackView!
     
@@ -27,6 +28,7 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     }
 
     func setupInitialState(with questionsCount: Int) {
+        nextButton.setTitle(String.Button.next, for: .normal)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationController?.navigationBar.isHidden = true
         buttonsStackView.createButtons(count: questionsCount)
@@ -63,7 +65,7 @@ class PartOneViewController: UIViewController, PartOneViewInput {
     @IBAction func chooseAnswer(_ sender: UIButton) {
         let index = output.chosenQuestionNumber
         buttonsStackView.setButtonState(index: index, to: .answered)
-        output.answerDidChosen(with: Int(slider.value))
+        output.answerDidChosen(with: Int(slider.value.rounded()))        
         resetSlider()
     }
     
