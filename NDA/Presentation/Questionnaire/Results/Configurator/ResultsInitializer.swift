@@ -9,8 +9,6 @@
 import UIKit
 
 class ResultsModuleInitializer: NSObject {
-
-    // Connect with object on storyboard
     @IBOutlet weak var resultsViewController: ResultsViewController!
 
     override func awakeFromNib() {

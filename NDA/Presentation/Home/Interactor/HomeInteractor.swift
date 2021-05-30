@@ -14,6 +14,16 @@ class HomeInteractor: HomeInteractorInput, TimerObserver {
     var timerService: TimerService!
     var notificationsService: NotificationsService!
     
+    func loadSessions() -> [Session] {
+        var sessions = [Session]()
+        do {
+            try sessions = dataService.getSessions()
+        } catch {
+            output.handle(error)
+        }
+        return sessions
+    }
+    
     func loadSession() -> Session {
         loadLastCompletedSession()
         var session = Session()

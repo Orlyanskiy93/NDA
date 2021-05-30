@@ -13,13 +13,24 @@ class HomePresenter: HomeModuleInput, HomeViewOutput, HomeInteractorOutput {
     var interactor: HomeInteractorInput!
     var router: HomeRouterInput!
     var session: Session!
+    var sessions: [Session] = []
+    var isActiveTimer: Bool = false
     
     func viewIsReady() {
-        self.session = interactor.loadSession()
-        view.setup(with: session)
+        view.setupInitialState()
+    }
+    
+    func updateView() {
+        session = interactor.loadSession()
+        sessions = interactor.loadSessions()
+        view.setStatus(with: sessions)
+        if !isActiveTimer {
+            view.updateButton(with: session)
+        }
     }
         
     func didLoad(timeIntervalToNextQuestionnaire timeInterval: TimeInterval) {
+        isActiveTimer = true
         view.updateButton(with: timeInterval)
     }
     

@@ -22,6 +22,7 @@ class ButtonsStackView: UIStackView {
     }
     
     func createButtons(count: Int) {
+        var buttons = [StackViewButton]()
         for i in 0..<count {
             let button = StackViewButton()
             button.setTitle("\(i + 1)", for: .normal)
@@ -30,6 +31,7 @@ class ButtonsStackView: UIStackView {
             buttons.append(button)
             addArrangedSubview(button)
         }
+        self.buttons = buttons
     }
     
     @objc func didSelected(_ button: StackViewButton) {

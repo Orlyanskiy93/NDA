@@ -110,7 +110,7 @@
 		5D0A7357262E159E00E7982E /* PartTwoDetailsTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0A7356262E159C00E7982E /* PartTwoDetailsTextCell.swift */; };
 		5D0A735A262E15D500E7982E /* PartTwoDetailsTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0A7359262E15D500E7982E /* PartTwoDetailsTextCell.xib */; };
 		5D1DA7A526404D8300C81D92 /* PartOneDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA7A426404D8300C81D92 /* PartOneDetailsHeaderView.swift */; };
-		5D1DA7A72640923800C81D92 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA7A62640923800C81D92 /* Coordinates.swift */; };
+		5D1DA7A72640923800C81D92 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA7A62640923800C81D92 /* Coordinate.swift */; };
 		5D1DA7CE2642969300C81D92 /* StackViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA7CD2642969300C81D92 /* StackViewButton.swift */; };
 		5D1DA7D02642982E00C81D92 /* ButtonsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA7CF2642982E00C81D92 /* ButtonsStackView.swift */; };
 		5D1DA7D22642B29E00C81D92 /* Double+rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1DA7D12642B29E00C81D92 /* Double+rounded.swift */; };
@@ -130,7 +130,6 @@
 		5D2CCAFF265AE50300C791DB /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2CCB01265AE50300C791DB /* Profile.storyboard */; };
 		5D484ECE262F8A6700FF537D /* PartTwoDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D484ECD262F8A6700FF537D /* PartTwoDetailsHeaderView.xib */; };
 		5D484ED3262F8A7E00FF537D /* PartTwoDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484ED2262F8A7E00FF537D /* PartTwoDetailsHeaderView.swift */; };
-		5D484EDB26308E9C00FF537D /* UIView+setupFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484EDA26308E9C00FF537D /* UIView+setupFromNib.swift */; };
 		5D484EDE26315F8400FF537D /* UITableViewCell+identifier+nib .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484EDD26315F8400FF537D /* UITableViewCell+identifier+nib .swift */; };
 		5D484EE12631615300FF537D /* DateFormatter+customSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484EE02631615300FF537D /* DateFormatter+customSetup.swift */; };
 		5D484EE92631C4BA00FF537D /* NDA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D484EE72631C4BA00FF537D /* NDA.xcdatamodeld */; };
@@ -430,7 +429,7 @@
 		5D0A7356262E159C00E7982E /* PartTwoDetailsTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoDetailsTextCell.swift; sourceTree = "<group>"; };
 		5D0A7359262E15D500E7982E /* PartTwoDetailsTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartTwoDetailsTextCell.xib; sourceTree = "<group>"; };
 		5D1DA7A426404D8300C81D92 /* PartOneDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOneDetailsHeaderView.swift; sourceTree = "<group>"; };
-		5D1DA7A62640923800C81D92 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		5D1DA7A62640923800C81D92 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		5D1DA7CD2642969300C81D92 /* StackViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewButton.swift; sourceTree = "<group>"; };
 		5D1DA7CF2642982E00C81D92 /* ButtonsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsStackView.swift; sourceTree = "<group>"; };
 		5D1DA7D12642B29E00C81D92 /* Double+rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+rounded.swift"; sourceTree = "<group>"; };
@@ -450,7 +449,6 @@
 		5D2CCB02265AE53D00C791DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		5D484ECD262F8A6700FF537D /* PartTwoDetailsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartTwoDetailsHeaderView.xib; sourceTree = "<group>"; };
 		5D484ED2262F8A7E00FF537D /* PartTwoDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoDetailsHeaderView.swift; sourceTree = "<group>"; };
-		5D484EDA26308E9C00FF537D /* UIView+setupFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setupFromNib.swift"; sourceTree = "<group>"; };
 		5D484EDD26315F8400FF537D /* UITableViewCell+identifier+nib .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+identifier+nib .swift"; sourceTree = "<group>"; };
 		5D484EE02631615300FF537D /* DateFormatter+customSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+customSetup.swift"; sourceTree = "<group>"; };
 		5D484EE82631C4BA00FF537D /* NDA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NDA.xcdatamodel; sourceTree = "<group>"; };
@@ -1057,7 +1055,11 @@
 				5D02BF56260646F30053E96C /* User.swift */,
 				5DC62AEB26278214000569E9 /* Session.swift */,
 				5DC62AE726262287000569E9 /* Score.swift */,
+<<<<<<< HEAD
+				5D1DA7A62640923800C81D92 /* Coordinate.swift */,
+=======
 				5D1DA7A62640923800C81D92 /* Coordinates.swift */,
+>>>>>>> Develop
 				5D1DA80B264B11BE00C81D92 /* FAQ.swift */,
 			);
 			path = Entity;
@@ -1248,7 +1250,6 @@
 		5D484ED926308E6C00FF537D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5D484EDA26308E9C00FF537D /* UIView+setupFromNib.swift */,
 				5D484EDD26315F8400FF537D /* UITableViewCell+identifier+nib .swift */,
 				5D484EE02631615300FF537D /* DateFormatter+customSetup.swift */,
 				5D1DA7D12642B29E00C81D92 /* Double+rounded.swift */,
@@ -2573,14 +2574,13 @@
 				38134F07DCCB1CC6ECBB18BB /* SessionDescriptionModuleInput.swift in Sources */,
 				1C594F88D4DB22B527BA3328 /* SessionDescriptionPresenter.swift in Sources */,
 				413909B1A9C5B1BAF0EA7D13 /* SessionDescriptionInteractorInput.swift in Sources */,
-				5D1DA7A72640923800C81D92 /* Coordinates.swift in Sources */,
+				5D1DA7A72640923800C81D92 /* Coordinate.swift in Sources */,
 				706AF22BC93D99BCCA2E850E /* SessionDescriptionInteractorOutput.swift in Sources */,
 				298823609687FBF55D92135E /* SessionDescriptionInteractor.swift in Sources */,
 				2F3B987035062294D49313CF /* SessionDescriptionRouterInput.swift in Sources */,
 				9EDA0BC66770A39AFC0AB761 /* SessionDescriptionRouter.swift in Sources */,
 				88FD19CF92D20AA5DC2D62C2 /* SessionDescriptionConfigurator.swift in Sources */,
 				86FC57D527EFCA61B9B61B98 /* SessionDescriptionInitializer.swift in Sources */,
-				5D484EDB26308E9C00FF537D /* UIView+setupFromNib.swift in Sources */,
 				2A672507F82329956F11047B /* PartOneDetailsViewInput.swift in Sources */,
 				5401386D7F75F9B9AB90EBB7 /* PartOneDetailsViewOutput.swift in Sources */,
 				C91F891F25E1905B3709696C /* PartOneDetailsViewController.swift in Sources */,

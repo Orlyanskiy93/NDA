@@ -144,6 +144,15 @@
 
 "information" = "Information";
 "information1Question" = "How does app work?";
+<<<<<<< HEAD
+"information1Answer" = "The application is a survey consisting of three parts, the results of which can detect neuro-degenerative disorders of the brain. The questions are intended to help us better understand any symptoms you may be experiencing in the areas of attention, memory, organization, and thinking.";
+
+"information2Question" = "How are the scores calculated?";
+"information2Answer" = "The Gunning Nebula Index or Fog Index shows the level of readability of the text. This method of testing the comfort of perception of the text is named after the creator of Robert Gunning. At first, it was intended for journalists to avoid vague wording in what was written. Currently used by copywriters to determine the degree of simplicity of the text for readers.";
+
+"information3Question" = "How will the app help me?";
+"information3Answer" = "Our application allows you to identify abnormalities in the work of the brain. According to modern concepts, the key importance in the strategy of combating neurodegenerative diseases is given to the earliest possible diagnosis of the pathological process and, in particular, to the diagnosis of the disease in its latent stage (synonyms-preclinical, presymptomatic stage). The latent stage means that at the cellular and molecular level, the disease has already begun and a certain part of the neurons have already died, but the person does not feel sick yet and from the outside can look completely fine.";
+=======
 "information1Answer" = " Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
 
 "information2Question" = "How are the scores calculated?";
@@ -151,6 +160,7 @@
 
 "information3Question" = "How are the scores calculated?";
 "information3Answer" = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
+>>>>>>> Develop
 
 "information4Question" = "How is my information processed?";
 "information4Answer" = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";

@@ -53,13 +53,21 @@
 "hoursToNextSession" = "ЧАСОВ ДО СЛЕДУЮЩЕЙ СЕССИИ";
 "minutesToNextSession" = "МИНУТ ДО СЛЕДУЮЩЕЙ СЕССИИ";
 "secondsToNextSession" = "СЕКУНД ДО СЛЕДУЮЩЕЙ СЕССИИ";
+<<<<<<< HEAD
+"toHomePage" = "НА ГЛАВНУЮ";
+=======
 "toHomePage" = "ДОМОЙ";
+>>>>>>> Develop
 "export" = "ЭКСПОРТ";
 "done" = "ГОТОВО";
 
 //MARK: Home
 
+<<<<<<< HEAD
+"home" = "Главная";
+=======
 "home" = "Опрос";
+>>>>>>> Develop
 "questionnaire" = "Опрос";
 "questionnaireDescription" = "Ответьте не следующие несколько вопросов на столько быстро насколько можете. Опрос состоит из трех частей: Самоэффективность, Короткие ответы, Развернутый ответ.";
 "notDeterminedStatus" = "Ваш статус когнитивного поведения появится здесь после того, как вы заполните не менее трех опросов.";
@@ -143,17 +151,29 @@
 
 "information" = "Информация";
 "information1Question" = "Как работает приложение?";
+<<<<<<< HEAD
+"information1Answer" = "Приложение представляет собой опрос, состоящий из трёх частей, по результатам которого можно обнаружить нейро-дегенеративные расстройства головного мозга. Вопросы предназначены для того, чтобы помочь нам лучше понять любые симптомы, которые вы можете испытывать в области внимания, памяти, организации и мышления.";
+=======
 "information1Answer" = " Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
+>>>>>>> Develop
 
 "information2Question" = "Как считаются баллы?";
 "information2Answer" = "Индекс туманности Ганнинга или Фог-индекс (Fog Index) показывает уровень удобочитаемости текста.
 Этот метод проверки комфорта восприятия текста назван по имени создателя Роберта Ганнинга. Вначале он предназначался для журналистов, чтобы избежать туманных формулировок в написанном. В настоящее время используется копирайтерами для определения степени простоты текста для читателей.";
 
+<<<<<<< HEAD
+"information3Question" = "Как приложение мне поможет?";
+"information3Answer" = "Наше приложение позволяет выявить отклонения в работе головного мозга. Согласно современным представлениям, ключевое значение в стратегии борьбы с нейродегенеративными заболеваниями придается максимально ранней диагностике патологического процесса и в особенности - диагностике болезни в ее латентной стадии (синонимы - доклиническая, пресимптоматическая стадия). Латентная стадия означает, что на клеточном и молекулярном уровне болезнь уже началась и определенная часть нейронов уже погибла, но человек пока не ощущает себя больным и со стороны может выглядеть в полном порядке.";
+
+"information4Question" = "Как обрабатывается моя информация?";
+"information4Answer" = "Обработка персональных данных путем осуществления прямых контактов с потенциальным потребителем с помощью средств связи, а также в целях политической агитации допускается только при условии предварительного согласия субъекта персональных данных. Указанная обработка персональных данных признается осуществляемой без предварительного согласия субъекта персональных данных, если оператор не докажет, что такое согласие было получено.";
+=======
 "information3Question" = "How are the scores calculated?";
 "information3Answer" = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
 
 "information4Question" = "Как обрабатывается моя информация?";
 "information4Answer" = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
+>>>>>>> Develop
 
 //MARK: Export
 

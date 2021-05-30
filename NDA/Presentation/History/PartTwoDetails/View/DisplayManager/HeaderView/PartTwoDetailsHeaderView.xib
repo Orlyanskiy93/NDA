@@ -29,7 +29,7 @@
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfk-eg-7LT" customClass="CircleView" customModule="NDA" customModuleProvider="target">
                     <rect key="frame" x="146.66666666666666" y="119.33333333333331" width="120.99999999999997" height="79.666666666666686"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Aio-UY-99H">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Aio-UY-99H">
                             <rect key="frame" x="35" y="16.000000000000014" width="51" height="48"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                             <nil key="textColor"/>

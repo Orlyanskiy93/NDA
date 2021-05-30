@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8JD-n1-6GH">
+=======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+>>>>>>> Develop
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,15 +12,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+<<<<<<< HEAD
+        <!--Information View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="InformationViewController" customModule="NDA" customModuleProvider="target" sceneMemberID="viewController">
+=======
         <!--Information-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController title="Information" id="Y6W-OH-hqX" customClass="InformationViewController" customModule="NDA" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> Develop
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-hK-A2R">
+<<<<<<< HEAD
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+=======
                                 <rect key="frame" x="20" y="128" width="374" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -26,10 +42,22 @@
                                     <navigationItem title="Title" id="DU4-1U-uMx"/>
                                 </items>
                             </navigationBar>
+>>>>>>> Develop
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+<<<<<<< HEAD
+                            <constraint firstItem="Ckb-hK-A2R" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="1ex-wb-oUD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ckb-hK-A2R" secondAttribute="trailing" id="2sP-gf-hIy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ckb-hK-A2R" secondAttribute="bottom" id="8Xu-Yc-ccC"/>
+                            <constraint firstItem="Ckb-hK-A2R" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kXu-V9-eab"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lha-Z2-hZB"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+=======
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ckb-hK-A2R" secondAttribute="trailing" constant="20" id="2sP-gf-hIy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kZf-zj-zZF" secondAttribute="trailing" id="4g6-se-67g"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ckb-hK-A2R" secondAttribute="bottom" id="8Xu-Yc-ccC"/>
@@ -43,6 +71,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="informationNavigationItem" destination="DU4-1U-uMx" id="83h-bh-QM6"/>
+>>>>>>> Develop
                         <outlet property="tableView" destination="Ckb-hK-A2R" id="fgO-ib-N1k"/>
                     </connections>
                 </viewController>
@@ -53,7 +82,30 @@
                     </connections>
                 </customObject>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="1234.7826086956522" y="-56.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Iy-JM-w8N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8JD-n1-6GH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="info" selectedImage="info" id="nfE-wm-O0f"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="99h-DA-SxR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="m3O-QT-sPI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moj-Zs-94b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324.63768115942031" y="-56.25"/>
+=======
             <point key="canvasLocation" x="5.7971014492753632" y="30.803571428571427"/>
+>>>>>>> Develop
         </scene>
     </scenes>
     <resources>

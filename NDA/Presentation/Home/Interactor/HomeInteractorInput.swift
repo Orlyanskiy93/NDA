@@ -10,4 +10,5 @@ import Foundation
 
 protocol HomeInteractorInput {
     func loadSession() -> Session
+    func loadSessions() -> [Session]
 }

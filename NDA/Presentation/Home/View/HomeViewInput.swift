@@ -8,6 +8,8 @@
 import Foundation
 
 protocol HomeViewInput: AnyObject, UIViewInput {
-    func setup(with session: Session)
+    func setupInitialState()
+    func updateButton(with session: Session)
     func updateButton(with timeInterval: TimeInterval)
+    func setStatus(with sessions: [Session])
 }

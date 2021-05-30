@@ -129,7 +129,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-uR-n9e" customClass="CircleView" customModule="NDA" customModuleProvider="target">
                     <rect key="frame" x="148" y="120" width="118" height="118"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HB-3D-BbU">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HB-3D-BbU">
                             <rect key="frame" x="22.666666666666657" y="35" width="73" height="48"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                             <nil key="textColor"/>

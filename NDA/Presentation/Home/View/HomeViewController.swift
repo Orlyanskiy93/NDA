@@ -18,14 +18,20 @@ class HomeViewController: UIViewController, HomeViewInput {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        output.viewIsReady()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        output.viewIsReady()
-        statusView.updateState(with: Coordinates().points)
+        output.updateView()
     }
     
+<<<<<<< HEAD
+    func setupInitialState() {
+        navigationItem.title = String.Home.home
+        beginQuestionnaireButton.titleLabel?.minimumScaleFactor = 0.5
+        beginQuestionnaireButton.titleLabel?.adjustsFontSizeToFitWidth = true
+=======
     func setup(with session: Session) {
         self.navigationItem.title = String.Home.home
         if session.stage != .partOne {
@@ -33,8 +39,9 @@ class HomeViewController: UIViewController, HomeViewInput {
         } else {
             setButton(title: String.Button.beginQuestionnaire, color: blueColor, isEnabled: true)
         }
+>>>>>>> Develop
     }
-    
+        
     @IBAction func begin(_ sender: UIButton) {
         output.runSession()
     }
@@ -44,6 +51,18 @@ class HomeViewController: UIViewController, HomeViewInput {
         beginQuestionnaireButton.backgroundColor = color
         beginQuestionnaireButton.isEnabled = isEnabled
         
+    }
+    
+    func setStatus(with sessions: [Session]) {
+        statusView.setup(with: sessions)
+    }
+    
+    func updateButton(with session: Session) {
+        if session.stage != .partOne {
+            setButton(title: String.Button.resumeQuestionnaire, color: greenColor, isEnabled: true)
+        } else {
+            setButton(title: String.Button.beginQuestionnaire, color: blueColor, isEnabled: true)
+        }
     }
     
     func updateButton(with timeInterval: TimeInterval) {

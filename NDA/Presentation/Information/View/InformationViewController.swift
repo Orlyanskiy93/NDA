@@ -21,7 +21,11 @@ class InformationViewController: UIViewController, InformationViewInput {
     }
 
     func setupInitialState() {
+<<<<<<< HEAD
+        navigationItem.title = String.Information.information
+=======
         informationNavigationItem.title = String.Information.information
+>>>>>>> Develop
     }
     
     func update(_ faqArray: [FAQ]) {

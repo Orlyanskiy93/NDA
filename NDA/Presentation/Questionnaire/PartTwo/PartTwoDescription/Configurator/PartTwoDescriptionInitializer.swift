@@ -9,8 +9,6 @@
 import UIKit
 
 class PartTwoDescriptionModuleInitializer: NSObject {
-
-    // Connect with object on storyboard
     @IBOutlet weak var parttwodescriptionViewController: PartTwoDescriptionViewController!
 
     override func awakeFromNib() {

@@ -18,14 +18,18 @@ class ResultsInteractor: ResultsInteractorInput {
         } catch {
             output.handle(error)
         }
-        setupNotification(with: session.completionDate)
+        setupNotification()
         return session
     }
     
-    func setupNotification(with date: Date) {
+    func setupNotification() {
         let timeInterval = TimeInterval()
+<<<<<<< HEAD
+        notificationService.setNotification(with: timeInterval.day * 30)
+=======
 //        let timeIntervalToNextQuestionnaire = date.timeIntervalSinceNow * timeInterval.day * 30
 //        notificationService.setNotification(with: timeIntervalToNextQuestionnaire)
+>>>>>>> Develop
     }
     
     func finishSession() {

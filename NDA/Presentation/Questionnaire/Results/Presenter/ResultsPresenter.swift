@@ -7,10 +7,7 @@
 //
 import Foundation
 
-class ResultsPresenter: NSObject,
-                        ResultsModuleInput,
-                        ResultsViewOutput,
-                        ResultsInteractorOutput {
+class ResultsPresenter: NSObject, ResultsModuleInput, ResultsViewOutput, ResultsInteractorOutput {
 
     weak var view: ResultsViewInput!
     var interactor: ResultsInteractorInput!
