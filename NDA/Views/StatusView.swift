@@ -13,6 +13,11 @@ class StatusView: RoundedView {
     private let redColor: UIColor = UIColor(named: "NDRed") ?? .systemRed
 
     private var statusLabel: UILabel = UILabel()
+    private var coordinates: [Coordinate] = [] {
+        didSet {
+            updateState()
+        }
+    }
     private var state: State = .notDetermined {
         didSet {
             switch state {
@@ -28,52 +33,47 @@ class StatusView: RoundedView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.addSubview(statusLabel)
-        state = .notDetermined
+        setup()
+    }
+    
+    private func setup() {
+        addSubview(statusLabel)
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
         statusLabel.numberOfLines = 0
+        addConstraints()
+        state = .notDetermined
         addConstraints()
     }
     
     private func addConstraints() {
         let constraints = [
-            NSLayoutConstraint(item: statusLabel,
-                               attribute: .bottom,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .bottom,
-                               multiplier: 1,
-                               constant: -20),
-            NSLayoutConstraint(item: statusLabel,
-                               attribute: .top,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .top,
-                               multiplier: 1,
-                               constant: 20),
-            NSLayoutConstraint(item: statusLabel,
-                               attribute: .leading,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .leading,
-                               multiplier: 1,
-                               constant: 20),
-            NSLayoutConstraint(item: statusLabel,
-                               attribute: .trailing,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .trailing,
-                               multiplier: 1,
-                               constant: -20)
+            NSLayoutConstraint(item: statusLabel, attribute: .bottom, relatedBy: .equal, toItem: self,
+                               attribute: .bottom, multiplier: 1, constant: -20),
+            NSLayoutConstraint(item: statusLabel, attribute: .top, relatedBy: .equal, toItem: self,
+                               attribute: .top, multiplier: 1, constant: 20),
+            NSLayoutConstraint(item: statusLabel, attribute: .leading, relatedBy: .equal, toItem: self,
+                               attribute: .leading, multiplier: 1, constant: 20),
+            NSLayoutConstraint(item: statusLabel, attribute: .trailing, relatedBy: .equal, toItem: self,
+                               attribute: .trailing, multiplier: 1, constant: -20)
         ]
-        
         NSLayoutConstraint.activate(constraints)
     }
     
-    func updateState(with points: [(x: Double, y: Double)]) {
-        let slope = lineOfBestFit(points: points)
+    func setup(with sessions: [Session]) {
+        var coordinates = [Coordinate]()
+        for i in 0..<sessions.count {
+            let xPoint = Double(i)
+            let yPoint = sessions[i].score.average
+            let coordinate = Coordinate(xPoint: xPoint, yPoint: yPoint)
+            coordinates.append(coordinate)
+        }
+        self.coordinates = coordinates
+    }
+    
+    private func updateState() {
+        let slope = lineOfBestFit(coordinates: coordinates)
         
-        if points.count < 3 {
+        if coordinates.count < 3 {
             state = .notDetermined
         } else {
             if slope < -0.15 {
@@ -99,32 +99,31 @@ class StatusView: RoundedView {
         self.layer.borderColor = redColor.cgColor
     }
     
-    private func lineOfBestFit(points: [(x: Double, y: Double)]) -> Double {
-
+    private func lineOfBestFit(coordinates: [Coordinate]) -> Double {
             var sumX: Double = 0
-            for element in points {
-                sumX += element.x
+            for element in coordinates {
+                sumX += element.xPoint
             }
 
-            let meanX = sumX/Double(points.count)
+            let meanX = sumX/Double(coordinates.count)
 
             var sumY: Double = 0
-            for element in points {
-                sumY += element.y
+            for element in coordinates {
+                sumY += element.yPoint
             }
 
-            let meanY = sumY/Double(points.count)
+            let meanY = sumY/Double(coordinates.count)
 
             var productXY: Double = 0
-            for i in 0..<points.count {
-                let left = points[i].x - meanX
-                let right = points[i].y - meanY
+            for i in 0..<coordinates.count {
+                let left = coordinates[i].xPoint - meanX
+                let right = coordinates[i].yPoint - meanY
                 productXY += left * right
             }
 
             var productXX: Double = 0
-            for i in 0..<points.count {
-                let deviationFromMeanX = points[i].x - meanX
+            for i in 0..<coordinates.count {
+                let deviationFromMeanX = coordinates[i].xPoint - meanX
                 productXX += deviationFromMeanX * deviationFromMeanX
             }
 

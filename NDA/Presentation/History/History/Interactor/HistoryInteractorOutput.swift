@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol HistoryInteractorOutput: class {
+protocol HistoryInteractorOutput: AnyObject {
     func handle(_ error: Error)
 }

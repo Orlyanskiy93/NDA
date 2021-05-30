@@ -6,6 +6,6 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol HistoryModuleInput: class {
+protocol HistoryModuleInput: AnyObject {
 
 }

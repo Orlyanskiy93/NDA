@@ -10,11 +10,15 @@ import Charts
 
 class ChartView: LineChartView {
     private var sessions: [Session] = []
-    private var coordinates: [(x: Double, y: Double)] = Coordinates().points
+    private var coordinates: [Coordinate] = []
     private let blueColor: UIColor = UIColor(named: "NDBlue") ?? .systemBlue
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        chartSetup()
+    }
+    
+    func chartSetup() {
         self.rightAxis.enabled = false
         self.extraRightOffset = 20
         self.xAxis.labelPosition = .bottom
@@ -23,17 +27,36 @@ class ChartView: LineChartView {
         self.legend.form = .empty
     }
     
+    func setupCoordinates(with sessions: [Session]) {
+        var coordinates = [Coordinate]()
+        for i in 0..<sessions.count {
+            let xPoint = Double(i)
+            let yPoint = sessions[i].score.average
+            let coordinate = Coordinate(xPoint: xPoint, yPoint: yPoint)
+            coordinates.append(coordinate)
+        }
+        self.coordinates = coordinates
+    }
+    
     func setData(with sessions: [Session]) {
+        setupCoordinates(with: sessions)
         self.sessions = sessions
         self.xAxis.valueFormatter = self
     
         self.xAxis.calculate(min: 0, max: Double(coordinates.count))
-        self.xAxis.setLabelCount(coordinates.count, force: true)
+        if coordinates.count == 1 {
+            self.xAxis.setLabelCount(coordinates.count, force: false)
+        } else {
+            self.xAxis.setLabelCount(coordinates.count, force: true)
+        }
         
         var values: [ChartDataEntry] = []
         
-        coordinates.forEach { (xPoint: Double, yPoint: Double) in
+        coordinates.forEach { coordinate in
+            let xPoint = coordinate.xPoint
+            let yPoint = coordinate.yPoint
             let dataPoint = stringForValue(xPoint, axis: nil)
+            
             let chartDataEntry = ChartDataEntry(x: xPoint, y: yPoint, data: dataPoint as AnyObject)
             values.append(chartDataEntry)
         }
