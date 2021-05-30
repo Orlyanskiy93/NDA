@@ -9,7 +9,8 @@
 //MARK: Error
 
 "error" = "Error";
-"ok" = "OK";
+"ok" = "Ok";
+"cancel" = "Cancel";
 "wrongName" = "Name must contains only letters";
 "wrongAge" = "Age is to much";
 "wrongEmail" = "Wrong email";
@@ -19,7 +20,6 @@
 "getUser" = "Unable to load user";
 "optionsCount" = "Wrong count of options";
 "tryAgain" = "Try again";
-"welcomeMessage" = "Welcome to the Neuro Degenerative Cognitive Assessment App!";
 "rightAnswer" = "Options have no right answer";
 "mapping" = "Unable to load data";
 "savingSession" = "Unable to save session";
@@ -37,13 +37,34 @@
 "editInformation" = "EDIT INFORMATION";
 "eraceAppData" = "ERACE APP DATA";
 "beginQuestionnaire" = "BEGIN QUESTIONNAIRE";
+"resumeQuestionnaire" = "RESUME QUESTIONNAIRE";
 "daysToNextSession" = "DAYS UNTIL NEXT SESSION";
 "hoursToNextSession" = "HOURS UNTIL NEXT SESSION";
+"minutesToNextSession" = "MINUTES UNTIL NEXT SESSION";
+"secondsToNextSession" = "SECONDS UNTIL NEXT SESSION";
 "toHomePage" = "GO TO HOME PAGE";
+"export" = "EXPORT";
+"done" = "DONE";
+
+//MARK: Login/Profile
+
+"profileNavigationItemTitle" = "Your profile";
+"editProfileNavigationItemTitle" = "Edit profile";
+"profile" = "Profile";
+"welcomeMessage" = "Welcome to the Neuro Degenerative Cognitive Assessment App!";
+"loginTitle" = "To get started, we need some of your basic details:";
+"name" = "Your full name:";
+"age" = "Your age:";
+"email" = "Your email:";
 
 //MARK: Home
 
+"home" = "Home";
+"questionnaire" = "Questionnaire";
 "questionnaireDescription" = "Please answer the next few questions as quickly as your ability. The questionnaire will consist of 3 parts: Self - Efficacy, Short - Answer and Long - Answer questions.";
+"notDeterminedStatus" = "Your cognitive behavior status will appear here after you complete at least 3 questionnaires.";
+"positiveDynamicsStatus" = "No change detected in cognitive behavior. Everything is great!";
+"negativeDynamicsStatus" = "Potential change detected in cognitive behavior. Please consider visiting your doctor.";
 
 //MARK: PartOne
 
@@ -68,14 +89,34 @@
 "partTwoModuleDescription" = "The following questions are designed to test you using a few simple short - answer questions. Please try to answer these questions quickly and correctly.";
 "arythmeticQuestion" = "What is ";
 "identifyQuestion" = "Please identify picture of ";
+"bird" = "bird";
+"buffalo" = "buffalo";
+"cow" = "cow";
+"goat" = "goat";
+"horse" = "horse";
+"koala" = "koala";
+"monkey" = "monkey";
+"owl" = "owl";
+"pig" = "pig";
+"rabbit" = "rabbit";
+"rhino" = "rhino";
+"rooster" = "rooster";
+"sheep" = "sheep";
+"tiger" = "tiger";
+"turtle" = "turtle";
+"zebra" = "zebra";
 
 //MARK: PartThree
 
+"partThreeTitle" = "Part 3: Long Answer";
+"partThreeDescription" = "The following questions are designed to test you using a few long - answer questions. Please try to provide detailed medium - size answers. You might find the dictating feature in your keyboard helpful.";
+"placeholder" = "Input your answer here:";
 "partThreeQuestion1" = "Pleace describe the last birthday party you had.";
 "partThreeQuestion2" = "Pleace describe the last book you read.";
 "partThreeQuestion3" = "Pleace describe the last movie you watched.";
 
 //MARK: Results
+
 "finishingMessage" = "Thank you for finishing  the questionnaire!";
 "scoreMessage" = "Your scores are:";
 "average" = "Average:";
@@ -85,6 +126,8 @@
 
 //MARK: History
 
+"history" = "History";
+"emptyHistory" = "You have no history yet. You can view you history once you have answered at least one questionnaire!";
 "score" = "Score:";
 "yourAnswer" = "Your answer:";
 "correct" = "Correct";
@@ -94,3 +137,48 @@
 "partOne" = "Self Efficacy Questions";
 "partTwo" = "Short Answers Questions";
 "partThree" = "Long Answer Question";
+"recentScores" = "Your recent scores:";
+"removeProfile" = "Remove profile and history?";
+
+//MARK: Information
+
+"information" = "Information";
+"information1Question" = "How does app work?";
+"information1Answer" = "The application is a survey consisting of three parts, the results of which can detect neuro-degenerative disorders of the brain. The questions are intended to help us better understand any symptoms you may be experiencing in the areas of attention, memory, organization, and thinking.";
+
+"information2Question" = "How are the scores calculated?";
+"information2Answer" = "The Gunning Nebula Index or Fog Index shows the level of readability of the text. This method of testing the comfort of perception of the text is named after the creator of Robert Gunning. At first, it was intended for journalists to avoid vague wording in what was written. Currently used by copywriters to determine the degree of simplicity of the text for readers.";
+
+"information3Question" = "How will the app help me?";
+"information3Answer" = "Our application allows you to identify abnormalities in the work of the brain. According to modern concepts, the key importance in the strategy of combating neurodegenerative diseases is given to the earliest possible diagnosis of the pathological process and, in particular, to the diagnosis of the disease in its latent stage (synonyms-preclinical, presymptomatic stage). The latent stage means that at the cellular and molecular level, the disease has already begun and a certain part of the neurons have already died, but the person does not feel sick yet and from the outside can look completely fine.";
+
+"information4Question" = "How is my information processed?";
+"information4Answer" = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa.Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
+
+//MARK: Export
+
+"export" = "Export";
+"exportTitle" = "The export feature allows you to download  your questionnaire results in .cvs file. The file includes detailed informatinon as well as scores for all your questionnaire sessions, which you might want to share with your doctor, family or friends.";
+"tableTitle1" = "Session Date";
+"tableTitle2" = "Average Score";
+"tableTitle3" = "Part 1 Score";
+"tableTitle4" = "Part 2 Score";
+"tableTitle5" = "Part 3 Score";
+"tableTitle6" = "Part 1. Question 1: ";
+"tableTitle7" = "Part 1. Question 2: ";
+"tableTitle8" = "Part 1. Question 3: ";
+"tableTitle9" = "Part 1. Question 4: ";
+"tableTitle10" = "Part 1. Question 5: ";
+"tableTitle11" = "Part 1. Question 6: ";
+"tableTitle12" = "Part 1. Question 7: ";
+"tableTitle13" = "Part 1. Question 8: ";
+"tableTitle14" = "Part 2: % of correct answers";
+"tableTitle15" = "Part 2: Average response time";
+"tableTitle16" = "Part 3: Question:";
+"tableTitle17" = "Part 3: Answer";
+"tableTitle18" = "Part 3: Gunning Fog Index";
+
+
+//MARK: Notifications
+
+"newSession" = "You can already begin a new session!";

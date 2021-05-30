@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Coordinates {
+struct Coordinate {
     private var dataService = QuestionnaireDataServiceImp.shared
     
     private(set) var points: [(x: Double, y: Double)] = []
