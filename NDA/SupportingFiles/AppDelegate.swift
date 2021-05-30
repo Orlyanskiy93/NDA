@@ -16,7 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared()
+<<<<<<< HEAD
         notificationCenter.requestAuthorization(options: [.alert, .sound]) { _,_ in return () }
+=======
+        notificationCenter.requestAuthorization(options: [.alert, .sound]) { granted, _ in
+            if granted {
+            }
+        }
+
+>>>>>>> Develop
         return true
     }
 

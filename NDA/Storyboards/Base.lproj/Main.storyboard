@@ -14,7 +14,11 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mj4-di-yAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="347" y="1317"/>
+=======
+            <point key="canvasLocation" x="1604" y="99"/>
+>>>>>>> Develop
         </scene>
         <!--Questionnaire-->
         <scene sceneID="CAY-RG-H0Y">
@@ -24,7 +28,11 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDX-m3-XYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="343" y="1176"/>
+=======
+            <point key="canvasLocation" x="1601" y="-41"/>
+>>>>>>> Develop
         </scene>
         <!--Profile-->
         <scene sceneID="tBn-hi-DIa">
@@ -34,7 +42,11 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfy-IJ-aMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="343" y="1057"/>
+=======
+            <point key="canvasLocation" x="1600" y="-160"/>
+>>>>>>> Develop
         </scene>
         <!--Information-->
         <scene sceneID="Onx-fK-aGe">
@@ -44,7 +56,11 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzc-au-iqv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="364" y="1523"/>
+=======
+            <point key="canvasLocation" x="1622" y="305"/>
+>>>>>>> Develop
         </scene>
         <!--Export-->
         <scene sceneID="9r5-UZ-6B6">
@@ -54,7 +70,11 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHg-T8-3JC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="343" y="1423"/>
+=======
+            <point key="canvasLocation" x="1601" y="205"/>
+>>>>>>> Develop
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zfZ-gk-yjy">
@@ -70,7 +90,10 @@
                     <connections>
                         <segue destination="1j5-Fs-b4q" kind="relationship" relationship="viewControllers" id="E8T-Fc-tVq"/>
                         <segue destination="Kq8-FW-xPO" kind="relationship" relationship="viewControllers" id="5zt-Qh-uat"/>
+<<<<<<< HEAD
                         <segue destination="Xgg-Ms-KNF" kind="relationship" relationship="viewControllers" id="3Bh-U8-1Vn"/>
+=======
+>>>>>>> Develop
                         <segue destination="Af0-bJ-u93" kind="relationship" relationship="viewControllers" id="gew-oZ-a1F"/>
                         <segue destination="pEV-DN-hrV" kind="relationship" relationship="viewControllers" id="qvt-6k-Kxi"/>
                     </connections>

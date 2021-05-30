@@ -58,27 +58,46 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IV3-bF-hTn">
+<<<<<<< HEAD
                         <rect key="frame" x="20" y="39" width="374" height="92"/>
+=======
+                        <rect key="frame" x="0.0" y="39" width="414" height="92"/>
+>>>>>>> Develop
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+<<<<<<< HEAD
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRf-dC-lqD">
                         <rect key="frame" x="20" y="10" width="374" height="24"/>
+=======
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRf-dC-lqD">
+                        <rect key="frame" x="0.0" y="10" width="414" height="24"/>
+>>>>>>> Develop
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+<<<<<<< HEAD
                     <constraint firstItem="IV3-bF-hTn" firstAttribute="leading" secondItem="sJj-kf-GGC" secondAttribute="leading" constant="20" id="4Sn-b6-t4B"/>
                     <constraint firstAttribute="trailing" secondItem="IV3-bF-hTn" secondAttribute="trailing" constant="20" id="539-oc-JuR"/>
                     <constraint firstItem="KRf-dC-lqD" firstAttribute="leading" secondItem="sJj-kf-GGC" secondAttribute="leading" constant="20" id="Efv-1R-HtV"/>
+=======
+                    <constraint firstItem="IV3-bF-hTn" firstAttribute="leading" secondItem="sJj-kf-GGC" secondAttribute="leading" id="4Sn-b6-t4B"/>
+                    <constraint firstAttribute="trailing" secondItem="IV3-bF-hTn" secondAttribute="trailing" id="539-oc-JuR"/>
+                    <constraint firstItem="KRf-dC-lqD" firstAttribute="leading" secondItem="sJj-kf-GGC" secondAttribute="leading" id="Efv-1R-HtV"/>
+>>>>>>> Develop
                     <constraint firstItem="KRf-dC-lqD" firstAttribute="top" secondItem="sJj-kf-GGC" secondAttribute="top" constant="10" id="Ey8-Br-fLF"/>
                     <constraint firstItem="IV3-bF-hTn" firstAttribute="top" secondItem="KRf-dC-lqD" secondAttribute="bottom" constant="5" id="Khz-8N-Kyh"/>
                     <constraint firstAttribute="bottom" secondItem="nPE-0P-Las" secondAttribute="bottom" id="PXE-So-PWq"/>
                     <constraint firstAttribute="trailing" secondItem="nPE-0P-Las" secondAttribute="trailing" id="eA3-3z-JEk"/>
+<<<<<<< HEAD
                     <constraint firstAttribute="trailing" secondItem="KRf-dC-lqD" secondAttribute="trailing" constant="20" id="hRX-mY-rSc"/>
+=======
+                    <constraint firstAttribute="trailing" secondItem="KRf-dC-lqD" secondAttribute="trailing" id="hRX-mY-rSc"/>
+>>>>>>> Develop
                     <constraint firstItem="nPE-0P-Las" firstAttribute="top" secondItem="IV3-bF-hTn" secondAttribute="bottom" constant="10" id="iKa-ey-MNj"/>
                     <constraint firstItem="nPE-0P-Las" firstAttribute="leading" secondItem="sJj-kf-GGC" secondAttribute="leading" id="oHn-wt-xGM"/>
                 </constraints>

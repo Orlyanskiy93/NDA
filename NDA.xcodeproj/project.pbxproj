@@ -1055,7 +1055,11 @@
 				5D02BF56260646F30053E96C /* User.swift */,
 				5DC62AEB26278214000569E9 /* Session.swift */,
 				5DC62AE726262287000569E9 /* Score.swift */,
+<<<<<<< HEAD
 				5D1DA7A62640923800C81D92 /* Coordinate.swift */,
+=======
+				5D1DA7A62640923800C81D92 /* Coordinates.swift */,
+>>>>>>> Develop
 				5D1DA80B264B11BE00C81D92 /* FAQ.swift */,
 			);
 			path = Entity;

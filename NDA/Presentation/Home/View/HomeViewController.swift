@@ -26,10 +26,20 @@ class HomeViewController: UIViewController, HomeViewInput {
         output.updateView()
     }
     
+<<<<<<< HEAD
     func setupInitialState() {
         navigationItem.title = String.Home.home
         beginQuestionnaireButton.titleLabel?.minimumScaleFactor = 0.5
         beginQuestionnaireButton.titleLabel?.adjustsFontSizeToFitWidth = true
+=======
+    func setup(with session: Session) {
+        self.navigationItem.title = String.Home.home
+        if session.stage != .partOne {
+            setButton(title: String.Button.resumeQuestionnaire, color: greenColor, isEnabled: true)
+        } else {
+            setButton(title: String.Button.beginQuestionnaire, color: blueColor, isEnabled: true)
+        }
+>>>>>>> Develop
     }
         
     @IBAction func begin(_ sender: UIButton) {
