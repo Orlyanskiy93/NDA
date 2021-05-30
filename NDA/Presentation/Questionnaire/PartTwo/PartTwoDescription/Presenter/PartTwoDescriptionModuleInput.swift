@@ -6,6 +6,6 @@
 //  Copyright © 2021 Personal. All rights reserved.
 //
 
-protocol PartTwoDescriptionModuleInput: class {
+protocol PartTwoDescriptionModuleInput: AnyObject {
 
 }
