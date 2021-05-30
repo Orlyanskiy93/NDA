@@ -28,6 +28,7 @@ class PartOnePresenter: NSObject, PartOneModuleInput, PartOneViewOutput, PartOne
     }
     
     func saveAnswer(with question: QuestionPartOne, answerValue: Int) {
+        
         let currentAnswer = AnswerPartOne(question: question, value: answerValue)
         guard let index = answers.firstIndex(where: { answer in
             return answer.question == currentAnswer.question
@@ -42,7 +43,6 @@ class PartOnePresenter: NSObject, PartOneModuleInput, PartOneViewOutput, PartOne
         saveAnswer(with: questions[chosenQuestionNumber], answerValue: value)
         
         if questionNumber + 1 < questions.count {
-            
             if questionNumber == chosenQuestionNumber {
                 questionNumber += 1
                 let progressValue = Float(questionNumber) / Float(questions.count)
@@ -65,6 +65,7 @@ class PartOnePresenter: NSObject, PartOneModuleInput, PartOneViewOutput, PartOne
         guard let index = answers.firstIndex(where: { answer in
             return answer.question == questions[chosenQuestionNumber]
         }) else {
+            view.showEditing(questions[chosenQuestionNumber], with: 5)
             return
         }
         let question = answers[index].question
