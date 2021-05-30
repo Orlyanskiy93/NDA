@@ -130,7 +130,6 @@
 		5D2CCAFF265AE50300C791DB /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2CCB01265AE50300C791DB /* Profile.storyboard */; };
 		5D484ECE262F8A6700FF537D /* PartTwoDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D484ECD262F8A6700FF537D /* PartTwoDetailsHeaderView.xib */; };
 		5D484ED3262F8A7E00FF537D /* PartTwoDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484ED2262F8A7E00FF537D /* PartTwoDetailsHeaderView.swift */; };
-		5D484EDB26308E9C00FF537D /* UIView+setupFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484EDA26308E9C00FF537D /* UIView+setupFromNib.swift */; };
 		5D484EDE26315F8400FF537D /* UITableViewCell+identifier+nib .swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484EDD26315F8400FF537D /* UITableViewCell+identifier+nib .swift */; };
 		5D484EE12631615300FF537D /* DateFormatter+customSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D484EE02631615300FF537D /* DateFormatter+customSetup.swift */; };
 		5D484EE92631C4BA00FF537D /* NDA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D484EE72631C4BA00FF537D /* NDA.xcdatamodeld */; };
@@ -450,7 +449,6 @@
 		5D2CCB02265AE53D00C791DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		5D484ECD262F8A6700FF537D /* PartTwoDetailsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartTwoDetailsHeaderView.xib; sourceTree = "<group>"; };
 		5D484ED2262F8A7E00FF537D /* PartTwoDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTwoDetailsHeaderView.swift; sourceTree = "<group>"; };
-		5D484EDA26308E9C00FF537D /* UIView+setupFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setupFromNib.swift"; sourceTree = "<group>"; };
 		5D484EDD26315F8400FF537D /* UITableViewCell+identifier+nib .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+identifier+nib .swift"; sourceTree = "<group>"; };
 		5D484EE02631615300FF537D /* DateFormatter+customSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+customSetup.swift"; sourceTree = "<group>"; };
 		5D484EE82631C4BA00FF537D /* NDA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NDA.xcdatamodel; sourceTree = "<group>"; };
@@ -1248,7 +1246,6 @@
 		5D484ED926308E6C00FF537D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5D484EDA26308E9C00FF537D /* UIView+setupFromNib.swift */,
 				5D484EDD26315F8400FF537D /* UITableViewCell+identifier+nib .swift */,
 				5D484EE02631615300FF537D /* DateFormatter+customSetup.swift */,
 				5D1DA7D12642B29E00C81D92 /* Double+rounded.swift */,
@@ -2580,7 +2577,6 @@
 				9EDA0BC66770A39AFC0AB761 /* SessionDescriptionRouter.swift in Sources */,
 				88FD19CF92D20AA5DC2D62C2 /* SessionDescriptionConfigurator.swift in Sources */,
 				86FC57D527EFCA61B9B61B98 /* SessionDescriptionInitializer.swift in Sources */,
-				5D484EDB26308E9C00FF537D /* UIView+setupFromNib.swift in Sources */,
 				2A672507F82329956F11047B /* PartOneDetailsViewInput.swift in Sources */,
 				5401386D7F75F9B9AB90EBB7 /* PartOneDetailsViewOutput.swift in Sources */,
 				C91F891F25E1905B3709696C /* PartOneDetailsViewController.swift in Sources */,
