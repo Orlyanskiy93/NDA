@@ -1,5 +1,5 @@
 # Neuro Degenerative Cognitive Assessment App
-Приложение представляет собой опрос, состоящий из трёх частей, после прохождения прохождения которых расчитываются баллы. Необходимо пройти три части, чтобы расчитать отклонение, на осовании которого можно следить за изменениями в работе головного мозга.
+Приложение представляет собой опрос, состоящий из трёх частей, после прохождения которых рассчитываются баллы. Необходимо пройти три части, чтобы рассчитать отклонение, на основании которого можно следить за изменениями в работе головного мозга.
 Приложение локализировано на два языка.
 
 Архитектура: VIPER
@@ -29,7 +29,7 @@ Pods: Alamofire, ObjectMapper, PromiseKit, ViperMcFlurry, Charts, SwiftLint, IQK
 
 ## Часть 3: Развернутый ответ
 * Представлен один вопрос, на который необходимо ответить максимально развернуто. 
-* На осонове ответа будет получен ["gunning fog index"](https://en.wikipedia.org/wiki/Gunning_fog_index), на основании которого расчитываются баллы.
+* Затем текст пользователя отправляется на сервер, для получения ["gunning fog index"](https://en.wikipedia.org/wiki/Gunning_fog_index), на основании которого рассчитываются баллы.
 
 
 ![Simulator Screen Recording - iPhone 8 Plus - 2021-05-30 at 20 29 31](https://user-images.githubusercontent.com/54894715/120114034-f3cc5d80-c185-11eb-8911-734e7b7ce60a.gif)
@@ -41,6 +41,11 @@ Pods: Alamofire, ObjectMapper, PromiseKit, ViperMcFlurry, Charts, SwiftLint, IQK
 ![Simulator Screen Shot - iPhone 8 Plus - 2021-05-30 at 21 13 53](https://user-images.githubusercontent.com/54894715/120115506-a2739c80-c18c-11eb-8040-ce0b505de1f8.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Simulator Screen Shot - iPhone 8 Plus - 2021-05-30 at 21 20 03](https://user-images.githubusercontent.com/54894715/120115561-ea92bf00-c18c-11eb-9dbc-37ba4bd6bf06.png)
+
+* Опрос можно проходить один раз в 30 дней, когда прохождение будет доступно, пользователю придет уведомление
+
+![Simulator Screen Shot - iPhone 8 Plus - 2021-05-31 at 10 04 22](https://user-images.githubusercontent.com/54894715/120153884-e9e34280-c1f7-11eb-967b-e0537ced6afd.png)
+
 
 
 * На вкладке истории можно посмотреть все свои ответы по пройденным опросам
